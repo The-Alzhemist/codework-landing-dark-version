@@ -10,17 +10,13 @@ export const menuList = [
       url: "/services",
     },
     {
-      name: "About us",
-      url: "/aboutus",
-    },
-    {
-      name: "Projects",
+      name: "Project",
       url: "/projects",
     },
     {
-      name: "Products",
-      url: "/products",
-    },
+      name: "Contact us",
+      url: "/contact-us",
+    }
   ];
 
   
@@ -38,9 +34,9 @@ export const NavbarLeft = () => {
                   {menuList.map((menu: any) => (
                     <React.Fragment key={menu}>
                       <motion.div
-                        whileHover={{ scale: 1.02 }}
+                        whileHover={{ x: 50 }}
                         variants={itemVariants}
-                        className="text-slate-800 text-5xl font-bold cursor-pointer"
+                        className="text-white hover:text-primary-500 text-5xl font-bold cursor-pointer"
                       >
                         {menu.name}
                       </motion.div>

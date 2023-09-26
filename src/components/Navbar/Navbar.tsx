@@ -10,16 +10,41 @@ import { NavbarRight } from "./components/NavbarRight/NavbarRight";
 import { NavbarLeft } from "./components/NavbarLeft/NavbarLeft";
 import { NavbarProps } from "./interface";
 
-const Navbar = ({handleButtonClick, open,itemVariants}: NavbarProps) => {
+const CodeworkTechLogo = () => {
+  return (
+    <>
+      <picture>
+        <source
+          srcSet="/logo/codework-tech-logo-white-transpatent.webp"
+          type="image/webp"
+        />
+        <img
+          src="/logo/codework-tech-logo-white-transpatent.png"
+          alt="codework tech logo"
+          title="codework tech logo"
+          loading="lazy"
+          className="w-auto h-4"
+        />
+      </picture>
+    </>
+  );
+};
+
+const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
   return (
     <>
       <div
         className={`fixed h-[70px] top-0 ${
-          open ? "bg-primary-600" : "bg-secondary-600"
-        } p-2  cursor-pointer w-full px-6 py-3 flex justify-between items-center`}
+          open ? "bg-neutral-1000" : "bg-neutral-1000"
+        } p-2   w-full px-12 py-3 flex justify-between items-center`}
       >
-        <div className="text-white">Logo</div>
-        <div className="text-xl text-white" onClick={handleButtonClick}>
+        <div className="text-white cursor-pointer">
+          <CodeworkTechLogo />
+        </div>
+        <div
+          className="text-xl text-white cursor-pointer"
+          onClick={handleButtonClick}
+        >
           {open ? <IoClose /> : <FaHamburger />}
         </div>
       </div>
@@ -37,18 +62,18 @@ const Navbar = ({handleButtonClick, open,itemVariants}: NavbarProps) => {
                 height: 0,
                 transition: { delay: 0.7, duration: 0.3 },
               }}
-              className="bg-primary-600  border-b-2  flex flex-col"
+              className="bg-neutral-1000  flex flex-col"
             >
               {/* nav */}
               <motion.div
-                className="p-2 cursor-pointer w-full px-6 py-3 flex justify-between items-center h-[70px]"
+                className="p-2 cursor-pointer w-full px-12 py-3 flex justify-between items-center h-[70px]"
                 initial="closed"
                 animate="open"
                 exit="closed"
                 variants={itemVariants}
               >
                 <motion.div className="text-white" whileHover={{ scale: 1.02 }}>
-                  Logo
+                  <CodeworkTechLogo />
                 </motion.div>
                 <motion.div
                   className="text-xl text-white"
@@ -64,7 +89,7 @@ const Navbar = ({handleButtonClick, open,itemVariants}: NavbarProps) => {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className="sm:ml-5 cursor-pointer px-6 sm:px-10 pt-10 flex  justify-between items-end"
+                className="cursor-pointer px-12 pt-10 flex  justify-between items-end"
               >
                 <NavbarLeft />
 
