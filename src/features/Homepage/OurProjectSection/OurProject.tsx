@@ -46,11 +46,11 @@ export const OurProject = () => {
         {/* card */}
 
         <div className="flex flex-wrap justify-center gap-5">
-          {serviceList.map((service: any) => (
+          {serviceList.map((service: any, index: number) => (
             <React.Fragment key={service.name}>
-              <div className="relative  grid grid-cols-5 gap-x-7 bg-[#172D27]  p-6 rounded-xl">
+              <div className={`relative  grid grid-cols-5 gap-x-7 bg-[#172D27]  p-6 rounded-x`}>
                 {/* content */}
-                <div className="flex flex-col justify-center col-start-1 col-span-2">
+                <div className={`flex flex-col justify-center ${index%2 === 0 ? 'col-start-1 col-span-2' : 'col-start-4 col-span-2'}`}>
                   <h3 className="relative text-5xl font-semibold  text-[#59ADA0] flex items-center justify-between mb-5">
                     <span className="">{service.name}</span>
                   </h3>
@@ -67,7 +67,7 @@ export const OurProject = () => {
                 </div>
 
                 {/* img */}
-                <div className="col-start-3 col-span-3 p-10 bg-gradient-to-t  from-[#59ADA0]  via-[#172D27] 30%     rounded-md ">
+                <div className={` ${index%2 === 0 ? 'col-start-3 col-span-3' : 'col-start-1 col-span-3'} p-10 bg-gradient-to-t  from-[#59ADA0]  via-[#172D27] rounded-md`}>
                   <img
                     className=" rounded-md max-w"
                     src="/images/computer-bg.jpeg"
