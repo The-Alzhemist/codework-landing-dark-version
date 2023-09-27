@@ -7,9 +7,9 @@ const Footer = (props: FooterProps) => {
   const { fontPrompt, footerMenu } = props;
 
   return (
-    <footer className="bg-secondary-1000 text-white">
+    <footer className="bg-neutral-1000 text-white">
       <div
-        className={` font-prompt relative md:py-[50px] max-w-[1440px] mx-auto p-5 lg:px-[50px] flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-y-0 `}
+        className={` font-prompt relative md:py-[50px]  mx-auto p-5 lg:px-[50px] flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-y-0 `}
       >
         {/* left */}
         <div className="w-full lg:w-1/2">

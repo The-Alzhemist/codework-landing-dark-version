@@ -21,7 +21,7 @@ export default function Home() {
       <HeroSection/>
       <OurPartner/>
       <OurService/>
-      {/* <OurProject/> */}
+      <OurProject/>
       <ContactHomeSection/>
     </main>
   );

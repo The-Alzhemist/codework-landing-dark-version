@@ -22,17 +22,17 @@ const serviceList = [
 
 export const OurProject = () => {
   return (
-    <section className="relative md:py-[50px] mx-auto lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
-      <div className=" m-auto">
+    <section className="relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-1000 ">
+      <div className=" m-auto max-w-[1440px]">
         {/* title */}
         <div className="flex items-center flex-col mb-16 ">
-          <h2 className="text-lg md:text-4xl font-semibold flex mb-5 text-center">
+          <h2 className="text-lg md:text-4xl font-semibold flex mb-7 text-center">
             <span className="text-primary-100 border-b-2 border-primary-100 ">
               PROJECTS
             </span>
           </h2>
           <Paragraph
-            className={`lg:max-w-[1000px] text-lg text-white text-center font-light `}
+            className={`lg:max-w-[1000px] text-base sm:text-md  text-white text-center font-light `}
           >
             At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision
@@ -48,17 +48,17 @@ export const OurProject = () => {
         <div className="flex flex-wrap justify-center gap-5">
           {serviceList.map((service: any, index: number) => (
             <React.Fragment key={service.name}>
-              <div className={`relative  grid grid-cols-5 gap-x-7 bg-[#172D27]  p-6 rounded-x rounded-2xl`}>
+              <div className={`relative flex  flex-col ${index%2 ===0 ? 'sm:flex-row' : 'sm:flex-row-reverse'} gap-x-7  bg-[#172D27]  p-6 rounded-x rounded-2xl`}>
                 {/* content */}
-                <div className={`flex flex-col justify-center ${index%2 === 0 ? 'col-start-1 col-span-2 col-s' : 'col-start-4 col-span-2'} row-start-1 row-span-1`}>
-                  <h3 className="relative text-5xl font-semibold  text-[#59ADA0] flex items-center justify-between mb-5">
+                <div className={`flex flex-col justify-center sm:w-2/5 `}>
+                  <h3 className="relative text-3xl sm:text-5xl font-semibold  text-[#59ADA0] flex items-center justify-between mb-5">
                     <span className="">{service.name}</span>
                   </h3>
-                  <p className="text-white flex items-center text-lg font-light mb-14">
+                  <p className="text-white flex items-center text-base sm:text-lg font-light mb-14">
                     {service.detail}
                   </p>
 
-                  <div className="flex justify-end items-center text-white text-lg gap-x-2">
+                  <div className="flex justify-end items-center text-white text-base sm:text-lg gap-x-2">
                     <span>See more </span>
                     <span className="text-2xl">
                       <BsArrowRightCircle />
@@ -67,7 +67,7 @@ export const OurProject = () => {
                 </div>
 
                 {/* img */}
-                <div className={`row-start-1 row-span-1 ${index%2 === 0 ? 'col-start-3 col-span-3' : 'col-start-1 col-span-3'} p-10 bg-gradient-to-t  from-[#59ADA0]  via-[#172D27] rounded-md mb-5`}>
+                <div className={`sm:w-3/5 p-3 sm:p-10 bg-gradient-to-t  from-[#59ADA0]  via-[#172D27] rounded-md mb-5`}>
                   <img
                     className=" rounded-md max-w"
                     src="/images/computer-bg.jpeg"
