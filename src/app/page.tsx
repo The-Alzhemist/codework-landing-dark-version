@@ -1,4 +1,5 @@
 
+import ContactHomeSection from "@/features/Homepage/ContactHomeSection/ContactHomeSection";
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import { OurPartner } from "@/features/Homepage/OurPartnerSection/OurPartner";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
@@ -12,6 +13,7 @@ export default function Home() {
       <OurPartner/>
       <OurService/>
       <OurProject/>
+      <ContactHomeSection/>
     </main>
   );
 }
