@@ -5,18 +5,15 @@ const config: Config = {
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/features/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+  
       colors: {
         white: '#FFFFFF',
         primary: {
-          DEFAULT: '#DBED58',
+          DEFAULT: '#E9FB64',
           1000: '#1A1E00',
           900: '#2E3400',
           850: '#383F00',
@@ -64,6 +61,9 @@ const config: Config = {
           50: '#FCF9F1'
         },
       },
+      backgroundImage: {
+        'hero-pattern': "url('/images/computer-bg.jpeg')",
+      }
     },
   },
   plugins: [],
