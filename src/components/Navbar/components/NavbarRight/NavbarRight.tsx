@@ -17,37 +17,37 @@ export const NavbarRight = () => {
   return (
     <>
       <motion.div
-        className="text-right hidden sm:block text-white"
+        className="text-right sm:block text-white"
         initial="closed"
         animate="open"
         exit="closed"
         variants={itemVariants}
       >
         <div className="mb-5">
-          <label className="text-lg font-semibold">Social media</label>
+          <label className="text-sm sm:text-lg font-semibold">Social media</label>
           <div className="flex justify-end gap-x-1">
             <IconSocialLink linkName="#" iconName={<PiFacebookLogoBold />} />
             <IconSocialLink linkName="#" iconName={<FaInstagram />} />
             <IconSocialLink linkName="#" iconName={<PiLinkedinLogoBold />} />
           </div>
-          <div className="text-2xl">Codework Tech</div>
+          <div className="text-xs sm:text-2xl">Codework Tech</div>
         </div>
 
         <div className="mb-5">
           <label className="flex justify-end">
             <IconSocialLink linkName="#" iconName={<FaLine />} />
           </label>
-          <div className="text-2xl">@codeworktech</div>
+          <div className="text-xs sm:text-2xl">@codeworktech</div>
         </div>
 
         <div className="mb-5">
-          <label className="text-lg font-semibold">Telephone</label>
-          <div className="text-2xl">(+66)83 987 4997</div>
+          <label className="text-sm sm:text-lg font-semibold">Telephone</label>
+          <div className="text-xs sm:text-2xl">(+66)83 987 4997</div>
         </div>
 
         <div>
-          <label className="text-lg font-semibold">Email</label>
-          <div className="text-2xl">hello@codework-tech.com</div>
+          <label className="text-sm sm:text-lg font-semibold">Email</label>
+          <div className="text-xs sm:text-2xl">hello@codework-tech.com</div>
         </div>
       </motion.div>
     </>

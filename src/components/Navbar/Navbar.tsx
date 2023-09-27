@@ -3,12 +3,12 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React from "react";
 
-import { FaHamburger } from "react-icons/fa";
-import { IoClose } from "react-icons/io5";
 import withNavbar from "./withNavbar";
 import { NavbarRight } from "./components/NavbarRight/NavbarRight";
 import { NavbarLeft } from "./components/NavbarLeft/NavbarLeft";
 import { NavbarProps } from "./interface";
+import { IoMdMenu } from "react-icons/io";
+import { IoCloseCircleOutline } from "react-icons/io5";
 
 const CodeworkTechLogo = () => {
   return (
@@ -34,28 +34,28 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
   return (
     <>
       <div
-        className={`fixed h-[70px] top-0 ${
+        className={`z-10 fixed h-[70px] top-0 ${
           open ? "bg-neutral-1000" : "bg-neutral-1000"
-        } p-2   w-full px-12 py-3 flex justify-between items-center`}
+        } p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center`}
       >
         <div className="text-white cursor-pointer">
           <CodeworkTechLogo />
         </div>
         <div
-          className="text-xl text-white cursor-pointer"
+          className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-600 rounded-full p-2 "
           onClick={handleButtonClick}
         >
-          {open ? <IoClose /> : <FaHamburger />}
+          <IoMdMenu />
         </div>
       </div>
 
-      <section className="absolute w-full top-0 z-10 ">
+      <section className="fixed top-0 w-full  z-10 ">
         <AnimatePresence>
           {open && (
             <motion.aside
               initial={{ height: 0 }}
               animate={{
-                height: 500,
+                height: "auto",
                 transition: { delay: 0, duration: 0.3 },
               }}
               exit={{
@@ -66,7 +66,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
             >
               {/* nav */}
               <motion.div
-                className="p-2 cursor-pointer w-full px-12 py-3 flex justify-between items-center h-[70px]"
+                className="  p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]"
                 initial="closed"
                 animate="open"
                 exit="closed"
@@ -76,11 +76,11 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                   <CodeworkTechLogo />
                 </motion.div>
                 <motion.div
-                  className="text-xl text-white"
+                  className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-600 rounded-full p-2 "
                   whileHover={{ scale: 1.02 }}
                   onClick={handleButtonClick}
                 >
-                  <IoClose />
+                  <IoCloseCircleOutline />
                 </motion.div>
               </motion.div>
 
@@ -89,7 +89,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className="cursor-pointer px-12 pt-10 flex  justify-between items-end"
+                className="cursor-pointer px-5 sm:px-12 pt-10 flex  justify-between items-end mb-10"
               >
                 <NavbarLeft />
 
