@@ -4,8 +4,8 @@ import React from "react";
 
 export const OurPartner = () => {
   return (
-    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-secondary-1000 ">
-      <div className="flex flex-col-reverse lg:flex-row justify-center gap-10 items-center m-auto">
+    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
+      <div className=" flex flex-col-reverse lg:flex-row justify-center gap-10 items-center m-auto">
         {/* logo */}
         <div className="grid grid-cols-3 sm:grid-cols-4 gap-5 ">
           {ourPartnerSectionText.imagesList.map((item: any, index: number) => (

@@ -22,10 +22,10 @@ const serviceList = [
 
 export const OurProject = () => {
   return (
-    <section className="relative md:py-[50px] mx-auto lg:px-[50px] sm:pt-0  bg-secondary-1000 ">
+    <section className="relative md:py-[50px] mx-auto lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
       <div className=" m-auto">
         {/* title */}
-        <div className="flex items-center flex-col mb-16  ">
+        <div className="flex items-center flex-col mb-16 ">
           <h2 className="text-lg md:text-4xl font-semibold flex mb-5 text-center">
             <span className="text-primary-100 border-b-2 border-primary-100 ">
               PROJECTS

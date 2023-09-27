@@ -36,17 +36,17 @@ const serviceList = [
 
 export const OurService = () => {
   return (
-    <section className="relative md:py-[50px] mx-auto lg:px-[50px] sm:pt-0  bg-secondary-1000 ">
-      <div className=" m-auto">
+    <section className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
+      <div className="max-w-[1440px] m-auto">
         {/* title */}
-        <div className="flex items-center flex-col mb-16  ">
-          <h2 className="text-lg md:text-4xl font-semibold flex mb-5 text-center">
+        <div className="flex items-center flex-col mb-16">
+          <h2 className="text-xl md:text-4xl font-semibold flex mb-7 text-center">
             <span className="text-primary-100 border-b-2 border-primary-100 ">
               SERVICES
             </span>
           </h2>
           <Paragraph
-            className={`lg:max-w-[1000px] text-md text-white text-center font-light `}
+            className={`lg:max-w-[1000px] text-base sm:text-md text-white text-center font-light `}
           >
             At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision
@@ -62,12 +62,12 @@ export const OurService = () => {
         <div className="flex flex-wrap justify-center gap-5">
           {serviceList.map((service: any) => (
             <React.Fragment key={service.name}>
-              <div className="relative max-w-[400px] border-2 border-secondary-100 min-h-[500px] p-6 rounded-xl overflow-hidden">
+              <div className="relative sm:w-[45%]  lg:w-[30%] max-w-[425px] border-2 border-neutral-500 min-h-[500px] p-6 rounded-xl overflow-hidden">
                 <h3 className="relative text-3xl font-semibold h-[135px] text-white flex items-center justify-between">
                   <span className="max-w-[310px]">{service.name}</span>
                   <span><BsArrowRightCircle/></span>
                 </h3>
-                <p className="text-white h-[150px] mb-5 flex items-center text-lg font-light">
+                <p className="text-white h-[150px] mb-5 flex items-start text-base sm:text-lg font-light">
                   {service.detail}
                 </p>
                 <img
