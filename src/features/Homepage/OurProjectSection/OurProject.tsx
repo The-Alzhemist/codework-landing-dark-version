@@ -31,6 +31,11 @@ export const OurProject = () => {
     visible: { opacity: 1 },
   };
 
+  const projectListAnimation = {
+    hidden: { opacity: 0, y: -50  }, // Fade in from left
+    visible: { opacity: 1, y: 0},
+  };
+
   return (
     <section className="relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-1000 ">
       <div ref={ref} className=" m-auto max-w-[1440px]">
@@ -41,7 +46,7 @@ export const OurProject = () => {
           animate={inView ? "visible" : "hidden"}
           variants={headingAnimation}
           transition={{ duration: 3 }}
-          className="flex items-center flex-col mb-16 "
+          className="flex items-center flex-col mb-16 ease-out"
         >
           <h2 className="text-lg md:text-4xl font-semibold flex mb-7 text-center">
             <span className="text-primary-100 border-b-2 border-primary-100 ">
@@ -69,8 +74,8 @@ export const OurProject = () => {
            
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
-                variants={headingAnimation}
-                transition={{ duration: 3 }}
+                variants={projectListAnimation}
+                transition={{ duration: 1 }}
                 className={`relative flex  flex-col ${
                   index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
                 } gap-x-7  bg-[#172D27]  p-6 rounded-x rounded-2xl`}

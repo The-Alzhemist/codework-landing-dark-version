@@ -17,7 +17,7 @@ const Footer = (props: FooterProps) => {
           <div className="font-light">{footerMenu.footerLeft.companyAddress}</div>
           <div className="font-light">Email: {footerMenu.footerLeft.companyEmail}</div>
           <div className="mb-5 font-light"> Tel: {footerMenu.footerLeft.companyTel}</div>
-          <div className="text-sm font-light">
+          <div className="text-xs sm:text-sm font-light">
             {footerMenu.footerLeft.companyCopyright}
           </div>
         </div>
@@ -35,7 +35,7 @@ const Footer = (props: FooterProps) => {
                   <Link href={menu.path}>{menu.pageMenu}</Link>
                       {menu.hasSubMenu &&
                         menu.subMenu?.map((submenu: { name: string }, index: number) => (
-                          <div className="text-sm font-light" key={`submenu-top-${index}`}>{submenu.name}</div>
+                          <div className="text-xs sm:text-sm font-light" key={`submenu-top-${index}`}>{submenu.name}</div>
                         ))}
                     </div>
                 </React.Fragment>
@@ -51,7 +51,7 @@ const Footer = (props: FooterProps) => {
                     <Link href={menu.path}>{menu.pageMenu}</Link>
                       {menu.hasSubMenu &&
                         menu.subMenu?.map((submenu: { name: string }, index: number) => (
-                          <div className="text-sm" key={`submenu-top-${index}`}>{submenu.name}</div>
+                          <div className="text-xs sm:text-sm" key={`submenu-top-${index}`}>{submenu.name}</div>
                         ))}
                     </div>
                 </React.Fragment>
