@@ -34,17 +34,17 @@ const ContactHomeSection = (props: ContactHomeSectionProp) => {
 
         <picture className="w-full lg:w-1/2 flex justify-center lg:justify-start">
           <source
-            srcSet="https://fastly.picsum.photos/id/716/500/500.jpg?hmac=t_YSPYS_yDjE9YSxHrDW9PrxvGExSkJg-MOkKntmQFU"
+            srcSet="/images/contact-us-cover.png"
             type="image/webp"
             media="(max-width: 639px)"
           />
           <source
-            srcSet="https://fastly.picsum.photos/id/716/500/500.jpg?hmac=t_YSPYS_yDjE9YSxHrDW9PrxvGExSkJg-MOkKntmQFU"
+            srcSet="/images/contact-us-cover.png"
             type="image/webp"
             media="(min-width: 640px)"
           />
           <img
-            src="https://fastly.picsum.photos/id/716/500/500.jpg?hmac=t_YSPYS_yDjE9YSxHrDW9PrxvGExSkJg-MOkKntmQFU"
+            src="/images/contact-us-cover.png"
             alt="codework contact us section cover image"
             title="codework contact us section cover image"
             loading="lazy"

@@ -11,31 +11,37 @@ import { useInView } from "react-intersection-observer";
 const serviceList = [
   {
     name: "UX/UI design",
+    image: '/images/ux-ui.png',
     detail:
       "Focusing on creating intuitive and visually appealing digital interfaces that enhance user experience and engagement",
   },
   {
     name: "Project solution consultancy",
+    image: '/images/project-solution.png',
     detail:
       "Collaborating closely with clients to identify their unique challenges and requirements",
   },
   {
     name: "Web development",
+    image: '/images/web-development.png',
     detail:
       "The process of building and maintaining websites, utilizing various programming languages and frameworks to create responsive and dynamic online platforms.",
   },
   {
     name: "Mobile development",
+    image: '/images/mobile-development.png',
     detail:
       "Elevate your business with our mobile development expertise. We specialize in creating intuitive and customized mobile apps for both iOS and Android platforms.",
   },
   {
     name: "Digital marketing",
+    image: '/images/digital-marketing.png',
     detail:
       "Unlock the full potential of your online presence with our digital marketing strategies. From SEO and social media marketing to targeted campaigns",
   },
   {
     name: "Digital transformation consultancy",
+    image: '/images/digital-transformation-consultancy.png',
     detail:
       "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences.",
   },
@@ -50,9 +56,6 @@ export const OurService = () => {
   };
 
  
-
-  
-
   return (
     <section className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
       <div ref={ref} className="max-w-[1440px] m-auto">
@@ -99,7 +102,7 @@ export const OurService = () => {
                 </p>
                 <img
                   className="relative bottom-[-40px] rounded-md"
-                  src="/images/computer-bg.jpeg"
+                  src={service.image}
                   alt=""
                 />
               </div>

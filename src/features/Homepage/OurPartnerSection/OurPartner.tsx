@@ -57,7 +57,7 @@ export const OurPartner = () => {
         >
           <h2 className="text-xl md:text-4xl font-semibold flex mb-7">
             <span className="text-primary-100 border-b-2 border-primary-100 ">
-              {" "}
+            
               PARTNERS
             </span>
           </h2>
