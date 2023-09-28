@@ -1,11 +1,12 @@
-"use client"
+"use client";
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 
 import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const serviceList = [
   {
@@ -41,15 +42,26 @@ const serviceList = [
 ];
 
 export const OurService = () => {
+  const [ref, inView] = useInView();
+
+  const headingAnimation = {
+    hidden: { opacity: 0  }, // Fade in from left
+    visible: { opacity: 1 },
+  };
+
   return (
     <section className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
-      <div className="max-w-[1440px] m-auto">
+      <div ref={ref} className="max-w-[1440px] m-auto">
         {/* title */}
-        <div className="flex items-center flex-col mb-16">
-          <h2
-           
-            className="text-xl md:text-4xl font-semibold flex mb-7 text-center"
-          >
+        <motion.div
+        
+          initial="hidden"
+          animate={inView ? "visible" : "hidden"}
+          variants={headingAnimation}
+          transition={{ duration: 0.8 }}
+          className="flex items-center flex-col mb-16"
+        >
+          <h2 className="text-xl md:text-4xl font-semibold flex mb-7 text-center">
             <span className="text-primary-100 border-b-2 border-primary-100 ">
               SERVICES
             </span>
@@ -64,7 +76,7 @@ export const OurService = () => {
             network of trusted partners who help us deliver the technology
             solutions you can rely on.`}
           </Paragraph>
-        </div>
+        </motion.div>
 
         {/* card */}
 
