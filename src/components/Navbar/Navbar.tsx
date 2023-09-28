@@ -9,23 +9,26 @@ import { NavbarLeft } from "./components/NavbarLeft/NavbarLeft";
 import { NavbarProps } from "./interface";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseCircleOutline } from "react-icons/io5";
+import Link from "next/link";
 
 const CodeworkTechLogo = () => {
   return (
     <>
-      <picture>
-        <source
-          srcSet="/logo/codework-tech-logo-white-transpatent.webp"
-          type="image/webp"
-        />
-        <img
-          src="/logo/codework-tech-logo-white-transpatent.png"
-          alt="codework tech logo"
-          title="codework tech logo"
-          loading="lazy"
-          className="w-auto h-4"
-        />
-      </picture>
+      <Link href="/">
+        <picture>
+          <source
+            srcSet="/logo/codework-tech-logo-white-transpatent.webp"
+            type="image/webp"
+          />
+          <img
+            src="/logo/codework-tech-logo-white-transpatent.png"
+            alt="codework tech logo"
+            title="codework tech logo"
+            loading="lazy"
+            className="w-auto h-4"
+          />
+        </picture>
+      </Link>
     </>
   );
 };

@@ -57,7 +57,7 @@ const HeroSection = (props: HeroSectionProps) => {
           </Paragraph>
 
           <motion.div variants={itemAnimation} className="max-w-7xl">
-            <PrimaryButton pathName="/aboutus" className="mr-5 text-xl">
+            <PrimaryButton pathName="/contact-us" className="mr-5 text-xl">
               Contact us
             </PrimaryButton>
           </motion.div>
