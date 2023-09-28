@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.custom-bg {
+    /* Add your background image URL */
+
+  
+    /* Add gradient overlay */
+    background: linear-gradient(86deg, #161710 29.15%, rgba(22, 23, 16, 0.00) 160.16%),
+              url('/images/computer-bg.jpeg');
+    /* background-blend-mode: overlay; */
+    background-size: cover; /* Adjust as needed */
+    background-position: center; /* Adjust as needed */
+    /* Add other background properties */
+    /* ... */
+  }
