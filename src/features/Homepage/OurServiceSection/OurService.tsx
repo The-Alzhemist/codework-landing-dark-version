@@ -1,6 +1,11 @@
+"use client"
+
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
-import { BsArrowRightCircleFill, BsArrowRightCircle } from "react-icons/bs";
+import { BsArrowRightCircle } from "react-icons/bs";
+
+import { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 
 const serviceList = [
   {
@@ -30,7 +35,8 @@ const serviceList = [
   },
   {
     name: "Digital transformation consultancy",
-    detail:"We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences.",
+    detail:
+      "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences.",
   },
 ];
 
@@ -40,7 +46,10 @@ export const OurService = () => {
       <div className="max-w-[1440px] m-auto">
         {/* title */}
         <div className="flex items-center flex-col mb-16">
-          <h2 className="text-xl md:text-4xl font-semibold flex mb-7 text-center">
+          <h2
+           
+            className="text-xl md:text-4xl font-semibold flex mb-7 text-center"
+          >
             <span className="text-primary-100 border-b-2 border-primary-100 ">
               SERVICES
             </span>
@@ -48,12 +57,12 @@ export const OurService = () => {
           <Paragraph
             className={`lg:max-w-[1000px] text-base sm:text-md text-white text-center font-light `}
           >
-            At CodeWork, we believe in the power of collaboration. That's why
+            {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision
             for innovation and excellence. Together, we bring you cutting-edge
             solutions that propel your business into the future. Explore our
             network of trusted partners who help us deliver the technology
-            solutions you can rely on.
+            solutions you can rely on.`}
           </Paragraph>
         </div>
 
@@ -65,7 +74,9 @@ export const OurService = () => {
               <div className="relative sm:w-[45%]  lg:w-[30%] max-w-[425px] border-2 border-neutral-500 min-h-[500px] p-6 rounded-xl overflow-hidden">
                 <h3 className="relative text-3xl font-semibold h-[135px] text-white flex items-center justify-between">
                   <span className="max-w-[310px]">{service.name}</span>
-                  <span><BsArrowRightCircle/></span>
+                  <span>
+                    <BsArrowRightCircle />
+                  </span>
                 </h3>
                 <p className="text-white h-[150px] mb-5 flex items-start text-base sm:text-lg font-light">
                   {service.detail}

@@ -36,12 +36,13 @@ export const OurPartner = () => {
           <Paragraph
             className={`lg:max-w-[550px] xl:max-w-[670px] text-base sm:text-md font-light text-white text-center lg:text-left`}
           >
-            At CodeWork, we believe in the power of collaboration. That's why
+            {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision
             for innovation and excellence. Together, we bring you cutting-edge
             solutions that propel your business into the future. Explore our
             network of trusted partners who help us deliver the technology
-            solutions you can rely on.
+            solutions you can rely on.`}
+           
           </Paragraph>
         </div>
       </div>

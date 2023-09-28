@@ -34,12 +34,13 @@ export const OurProject = () => {
           <Paragraph
             className={`lg:max-w-[1000px] text-base sm:text-md  text-white text-center font-light `}
           >
-            At CodeWork, we believe in the power of collaboration. That's why
+            {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision
             for innovation and excellence. Together, we bring you cutting-edge
             solutions that propel your business into the future. Explore our
             network of trusted partners who help us deliver the technology
-            solutions you can rely on.
+            solutions you can rely on.`}
+          
           </Paragraph>
         </div>
 
@@ -69,7 +70,7 @@ export const OurProject = () => {
                 {/* img */}
                 <div className={`sm:w-3/5 p-3 sm:p-10 bg-gradient-to-t  from-[#59ADA0]  via-[#172D27] rounded-md mb-5`}>
                   <img
-                    className=" rounded-md max-w"
+                    className="rounded-md max-w"
                     src="/images/computer-bg.jpeg"
                     alt=""
                   />

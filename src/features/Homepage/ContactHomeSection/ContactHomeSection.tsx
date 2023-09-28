@@ -13,9 +13,9 @@ const ContactHomeSection = (props: ContactHomeSectionProp) => {
     <section className={`relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutral-1000 px-5 `}>
       <div className="flex gap-16 flex-col lg:flex-row justify-center items-center mb-10 p-5 sm:p-16  bg-secondary-900 max-w-[1440px] m-auto">
         <div className="w-full lg:w-1/2 text-left mb-5  flex flex-col items-end">
-          <Paragraph className="max-w-[450px]   p-4 rounded-2xl mb-5 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 ">Let's start a conversation about your business's digital future</Paragraph>
+          <Paragraph className="max-w-[450px]   p-4 rounded-2xl mb-5 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 "> {`Let's start a conversation about your business's digital future`}</Paragraph>
           <Paragraph className="max-w-[670px] text-end  mb-4 text-md sm:text-2xl font-semibold text-white">
-            Let’s make your dream come true
+           {`Let’s make your dream come true`} 
           </Paragraph>
 
           <h2 className="mb-14 flex justify-end relative">
