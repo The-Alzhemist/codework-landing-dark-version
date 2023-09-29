@@ -6,6 +6,7 @@ import { HeroSectionProps } from "./interface";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { motion } from "framer-motion";
+import { ourPartnerSectionText } from "@/constants/homePage/ourPartnerText";
 
 const HeroSection = (props: HeroSectionProps) => {
   const { heroSectionText } = props;
@@ -62,6 +63,27 @@ const HeroSection = (props: HeroSectionProps) => {
             </PrimaryButton>
           </motion.div>
         </motion.div>
+
+        <div className="flex flex-wrap justify-center gap-5 max-w-[1000px]">
+          {ourPartnerSectionText.imagesList.map((item: any, index: number) => (
+            <React.Fragment key={`our-partner-${index}`}>
+              <motion.a
+                className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg"
+                href={item.urlName}
+                target="_blank"
+                rel="noopener nofollow"
+              >
+                <img
+                  src={item.pathName}
+                  width={0}
+                  height={0}
+                  className={`h-auto w-[90%] p-3 ${item.className}`}
+                  alt={`${item.alt}`}
+                />
+              </motion.a>
+            </React.Fragment>
+          ))}
+        </div>
       </div>
     </section>
   );
