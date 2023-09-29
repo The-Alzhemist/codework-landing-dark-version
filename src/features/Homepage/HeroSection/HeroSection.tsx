@@ -64,7 +64,7 @@ const HeroSection = (props: HeroSectionProps) => {
           </motion.div>
         </motion.div>
 
-        <div className="flex flex-wrap justify-center gap-5 max-w-[1000px]">
+        {/* <div className="flex flex-wrap justify-center gap-5 max-w-[1000px]">
           {ourPartnerSectionText.imagesList.map((item: any, index: number) => (
             <React.Fragment key={`our-partner-${index}`}>
               <motion.a
@@ -83,7 +83,9 @@ const HeroSection = (props: HeroSectionProps) => {
               </motion.a>
             </React.Fragment>
           ))}
-        </div>
+        </div> */}
+
+
       </div>
     </section>
   );
