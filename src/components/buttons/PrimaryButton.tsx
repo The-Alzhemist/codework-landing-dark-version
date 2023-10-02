@@ -9,7 +9,7 @@ interface CustomButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 
 export const PrimaryButton: React.FC<CustomButtonProps> = ({pathName, className, children, id}) => {
-  const style = twMerge(`py-2.5 px-5 mr-2 text-sm font-medium text-gray-900 bg-primary hover:bg-primary-800 hover:text-primary-100 hover:border-primary-100 hover:shadow-md cursor-pointer rounded-full border-2 border-gray-900 transition-all duration-100 east-out lg:hover:scale-125`, className);
+  const style = twMerge(`py-2.5 px-5 mr-2 text-sm font-medium text-gray-900 bg-primary hover:bg-primary-800 hover:text-primary-100 hover:border-primary-100 hover:shadow-md cursor-pointer rounded-full border-2 border-primary transition-all duration-100 east-out lg:hover:scale-125 shadow-xl shadow-primary-50/10`, className);
   
   return (
     <Link href={pathName}>

@@ -58,7 +58,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
             <motion.aside
               initial={{ height: 0 }}
               animate={{
-                height: "auto",
+                height: "100vh",
                 transition: { delay: 0, duration: 0.3 },
               }}
               exit={{
@@ -92,7 +92,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className="cursor-pointer px-5 sm:px-12 pt-10 flex  justify-between items-end mb-10"
+                className="cursor-pointer px-5 sm:px-12 pt-10 flex justify-between items-center mb-10 h-screen"
               >
                 <NavbarLeft />
 

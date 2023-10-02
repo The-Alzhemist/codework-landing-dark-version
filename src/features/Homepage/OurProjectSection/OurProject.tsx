@@ -10,17 +10,7 @@ const serviceList = [
     name: "Seamoor marine",
     detail:
       "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
-  },
-  {
-    name: "Seamoor marine",
-    detail:
-      "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
-  },
-  {
-    name: "Seamoor marine",
-    detail:
-      "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
-  },
+  }
 ];
 
 export const OurProject = () => {
