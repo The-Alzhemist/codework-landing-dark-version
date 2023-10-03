@@ -14,7 +14,7 @@ export const OurPartner = () => {
   };
 
   return (
-    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
+    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutralVariant-1000">
       <motion.div
         ref={ref}
         className={`

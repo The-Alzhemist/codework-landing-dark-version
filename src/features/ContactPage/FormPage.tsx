@@ -58,7 +58,7 @@ const FormPage = ({
         initial="hidden"
         animate="visible"
         variants={titleAnimation}
-        className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px]  sm:my-0"
+        className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
         <motion.h1 className="text-center mb-20 text-white">
           <motion.div variants={itemAnimation} className="text-2xl font-light">

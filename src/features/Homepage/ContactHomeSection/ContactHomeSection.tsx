@@ -10,7 +10,7 @@ import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 const ContactHomeSection = (props: ContactHomeSectionProp) => {
   const { contactUsSectionText } = props;
   return (
-    <section className={`relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutral-1000 px-5 `}>
+    <section className={`relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutralVariant-1000 px-5 `}>
       <div className="flex gap-16 flex-col lg:flex-row justify-center items-center mb-10 p-5 sm:p-16  bg-secondary-900 max-w-[1440px] m-auto">
         <div className="w-full lg:w-1/2 text-left mb-5  flex flex-col items-end">
           <Paragraph className="max-w-[450px]   p-4 rounded-2xl mb-5 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 "> {`Let's start a conversation about your business's digital future`}</Paragraph>

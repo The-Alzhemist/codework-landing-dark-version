@@ -31,7 +31,7 @@ const SelectedField = ({
           )}
           <div className="relative">
             <select
-               className={`bg-zinc-600 border-zinc-500 text-white
+               className={`bg-neutral-800 border-neutral-900 text-white
                border rounded w-full py-1 px-3 leading-tight focus:outline-none focus:shadow-outline
                disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed 
                placeholder-gray-400 h-[38px]

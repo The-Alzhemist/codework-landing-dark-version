@@ -36,7 +36,7 @@ const TextAreaField = ({
             <textarea
               {...field}
               value={field.value ?? ''}
-              className={`bg-zinc-600 border-zinc-500
+              className={`bg-neutral-800 border-neutral-900
               appearance-none border rounded w-full py-2 px-3 text-white leading-tight focus:outline-none focus:shadow-outline
               disabled:bg-gray-300 disabled:text-gray-500 disabled:cursor-not-allowed 
               placeholder-gray-400  placeholder:text-md

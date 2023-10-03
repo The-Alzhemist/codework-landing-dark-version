@@ -1,12 +1,21 @@
-export interface HeroTextInterface {
-    heading1: string;
-    heading2: string;
-    heading3: string;
-    description: string;
-    linkName: string;
-    buttonName: string;
-}
+
 
 export interface HeroSectionProps {
-    heroSectionText: HeroTextInterface
+    containerAnimation: {
+        hidden: AnimationProperties;
+        visible: AnimationProperties;
+      };
+      itemAnimation: {
+        hidden: AnimationProperties;
+        visible: AnimationProperties;
+      };
 }
+
+interface AnimationProperties {
+    opacity: number;
+    y?: number;
+    transition?: {
+      delay?: number;
+      staggerChildren?: number;
+    };
+  }

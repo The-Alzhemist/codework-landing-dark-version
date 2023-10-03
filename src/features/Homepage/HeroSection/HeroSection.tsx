@@ -6,36 +6,15 @@ import { HeroSectionProps } from "./interface";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { motion } from "framer-motion";
-import { ourPartnerSectionText } from "@/constants/homePage/ourPartnerText";
-
-const HeroSection = (props: HeroSectionProps) => {
-  const { heroSectionText } = props;
-
-  const titleAnimation = {
-    hidden: {opacity: 1},
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 1,
-        staggerChildren: 0.08,
-      },
-    }
-  }
-
-   const itemAnimation = {
-    hidden: {opacity: 0, y:50},
-    visible: {
-      opacity: 1, y:0
-    }
-  }
 
 
+const HeroSection = ({containerAnimation, itemAnimation}: HeroSectionProps) => {
   return (
     <section
       className={`relative  md:py-[50px] mx-auto px-5 lg:px-[50px]  custom-bg `}
     >
       <div className="relative flex w-full max-w-[1440px] m-auto ">
-        <motion.div  initial="hidden" animate="visible" variants={titleAnimation}  className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col justify-center sm:p-0">
+        <motion.div  initial="hidden" animate="visible" variants={containerAnimation}  className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col justify-center sm:p-0">
           <motion.h1 className="mb-5 md:mb-5 relative font-semibold">
             <motion.div  variants={itemAnimation} className="text-3xl md:text-6xl mb-3 text-white">
               We can make

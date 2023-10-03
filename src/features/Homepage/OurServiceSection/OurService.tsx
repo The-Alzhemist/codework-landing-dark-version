@@ -57,7 +57,7 @@ export const OurService = () => {
 
  
   return (
-    <section className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 ">
+    <section className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutralVariant-1000 ">
       <div ref={ref} className="max-w-[1440px] m-auto">
         {/* title */}
         <motion.div

@@ -60,6 +60,22 @@ const config: Config = {
           100: '#F3F1E8',
           50: '#FCF9F1'
         },
+        neutralVariant: {
+          DEFAULT: '#FBFAE8',
+          1000: '#1B1C12',
+          900: '#303126',
+          850: '#3B3C30',
+          800: '#474741',
+          750: '#535346',
+          700: '#5F5F52',
+          600: '#78786A',
+          500: '#929283',
+          400: '#ACAC9C',
+          300: '#C8C7B7',
+          200: '#E4E3D2',
+          100: '#F3F2E0',
+          50: '#FBFAE8'
+        },
       },
       backgroundImage: {
         'hero-pattern': "url('/images/computer-bg.jpeg')",
