@@ -22,3 +22,24 @@
     /* Add other background properties */
     /* ... */
   }
+
+  .logo-container:before,
+.logo-container:after {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  height: 100%;
+  content: "";
+  z-index: 2;
+}
+
+
+  .logo-container:before {
+    left: 0;
+    background: linear-gradient(to left, rgba(216, 66, 66, 0), #1B1C12);
+  }
+  
+  .logo-container:after {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #1B1C12);
+  }

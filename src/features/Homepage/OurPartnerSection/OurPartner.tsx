@@ -33,28 +33,6 @@ export const OurPartner = () => {
       >
         {/* logo */}
         <div className="flex flex-wrap justify-center gap-5 max-w-[1000px]">
-          {/* {ourPartnerSectionText.imagesList.map((item: any, index: number) => (
-            <React.Fragment key={`our-partner-${index}`}>
-              <motion.a
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                variants={headingAnimation}
-                transition={{ duration: 0.8 }}
-                className="w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg"
-                href={item.urlName}
-                target="_blank"
-                rel="noopener nofollow"
-              >
-                <img
-                  src={item.pathName}
-                  width={0}
-                  height={0}
-                  className={`h-auto w-[90%] p-3 ${item.className}`}
-                  alt={`${item.alt}`}
-                />
-              </motion.a>
-            </React.Fragment>
-          ))} */}
         </div>
 
         {/* content */}
