@@ -4,9 +4,9 @@ import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 import { BsArrowRightCircle } from "react-icons/bs";
 
-import { useRef } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import withOurService from "./withOurService";
 
 const serviceList = [
   {
@@ -48,33 +48,22 @@ const serviceList = [
 ];
 
 export const OurService = () => {
-  const [ref, inView] = useInView();
-
-  const headingAnimation = {
-    hidden: { opacity: 0  }, // Fade in from left
-    visible: { opacity: 1 },
-  };
-
- 
   return (
     <section className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutralVariant-1000 ">
-      <div ref={ref} className="max-w-[1440px] m-auto">
+      <div  className="max-w-[1440px] m-auto">
         {/* title */}
         <motion.div
         
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={headingAnimation}
-          transition={{ duration: 0.8 }}
+         
           className="flex items-center flex-col mb-16"
         >
-          <h2 className="text-xl md:text-4xl font-semibold flex mb-7 text-center">
-            <span className="text-primary-100 border-b-2 border-primary-100 ">
-              SERVICES
+          <h2 className="text-2xl md:text-5xl font-semibold flex mb-7 text-center">
+            <span className="text-white border-b-2 border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
+              Services.
             </span>
           </h2>
           <Paragraph
-            className={`lg:max-w-[1000px] text-base sm:text-md text-white text-center font-light `}
+            className={`lg:max-w-[1000px] text-base sm:text-md text-gray-400 text-center font-light `}
           >
             {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision
@@ -87,17 +76,17 @@ export const OurService = () => {
 
         {/* card */}
 
-        <div className="flex flex-wrap justify-center gap-5">
+        <div className="flex flex-wrap justify-center gap-7 ">
           {serviceList.map((service: any) => (
             <React.Fragment key={service.name}>
-              <div className="relative sm:w-[45%]  lg:w-[30%] max-w-[425px] border-2 border-neutral-500 min-h-[500px] p-6 rounded-xl overflow-hidden">
-                <h3 className="relative text-3xl font-semibold h-[135px] text-white flex items-center justify-between">
-                  <span className="max-w-[310px]">{service.name}</span>
-                  <span>
+              <div className="relative sm:w-[45%] lg:w-[30%] max-w-[425px] border border-primary-100  min-h-[500px] p-6 rounded-lg overflow-hidden shadow-[5px_5px_0px_0px_rgba(233,251,100)]">
+                <h3 className="relative text-4xl font-semibold h-[135px] text-white flex items-center justify-between">
+                  <span className="max-w-[310px] text-transparent bg-clip-text bg-gradient-to-r to-primary-100 from-secondary-100">{service.name}</span>
+                  {/* <span>
                     <BsArrowRightCircle />
-                  </span>
+                  </span> */}
                 </h3>
-                <p className="text-white h-[150px] mb-5 flex items-start text-base sm:text-lg font-light">
+                <p className="text-secondary-400  h-[100px] mb-5 flex items-start text-base sm:text-md font-light">
                   {service.detail}
                 </p>
                 <img
@@ -113,3 +102,6 @@ export const OurService = () => {
     </section>
   );
 };
+
+const WrappedComponent = withOurService(OurService);
+export default WrappedComponent;
