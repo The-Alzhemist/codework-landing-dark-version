@@ -39,12 +39,12 @@ export const OurProject = () => {
           className="flex items-center flex-col mb-16 ease-out"
         >
           <h2 className="text-lg md:text-4xl font-semibold flex mb-7 text-center">
-            <span className="text-primary-100 border-b-2 border-primary-100 ">
-              PROJECTS
+          <span className="text-white border-b-2 border-primary-100 underline underline-offset-3  decoration-8 decoration-primary-100">
+              Projects.
             </span>
           </h2>
           <Paragraph
-            className={`lg:max-w-[1000px] text-base sm:text-md  text-white text-center font-light `}
+            className={`lg:max-w-[1000px] text-base sm:text-md  text-gray-400  text-center font-light `}
           >
             {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision

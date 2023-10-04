@@ -44,12 +44,12 @@ export const OurPartner = () => {
           className="flex flex-col items-center transition-all "
         >
           <h2 className="text-xl md:text-4xl font-semibold flex mb-7">
-            <span className="text-primary-100 border-b-2 border-primary-100 ">
-              PARTNERS
+          <span className="text-white border-b-2 border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
+              Partner.
             </span>
           </h2>
           <Paragraph
-            className={`lg:max-w-[1000px] text-base sm:text-md font-light text-white text-center`}
+            className={`lg:max-w-[1000px] text-base sm:text-md font-light text-gray-400 text-center`}
           >
             {`At CodeWork, we believe in the power of collaboration. That's why we've teamed up with industry-leading partners who share our vision for innovation and excellence. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our network of trusted partners who help us deliver the technology solutions you can rely on.`}
           </Paragraph>
