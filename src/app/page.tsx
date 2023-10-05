@@ -38,12 +38,12 @@ export default function Home() {
     <QueryClientProvider client={queryClient}>
     <main className={`mt-[70px] ${poppinsFont.className}`}>
       <HeroSectionCopy/>
-      <HeroSection/>
+      {/* <HeroSection/> */}
       <OurPartner/>
       <OurService/>
       <OurProject/>
       <ContactHomeSection/>
-      <GimmickSection/>
+      {/* <GimmickSection/> */}
       {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />} 
     </main>
     </QueryClientProvider>

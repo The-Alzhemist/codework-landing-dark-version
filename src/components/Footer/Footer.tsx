@@ -1,10 +1,38 @@
-import React from "react";
+"use client"
+
+import React, { useEffect, useRef } from "react";
 import withFooter from "./withFooter";
 import { FooterMenuItem, FooterProps } from "./interface";
 import Link from "next/link";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap";
+// เปิดใช้งาน ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 const Footer = (props: FooterProps) => {
-  const { fontPrompt, footerMenu } = props;
+  const { footerMenu } = props;
+
+  const footerLeft = useRef<HTMLDivElement | null>(null);
+  const footerRight = useRef<HTMLDivElement | null>(null);
+  const pref = useRef<HTMLDivElement | null>(null);
+  const divBtnRef = useRef<HTMLDivElement | null>(null);
+  const root = useRef<any>(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(footerLeft.current, {opacity:0, delay: 0, x:-50, duration:3, ease: "power4", scrollTrigger: {
+        trigger: footerLeft.current,
+        toggleActions: "restart none none none",
+        
+      } });
+      gsap.from(footerRight.current, {opacity:0, delay: 0, x:50, duration:3, ease: "power4", scrollTrigger: {
+        trigger: footerRight.current,
+        toggleActions: "restart none none none",
+      } });
+    }, root);
+
+    return () => ctx.revert();
+  },[]);
 
   return (
     <footer className="bg-neutral-1000 text-white">
@@ -12,7 +40,7 @@ const Footer = (props: FooterProps) => {
         className={` font-prompt relative md:py-[50px]  mx-auto p-5 lg:px-[50px] flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-y-0 `}
       >
         {/* left */}
-        <div className="w-full lg:w-1/2">
+        <div className="w-full lg:w-1/2" ref={footerLeft}>
           <div className="font-light">{footerMenu.footerLeft.companyName}</div>
           <div className="font-light">{footerMenu.footerLeft.companyAddress}</div>
           <div className="font-light">Email: {footerMenu.footerLeft.companyEmail}</div>
@@ -24,7 +52,7 @@ const Footer = (props: FooterProps) => {
 
         {/* right */}
       
-        <div className="w-full lg:w-1/2 flex flex-col gap-y-5">
+        <div className="w-full lg:w-1/2 flex flex-col gap-y-5" ref={footerRight}>
             {/* Row:1 */}
           <div className="w-full flex">
             {footerMenu.footerRight
