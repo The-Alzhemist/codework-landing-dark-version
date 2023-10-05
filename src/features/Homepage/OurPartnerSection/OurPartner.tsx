@@ -2,17 +2,58 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { ourPartnerSectionText } from "@/constants/homePage/ourPartnerText";
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useLayoutEffect, useRef } from "react";
 import withOurPartner from "./withOurPartner";
 import { OurPartnerProps } from "./interface";
 import { useInView } from "react-intersection-observer";
+import { ScrollTrigger } from "gsap/ScrollTrigger"
+import { gsap } from "gsap";
+// เปิดใช้งาน ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
 
 const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
-  const [ref, inView] = useInView(); 
+
+  const h1Ref = useRef<HTMLDivElement | null>(null);
+  const pref = useRef<HTMLDivElement | null>(null);
+  const divBtnRef = useRef<HTMLDivElement | null>(null);
+  const root = useRef<any>(null);
+
+  useEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(h1Ref.current, { duration:1, y: 10, delay: 0, ease: "power4", stagger: 0.25, scrollTrigger: {
+        trigger: h1Ref.current,
+        markers: true,
+        scrub: 1,
+        pin: true,
+        toggleActions: "restart pause resume none",
+        
+      } });
+      gsap.from(pref.current, { opacity: 0, y: 10, duration:1, delay: .7, ease: "power4", stagger: 0.25,  scrollTrigger: {
+        trigger: pref.current,
+        markers: true,
+        scrub: 1,
+        toggleActions: "restart pause resume none",
+        
+      } });
+      gsap.from(divBtnRef.current, { opacity: 0, y:100,  duration:3, delay: 3, ease: "power4", stagger: 0.25, scrollTrigger: {
+        trigger: divBtnRef.current,
+        markers: true,
+        scrub: 1,
+        toggleActions: "restart pause resume none",
+        
+      } });
+    }, root);
+
+    return () => ctx.revert();
+  },[]);
+
+  
+
+
   return (
-    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutralVariant-1000">
-      <motion.div
-        ref={ref}
+    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutralVariant-1000"  ref={root}>
+      <div
+        ref={root}
         className={`
         } flex flex-col-reverse  items-center justify-center gap-10 items-center m-auto`}
       >
@@ -20,29 +61,28 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
         <div className="flex flex-wrap justify-center gap-5 max-w-[1000px]"></div>
 
         {/* content */}
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={headingAnimation}
-          transition={{ duration: 0.8 }}
-          className="flex flex-col items-center transition-all "
+        <div
+          className="flex flex-col items-center transition-all"
         >
-          <h2 className="text-2xl md:text-4xl font-semibold flex mb-7">
+          <h2 className="text-2xl md:text-4xl font-semibold flex mb-7" ref={h1Ref}>
             <span className="text-white border-b-2 border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
               Partner.
             </span>
           </h2>
+          <div ref={pref}>
           <Paragraph
             className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-gray-400 text-center`}
           >
             {`At CodeWork, we believe in the power of collaboration. That's why we've teamed up with industry-leading partners who share our vision for innovation and excellence. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our network of trusted partners who help us deliver the technology solutions you can rely on.`}
           </Paragraph>
-        </motion.div>
-      </motion.div>
+          </div>
+         
+        </div>
+      </div>
 
       <>
         {/* logo */}
-        <div className=" overflow-hidden  whitespace-nowrap relative group ">
+        <div ref={divBtnRef} className=" overflow-hidden  whitespace-nowrap relative group ">
           {/* img-slide */}
           <ul className="inline-block animate-scroll group-hover:pause mr-10">
             {/* img */}
@@ -50,11 +90,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
               {ourPartnerSectionText.imagesList.map(
                 (item: any, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
-                    <motion.a
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      variants={headingAnimation}
-                      transition={{ duration: 0.8 }}
+                    <a
                       className="grayscale group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
                       href={item.urlName}
                       target="_blank"
@@ -67,7 +103,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
                         className={`h-auto w-[90%] p-3 ${item.className}`}
                         alt={`${item.alt}`}
                       />
-                    </motion.a>
+                    </a>
                   </React.Fragment>
                 )
               )}
@@ -80,11 +116,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
               {ourPartnerSectionText.imagesList.map(
                 (item: any, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
-                    <motion.a
-                      initial="hidden"
-                      animate={inView ? "visible" : "hidden"}
-                      variants={headingAnimation}
-                      transition={{ duration: 0.8 }}
+                    <a
                       className="grayscale group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
                       href={item.urlName}
                       target="_blank"
@@ -97,12 +129,13 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
                         className={`h-auto w-[90%] p-3 ${item.className}`}
                         alt={`${item.alt}`}
                       />
-                    </motion.a>
+                    </a>
                   </React.Fragment>
                 )
               )}
             </div>
           </ul>
+
         </div>
       </>
     </section>
