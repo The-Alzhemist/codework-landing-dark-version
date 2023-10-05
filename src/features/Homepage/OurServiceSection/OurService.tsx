@@ -63,7 +63,7 @@ export const OurService = () => {
             </span>
           </h2>
           <Paragraph
-            className={`lg:max-w-[1000px] text-base sm:text-md text-gray-400 text-center font-light `}
+            className={`lg:max-w-[1000px] text-sm sm:text-md text-gray-400 text-center font-light `}
           >
             {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision

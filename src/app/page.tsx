@@ -4,7 +4,7 @@ import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
 import { GimmickSection } from "@/features/GimmickSection/GimmickSection";
 import ContactHomeSection from "@/features/Homepage/ContactHomeSection/ContactHomeSection";
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
-import { OurPartner } from "@/features/Homepage/OurPartnerSection/OurPartner";
+import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 import { OurService } from "@/features/Homepage/OurServiceSection/OurService";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
