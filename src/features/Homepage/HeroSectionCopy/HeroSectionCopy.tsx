@@ -19,16 +19,18 @@ const HeroSectionCopy = ({
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(".xxx", { rotation: "+=360" });
+      gsap.from(h1Ref.current, { opacity: 0, y: 200, delay: .5, ease: "slowMo" });
+      gsap.from(pref.current, { opacity: 0, y: 200, delay: .7, ease: "slowMo" });
+      gsap.from(divBtnRef.current, { opacity: 0, y: 200, delay: .8, ease: "slowMo" });
     }, root);
-
+  
     return () => ctx.revert();
   }, []);
 
-
   return (
     <section
-      className={`relative  md:py-[50px] mx-auto px-5 lg:px-[50px]  custom-bg `} ref={root}
+      className={`relative  md:py-[50px] mx-auto px-5 lg:px-[50px]  custom-bg `}
+      ref={root}
     >
       <div className="relative flex w-full max-w-[1440px] m-auto">
         <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col justify-center sm:p-0">
