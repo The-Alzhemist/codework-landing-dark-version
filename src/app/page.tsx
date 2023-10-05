@@ -4,6 +4,7 @@ import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
 import { GimmickSection } from "@/features/GimmickSection/GimmickSection";
 import ContactHomeSection from "@/features/Homepage/ContactHomeSection/ContactHomeSection";
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
+import HeroSectionCopy from "@/features/Homepage/HeroSectionCopy/HeroSectionCopy";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 import { OurService } from "@/features/Homepage/OurServiceSection/OurService";
@@ -36,6 +37,7 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
     <main className={`mt-[70px] ${poppinsFont.className}`}>
+      <HeroSectionCopy/>
       <HeroSection/>
       <OurPartner/>
       <OurService/>
