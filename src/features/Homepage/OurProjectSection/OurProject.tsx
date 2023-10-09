@@ -57,50 +57,27 @@ export const OurProject = () => {
 
         {/* card */}
 
-        <div className="flex flex-wrap justify-center gap-5">
-          {serviceList.map((service: any, index: number) => (
-            <React.Fragment key={service.name}>
-              <motion.div
-           
-                initial="hidden"
-                animate={inView ? "visible" : "hidden"}
-                variants={projectListAnimation}
-                transition={{ duration: 1 }}
-                className={`relative flex  flex-col ${
-                  index % 2 === 0 ? "sm:flex-row" : "sm:flex-row-reverse"
-                } gap-x-7  bg-[#172D27]  p-6 rounded-x rounded-2xl`}
-              >
-                {/* content */}
-                <div className={`flex flex-col justify-center sm:w-2/5 `}>
-                  <h3 className="relative text-3xl sm:text-5xl font-semibold  text-[#59ADA0] flex items-center justify-between mb-5">
-                    <span className="">{service.name}</span>
-                  </h3>
-                  <p className="text-white flex items-center text-base sm:text-lg font-light mb-14">
-                    {service.detail}
-                  </p>
-
-                  <div className="flex justify-end items-center text-white text-base sm:text-lg gap-x-2">
-                    <span>See more </span>
-                    <span className="text-2xl">
-                      <BsArrowRightCircle />
-                    </span>
-                  </div>
-                </div>
-
-                {/* img */}
-                <div
-                  className={`sm:w-3/5 p-3 sm:p-10 bg-gradient-to-t  from-[#59ADA0]  via-[#172D27] rounded-md mb-5`}
-                >
-                  <img
-                    className="rounded-md max-w"
-                    src="/images/computer-bg.jpeg"
+        <div className="flex flex-wrap justify-center gap-5 max-w-[1000px] m-auto ">
+            <div className="bg-neutral-950-750 w-full rounded-2xl  border-slate-500   border-2 overflow-hidden">
+              {/* img */}
+               <div className="flex justify-center w-full h-[300px]  rounded-t-xl overflow-hidden mt-10  px-5 ">
+               <img
+                    src="/images/seamoor.png"
                     alt=""
+                    className="rounded-t-3xl border-t-[10px]  border-l-[10px]  border-r-[10px] border-[#59ADA0]"
+
                   />
-                </div>
-              </motion.div>
-            </React.Fragment>
-          ))}
+               </div>
+
+               {/* text */}
+               <div className=" text-slate-400 p-7 border-t-2  border-dashed text  border-slate-500">
+                <h2 className="text-3xl ">Seamoor marine</h2>
+                <p className="font-light ">Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.</p>
+               </div>
+            </div>
         </div>
+
+        
       </div>
     </section>
   );

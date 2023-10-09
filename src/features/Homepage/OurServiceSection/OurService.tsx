@@ -2,10 +2,8 @@
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
-import { BsArrowRightCircle } from "react-icons/bs";
 
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 import withOurService from "./withOurService";
 
 const serviceList = [
@@ -57,7 +55,7 @@ export const OurService = () => {
          
           className="flex items-center flex-col mb-16"
         >
-          <h2 className="text-2xl md:text-5xl font-semibold flex mb-7 text-center">
+          <h2 className="text-2xl md:text-4xl font-semibold flex mb-7 text-center">
             <span className="text-white border-b-2 border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
               Services.
             </span>
@@ -79,18 +77,15 @@ export const OurService = () => {
         <div className="flex flex-wrap justify-center gap-7 ">
           {serviceList.map((service: any) => (
             <React.Fragment key={service.name}>
-              <div className="relative sm:w-[45%] lg:w-[30%] max-w-[425px] border border-primary-100  min-h-[500px] p-6 rounded-lg overflow-hidden shadow-[5px_5px_0px_0px_rgba(233,251,100)]">
-                <h3 className="relative text-4xl font-semibold h-[135px] text-white flex items-center justify-between">
+              <div className="relative sm:w-[45%] lg:w-[30%] max-w-[425px] border border-primary-50 hover:border-primary-100  min-h-[500px] p-6 rounded-lg overflow-hidden cursor-pointer transition-all duration-3 hover:shadow-[5px_5px_0px_0px_rgba(233,251,100,1)] group">
+                <h3 className="relative  text-xl sm:text-4xl font-semibold h-[135px] text-white flex items-center justify-between">
                   <span className="max-w-[310px] text-transparent bg-clip-text bg-gradient-to-r to-primary-100 from-secondary-100">{service.name}</span>
-                  {/* <span>
-                    <BsArrowRightCircle />
-                  </span> */}
                 </h3>
-                <p className="text-secondary-400  h-[100px] mb-5 flex items-start text-base sm:text-md font-light">
+                <p className="text-secondary-400  h-[100px] mb-5 flex items-start text-sm sm:text-md font-light">
                   {service.detail}
                 </p>
                 <img
-                  className="relative bottom-[-40px] rounded-md"
+                  className="relative bottom-[-40px] transition-all duration-100 rounded-md grayscale group-hover:grayscale-0"
                   src={service.image}
                   alt=""
                 />

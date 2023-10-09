@@ -14,8 +14,8 @@ export const metadata: Metadata = {
   openGraph: {
     title: "CodeWork Tech | Contact Us",
   description: "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
-    url: 'https://codework-tech.com/contact-us',
-    siteName: 'https://codework-tech.com/contact-us',
+    url: '',
+    siteName: '',
     images: [
       {
         url: '/logo/meta/metatag-contact-us.png',

@@ -4,10 +4,10 @@ import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
 import { GimmickSection } from "@/features/GimmickSection/GimmickSection";
 import ContactHomeSection from "@/features/Homepage/ContactHomeSection/ContactHomeSection";
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
-import HeroSectionCopy from "@/features/Homepage/HeroSectionCopy/HeroSectionCopy";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
-import { OurProjectCopy } from "@/features/Homepage/OurProjectSection copy/OurProject";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
+
+
 import { OurService } from "@/features/Homepage/OurServiceSection/OurService";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
@@ -38,12 +38,12 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
     <main className={`mt-[70px] ${poppinsFont.className}`}>
-      <HeroSectionCopy/>
+      <HeroSection/>
       {/* <HeroSection/> */}
       <OurPartner/>
       <OurService/>
       {/* <OurProject/> */}
-      <OurProjectCopy/>
+      <OurProject/>
       <ContactHomeSection/>
       {/* <GimmickSection/> */}
       {/* {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}  */}
