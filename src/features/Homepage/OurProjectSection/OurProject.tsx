@@ -1,9 +1,8 @@
 "use client";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
-import { motion } from "framer-motion";
 import React from "react";
-import { BsArrowRightCircleFill, BsArrowRightCircle } from "react-icons/bs";
-import { useInView } from "react-intersection-observer";
+import withOurProject from "./withOurPoject";
+
 
 const serviceList = [
   {
@@ -14,28 +13,13 @@ const serviceList = [
 ];
 
 export const OurProject = () => {
-  const [ref, inView] = useInView();
-
-  const headingAnimation = {
-    hidden: { opacity: 0 }, // Fade in from left
-    visible: { opacity: 1 },
-  };
-
-  const projectListAnimation = {
-    hidden: { opacity: 0, y: -50  }, // Fade in from left
-    visible: { opacity: 1, y: 0},
-  };
 
   return (
     <section className="relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutralVariant-1000 ">
-      <div ref={ref} className=" m-auto max-w-[1440px]">
+      <div className=" m-auto max-w-[1440px]">
         {/* title */}
-        <motion.div
-       
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={headingAnimation}
-          transition={{ duration: 3 }}
+        <div
+      
           className="flex items-center flex-col mb-16 ease-out"
         >
           <h2 className="text-lg md:text-4xl font-semibold flex mb-7 text-center">
@@ -53,7 +37,7 @@ export const OurProject = () => {
             network of trusted partners who help us deliver the technology
             solutions you can rely on.`}
           </Paragraph>
-        </motion.div>
+        </div>
 
         {/* card */}
 
@@ -82,3 +66,7 @@ export const OurProject = () => {
     </section>
   );
 };
+
+
+const WrappedComponent = withOurProject(OurProject);
+export default WrappedComponent;
