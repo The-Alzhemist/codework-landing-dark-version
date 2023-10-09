@@ -20,12 +20,12 @@ const Footer = (props: FooterProps) => {
 
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(footerLeft.current, {opacity:0, delay: 0, x:-50, duration:3, ease: "power4", scrollTrigger: {
+      gsap.from(footerLeft.current, {opacity:0, delay: 0, y:-50, duration:3, ease: "power4", scrollTrigger: {
         trigger: footerLeft.current,
         toggleActions: "restart none none none",
         
       } });
-      gsap.from(footerRight.current, {opacity:0, delay: 0, x:50, duration:3, ease: "power4", scrollTrigger: {
+      gsap.from(footerRight.current, {opacity:0, delay: 0, y:50, duration:3, ease: "power4", scrollTrigger: {
         trigger: footerRight.current,
         toggleActions: "restart none none none",
       } });

@@ -6,6 +6,7 @@ import ContactHomeSection from "@/features/Homepage/ContactHomeSection/ContactHo
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import HeroSectionCopy from "@/features/Homepage/HeroSectionCopy/HeroSectionCopy";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
+import { OurProjectCopy } from "@/features/Homepage/OurProjectSection copy/OurProject";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 import { OurService } from "@/features/Homepage/OurServiceSection/OurService";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
@@ -41,10 +42,11 @@ export default function Home() {
       {/* <HeroSection/> */}
       <OurPartner/>
       <OurService/>
-      <OurProject/>
+      {/* <OurProject/> */}
+      <OurProjectCopy/>
       <ContactHomeSection/>
       {/* <GimmickSection/> */}
-      {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />} 
+      {/* {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}  */}
     </main>
     </QueryClientProvider>
   );

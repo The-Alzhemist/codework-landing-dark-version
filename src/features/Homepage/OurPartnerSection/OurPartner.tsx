@@ -22,7 +22,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
     let ctx = gsap.context(() => {
       gsap.from(h1Ref.current, { duration:1, y: 10, delay: 0, ease: "power4", stagger: 0.25, scrollTrigger: {
         trigger: h1Ref.current,
-        markers: true,
+        markers: false,
         scrub: 1,
         pin: true,
         toggleActions: "restart pause resume none",
@@ -30,14 +30,14 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
       } });
       gsap.from(pref.current, { opacity: 0, y: 10, duration:1, delay: .7, ease: "power4", stagger: 0.25,  scrollTrigger: {
         trigger: pref.current,
-        markers: true,
+        markers: false,
         scrub: 1,
         toggleActions: "restart pause resume none",
         
       } });
       gsap.from(divBtnRef.current, { opacity: 0, y:100,  duration:3, delay: 3, ease: "power4", stagger: 0.25, scrollTrigger: {
         trigger: divBtnRef.current,
-        markers: true,
+        markers: false,
         scrub: 1,
         toggleActions: "restart pause resume none",
         
