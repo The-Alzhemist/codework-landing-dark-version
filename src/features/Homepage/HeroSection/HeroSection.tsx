@@ -51,6 +51,7 @@ const HeroSection = ({
         duration: 10,
         delay: 1,
         yoyo:true,
+        ease: "power4",
         repeat: -1
       })
 
@@ -64,9 +65,9 @@ const HeroSection = ({
       className={`relative  md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000`}
       ref={root}
     >
-      <div className="overflow-hidden flex justify-center items-center z-30" ref={circle}>
-      <BackgroundGradientBlur className="top-[-200px] left-[-200px]  z-10 opacity-20 scale-100 " />
-      <BackgroundGradientBlur className="bottom-0 right-[-200px] z-10 opacity-20 scale-100 top-0" />
+      <div className="overflow-hidden flex justify-between  items-center z-30" ref={circle}>
+      <BackgroundGradientBlur className="top-0 left-0  z-50 opacity-20 scale-100 overflow-hidden" />
+      <BackgroundGradientBlur className="top-0 right-0 rotate-180  z-50 opacity-20 scale-100 overflow-hidden" />
       </div>
       
 
@@ -76,7 +77,7 @@ const HeroSection = ({
             <div className="text-3xl md:text-6xl mb-3 text-white">
               We can make
             </div>
-            <div className="text-3xl md:text-6xl mb-3  text-white">
+            <div className="text-3xl md:text-6xl mb-3 text-white">
               your <span className="text-primary-100">idea</span> come
               <span className="text-primary-100"> true</span>
             </div>

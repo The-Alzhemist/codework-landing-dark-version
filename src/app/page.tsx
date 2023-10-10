@@ -37,7 +37,7 @@ export default function Home() {
   
   return (
     <QueryClientProvider client={queryClient}>
-    <main className={`mt-[70px] ${poppinsFont.className}`}>
+    <main className={` ${poppinsFont.className}`}>
       <HeroSection/>
       {/* <HeroSection/> */}
       <OurPartner/>

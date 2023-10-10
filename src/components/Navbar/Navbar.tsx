@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 import withNavbar from "./withNavbar";
 import { NavbarRight } from "./components/NavbarRight/NavbarRight";
@@ -34,10 +34,32 @@ const CodeworkTechLogo = () => {
 };
 
 const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (typeof window !== "undefined" && window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    typeof window !== "undefined" &&
+      window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      typeof window !== "undefined" &&
+        window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <>
       <div
-        className={`z-10 fixed h-[70px] top-0 bg-neutral-1000 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center`}
+        className={`${
+          isScrolled
+            ? " fixed bg-neutral-1000"
+            : "absolute bg-transparent"
+        } z-10   p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-300`}
       >
         <div className="text-white cursor-pointer">
           <CodeworkTechLogo />
