@@ -33,45 +33,43 @@ const FormPage = ({
   showModal,
   setShowModal,
 }: WithFormPageProps) => {
-  const titleAnimation = {
-    hidden: { opacity: 1 },
-    visible: {
-      opacity: 1,
-      transition: {
-        delay: 1,
-        staggerChildren: 0.08,
-      },
-    },
-  };
+  // const titleAnimation = {
+  //   hidden: { opacity: 1 },
+  //   visible: {
+  //     opacity: 1,
+  //     transition: {
+  //       delay: 1,
+  //       staggerChildren: 0.08,
+  //     },
+  //   },
+  // };
 
-  const itemAnimation = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-    },
-  };
+  // const itemAnimation = {
+  //   hidden: { opacity: 0, y: 50 },
+  //   visible: {
+  //     opacity: 1,
+  //     y: 0,
+  //   },
+  // };
 
   return (
     <>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={titleAnimation}
+      <div
+     
         className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
-        <motion.h1 className="text-center mb-20 text-white">
-          <motion.div variants={itemAnimation} className="text-2xl font-light">
+        <h1 className="text-center mb-20 text-white">
+          <div  className="text-2xl font-light">
             Wanna talk with us?
-          </motion.div>
-          <motion.div
-            variants={itemAnimation}
+          </div>
+          <div
+            
             className="font-normal inline bg-line text-3xl md:text-5xl text-primary-100"
           >
             Contact us
-          </motion.div>
-        </motion.h1>
-        <motion.form     variants={itemAnimation}  onSubmit={handleSubmit(onSubmit)}>
+          </div>
+        </h1>
+        <form  onSubmit={handleSubmit(onSubmit)}>
           {/* row 1 */}
           <div className="text-white">
             <TextAreaField
@@ -289,7 +287,7 @@ const FormPage = ({
               </div>
             </ExternalPrimaryButton>
           </div>
-        </motion.form>
+        </form>
 
         <StatusMessage errors={state.errors} />
         <SocialsSection />
@@ -314,7 +312,7 @@ const FormPage = ({
             </div>
           </div>
         </Modal>
-      </motion.div>
+      </div>
     </>
   );
 };

@@ -29,13 +29,13 @@ export const NavbarLeft = () => {
 
   return (
     <>
-      <div className="flex flex-col  gap-y-5">
+      <div className="flex flex-col  gap-y-7">
         {menuList.map((menu: any) => (
           <React.Fragment key={menu}>
             <motion.div
               whileHover={{ x: 50 }}
               variants={itemVariants}
-              className="text-white hover:text-primary-500 text-2xl sm:text-5xl font-bold cursor-pointer"
+              className="text-neutral-900 hover:text-neutral-500 text-3xl sm:text-5xl font-bold cursor-pointer"
             >
               {menu.name}
             </motion.div>

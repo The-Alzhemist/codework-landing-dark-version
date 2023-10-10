@@ -51,7 +51,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
 
 
   return (
-    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutralVariant-1000"  ref={root}>
+    <section className="relative py-12  md:py-[100px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000"  ref={root}>
       <div
         ref={root}
         className={`
@@ -65,7 +65,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
           className="flex flex-col items-center transition-all"
         >
           <h2 className="text-2xl md:text-4xl font-semibold flex mb-7" ref={h1Ref}>
-            <span className="text-white border-b-2 border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
+            <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
               Partner.
             </span>
           </h2>

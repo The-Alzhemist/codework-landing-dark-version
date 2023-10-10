@@ -37,9 +37,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
   return (
     <>
       <div
-        className={`z-10 fixed h-[70px] top-0 ${
-          open ? "bg-neutral-1000" : "bg-neutral-1000"
-        } p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center`}
+        className={`z-10 fixed h-[70px] top-0 bg-neutral-1000 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center`}
       >
         <div className="text-white cursor-pointer">
           <CodeworkTechLogo />
@@ -58,14 +56,14 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
             <motion.aside
               initial={{ height: 0 }}
               animate={{
-                height: "100vh",
+                height: 500,
                 transition: { delay: 0, duration: 0.3 },
               }}
               exit={{
                 height: 0,
                 transition: { delay: 0.7, duration: 0.3 },
               }}
-              className="bg-neutral-1000  flex flex-col"
+              className="bg-neutral-200  flex flex-col"
             >
               {/* nav */}
               <motion.div
@@ -76,10 +74,24 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 variants={itemVariants}
               >
                 <motion.div className="text-white" whileHover={{ scale: 1.02 }}>
-                  <CodeworkTechLogo />
+                  <Link href="/">
+                    <picture>
+                      <source
+                        srcSet="/logo/codework-dark-logo-1x.webp"
+                        type="image/webp"
+                      />
+                      <img
+                        src="/logo/codework-dark-logo-1x.webp"
+                        alt="codework tech logo"
+                        title="codework tech logo"
+                        loading="lazy"
+                        className="w-auto h-4"
+                      />
+                    </picture>
+                  </Link>
                 </motion.div>
                 <motion.div
-                  className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-600 rounded-full p-2 "
+                  className="text-2xl text-neutral-800 cursor-pointer hover:bg-neutral-400 rounded-full p-2 "
                   whileHover={{ scale: 1.02 }}
                   onClick={handleButtonClick}
                 >
