@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import withOurPartner from "./withOurPartner";
 import { OurPartnerProps } from "./interface";
-import { useInView } from "react-intersection-observer";
 import { ScrollTrigger } from "gsap/ScrollTrigger"
 import { gsap } from "gsap";
 // เปิดใช้งาน ScrollTrigger
