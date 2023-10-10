@@ -4,10 +4,10 @@ import React, { useEffect, useLayoutEffect, useRef } from "react";
 import withFooter from "./withFooter";
 import { FooterMenuItem, FooterProps } from "./interface";
 import Link from "next/link";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import { gsap } from "gsap";
-// เปิดใช้งาน ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+
+
 
 const Footer = (props: FooterProps) => {
   const { footerMenu } = props;
@@ -16,10 +16,12 @@ const Footer = (props: FooterProps) => {
   const footerRight = useRef<HTMLDivElement | null>(null);
   const root = useRef<any>(null);
 
+  const isMobile = typeof window !== "undefined" && window.innerWidth <= 500 ? true : false
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from(footerLeft.current, {
-        x: 50,
+        x: isMobile ? 10 : 50,
         opacity: 0,
         duration: 2,
         ease: "Power4.easeInOut",
@@ -30,7 +32,7 @@ const Footer = (props: FooterProps) => {
         },
       })
       gsap.from(footerRight.current, {
-        x: -50,
+        x: isMobile ? -10 : -50,
         opacity: 0,
         duration: 2,
         ease: "Power4.easeInOut",

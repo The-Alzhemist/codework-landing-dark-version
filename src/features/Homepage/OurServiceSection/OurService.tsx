@@ -108,13 +108,13 @@ export const OurService = () => {
         <div className="flex flex-wrap justify-center gap-7" ref={divBtnRef}>
           {serviceList.map((service: any) => (
             <React.Fragment key={service.name}>
-              <div className="relative sm:w-[45%] lg:w-[30%] max-w-[425px] border border-primary-50 hover:border-primary-100  min-h-[500px] p-6 rounded-lg overflow-hidden cursor-pointer transition-all duration-3 hover:shadow-[5px_5px_0px_0px_rgba(233,251,100,1)] group">
-                <h3 className="relative  text-xl sm:text-4xl font-semibold h-[135px] text-white flex items-center justify-between">
+              <div className="relative sm:w-[45%] lg:w-[30%] max-w-[425px] border border-primary-50 hover:border-primary-100  min-h-auto sm:min-h-[500px] p-6 rounded-lg overflow-hidden cursor-pointer transition-all duration-3 hover:shadow-[5px_5px_0px_0px_rgba(233,251,100,1)] group">
+                <h3 className="relative  text-xl sm:text-4xl font-semibold h-[70px] sm:h-[135px] text-white flex items-center justify-between">
                   <span className="max-w-[310px] text-transparent bg-clip-text bg-gradient-to-r to-primary-100 from-secondary-100">
                     {service.name}
                   </span>
                 </h3>
-                <p className="text-secondary-400  h-[100px] mb-5 flex items-start text-sm sm:text-md font-light">
+                <p className="text-secondary-400 h-[50px] sm:h-[100px] mb-5 flex items-start text-sm sm:text-md font-light">
                   {service.detail}
                 </p>
                 <img

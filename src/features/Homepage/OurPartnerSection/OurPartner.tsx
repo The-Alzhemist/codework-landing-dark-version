@@ -85,7 +85,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
           {/* img-slide */}
           <ul className="inline-block animate-scroll group-hover:pause mr-10">
             {/* img */}
-            <div className="flex gap-x-10">
+            <div className="flex gap-x-5 sm:gap-x-10">
               {ourPartnerSectionText.imagesList.map(
                 (item: any, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
@@ -111,7 +111,7 @@ const OurPartner = ({ headingAnimation }: OurPartnerProps) => {
 
           <ul className="inline-block animate-scroll group-hover:pause">
             {/* img */}
-            <div className="flex gap-x-10">
+            <div className="flex  gap-x-5 sm:gap-x-10">
               {ourPartnerSectionText.imagesList.map(
                 (item: any, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
