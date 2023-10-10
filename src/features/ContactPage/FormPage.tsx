@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useLayoutEffect, useRef, useState } from "react";
 
 import { SELECTED_OPTION_LIST } from "@/constants/contactPage/constants";
 import withFormPage from "./withFormPage";
@@ -19,7 +19,9 @@ import Modal from "@/components/Modal/Modal";
 
 import { CgSpinner } from "react-icons/cg";
 import { BiCheckCircle } from "react-icons/bi";
-import { motion } from "framer-motion";
+
+import { gsap } from "gsap";
+
 
 const FormPage = ({
   handleSubmit,
@@ -33,32 +35,48 @@ const FormPage = ({
   showModal,
   setShowModal,
 }: WithFormPageProps) => {
-  // const titleAnimation = {
-  //   hidden: { opacity: 1 },
-  //   visible: {
-  //     opacity: 1,
-  //     transition: {
-  //       delay: 1,
-  //       staggerChildren: 0.08,
-  //     },
-  //   },
-  // };
 
-  // const itemAnimation = {
-  //   hidden: { opacity: 0, y: 50 },
-  //   visible: {
-  //     opacity: 1,
-  //     y: 0,
-  //   },
-  // };
+  const h1Tag = useRef<HTMLDivElement | null>(null);
+  const formTag = useRef<HTMLFormElement | null>(null);
+  const root = useRef<any>(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.from(h1Tag.current, {
+        x: 50,
+        opacity: 0,
+        duration: 2,
+        ease: "Power4.easeInOut",
+        scrollTrigger: {
+          trigger: h1Tag.current,
+          markers: true,
+          toggleActions: "restart none none none"
+        },
+      })
+      gsap.from(formTag.current, {
+        x: -50,
+        opacity: 0,
+        duration: 2,
+        ease: "Power4.easeInOut",
+        scrollTrigger: {
+          trigger: formTag.current,
+          markers: true,
+          toggleActions: "restart none none none"
+        },
+      });
+    }, root);
+
+    return () => ctx.revert();
+  }, []);
+
 
   return (
     <>
       <div
-     
+      ref={root}
         className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
-        <h1 className="text-center mb-20 text-white">
+        <h1 className="text-center mb-20 text-white" ref={h1Tag}>
           <div  className="text-2xl font-light">
             Wanna talk with us?
           </div>
@@ -69,7 +87,7 @@ const FormPage = ({
             Contact us
           </div>
         </h1>
-        <form  onSubmit={handleSubmit(onSubmit)}>
+        <form  onSubmit={handleSubmit(onSubmit)} ref={formTag}>
           {/* row 1 */}
           <div className="text-white">
             <TextAreaField
