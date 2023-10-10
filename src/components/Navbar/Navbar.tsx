@@ -63,7 +63,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 height: 0,
                 transition: { delay: 0.7, duration: 0.3 },
               }}
-              className="bg-neutral-200  flex flex-col"
+              className="bg-white  flex flex-col"
             >
               {/* nav */}
               <motion.div

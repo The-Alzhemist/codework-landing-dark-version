@@ -27,7 +27,7 @@ const Footer = (props: FooterProps) => {
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: footerLeft.current,
-          markers: true,
+          markers: false,
           toggleActions: "restart none none none"
         },
       })
@@ -38,7 +38,7 @@ const Footer = (props: FooterProps) => {
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: footerRight.current,
-          markers: true,
+          markers: false,
           toggleActions: "restart none none none"
         },
       });

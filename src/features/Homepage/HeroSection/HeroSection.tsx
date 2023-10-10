@@ -7,6 +7,7 @@ import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 
 import { gsap } from "gsap";
 import withHeroSection from "./withHeroSection";
+import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 
 const HeroSection = ({
   containerAnimation,
@@ -16,15 +17,45 @@ const HeroSection = ({
   const pref = useRef<HTMLDivElement | null>(null);
   const divBtnRef = useRef<HTMLDivElement | null>(null);
 
+  const circle =  useRef<HTMLDivElement | null>(null);
   const root = useRef<any>(null);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.from(h1Ref.current, { opacity: 0, y: 200, duration:1, delay: .5, ease: "power4", stagger: 0.25 });
-      gsap.from(pref.current, { opacity: 0, y: 200, duration:1, delay: .7, ease: "power4", stagger: 0.25 });
-      gsap.from(divBtnRef.current, { opacity: 0, y: 200, duration:1, delay: .9, ease: "power4", stagger: 0.25 });
+      gsap.from(h1Ref.current, {
+        opacity: 0,
+        y: 200,
+        duration: 1,
+        delay: 0.5,
+        ease: "power4",
+        stagger: 0.25,
+      });
+      gsap.from(pref.current, {
+        opacity: 0,
+        y: 200,
+        duration: 1,
+        delay: 0.7,
+        ease: "power4",
+        stagger: 0.25,
+      });
+      gsap.from(divBtnRef.current, {
+        opacity: 0,
+        y: 200,
+        duration: 1,
+        delay: 0.9,
+        ease: "power4",
+        stagger: 0.25,
+      });
+      gsap.from(circle.current, {
+        opacity: 0,
+        duration: 10,
+        delay: 1,
+        yoyo:true,
+        repeat: -1
+      })
+
     }, root);
-  
+
     return () => ctx.revert();
   }, []);
 
@@ -33,8 +64,14 @@ const HeroSection = ({
       className={`relative  md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000`}
       ref={root}
     >
+      <div className="overflow-hidden flex justify-center items-center z-30" ref={circle}>
+      <BackgroundGradientBlur className="top-[-200px] left-[-200px]  z-10 opacity-20 scale-100 " />
+      <BackgroundGradientBlur className="bottom-0 right-[-200px] z-10 opacity-20 scale-100 top-0" />
+      </div>
+      
+
       <div className="relative flex w-full max-w-[1440px] m-auto">
-        <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col justify-center sm:p-0">
+        <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col items-center text-center justify-center sm:p-0">
           <h1 className="xxx mb-5 md:mb-5 relative font-semibold" ref={h1Ref}>
             <div className="text-3xl md:text-6xl mb-3 text-white">
               We can make

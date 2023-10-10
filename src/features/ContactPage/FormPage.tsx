@@ -49,7 +49,7 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: h1Tag.current,
-          markers: true,
+          markers: false,
           toggleActions: "restart none none none"
         },
       })
@@ -60,7 +60,7 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: formTag.current,
-          markers: true,
+          markers: false,
           toggleActions: "restart none none none"
         },
       });
