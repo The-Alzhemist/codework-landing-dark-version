@@ -3,7 +3,7 @@ import { BgGradientBlueInterface } from "./interface";
 import { twMerge } from "tailwind-merge";
 
 const BackgroundGradientBlur = ({ className }: BgGradientBlueInterface) => {
-  const style = twMerge(`hidden lg:flex absolute -z-10 w-[700px] h-[700px]`, className)
+  const style = twMerge(`flex absolute -z-10  w-[300px] h-[300px] sm:w-[500px] sm:h-[500px]  lg:w-[700px] lg:h-[700px] `, className)
   return (
     <>
         <picture className={style}>

@@ -78,18 +78,13 @@ const HeroSection = ({
       ref={root}
     >
      <div ref={circleLeft}>
-     <BackgroundGradientBlur className="top-[-200px] left-[-200px]      z-50 opacity-20  " />
+     <BackgroundGradientBlur className="top-0 left-[-100px] sm:top-[-200px] sm:left-[-200px]  z-50 opacity-20  " />
 
      </div>
      <div ref={circleRight}>
-     <BackgroundGradientBlur className="top-[200px] right-[-200px]      z-50 opacity-20  " />
+     <BackgroundGradientBlur className="top-[400px] right-[-100px] sm:top-[200px] sm:right-[-200px]      z-50 opacity-20  " />
      </div>
 
-      
-      {/* <BackgroundGradientBlur className="top-0 left-0  border border-yellow-500 z-50 opacity-20 " /> */}
-     
-     
-      
 
       <div className="relative flex w-full max-w-[1440px] m-auto">
         <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col items-center text-center justify-center sm:p-0">
