@@ -10,28 +10,9 @@ import { NavbarProps } from "./interface";
 import { IoMdMenu } from "react-icons/io";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Link from "next/link";
+import { CodeworkTechLogo } from "./components/BrandLogo/BrandLogo";
 
-const CodeworkTechLogo = () => {
-  return (
-    <>
-      <Link href="/">
-        <picture>
-          <source
-            srcSet="/logo/codework-tech-logo-white-transpatent.webp"
-            type="image/webp"
-          />
-          <img
-            src="/logo/codework-tech-logo-white-transpatent.png"
-            alt="codework tech logo"
-            title="codework tech logo"
-            loading="lazy"
-            className="w-auto h-4"
-          />
-        </picture>
-      </Link>
-    </>
-  );
-};
+
 
 const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);

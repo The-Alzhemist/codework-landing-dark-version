@@ -17,7 +17,7 @@ import TagManager from "react-gtm-module";
 import { QueryClient, QueryClientProvider } from "react-query";
 
 const poppinsFont = Poppins({
-  weight: ['100', '300',  '500', '700'],
+  weight: ['100', '300',  '500', '700', '800'],
   subsets: ['latin'],
 })
 

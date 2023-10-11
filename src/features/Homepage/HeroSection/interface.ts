@@ -1,21 +1,11 @@
 
 
 export interface HeroSectionProps {
-    containerAnimation: {
-        hidden: AnimationProperties;
-        visible: AnimationProperties;
-      };
-      itemAnimation: {
-        hidden: AnimationProperties;
-        visible: AnimationProperties;
-      };
+  root: React.RefObject<any>;
+  h1Ref: React.RefObject<HTMLDivElement | null>;
+  pRef: React.RefObject<HTMLDivElement | null>;
+  btnRef: React.RefObject<HTMLDivElement | null>;
+  circleLeftRef: React.RefObject<HTMLDivElement | null>;
+  circleRightRef: React.RefObject<HTMLDivElement | null>;
 }
 
-interface AnimationProperties {
-    opacity: number;
-    y?: number;
-    transition?: {
-      delay?: number;
-      staggerChildren?: number;
-    };
-  }
