@@ -8,11 +8,11 @@ const BackgroundGradientBlur = ({ className }: BgGradientBlueInterface) => {
     <>
         <picture className={style}>
               <source
-                srcSet="/images/bg-blur-50.png"
+                srcSet="/images/bg-blur-200.png"
                 type="image/webp"
               />
               <img
-                src="/images/bg-blur-50.png"
+                src="/images/bg-blur-200.png"
                 alt="bg circle gradient"
                 title="bg circle gradient"
                 loading="lazy"

@@ -59,7 +59,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
           isScrolled
             ? " fixed bg-neutral-1000"
             : "absolute bg-transparent"
-        } z-10   p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-300`}
+        } z-10   p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700  `}
       >
         <div className="text-white cursor-pointer">
           <CodeworkTechLogo />

@@ -17,8 +17,10 @@ const HeroSection = ({
   const pref = useRef<HTMLDivElement | null>(null);
   const divBtnRef = useRef<HTMLDivElement | null>(null);
 
-  const circle =  useRef<HTMLDivElement | null>(null);
   const root = useRef<any>(null);
+  const circleLeft =  useRef<HTMLDivElement | null>(null);
+  const circleRight =  useRef<HTMLDivElement | null>(null);
+
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -46,13 +48,23 @@ const HeroSection = ({
         ease: "power4",
         stagger: 0.25,
       });
-      gsap.from(circle.current, {
+      gsap.from(circleLeft.current, {
         opacity: 0,
-        duration: 10,
+        duration: 5,
         delay: 1,
         yoyo:true,
         ease: "power4",
-        repeat: -1
+        repeat: -1,
+        x: 100
+      })
+      gsap.from(circleRight.current, {
+        opacity: 0,
+        duration: 5,
+        delay: 1,
+        yoyo:true,
+        ease: "power4",
+        repeat: -1,
+        x: -100
       })
 
     }, root);
@@ -62,13 +74,21 @@ const HeroSection = ({
 
   return (
     <section
-      className={`relative  md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000`}
+      className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000`}
       ref={root}
     >
-      <div className="overflow-hidden flex justify-between  items-center z-30" ref={circle}>
-      <BackgroundGradientBlur className="top-0 left-0  z-50 opacity-20 scale-100 overflow-hidden" />
-      <BackgroundGradientBlur className="top-0 right-0 rotate-180  z-50 opacity-20 scale-100 overflow-hidden" />
-      </div>
+     <div ref={circleLeft}>
+     <BackgroundGradientBlur className="top-[-200px] left-[-200px]      z-50 opacity-20  " />
+
+     </div>
+     <div ref={circleRight}>
+     <BackgroundGradientBlur className="top-[200px] right-[-200px]      z-50 opacity-20  " />
+     </div>
+
+      
+      {/* <BackgroundGradientBlur className="top-0 left-0  border border-yellow-500 z-50 opacity-20 " /> */}
+     
+     
       
 
       <div className="relative flex w-full max-w-[1440px] m-auto">
