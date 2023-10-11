@@ -52,8 +52,8 @@ const ContactHomeSection = (props: ContactHomeSectionProp) => {
   }, []);
 
   return (
-    <section className={`relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutral-1000 px-5 `} ref={root}>
-      <div className="flex flex-col sm:flex-row justify-evenly mb-10 items-center px-5 py-10  border-2 border-neutral-700 bg-neutral-900 rounded-xl max-w-[1440px] m-auto min-h-[500px]">
+    <section className={`h-screen relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutral-800 px-5 flex justify-start items-center`} ref={root}>
+      <div className="flex flex-col sm:flex-row justify-evenly  items-center px-5 py-10  border-2 border-neutral-700 bg-neutral-900 rounded-xl max-w-[1440px] m-auto min-h-[500px]">
         <div className=" text-left flex flex-col items-end" ref={footerLeft}>
           <Paragraph className="max-w-[450px]   p-4 rounded-2xl mb-5 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 "> {`Let's start a conversation about your business's digital future`}</Paragraph>
           <Paragraph className="max-w-[670px] text-end  mb-4 text-md sm:text-2xl font-semibold text-white">
@@ -66,7 +66,7 @@ const ContactHomeSection = (props: ContactHomeSectionProp) => {
 
           <div className="w-1/2 flex justify-end relative mb-10 sm:mb-0 ">
             <PrimaryButton
-              className=" py-3 text-base sm:text-lg"
+              className=" py-3 text-base sm:text-lg hover:scale-90"
               pathName="/contact-us"
             >
               Share us your idea

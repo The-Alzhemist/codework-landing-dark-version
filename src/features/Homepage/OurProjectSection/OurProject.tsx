@@ -15,7 +15,7 @@ const serviceList = [
 export const OurProject = () => {
 
   return (
-    <section className="relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-1000 ">
+    <section className="h-screen relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-900 ">
       <div className=" m-auto max-w-[1440px]">
         {/* title */}
         <div
