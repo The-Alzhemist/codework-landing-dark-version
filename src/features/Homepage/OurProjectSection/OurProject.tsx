@@ -2,18 +2,18 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 import withOurProject from "./withOurPoject";
-import 'swiper/css/effect-coverflow';
+import "swiper/css/effect-coverflow";
 
 // import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCoverflow , Navigation} from "swiper/modules";
+import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
 
 // Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 const serviceList = [
   {
@@ -47,141 +47,149 @@ export const OurProject = () => {
         </div>
 
         {/* card */}
-        <div className="flex flex-wrap justify-center gap-5 max-w-[1400px] m-auto ">
-          <Swiper
-             effect={'coverflow'}
-             grabCursor={true}
-             centeredSlides={true}
-             loop={true}
-             slidesPerView={2}
-             initialSlide={1} // Set the initial slide index to 1 (Slide 2)
-             coverflowEffect={{
-               rotate: 0,
-               stretch: 1,
-               depth: 300,
-               modifier: 3,
-             }}
-            className="swiper-container"
-            modules={[EffectCoverflow, Pagination, Navigation]}
-          >
-            <SwiperSlide>
-              <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
-                {/* img */}
-                <div className="flex justify-center w-full rounded-2xl overflow-hidden">
-                  <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
+        <Swiper
+          navigation
+          pagination={{ clickable: true }}
+          effect="coverflow"
+          grabCursor={true}
+          centeredSlides={true}
+          initialSlide={2}
+          loop={true}
+          breakpoints= {{
+            // when window width is >= 320px
+            1000: {
+              slidesPerView: 2,
+              spaceBetween: 20
+            },
+            // when window width is >= 480px
+            600: {
+              slidesPerView: 1.5,
+              spaceBetween: 30
+            },
+            // when window width is >= 640px
+            200: {
+              slidesPerView: 1,
+              spaceBetween: 40
+            }
+          }}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 1000,
+            modifier: 1,
+            slideShadows: false,
+          }}
+  
+          modules={[EffectCoverflow, Pagination, Navigation]}
+        >
+          <SwiperSlide>
+            <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
+              {/* img */}
+              <div className="flex justify-center w-full rounded-2xl overflow-hidden">
+                <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
 
-                  <div className="absolute flex top-4 left-4 font-light gap-2 ">
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                     1 Project solution consultancy
-                    </div>
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      UX/UI Design
-                    </div>
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      Web development
-                    </div>
+                <div className="absolute flex top-4 left-4 font-light gap-2 ">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    1 Project solution consultancy
                   </div>
-                  <img
-                    src="/images/seamoorMock.png"
-                    alt=""
-                    className="rounded-lg w-full h-auto"
-                  />
-                </div>
-
-                {/* text */}
-                <div className="absolute bottom-0  text-neutral-50   p-7">
-                  <h2 className="text-3xl mb-5 font-semibold ">
-                    Seamoor marine
-                  </h2>
-                  <p className="font-light ">
-                    Develop an internal system for a marine and logistics
-                    company, optimizing operations, tracking shipments, and
-                    facilitating efficient communication.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
-                {/* img */}
-                <div className="flex justify-center w-full rounded-2xl overflow-hidden">
-                  <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
-
-                  <div className="absolute flex top-4 left-4 font-light gap-2 ">
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    2  Project solution consultancy
-                    </div>
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      UX/UI Design
-                    </div>
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      Web development
-                    </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    UX/UI Design
                   </div>
-                  <img
-                    src="/images/seamoorMock.png"
-                    alt=""
-                    className="rounded-lg w-full h-auto"
-                  />
-                </div>
-
-                {/* text */}
-                <div className="absolute bottom-0  text-neutral-50   p-7">
-                  <h2 className="text-3xl mb-5 font-semibold ">
-                    Seamoor marine
-                  </h2>
-                  <p className="font-light ">
-                    Develop an internal system for a marine and logistics
-                    company, optimizing operations, tracking shipments, and
-                    facilitating efficient communication.
-                  </p>
-                </div>
-              </div>
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
-                {/* img */}
-                <div className="flex justify-center w-full rounded-2xl overflow-hidden">
-                  <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
-
-                  <div className="absolute flex top-4 left-4 font-light gap-2 ">
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                     3 Project solution consultancy
-                    </div>
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      UX/UI Design
-                    </div>
-                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      Web development
-                    </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    Web development
                   </div>
-                  <img
-                    src="/images/seamoorMock.png"
-                    alt=""
-                    className="rounded-lg w-full h-auto"
-                  />
                 </div>
-
-                {/* text */}
-                <div className="absolute bottom-0  text-neutral-50   p-7">
-                  <h2 className="text-3xl mb-5 font-semibold ">
-                    Seamoor marine
-                  </h2>
-                  <p className="font-light ">
-                    Develop an internal system for a marine and logistics
-                    company, optimizing operations, tracking shipments, and
-                    facilitating efficient communication.
-                  </p>
-                </div>
+                <img
+                  src="/images/seamoorMock.png"
+                  alt=""
+                  className="rounded-lg w-full h-auto"
+                />
               </div>
-            </SwiperSlide>
 
+              {/* text */}
+              <div className="absolute bottom-0  text-neutral-50   p-7">
+                <h2 className="text-3xl mb-5 font-semibold ">Seamoor marine</h2>
+                <p className="font-light ">
+                  Develop an internal system for a marine and logistics company,
+                  optimizing operations, tracking shipments, and facilitating
+                  efficient communication.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
 
-        
-          </Swiper>
-        </div>
+          <SwiperSlide>
+            <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
+              {/* img */}
+              <div className="flex justify-center w-full rounded-2xl overflow-hidden">
+                <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
+
+                <div className="absolute flex top-4 left-4 font-light gap-2 ">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    2 Project solution consultancy
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    UX/UI Design
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    Web development
+                  </div>
+                </div>
+                <img
+                  src="/images/seamoorMock.png"
+                  alt=""
+                  className="rounded-lg w-full h-auto"
+                />
+              </div>
+
+              {/* text */}
+              <div className="absolute bottom-0  text-neutral-50   p-7">
+                <h2 className="text-3xl mb-5 font-semibold ">Seamoor marine</h2>
+                <p className="font-light ">
+                  Develop an internal system for a marine and logistics company,
+                  optimizing operations, tracking shipments, and facilitating
+                  efficient communication.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+
+          <SwiperSlide>
+            <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
+              {/* img */}
+              <div className="flex justify-center w-full rounded-2xl overflow-hidden">
+                <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
+
+                <div className="absolute flex top-4 left-4 font-light gap-2 ">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    3 Project solution consultancy
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    UX/UI Design
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                    Web development
+                  </div>
+                </div>
+                <img
+                  src="/images/seamoorMock.png"
+                  alt=""
+                  className="rounded-lg w-full h-auto"
+                />
+              </div>
+
+              {/* text */}
+              <div className="absolute bottom-0  text-neutral-50   p-7">
+                <h2 className="text-3xl mb-5 font-semibold ">Seamoor marine</h2>
+                <p className="font-light ">
+                  Develop an internal system for a marine and logistics company,
+                  optimizing operations, tracking shipments, and facilitating
+                  efficient communication.
+                </p>
+              </div>
+            </div>
+          </SwiperSlide>
+        </Swiper>
       </div>
     </section>
   );
