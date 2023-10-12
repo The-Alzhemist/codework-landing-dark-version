@@ -2,13 +2,18 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 import withOurProject from "./withOurPoject";
+import 'swiper/css/effect-coverflow';
+
+// import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper/modules";
+import { Pagination, EffectCoverflow , Navigation} from "swiper/modules";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 const serviceList = [
   {
@@ -20,7 +25,7 @@ const serviceList = [
 
 export const OurProject = () => {
   return (
-    <section className=" relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutralVariant-1000 ">
+    <section className=" relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-1000 ">
       <div className=" m-auto max-w-[1440px]">
         {/* title */}
         <div className="flex items-center flex-col mb-16 ease-out">
@@ -44,15 +49,20 @@ export const OurProject = () => {
         {/* card */}
         <div className="flex flex-wrap justify-center gap-5 max-w-[1400px] m-auto ">
           <Swiper
-            slidesPerView={1.5}
-            centeredSlides={true}
-            spaceBetween={30}
-            grabCursor={true}
-            pagination={{
-              clickable: true,
-            }}
-            modules={[Pagination]}
-            className="mySwiper"
+             effect={'coverflow'}
+             grabCursor={true}
+             centeredSlides={true}
+             loop={true}
+             slidesPerView={2}
+             initialSlide={1} // Set the initial slide index to 1 (Slide 2)
+             coverflowEffect={{
+               rotate: 0,
+               stretch: 1,
+               depth: 300,
+               modifier: 3,
+             }}
+            className="swiper-container"
+            modules={[EffectCoverflow, Pagination, Navigation]}
           >
             <SwiperSlide>
               <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
@@ -62,7 +72,7 @@ export const OurProject = () => {
 
                   <div className="absolute flex top-4 left-4 font-light gap-2 ">
                     <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      Project solution consultancy
+                     1 Project solution consultancy
                     </div>
                     <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
                       UX/UI Design
@@ -91,8 +101,8 @@ export const OurProject = () => {
                 </div>
               </div>
             </SwiperSlide>
+
             <SwiperSlide>
-              {" "}
               <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
                 {/* img */}
                 <div className="flex justify-center w-full rounded-2xl overflow-hidden">
@@ -100,7 +110,7 @@ export const OurProject = () => {
 
                   <div className="absolute flex top-4 left-4 font-light gap-2 ">
                     <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                      Project solution consultancy
+                    2  Project solution consultancy
                     </div>
                     <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
                       UX/UI Design
@@ -110,8 +120,7 @@ export const OurProject = () => {
                     </div>
                   </div>
                   <img
-                    src="        https://fastly.picsum.photos/id/269/836/544.jpg?grayscale&hmac=7stdFKeTPSzTj8U24auLAWeRRSVN6hktozQOnCAQLW8
-                    "
+                    src="/images/seamoorMock.png"
                     alt=""
                     className="rounded-lg w-full h-auto"
                   />
@@ -130,6 +139,47 @@ export const OurProject = () => {
                 </div>
               </div>
             </SwiperSlide>
+
+            <SwiperSlide>
+              <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
+                {/* img */}
+                <div className="flex justify-center w-full rounded-2xl overflow-hidden">
+                  <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
+
+                  <div className="absolute flex top-4 left-4 font-light gap-2 ">
+                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                     3 Project solution consultancy
+                    </div>
+                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                      UX/UI Design
+                    </div>
+                    <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                      Web development
+                    </div>
+                  </div>
+                  <img
+                    src="/images/seamoorMock.png"
+                    alt=""
+                    className="rounded-lg w-full h-auto"
+                  />
+                </div>
+
+                {/* text */}
+                <div className="absolute bottom-0  text-neutral-50   p-7">
+                  <h2 className="text-3xl mb-5 font-semibold ">
+                    Seamoor marine
+                  </h2>
+                  <p className="font-light ">
+                    Develop an internal system for a marine and logistics
+                    company, optimizing operations, tracking shipments, and
+                    facilitating efficient communication.
+                  </p>
+                </div>
+              </div>
+            </SwiperSlide>
+
+
+        
           </Swiper>
         </div>
       </div>

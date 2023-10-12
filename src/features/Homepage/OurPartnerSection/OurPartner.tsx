@@ -8,7 +8,7 @@ import { OurPartnerProps } from "./interface";
 const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
   return (
     <section
-      className="h-screen  relative py-10  md:py-[50px] mx-auto px-5 lg:px-[0px] sm:pt-0  bg-neutralVariant-1000 flex flex-col justify-center items-center"
+      className="h-screen  relative py-10  md:py-[50px] mx-auto px-5 lg:px-[0px] sm:pt-0  bg-neutral-1000 flex flex-col justify-center items-center"
       ref={root}
     >
       <div className="overflow-scroll w-full">
