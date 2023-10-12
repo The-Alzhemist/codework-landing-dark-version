@@ -20,7 +20,7 @@ const serviceList = [
 
 export const OurProject = () => {
   return (
-    <section className=" relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-900 ">
+    <section className=" relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutralVariant-1000 ">
       <div className=" m-auto max-w-[1440px]">
         {/* title */}
         <div className="flex items-center flex-col mb-16 ease-out">
@@ -72,7 +72,7 @@ export const OurProject = () => {
                     </div>
                   </div>
                   <img
-                    src="https://fastly.picsum.photos/id/866/836/544.jpg?hmac=kYHGOly8GBlfVC-qEaY8r3iMmpkLD0IYyDMYpLpTEqc"
+                    src="/images/seamoorMock.png"
                     alt=""
                     className="rounded-lg w-full h-auto"
                   />
