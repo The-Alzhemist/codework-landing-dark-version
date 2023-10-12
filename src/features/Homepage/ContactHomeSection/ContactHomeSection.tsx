@@ -1,20 +1,47 @@
-import React from "react";
+import React, { useLayoutEffect, useRef } from "react";
 import withContactUs from "./withContactUs";
-
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
+import { gsap } from "gsap";
+
+import { TextPlugin } from "gsap/TextPlugin";
+gsap.registerPlugin(TextPlugin);
 
 const ContactHomeSection = () => {
+  const textMessageRef = useRef<any | null>(null);
+  const root = useRef<any>(null);
+
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      gsap.to(textMessageRef.current, {
+        duration: 7,
+        repeat: -1,
+        repeatDelay: 5,
+        ease: "bounce.out",
+        text: {
+          value:
+            "Let's start a conversation about your business's digital future",
+          delimiter: "",
+        },
+      });
+    }, root);
+
+    return () => ctx.revert();
+  }, []);
   return (
     <section
-      className={`h-screen relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutral-1000 px-5 flex justify-start items-center `}
+      ref={root}
+      className={`h-screen relative py-12 md:py-[50px] mx-auto lg:px-[50px] sm:pt-0 bg-neutral-1000 px-5 flex justify-start items-center  `}
     >
       <div className="flex flex-col lg:flex-row justify-evenly  items-center px-5 py-8  border-2 border-neutral-700 bg-secondary-50  rounded-xl m-auto min-h-[500px] group transition-all duration-300  hover:py-14 ">
         <div className=" text-left flex flex-col items-end">
-          <Paragraph className="max-w-[450px] p-4 rounded-2xl mb-5 group-hover:mb-10 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 group-hover:rotate-[-6deg]  transition-all duration-300">
-            {`Let's start a conversation about your business's digital future`}
-          </Paragraph>
+          <div
+            className="max-w-[450px] min-w-[200px] p-4 rounded-2xl mb-5 group-hover:mb-10 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 group-hover:rotate-[-6deg]  transition-all duration-300"
+            ref={textMessageRef}
+          >
+            {`             `}
+          </div>
           <Paragraph className="max-w-[670px] text-end  mb-4 group-hover:mt-10 text-md sm:text-2xl font-semibold text-slate-900 group-hover:rotate-6 transition-all duration-300">
             {`Let’s make your dream come true`}
           </Paragraph>
