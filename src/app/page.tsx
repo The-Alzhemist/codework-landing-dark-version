@@ -71,13 +71,15 @@ export default function Home() {
 
   const [activeSection, setActiveSection] = useState(1);
 
-  const scrollToSection = (sectionNumber:any) => {
+  const scrollToSection = (sectionNumber: any) => {
     // Find the corresponding section reference
     const sectionRefs = [ref1, ref2, ref3, ref4, ref5];
 
     // Ensure that sectionRef is of the correct type
-    const sectionRef = sectionRefs[sectionNumber-1] as React.RefObject<HTMLElement> | null;
-    
+    const sectionRef = sectionRefs[
+      sectionNumber - 1
+    ] as React.RefObject<HTMLElement> | null;
+
     // Check if the section reference exists
     if (sectionRef && sectionRef.current) {
       // Scroll to the section smoothly
@@ -135,6 +137,7 @@ export default function Home() {
         {/* <GimmickSection/> */}
         {/* {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}  */}
 
+        {/* tab section */}
         <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2 ">
           <div
             onClick={() => scrollToSection(1)}
@@ -180,6 +183,31 @@ export default function Home() {
                 : " border-slate-300"
             }  p-1 w-[2px] h-[2px] border rounded-full cursor-pointer`}
           ></div>
+        </div>
+
+        {/* contact */}
+        <div className="flex flex-col gap-y-2 fixed bottom-4 right-4 z-50">
+          <a
+            href="https://www.facebook.com/profile.php?id=61551048177724"
+            rel="nofollow"
+            target="_blank"
+          >
+            <img
+              src="/logo/line-logo.png"
+              className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px] z-50"
+            />
+          </a>
+
+          <a
+            href="https://www.facebook.com/profile.php?id=61551048177724"
+            rel="nofollow"
+            target="_blank"
+          >
+            <img
+              src="/logo/facebook-logo.png"
+              className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]"
+            />
+          </a>
         </div>
       </main>
     </QueryClientProvider>

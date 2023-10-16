@@ -54,7 +54,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
                   (item: any, index: number) => (
                     <React.Fragment key={`our-partner-${index}`}>
                       <a
-                        className="grayscale group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
+                        className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
                         href={item.urlName}
                         target="_blank"
                         rel="noopener nofollow"
@@ -80,7 +80,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
                   (item: any, index: number) => (
                     <React.Fragment key={`our-partner-${index}`}>
                       <a
-                        className="grayscale group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
+                        className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
                         href={item.urlName}
                         target="_blank"
                         rel="noopener nofollow"

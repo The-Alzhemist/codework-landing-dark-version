@@ -71,4 +71,11 @@
   object-fit: cover;
 }
 
-
+.swiper-pagination-bullet {
+   border: 1px solid #fff;
+}
+.swiper-pagination-bullet-active {
+	color:#fff;
+  border:2px solid #E9FB64;
+	background: #E9FB64 !important;
+}

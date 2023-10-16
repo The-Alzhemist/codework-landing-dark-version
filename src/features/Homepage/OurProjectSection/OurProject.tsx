@@ -55,22 +55,22 @@ export const OurProject = () => {
           centeredSlides={true}
           initialSlide={2}
           loop={true}
-          breakpoints= {{
+          breakpoints={{
             // when window width is >= 320px
             1000: {
               slidesPerView: 2,
-              spaceBetween: 20
+              spaceBetween: 20,
             },
             // when window width is >= 480px
             600: {
               slidesPerView: 1.5,
-              spaceBetween: 30
+              spaceBetween: 30,
             },
             // when window width is >= 640px
             200: {
               slidesPerView: 1,
-              spaceBetween: 40
-            }
+              spaceBetween: 40,
+            },
           }}
           coverflowEffect={{
             rotate: 0,
@@ -79,7 +79,6 @@ export const OurProject = () => {
             modifier: 1,
             slideShadows: false,
           }}
-  
           modules={[EffectCoverflow, Pagination, Navigation]}
         >
           <SwiperSlide>
@@ -88,28 +87,37 @@ export const OurProject = () => {
               <div className="flex justify-center w-full rounded-2xl overflow-hidden">
                 <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
 
-                <div className="absolute flex top-4 left-4 font-light gap-2 ">
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                <img
+                  src="/images/seamoorMock.png"
+                  alt=""
+                  className="rounded-lg w-full min-h-[300px] sm:h-auto object-cover"
+                />
+              </div>
+
+              {/* text */}
+              <div className="absolute bottom-0  text-neutral-50   p-7">
+                <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                     1 Project solution consultancy
                   </div>
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                     UX/UI Design
                   </div>
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                     Web development
                   </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Digital marketing
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Digital transformation consultancy
+                  </div>
                 </div>
-                <img
-                  src="/images/seamoorMock.png"
-                  alt=""
-                  className="rounded-lg w-full h-auto"
-                />
-              </div>
 
-              {/* text */}
-              <div className="absolute bottom-0  text-neutral-50   p-7">
-                <h2 className="text-3xl mb-5 font-semibold ">Seamoor marine</h2>
-                <p className="font-light ">
+                <h2 className="text-2xl sm:text-3xl mb-1 sm:mb-5 font-semibold ">
+                  Seamoor marine
+                </h2>
+                <p className="font-light text-xs sm:text-base">
                   Develop an internal system for a marine and logistics company,
                   optimizing operations, tracking shipments, and facilitating
                   efficient communication.
@@ -124,28 +132,37 @@ export const OurProject = () => {
               <div className="flex justify-center w-full rounded-2xl overflow-hidden">
                 <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
 
-                <div className="absolute flex top-4 left-4 font-light gap-2 ">
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    2 Project solution consultancy
-                  </div>
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    UX/UI Design
-                  </div>
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    Web development
-                  </div>
-                </div>
                 <img
                   src="/images/seamoorMock.png"
                   alt=""
-                  className="rounded-lg w-full h-auto"
+                  className="rounded-lg w-full min-h-[300px] sm:h-auto object-cover"
                 />
               </div>
 
               {/* text */}
               <div className="absolute bottom-0  text-neutral-50   p-7">
-                <h2 className="text-3xl mb-5 font-semibold ">Seamoor marine</h2>
-                <p className="font-light ">
+                <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    1 Project solution consultancy
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    UX/UI Design
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Web development
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Digital marketing
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Digital transformation consultancy
+                  </div>
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl mb-1 sm:mb-5 font-semibold ">
+                  Seamoor marine
+                </h2>
+                <p className="font-light text-xs sm:text-base">
                   Develop an internal system for a marine and logistics company,
                   optimizing operations, tracking shipments, and facilitating
                   efficient communication.
@@ -160,28 +177,37 @@ export const OurProject = () => {
               <div className="flex justify-center w-full rounded-2xl overflow-hidden">
                 <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
 
-                <div className="absolute flex top-4 left-4 font-light gap-2 ">
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    3 Project solution consultancy
-                  </div>
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    UX/UI Design
-                  </div>
-                  <div className="bg-neutralVariant-50  rounded-full text-center py-1 px-2 text-sm shadow-md">
-                    Web development
-                  </div>
-                </div>
                 <img
                   src="/images/seamoorMock.png"
                   alt=""
-                  className="rounded-lg w-full h-auto"
+                  className="rounded-lg w-full min-h-[300px] sm:h-auto object-cover"
                 />
               </div>
 
               {/* text */}
               <div className="absolute bottom-0  text-neutral-50   p-7">
-                <h2 className="text-3xl mb-5 font-semibold ">Seamoor marine</h2>
-                <p className="font-light ">
+                <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    1 Project solution consultancy
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    UX/UI Design
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Web development
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Digital marketing
+                  </div>
+                  <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
+                    Digital transformation consultancy
+                  </div>
+                </div>
+
+                <h2 className="text-2xl sm:text-3xl mb-1 sm:mb-5 font-semibold ">
+                  Seamoor marine
+                </h2>
+                <p className="font-light text-xs sm:text-base">
                   Develop an internal system for a marine and logistics company,
                   optimizing operations, tracking shipments, and facilitating
                   efficient communication.

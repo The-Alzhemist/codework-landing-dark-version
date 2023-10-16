@@ -55,7 +55,7 @@ const HeroSection = ({
           </div>
 
           <div className="max-w-7xl" ref={btnRef}>
-            <PrimaryButton pathName="/contact-us" className="mr-5 text-xl">
+            <PrimaryButton pathName="/contact-us" className=" text-xl">
               Contact us
             </PrimaryButton>
           </div>
