@@ -12,8 +12,6 @@ import { IoCloseCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import { CodeworkTechLogo } from "./components/BrandLogo/BrandLogo";
 
-
-
 const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
   useEffect(() => {
@@ -33,6 +31,9 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
         window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+
+
   return (
     <>
       <div
@@ -42,7 +43,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
             : "absolute bg-transparent"
         } z-10   p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700  `}
       >
-        <div className="text-white cursor-pointer">
+        <div className="text-neutral-1000 cursor-pointer">
           <CodeworkTechLogo />
         </div>
         <div
@@ -66,25 +67,25 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 height: 0,
                 transition: { delay: 0.7, duration: 0.3 },
               }}
-              className="bg-white  flex flex-col"
+              className="bg-primary-400  flex flex-col"
             >
               {/* nav */}
               <motion.div
-                className="  p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]"
+                className="p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]"
                 initial="closed"
                 animate="open"
                 exit="closed"
                 variants={itemVariants}
               >
-                <motion.div className="text-white" whileHover={{ scale: 1.02 }}>
+                <motion.div className="text-neutral-1000" whileHover={{ scale: 1.02 }}>
                   <Link href="/">
                     <picture>
                       <source
-                        srcSet="/logo/codework-dark-logo-1x.webp"
+                        srcSet="/logo/codework_white.png"
                         type="image/webp"
                       />
                       <img
-                        src="/logo/codework-dark-logo-1x.webp"
+                        src="/logo/codework_white.png"
                         alt="codework tech logo"
                         title="codework tech logo"
                         loading="lazy"

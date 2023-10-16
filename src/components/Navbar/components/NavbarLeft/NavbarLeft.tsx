@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import React from "react";
+import { FaArrowLeft } from "react-icons/fa6";
+
 export const menuList = [
   {
     name: "Home",
@@ -32,13 +34,16 @@ export const NavbarLeft = () => {
       <div className="flex flex-col  gap-y-7">
         {menuList.map((menu: any) => (
           <React.Fragment key={menu}>
-            
             <motion.div
-              whileHover={{ x: 50 }}
               variants={itemVariants}
-              className="text-neutral-900 hover:text-primary-300 text-3xl sm:text-5xl font-bold cursor-pointer"
+              className="text-neutral-900 hover:text-white text-3xl sm:text-5xl font-bold cursor-pointer group transition-all"
             >
-              {menu.name}
+              <span className="flex gap-x-2">
+                {menu.name}
+                <span className="hidden  group-hover:flex text-white">
+                  <FaArrowLeft />
+                </span>
+              </span>
             </motion.div>
           </React.Fragment>
         ))}

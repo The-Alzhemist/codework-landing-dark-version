@@ -188,7 +188,7 @@ export default function Home() {
         {/* contact */}
         <div className="flex flex-col gap-y-2 fixed bottom-4 right-4 z-50">
           <a
-            href="https://www.facebook.com/profile.php?id=61551048177724"
+            href="https://page.line.me/448yyxgh"
             rel="nofollow"
             target="_blank"
           >
