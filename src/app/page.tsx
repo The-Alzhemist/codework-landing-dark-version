@@ -11,9 +11,12 @@ import { OurService } from "@/features/Homepage/OurServiceSection/OurService";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
 import TagManager from "react-gtm-module";
 import { QueryClient, QueryClientProvider } from "react-query";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
@@ -60,103 +63,125 @@ function useIsInViewport(ref: any) {
 const queryClient = new QueryClient();
 export default function Home() {
   const [hasConsent, setHasConsent] = useState(false);
-
-  useEffect(() => {
-    const userHasGivenConsent =
-      typeof window !== "undefined" &&
-      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
-    if (userHasGivenConsent) {
-      setHasConsent(true);
-      TagManager.initialize({ gtmId: GTM_PRODUCTION });
-    }
-  }, [hasConsent]);
-
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
   const ref4 = useRef(null);
   const ref5 = useRef(null);
 
-  const isInViewport1 = useIsInViewport(ref1);
-  const isInViewport2 = useIsInViewport(ref2);
-  const isInViewport3 = useIsInViewport(ref3);
-  const isInViewport4 = useIsInViewport(ref4);
-  const isInViewport5 = useIsInViewport(ref5);
+  const [activeSection, setActiveSection] = useState(1);
 
-  console.log("isInViewport1:", isInViewport1);
-  console.log("isInViewport2:", isInViewport2);
-  console.log("isInViewport3:", isInViewport3);
-  console.log("isInViewport4:", isInViewport4);
-  console.log("isInViewport5:", isInViewport5);
+  const scrollToSection = (sectionNumber:any) => {
+    // Find the corresponding section reference
+    const sectionRefs = [ref1, ref2, ref3, ref4, ref5];
+
+    // Ensure that sectionRef is of the correct type
+    const sectionRef = sectionRefs[sectionNumber-1] as React.RefObject<HTMLElement> | null;
+    
+    // Check if the section reference exists
+    if (sectionRef && sectionRef.current) {
+      // Scroll to the section smoothly
+      sectionRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
+  useLayoutEffect(() => {
+    const refs = [ref1, ref2, ref3, ref4, ref5];
+
+    refs.forEach((ref, index) => {
+      if (ref.current) {
+        ScrollTrigger.create({
+          trigger: ref.current,
+          markers: false,
+          start: "top center",
+          end: "bottom center",
+          onEnter: () => {
+            console.log(index + 1);
+            setActiveSection(index + 1);
+          },
+          onEnterBack: () => {
+            console.log(`Back ${index + 1}`);
+            setActiveSection(index + 1);
+          },
+        });
+      }
+    });
+  }, [ref1, ref2, ref3, ref4, ref5]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      <main className={` ${poppinsFont.className} `}>
-        <div id="ref1" ref={ref1}>
+      <main className={`page-container ${poppinsFont.className} `}>
+        <div className="section" ref={ref1}>
           <HeroSection />
         </div>
 
-        <div id="ref2" ref={ref2}>
+        <div className="section" ref={ref2}>
           <OurPartner />
         </div>
 
-        <div id="ref3" ref={ref3}>
+        <div className="section" ref={ref3}>
           <OurService />
         </div>
 
         {/* <OurProject/> */}
-        <div id="ref4" ref={ref4}>
+        <div ref={ref4}>
           <OurProject />
         </div>
 
-        <div id="ref5" ref={ref5}>
+        <div ref={ref5}>
           <ContactHomeSection />
         </div>
 
         {/* <GimmickSection/> */}
         {/* {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}  */}
-        <div className="fixed top-[50%] right-3 flex flex-col gap-y-2 ">
+
+        <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2 ">
           <div
+            onClick={() => scrollToSection(1)}
             className={`${
-              isInViewport1
+              activeSection === 1
                 ? "bg-primary border-transparent"
-                : " border-slate-300  "
-            } p-1 w-[2px] h-[2px] border rounded-full`}
-          ></div>
-          <div
-            className={`${
-              isInViewport2
-                ? "bg-primary border-transparent"
-                : " border-slate-300 "
-            } p-1 w-[2px] h-[2px] border rounded-full`}
-          ></div>
-          <div
-            className={`${
-              isInViewport3
-                ? "bg-primary border-transparent"
-                : " border-slate-300  "
-            } p-1 w-[2px] h-[2px] border rounded-full`}
-          ></div>
-          <div
-            className={`${
-              isInViewport4
-                ? "bg-primary border-transparent"
-                : " border-slate-300 "
-            } p-1 w-[2px] h-[2px] border rounded-full`}
+                : " border-slate-300"
+            }  p-1 w-[2px] h-[2px] border rounded-full cursor-pointer`}
           ></div>
 
           <div
+            onClick={() => scrollToSection(2)}
             className={`${
-              isInViewport5
+              activeSection === 2
                 ? "bg-primary border-transparent"
-                : " border-slate-300 "
-            } p-1 w-[2px] h-[2px] border rounded-full`}
+                : " border-slate-300"
+            }  p-1 w-[2px] h-[2px] border rounded-full cursor-pointer`}
+          ></div>
+
+          <div
+            onClick={() => scrollToSection(3)}
+            className={`${
+              activeSection === 3
+                ? "bg-primary border-transparent"
+                : " border-slate-300"
+            }  p-1 w-[2px] h-[2px] border rounded-full cursor-pointer`}
+          ></div>
+
+          <div
+            onClick={() => scrollToSection(4)}
+            className={`${
+              activeSection === 4
+                ? "bg-primary border-transparent"
+                : " border-slate-300"
+            }  p-1 w-[2px] h-[2px] border rounded-full cursor-pointer`}
+          ></div>
+
+          <div
+            onClick={() => scrollToSection(5)}
+            className={`${
+              activeSection === 5
+                ? "bg-primary  border-transparent"
+                : " border-slate-300"
+            }  p-1 w-[2px] h-[2px] border rounded-full cursor-pointer`}
           ></div>
         </div>
       </main>
     </QueryClientProvider>
   );
-}
-function setHasConsent(arg0: boolean) {
-  throw new Error("Function not implemented.");
 }
