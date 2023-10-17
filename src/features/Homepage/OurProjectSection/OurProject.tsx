@@ -1,10 +1,8 @@
 "use client";
+
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 import withOurProject from "./withOurPoject";
-import "swiper/css/effect-coverflow";
-
-// import { EffectCoverflow, Pagination, Navigation } from 'swiper';
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
@@ -14,14 +12,6 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
-const serviceList = [
-  {
-    name: "Seamoor marine",
-    detail:
-      "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
-  },
-];
 
 export const OurProject = () => {
   return (
@@ -56,17 +46,14 @@ export const OurProject = () => {
           initialSlide={2}
           loop={true}
           breakpoints={{
-            // when window width is >= 320px
             1000: {
               slidesPerView: 2,
               spaceBetween: 20,
             },
-            // when window width is >= 480px
             600: {
               slidesPerView: 1.5,
               spaceBetween: 30,
             },
-            // when window width is >= 640px
             200: {
               slidesPerView: 1,
               spaceBetween: 40,

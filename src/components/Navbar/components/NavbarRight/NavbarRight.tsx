@@ -26,16 +26,18 @@ export const NavbarRight = () => {
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Social media</label>
           <div className="flex justify-end gap-x-1">
-            <IconSocialLink linkName="#" iconName={<PiFacebookLogoBold />} />
-            <IconSocialLink linkName="#" iconName={<FaInstagram />} />
-            <IconSocialLink linkName="#" iconName={<PiLinkedinLogoBold />} />
+            <IconSocialLink linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
+
+            {/* ถ้ามีลิ้งให้กลับมาเปิดใช้งาน */}
+            {/* <IconSocialLink linkName="#" iconName={<FaInstagram />} /> */}
+            {/* <IconSocialLink linkName="#" iconName={<PiLinkedinLogoBold />} /> */}
           </div>
           <div className="text-xs sm:text-lg ">Codework Tech</div>
         </div>
 
         <div className="mb-5">
           <label className="flex justify-end">
-            <IconSocialLink linkName="#" iconName={<FaLine />} />
+            <IconSocialLink linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
           </label>
           <div className="text-xs sm:text-lg">@codeworktech</div>
         </div>

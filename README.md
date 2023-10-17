@@ -40,6 +40,4 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 <!-- Task -->
 - HOC Pattern
 - meta
-- more interesting animation
 - SEO keyword searching section
-- swiper JS

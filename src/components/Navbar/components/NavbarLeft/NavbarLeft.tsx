@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Link from "next/link";
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 
@@ -21,7 +22,7 @@ export const menuList = [
   },
 ];
 
-export const NavbarLeft = () => {
+export const NavbarLeft = ({handleClick}:any) => {
   const itemVariants = {
     closed: {
       opacity: 0,
@@ -38,12 +39,14 @@ export const NavbarLeft = () => {
               variants={itemVariants}
               className="text-neutral-900 hover:text-white text-4xl sm:text-5xl font-bold cursor-pointer group transition-all"
             >
-              <span className="flex gap-x-2 text-center sm:text-left">
-                {menu.name}
-                <span className="hidden  group-hover:flex text-white">
-                  <FaArrowLeft />
+              <Link href={menu.url} onClick={handleClick}>
+                <span className="flex gap-x-2 text-center sm:text-left">
+                  {menu.name}
+                  <span className="hidden  group-hover:flex text-white">
+                    <FaArrowLeft />
+                  </span>
                 </span>
-              </span>
+              </Link>
             </motion.div>
           </React.Fragment>
         ))}

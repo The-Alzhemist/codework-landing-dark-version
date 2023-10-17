@@ -28,7 +28,6 @@ const Footer = (props: FooterProps) => {
         scrollTrigger: {
           trigger: footerLeft.current,
           markers: false,
-          toggleActions: "restart none none none"
         },
       })
       gsap.from(footerRight.current, {
@@ -39,7 +38,6 @@ const Footer = (props: FooterProps) => {
         scrollTrigger: {
           trigger: footerRight.current,
           markers: false,
-          toggleActions: "restart none none none"
         },
       });
     }, root);

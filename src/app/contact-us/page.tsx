@@ -35,8 +35,6 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUsPage() {
-  
-
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
        <FormPage/>

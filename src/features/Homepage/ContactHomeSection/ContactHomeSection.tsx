@@ -1,34 +1,13 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React from "react";
 import withContactUs from "./withContactUs";
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-import { gsap } from "gsap";
 
-import { TextPlugin } from "gsap/TextPlugin";
-gsap.registerPlugin(TextPlugin);
 
-const ContactHomeSection = () => {
-  const textMessageRef = useRef<any | null>(null);
-  const root = useRef<any>(null);
+const ContactHomeSection = ({ root,
+  textMessageRef}: any) => {
 
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      gsap.to(textMessageRef.current, {
-        duration: 7,
-        repeat: -1,
-        repeatDelay: 5,
-        ease: "bounce.out",
-        text: {
-          value:
-            "Let's start a conversation about your business's digital future",
-          delimiter: "",
-        },
-      });
-    }, root);
-
-    return () => ctx.revert();
-  }, []);
   return (
     <section
       ref={root}

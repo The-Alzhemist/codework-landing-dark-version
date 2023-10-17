@@ -110,7 +110,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 exit="closed"
                 className="cursor-pointer px-5 sm:px-12 sm:pt-10 flex justify-center sm:justify-between items-center sm:mb-10 h-screen"
               >
-                <NavbarLeft />
+                <NavbarLeft handleClick={handleButtonClick} />
 
                 <NavbarRight />
               </motion.div>

@@ -3,7 +3,7 @@ import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { ourPartnerSectionText } from "@/constants/homePage/ourPartnerText";
 import React from "react";
 import withOurPartner from "./withOurPartner";
-import { OurPartnerProps } from "./interface";
+
 
 const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
   return (

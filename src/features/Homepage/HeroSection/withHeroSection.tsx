@@ -3,7 +3,6 @@ import { HeroSectionProps } from "./interface";
 import { gsap } from "gsap";
 
 
-
 const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
   const Hoc = () => {
     const root = useRef<any>(null);

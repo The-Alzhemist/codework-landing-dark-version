@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { HeroSectionProps } from "./interface";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 
