@@ -11,7 +11,7 @@ export const NavbarRight = () => {
     closed: {
       opacity: 0,
     },
-    open: { opacity: 1, transition: { delay: 0.7, duration: 0.3 } },
+    open: { opacity: 1, transition: { delay: 0.25, duration: 0.25 } },
   };
 
   return (

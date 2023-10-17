@@ -14,7 +14,7 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
       closed: {
         opacity: 0,
       },
-      open: { opacity: 1, transition: { delay: 0.7, duration: 0.3 } },
+      open: { opacity: 1, transition: { delay: 0.2, duration: 0.2 } },
     };
 
     const newProps: any = {

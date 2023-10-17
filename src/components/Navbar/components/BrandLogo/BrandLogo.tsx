@@ -14,7 +14,7 @@ export const CodeworkTechLogo = () => {
               alt="codework tech logo"
               title="codework tech logo"
               loading="lazy"
-              className="w-auto h-3"
+              className="w-auto h-4"
             />
           </picture>
         </Link>

@@ -26,19 +26,19 @@ export const NavbarLeft = () => {
     closed: {
       opacity: 0,
     },
-    open: { opacity: 1, transition: { delay: 0.7, duration: 0.3 } },
+    open: { opacity: 1, transition: { delay: 0.2, duration: 0.2 } },
   };
 
   return (
     <>
-      <div className="flex flex-col  gap-y-7">
+      <div className="flex flex-col  gap-y-7 items-center sm:items-start  ">
         {menuList.map((menu: any) => (
           <React.Fragment key={menu}>
             <motion.div
               variants={itemVariants}
-              className="text-neutral-900 hover:text-white text-3xl sm:text-5xl font-bold cursor-pointer group transition-all"
+              className="text-neutral-900 hover:text-white text-4xl sm:text-5xl font-bold cursor-pointer group transition-all"
             >
-              <span className="flex gap-x-2">
+              <span className="flex gap-x-2 text-center sm:text-left">
                 {menu.name}
                 <span className="hidden  group-hover:flex text-white">
                   <FaArrowLeft />

@@ -41,13 +41,13 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
           isScrolled
             ? " fixed bg-neutral-1000"
             : "absolute bg-transparent"
-        } z-10   p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700  `}
+        } z-10 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700`}
       >
         <div className="text-neutral-1000 cursor-pointer">
           <CodeworkTechLogo />
         </div>
         <div
-          className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-600 rounded-full p-2 "
+          className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-850 rounded-full p-2 "
           onClick={handleButtonClick}
         >
           <IoMdMenu />
@@ -61,11 +61,11 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
               initial={{ height: 0 }}
               animate={{
                 height: 500,
-                transition: { delay: 0, duration: 0.3 },
+                transition: { delay: 0, duration: 0.25 },
               }}
               exit={{
                 height: 0,
-                transition: { delay: 0.7, duration: 0.3 },
+                transition: { delay: 0.25, duration: 0.25 },
               }}
               className="bg-primary-400  flex flex-col"
             >
@@ -95,7 +95,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                   </Link>
                 </motion.div>
                 <motion.div
-                  className="text-2xl text-neutral-800 cursor-pointer hover:bg-neutral-400 rounded-full p-2 "
+                  className="text-2xl text-neutral-800 cursor-pointer hover:bg-neutral-100 rounded-full p-2 "
                   whileHover={{ scale: 1.02 }}
                   onClick={handleButtonClick}
                 >
@@ -108,7 +108,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
                 initial="closed"
                 animate="open"
                 exit="closed"
-                className="cursor-pointer px-5 sm:px-12 pt-10 flex justify-between items-center mb-10 h-screen"
+                className="cursor-pointer px-5 sm:px-12 sm:pt-10 flex justify-center sm:justify-between items-center sm:mb-10 h-screen"
               >
                 <NavbarLeft />
 
