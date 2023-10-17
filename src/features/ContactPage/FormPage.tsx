@@ -49,8 +49,7 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: h1Tag.current,
-          markers: false,
-          toggleActions: "restart none none none"
+          markers: false
         },
       })
       gsap.from(formTag.current, {
@@ -60,8 +59,7 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: formTag.current,
-          markers: false,
-          toggleActions: "restart none none none"
+          markers: false
         },
       });
     }, root);

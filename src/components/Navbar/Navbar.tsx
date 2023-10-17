@@ -11,6 +11,12 @@ import { IoMdMenu } from "react-icons/io";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import { CodeworkTechLogo } from "./components/BrandLogo/BrandLogo";
+import { Poppins } from "next/font/google";
+
+const poppinsFont = Poppins({
+  weight: ["100", "300", "500", "700", "800"],
+  subsets: ["latin"],
+});
 
 const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -41,7 +47,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
           isScrolled
             ? " fixed bg-neutral-1000"
             : "absolute bg-transparent"
-        } z-10 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700`}
+        }  ${poppinsFont.className} z-10 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700`}
       >
         <div className="text-neutral-1000 cursor-pointer">
           <CodeworkTechLogo />
@@ -54,7 +60,7 @@ const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
         </div>
       </div>
 
-      <section className="fixed top-0 w-full  z-10 ">
+      <section className={`fixed top-0 w-full  z-10 ${poppinsFont.className}`}>
         <AnimatePresence>
           {open && (
             <motion.aside

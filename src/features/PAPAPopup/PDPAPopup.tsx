@@ -1,20 +1,18 @@
 import { SimpleButton } from '@/components/buttons/SimpleButton'
 import React from 'react'
-
 import withPDPAPopup from './withPDPAPopup';
 import { PDPAPopupProps } from './interface';
-import { Prompt } from '@next/font/google';
+import { Poppins } from '@next/font/google';
 
-const fontPrompt = Prompt({
-    weight: ["100", "200", "300", "400", "500", "600", "700"],
+const poppinsFont = Poppins({
+    weight: ["100", "300", "500", "700", "800"],
     subsets: ["latin"],
-    variable: "--font-prompt",
   });
 
 const PDPAPopup = ({ isOpen, handleClose, shouldRender, setIsOpen }: PDPAPopupProps) => {
     return (
         <>
-            {shouldRender && isOpen && <section className={`${fontPrompt.variable} font-prompt flex justify-center shadow-2xl`}>
+            {shouldRender && isOpen && <section className={`${poppinsFont.className} flex justify-center shadow-2xl`}>
                 <div className='bg-white sm:w-[90%] border-t-2 sm:border-2 border-gray-900 fixed z-50 bottom-0 md:bottom-10 p-5 sm:rounded-lg  w-full max-w-[800px] flex justify-between gap-x-5 flex-col sm:flex-row'>
                     <div className="flex flex-col justify-center mb-5 sm:mb-0">
                         <div className="text-xl font-semibold mb-2">The website uses cookies</div>

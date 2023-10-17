@@ -134,7 +134,7 @@ export default function Home() {
           <ContactHomeSection />
         </div>
 
-        {/* {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}  */}
+        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />} 
 
         {/* tab section */}
         <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2 ">
