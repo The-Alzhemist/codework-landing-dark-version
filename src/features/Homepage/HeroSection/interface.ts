@@ -1,11 +1,11 @@
 
 
 export interface HeroSectionProps {
-  root: React.RefObject<any>;
-  h1Ref: React.RefObject<HTMLDivElement | null>;
-  pRef: React.RefObject<HTMLDivElement | null>;
-  btnRef: React.RefObject<HTMLDivElement | null>;
-  circleLeftRef: React.RefObject<HTMLDivElement | null>;
-  circleRightRef: React.RefObject<HTMLDivElement | null>;
+  root: React.RefObject<HTMLElement>;
+  h1Ref: React.RefObject<HTMLDivElement>;
+  pRef: React.RefObject<HTMLDivElement>;
+  btnRef: React.RefObject<HTMLDivElement>;
+  circleLeftRef: React.RefObject<HTMLDivElement>;
+  circleRightRef: React.RefObject<HTMLDivElement>;
 }
 

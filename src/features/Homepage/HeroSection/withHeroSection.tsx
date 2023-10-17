@@ -5,8 +5,7 @@ import { gsap } from "gsap";
 
 const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
   const Hoc = () => {
-    const root = useRef<any>(null);
-
+    const root = useRef<HTMLElement | null>(null);
     const h1Ref = useRef<HTMLDivElement | null>(null);
     const pRef = useRef<HTMLDivElement | null>(null);
     const btnRef = useRef<HTMLDivElement | null>(null);
@@ -63,7 +62,7 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
       return () => ctx.revert();
     }, []);
 
-    const newProps: any = {
+    const newProps: HeroSectionProps = {
       root,
       h1Ref,
       pRef,

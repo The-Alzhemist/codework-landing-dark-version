@@ -6,6 +6,7 @@ import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 
 import withHeroSection from "./withHeroSection";
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
+import { HeroSectionProps } from "./interface";
 
 const HeroSection = ({
   root,
@@ -14,7 +15,7 @@ const HeroSection = ({
   btnRef,
   circleLeftRef,
   circleRightRef,
-}: any) => {
+}: HeroSectionProps) => {
   return (
     <section
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
