@@ -4,10 +4,10 @@ import { OurPartnerProps } from "./interface";
 
 const withOurPartner = (Component: React.FC<OurPartnerProps>) => {
   const Hoc = () => {
-    const root = useRef<any>(null);
-    const h1Ref = useRef<HTMLDivElement | null>(null);
-    const pRef = useRef<HTMLDivElement | null>(null);
-    const btnRef = useRef<HTMLDivElement | null>(null);
+    const root = useRef<HTMLElement>(null);
+    const h1Ref = useRef<HTMLDivElement>(null);
+    const pRef = useRef<HTMLDivElement>(null);
+    const btnRef = useRef<HTMLDivElement>(null);
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -40,7 +40,7 @@ const withOurPartner = (Component: React.FC<OurPartnerProps>) => {
     }, []);
 
 
-    const newProps: any = {
+    const newProps: OurPartnerProps = {
       root,
       h1Ref,
       pRef,

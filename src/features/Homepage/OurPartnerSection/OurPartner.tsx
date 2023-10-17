@@ -3,17 +3,17 @@ import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { ourPartnerSectionText } from "@/constants/homePage/ourPartnerText";
 import React from "react";
 import withOurPartner from "./withOurPartner";
+import { OurPartnerProps } from "./interface";
 
 
-const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
+const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
   return (
     <section
       className="h-screen  relative py-10  md:py-[50px] mx-auto px-5 lg:px-[0px] sm:pt-0  bg-neutral-1000 flex flex-col justify-center items-center"
       ref={root}
     >
-      <div className="overflow-scroll w-full">
+      <div className="w-full">
         <div
-          ref={root}
           className={`
         } flex flex-col-reverse  items-center justify-center gap-10 items-center m-auto`}
         >
@@ -51,7 +51,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
               {/* img */}
               <div className="flex gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map(
-                  (item: any, index: number) => (
+                  (item: {urlName: string,pathName: string, className: string, alt: string}, index: number) => (
                     <React.Fragment key={`our-partner-${index}`}>
                       <a
                         className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
@@ -77,7 +77,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
               {/* img */}
               <div className="flex  gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map(
-                  (item: any, index: number) => (
+                  (item: {urlName: string,pathName: string, className: string, alt: string}, index: number) => (
                     <React.Fragment key={`our-partner-${index}`}>
                       <a
                         className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"

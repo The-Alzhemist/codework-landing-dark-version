@@ -1,11 +1,13 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
-const withOurService = (Component: React.FC<any>) => {
+import { OurServiceProps } from "./interface";
+
+const withOurService = (Component: React.FC<OurServiceProps>) => {
   const Hoc = () => {
-    const h1Ref = useRef<HTMLDivElement | null>(null);
-    const pref = useRef<HTMLDivElement | null>(null);
-    const divBtnRef = useRef<HTMLDivElement | null>(null);
-    const root = useRef<any>(null);
+    const h1Ref = useRef<HTMLDivElement>(null);
+    const pref = useRef<HTMLDivElement>(null);
+    const divBtnRef = useRef<HTMLDivElement>(null);
+    const root = useRef<HTMLElement>(null);
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -37,7 +39,7 @@ const withOurService = (Component: React.FC<any>) => {
       return () => ctx.revert();
     }, []);
 
-    const newProps: any = {
+    const newProps: OurServiceProps = {
       h1Ref,
       pref,
       divBtnRef,

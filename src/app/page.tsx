@@ -7,7 +7,7 @@ import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 
-import { OurService } from "@/features/Homepage/OurServiceSection/OurService";
+
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
@@ -16,6 +16,7 @@ import TagManager from "react-gtm-module";
 import { QueryClient, QueryClientProvider } from "react-query";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import OurService from "@/features/Homepage/OurServiceSection/OurService";
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
