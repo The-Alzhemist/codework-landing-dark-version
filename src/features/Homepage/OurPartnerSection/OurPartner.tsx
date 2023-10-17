@@ -32,7 +32,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: any) => {
             </h2>
             <div ref={pRef}>
               <Paragraph
-                className={`lg:max-w-[1000px] text-base sm:text-md font-light text-white opacity-80 text-center`}
+                className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
               >
                 {`At CodeWork, we believe in the power of collaboration. That's why we've teamed up with industry-leading partners who share our vision for innovation and excellence. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our network of trusted partners who help us deliver the technology solutions you can rely on`}
               </Paragraph>

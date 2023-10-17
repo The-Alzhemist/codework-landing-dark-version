@@ -74,9 +74,9 @@ const FormPage = ({
     <>
       <div
       ref={root}
-        className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
+        className=" relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
-        <h1 className="text-center mb-20 text-white" ref={h1Tag}>
+        <h1 className="text-center mt-16 mb-20 text-white" ref={h1Tag}>
           <div  className="text-2xl font-light">
             Wanna talk with us?
           </div>

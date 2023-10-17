@@ -81,7 +81,7 @@ export const OurService = () => {
           </h2>
           <div ref={pref}>
             <Paragraph
-              className={`lg:max-w-[1000px] text-sm sm:text-md text-gray-400 text-center font-light `}
+              className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
             >
               {`At CodeWork, we believe in the power of collaboration. That's why
             we've teamed up with industry-leading partners who share our vision

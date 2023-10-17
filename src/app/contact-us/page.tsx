@@ -38,7 +38,7 @@ export default function ContactUsPage() {
   
 
   return (
-    <main className={`mt-[70px] bg-neutral-1000 ${poppinsFont.className}`}>
+    <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
        <FormPage/>
     </main>
   );

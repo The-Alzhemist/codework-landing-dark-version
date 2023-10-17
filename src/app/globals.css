@@ -8,54 +8,12 @@
   }
 }
 
-.custom-bg {
-  /* Add your background image URL */
 
-  /* Add gradient overlay */
-  background: linear-gradient(
-      86deg,
-      #161710 29.15%,
-      rgba(22, 23, 16, 0) 160.16%
-    ),
-    url("/images/hero-section-cover.jpg");
-  /* background-blend-mode: overlay; */
-  background-size: cover; /* Adjust as needed */
-  background-position: right; /* Adjust as needed */
-  /* Add other background properties */
-  /* ... */
-}
-
-.logo-container:before,
-.logo-container:after {
-  position: absolute;
-  top: 0;
-  width: 250px;
-  height: 100%;
-  content: "";
-  z-index: 2;
-}
-
-.logo-container:before {
-  left: 0;
-  background: linear-gradient(to left, rgba(216, 66, 66, 0), #1b1c12);
-}
-
-.logo-container:after {
-  right: 0;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), #1b1c12);
-}
-
-@keyframes move {
-  100% {
-    transform: translate3d(0, 0, 1px) rotate(360deg);
-  }
-}
-
+/* For Swiper JS */
 .swiper {
   width: 100%;
   height: 100%;
 }
-
 .swiper-slide {
 
   /* Center slide text vertically */
@@ -63,14 +21,12 @@
   justify-content: center;
   align-items: center;
 }
-
 .swiper-slide img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-
 .swiper-pagination-bullet {
    border: 1px solid #fff;
 }
@@ -78,4 +34,8 @@
 	color:#fff;
   border:2px solid #E9FB64;
 	background: #E9FB64 !important;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  color:#fff;
 }
