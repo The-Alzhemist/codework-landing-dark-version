@@ -1,7 +1,7 @@
 "use client";
 
 import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
-import { GimmickSection } from "@/features/GimmickSection/GimmickSection";
+
 import ContactHomeSection from "@/features/Homepage/ContactHomeSection/ContactHomeSection";
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
@@ -134,7 +134,6 @@ export default function Home() {
           <ContactHomeSection />
         </div>
 
-        {/* <GimmickSection/> */}
         {/* {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}  */}
 
         {/* tab section */}
