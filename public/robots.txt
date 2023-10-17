@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://codework-tech.com
+
+# Sitemaps
+Sitemap: https://codework-tech.com/sitemap.xml
