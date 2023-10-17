@@ -1,10 +1,30 @@
 import { useCycle } from "framer-motion";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { NavbarProps } from "./interface";
 
 const withNavbar = (Component: React.FC<NavbarProps>) => {
   const Hoc = () => {
     const [open, cycleOpen] = useCycle(false, true);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+      const handleScroll = () => {
+        if (typeof window !== "undefined" && window.scrollY > 30) {
+          setIsScrolled(true);
+        } else {
+          setIsScrolled(false);
+        }
+      };
+  
+      typeof window !== "undefined" &&
+        window.addEventListener("scroll", handleScroll);
+  
+      return () => {
+        typeof window !== "undefined" &&
+          window.removeEventListener("scroll", handleScroll);
+      };
+    }, []);
+  
 
     const handleButtonClick = () => {
       cycleOpen();
@@ -20,8 +40,8 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
     const newProps: any = {
       handleButtonClick,
       itemVariants,
-      open
-    
+      open,
+      isScrolled
     };
     return <Component {...newProps} />;
   };

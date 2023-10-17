@@ -8,3 +8,7 @@
 //     contactUsSectionText: ContactHomeSectionTextInterface
 // }
 
+export interface ContactHomeSectionProps {
+    root: React.RefObject<HTMLElement | null>;
+    textMessageRef: React.RefObject<HTMLElement | null>;
+  }

@@ -18,25 +18,7 @@ const poppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-const Navbar = ({ handleButtonClick, open, itemVariants }: NavbarProps) => {
-  const [isScrolled, setIsScrolled] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      if (typeof window !== "undefined" && window.scrollY > 30) {
-        setIsScrolled(true);
-      } else {
-        setIsScrolled(false);
-      }
-    };
-
-    typeof window !== "undefined" &&
-      window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      typeof window !== "undefined" &&
-        window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+const Navbar = ({ handleButtonClick, open, itemVariants, isScrolled }: NavbarProps) => {
 
 
 
