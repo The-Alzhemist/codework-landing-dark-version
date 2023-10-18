@@ -51,7 +51,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               {/* img */}
               <div className="flex gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map(
-                  (item: any, index: number) => (
+                  (item, index: number) => (
                     <React.Fragment key={`our-partner-${index}`}>
                       <a
                         className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
@@ -77,7 +77,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               {/* img */}
               <div className="flex  gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map(
-                  (item: any, index: number) => (
+                  (item, index: number) => (
                     <React.Fragment key={`our-partner-${index}`}>
                       <a
                         className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"

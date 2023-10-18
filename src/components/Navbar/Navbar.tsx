@@ -1,7 +1,7 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 import withNavbar from "./withNavbar";
 import { NavbarRight } from "./components/NavbarRight/NavbarRight";
@@ -18,18 +18,20 @@ const poppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-const Navbar = ({ handleButtonClick, open, itemVariants, isScrolled }: NavbarProps) => {
-
-
-
+const Navbar = ({
+  handleButtonClick,
+  open,
+  itemVariants,
+  isScrolled,
+}: NavbarProps) => {
   return (
     <>
       <div
         className={`${
-          isScrolled
-            ? " fixed bg-neutral-1000"
-            : "absolute bg-transparent"
-        }  ${poppinsFont.className} z-10 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700`}
+          isScrolled ? " fixed bg-neutral-1000" : "absolute bg-transparent"
+        }  ${
+          poppinsFont.className
+        } z-10 p-2  w-full px-5 sm:px-12 py-3 flex justify-between items-center transition-all duration-700`}
       >
         <div className="text-neutral-1000 cursor-pointer">
           <CodeworkTechLogo />
@@ -65,7 +67,10 @@ const Navbar = ({ handleButtonClick, open, itemVariants, isScrolled }: NavbarPro
                 exit="closed"
                 variants={itemVariants}
               >
-                <motion.div className="text-neutral-1000" whileHover={{ scale: 1.02 }}>
+                <motion.div
+                  className="text-neutral-1000"
+                  whileHover={{ scale: 1.02 }}
+                >
                   <Link href="/">
                     <picture>
                       <source
