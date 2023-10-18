@@ -8,6 +8,8 @@ import withHeroSection from "./withHeroSection";
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 import { HeroSectionProps } from "./interface";
 
+import { FaArrowRight } from "react-icons/fa6";
+
 const HeroSection = ({
   root,
   h1Ref,
@@ -54,9 +56,15 @@ const HeroSection = ({
             </Paragraph>
           </div>
 
-          <div className="max-w-7xl" ref={btnRef}>
-            <PrimaryButton pathName="/contact-us" className=" text-xl">
-              Contact us
+          <div className="max-w-7xl " ref={btnRef}>
+            <PrimaryButton pathName="/contact-us" className=" text-xl ">
+              <div className="flex items-center gap-2">
+                Contact us
+                <span className="animate-horicentralBounce">
+                  <FaArrowRight />
+                </span>
+              </div>
+            
             </PrimaryButton>
           </div>
         </div>

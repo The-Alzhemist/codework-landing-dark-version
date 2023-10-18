@@ -120,7 +120,7 @@ export const OurProject = () => {
                 <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
 
                 <img
-                  src="/images/seamoorMock.png"
+                  src="/images/seamoor_project_2.jpg"
                   alt=""
                   className="rounded-lg w-full min-h-[300px] sm:h-auto object-cover"
                 />
@@ -165,7 +165,7 @@ export const OurProject = () => {
                 <div className="absolute opacity-90 rounded-2xl  bg-gradient-to-t from-black from-10% to-transparent to-90%   w-full h-full"></div>
 
                 <img
-                  src="/images/seamoorMock.png"
+                  src="/images/seamoor_project_3.jpg"
                   alt=""
                   className="rounded-lg w-full min-h-[300px] sm:h-auto object-cover"
                 />
