@@ -1,7 +1,17 @@
 export interface NavbarProps {
-    handleButtonClick: () => void;
-    itemVariants: any;
-    open: boolean;
-    isScrolled: boolean
-  }
-
+  handleButtonClick: () => void;
+  itemVariants: {
+    closed: {
+      opacity: number;
+    };
+    open: {
+      opacity: number;
+      transition: {
+        delay: number;
+        duration: number;
+      };
+    };
+  };
+  open: boolean;
+  isScrolled: boolean;
+}

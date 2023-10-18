@@ -24,42 +24,6 @@ const poppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-function useIsInViewport(ref: any) {
-  const [isInViewport, setIsInViewport] = useState(false);
-
-  const checkVisibility = () => {
-    const element = ref.current;
-    if (element) {
-      const rect = element.getBoundingClientRect();
-      console.log("rect >>", rect);
-      const windowHeight =
-        (typeof window !== "undefined" && window.innerHeight) ||
-        document.documentElement.clientHeight;
-      const visibleHeight = Math.max(
-        0,
-        Math.min(rect.bottom, windowHeight) - Math.max(rect.top, 0)
-      );
-      const visibility = (visibleHeight / element.offsetHeight) * 100;
-      setIsInViewport(visibility > 60);
-    }
-  };
-
-  useMemo(() => {
-    checkVisibility();
-    typeof window !== "undefined" &&
-      window.addEventListener("scroll", checkVisibility);
-    typeof window !== "undefined" &&
-      window.addEventListener("resize", checkVisibility);
-    return () => {
-      typeof window !== "undefined" &&
-        window.removeEventListener("scroll", checkVisibility);
-      typeof window !== "undefined" &&
-        window.removeEventListener("resize", checkVisibility);
-    };
-  }, [ref]);
-
-  return isInViewport;
-}
 
 const queryClient = new QueryClient();
 export default function Home() {
@@ -72,7 +36,7 @@ export default function Home() {
 
   const [activeSection, setActiveSection] = useState(1);
 
-  const scrollToSection = (sectionNumber: any) => {
+  const scrollToSection = (sectionNumber: number) => {
     // Find the corresponding section reference
     const sectionRefs = [ref1, ref2, ref3, ref4, ref5];
 

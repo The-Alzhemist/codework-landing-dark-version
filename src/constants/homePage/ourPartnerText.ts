@@ -1,6 +1,6 @@
 
 
-export const ourPartnerSectionText: any = {
+export const ourPartnerSectionText = {
     heading1: "OUR ",
     heading2: "PARTNERS",
     imagesList: [

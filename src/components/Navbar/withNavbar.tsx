@@ -37,7 +37,7 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
       open: { opacity: 1, transition: { delay: 0.2, duration: 0.2 } },
     };
 
-    const newProps: any = {
+    const newProps: NavbarProps = {
       handleButtonClick,
       itemVariants,
       open,

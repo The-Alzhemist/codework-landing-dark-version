@@ -1,5 +1,5 @@
 
-export const footerMenu: any = {
+export const footerMenu = {
     footerLeft: {
       companyName: "CodeWork Tech Co.,Ltd.",
       companyAddress:

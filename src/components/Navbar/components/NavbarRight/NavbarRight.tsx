@@ -1,9 +1,8 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-import { IoClose } from "react-icons/io5";
-import { PiFacebookLogoBold, PiLinkedinLogoBold } from "react-icons/pi";
-import { FaLine, FaInstagram } from "react-icons/fa6";
+import { PiFacebookLogoBold } from "react-icons/pi";
+import { FaLine } from "react-icons/fa6";
 import IconSocialLink from "@/components/IconSocialLink/IconSocialLink";
 
 export const NavbarRight = () => {

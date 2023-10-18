@@ -3,10 +3,11 @@ import withContactUs from "./withContactUs";
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
+import { ContactHomeSectionProps } from "./interface";
 
 
 const ContactHomeSection = ({ root,
-  textMessageRef}: any) => {
+  textMessageRef}: ContactHomeSectionProps) => {
 
   return (
     <section

@@ -22,7 +22,7 @@ export const menuList = [
   },
 ];
 
-export const NavbarLeft = ({handleClick}:any) => {
+export const NavbarLeft = ({handleClick}: { handleClick: () => void }) => {
   const itemVariants = {
     closed: {
       opacity: 0,
@@ -33,8 +33,8 @@ export const NavbarLeft = ({handleClick}:any) => {
   return (
     <>
       <div className="flex flex-col  gap-y-7 items-center sm:items-start  ">
-        {menuList.map((menu: any) => (
-          <React.Fragment key={menu}>
+        {menuList.map((menu: {name: string, url: string}) => (
+          <React.Fragment key={menu.name}>
             <motion.div
               variants={itemVariants}
               className="text-neutral-900 hover:text-white text-4xl sm:text-5xl font-bold cursor-pointer group transition-all"

@@ -2,13 +2,14 @@ import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
+import { ContactHomeSectionProps } from "./interface";
 gsap.registerPlugin(TextPlugin);
 
 
-const withContactHomeSection = (Component: React.FC<any>) => {
+const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) => {
   const Hoc = () => {
-    const textMessageRef = useRef<any | null>(null);
-    const root = useRef<any>(null);
+    const textMessageRef = useRef<HTMLDivElement>(null);
+    const root = useRef<HTMLElement>(null);
   
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -28,7 +29,7 @@ const withContactHomeSection = (Component: React.FC<any>) => {
       return () => ctx.revert();
     }, []);
     
-    const newProps: any = {
+    const newProps: ContactHomeSectionProps = {
       root,
       textMessageRef
     };
