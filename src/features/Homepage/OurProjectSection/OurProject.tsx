@@ -27,12 +27,7 @@ export const OurProject = () => {
           <Paragraph
             className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
           >
-            {`At CodeWork, we believe in the power of collaboration. That's why
-            we've teamed up with industry-leading partners who share our vision
-            for innovation and excellence. Together, we bring you cutting-edge
-            solutions that propel your business into the future. Explore our
-            network of trusted partners who help us deliver the technology
-            solutions you can rely on.`}
+            {`Explore our successful projects with valued clients, showcasing our expertise and dedication.`}
           </Paragraph>
         </div>
 
@@ -85,7 +80,7 @@ export const OurProject = () => {
               <div className="absolute bottom-0  text-neutral-50   p-7">
                 <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
                   <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
-                    1 Project solution consultancy
+                    Project solution consultancy
                   </div>
                   <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                     UX/UI Design
@@ -130,7 +125,7 @@ export const OurProject = () => {
               <div className="absolute bottom-0  text-neutral-50   p-7">
                 <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
                   <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
-                    1 Project solution consultancy
+                    Project solution consultancy
                   </div>
                   <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                     UX/UI Design
@@ -175,7 +170,7 @@ export const OurProject = () => {
               <div className="absolute bottom-0  text-neutral-50   p-7">
                 <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
                   <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
-                    1 Project solution consultancy
+                    Project solution consultancy
                   </div>
                   <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                     UX/UI Design

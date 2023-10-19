@@ -5,7 +5,6 @@ import React from "react";
 import withOurPartner from "./withOurPartner";
 import { OurPartnerProps } from "./interface";
 
-
 const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
   return (
     <section
@@ -34,7 +33,9 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               <Paragraph
                 className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
               >
-                {`At CodeWork, we believe in the power of collaboration. That's why we've teamed up with industry-leading partners who share our vision for innovation and excellence. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our network of trusted partners who help us deliver the technology solutions you can rely on`}
+                {`We take pride in our collaboration with these esteemed companies.
+Together, we bring you cutting-edge solutions that propel your business into the future.
+Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork.`}
               </Paragraph>
             </div>
           </div>
@@ -50,52 +51,48 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
             <ul className="inline-block animate-scroll group-hover:pause mr-10">
               {/* img */}
               <div className="flex gap-x-5 sm:gap-x-10">
-                {ourPartnerSectionText.imagesList.map(
-                  (item, index: number) => (
-                    <React.Fragment key={`our-partner-${index}`}>
-                      <a
-                        className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
-                        href={item.urlName}
-                        target="_blank"
-                        rel="noopener nofollow"
-                      >
-                        <img
-                          src={item.pathName}
-                          width={0}
-                          height={0}
-                          className={`h-auto w-[90%] p-3 ${item.className}`}
-                          alt={`${item.alt}`}
-                        />
-                      </a>
-                    </React.Fragment>
-                  )
-                )}
+                {ourPartnerSectionText.imagesList.map((item, index: number) => (
+                  <React.Fragment key={`our-partner-${index}`}>
+                    <a
+                      className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
+                      href={item.urlName}
+                      target="_blank"
+                      rel="noopener nofollow"
+                    >
+                      <img
+                        src={item.pathName}
+                        width={0}
+                        height={0}
+                        className={`h-auto w-[90%] p-3 ${item.className}`}
+                        alt={`${item.alt}`}
+                      />
+                    </a>
+                  </React.Fragment>
+                ))}
               </div>
             </ul>
 
             <ul className="inline-block animate-scroll group-hover:pause">
               {/* img */}
               <div className="flex  gap-x-5 sm:gap-x-10">
-                {ourPartnerSectionText.imagesList.map(
-                  (item, index: number) => (
-                    <React.Fragment key={`our-partner-${index}`}>
-                      <a
-                        className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
-                        href={item.urlName}
-                        target="_blank"
-                        rel="noopener nofollow"
-                      >
-                        <img
-                          src={item.pathName}
-                          width={0}
-                          height={0}
-                          className={`h-auto w-[90%] p-3 ${item.className}`}
-                          alt={`${item.alt}`}
-                        />
-                      </a>
-                    </React.Fragment>
-                  )
-                )}
+                {ourPartnerSectionText.imagesList.map((item, index: number) => (
+                  <React.Fragment key={`our-partner-${index}`}>
+                    <a
+                      className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
+                      href={item.urlName}
+                      target="_blank"
+                      rel="noopener nofollow"
+                    >
+                      <img
+                        src={item.pathName}
+                        width={0}
+                        height={0}
+                        className={`h-auto w-[90%] p-3 ${item.className}`}
+                        alt={`${item.alt}`}
+                      />
+                    </a>
+                  </React.Fragment>
+                ))}
               </div>
             </ul>
           </div>

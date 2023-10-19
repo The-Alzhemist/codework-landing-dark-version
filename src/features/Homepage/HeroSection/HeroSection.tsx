@@ -47,11 +47,7 @@ const HeroSection = ({
               className={`mb-8 max-w-[880px] text-base sm:text-md font-light text-white opacity-80`}
             >
               <span>
-                {" "}
-                {` Turning your brilliant ideas into real-world solutions is our
-            passion! Whether you're an entrepreneur, a startup, or a
-            well-established business, we’re here to transform your vision into
-            a functional and cutting-edge software.`}
+                {`Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software.`}
               </span>
             </Paragraph>
           </div>
@@ -64,7 +60,6 @@ const HeroSection = ({
                   <FaArrowRight />
                 </span>
               </div>
-            
             </PrimaryButton>
           </div>
         </div>

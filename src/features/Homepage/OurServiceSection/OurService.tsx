@@ -70,12 +70,7 @@ const serviceList = [
             <Paragraph
               className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
             >
-              {`At CodeWork, we believe in the power of collaboration. That's why
-            we've teamed up with industry-leading partners who share our vision
-            for innovation and excellence. Together, we bring you cutting-edge
-            solutions that propel your business into the future. Explore our
-            network of trusted partners who help us deliver the technology
-            solutions you can rely on.`}
+              {`Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.`}
             </Paragraph>
           </div>
         </div>
