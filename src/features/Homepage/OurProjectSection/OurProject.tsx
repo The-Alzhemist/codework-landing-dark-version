@@ -19,11 +19,13 @@ export const OurProject = () => {
       <div className=" m-auto max-w-[1440px]">
         {/* title */}
         <div className="flex items-center flex-col mb-16 ease-out">
-          <h2 className="text-lg md:text-4xl font-semibold flex mb-7 text-center">
-            <span className="text-white border-b-2 border-primary-100 underline underline-offset-3  decoration-8 decoration-primary-100">
-              Projects.
-            </span>
-          </h2>
+            <h2
+              className="text-2xl md:text-4xl font-semibold flex mb-7"
+            >
+              <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
+                Project.
+              </span>
+            </h2>
           <Paragraph
             className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
           >

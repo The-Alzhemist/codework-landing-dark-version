@@ -7,11 +7,10 @@ import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
 import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 
-
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
-import { useEffect, useLayoutEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import TagManager from "react-gtm-module";
 import { QueryClient, QueryClientProvider } from "react-query";
 import gsap from "gsap";
@@ -24,10 +23,10 @@ const poppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-
 const queryClient = new QueryClient();
 export default function Home() {
   const [hasConsent, setHasConsent] = useState(false);
+  const rootPage = useRef(null);
   const ref1 = useRef(null);
   const ref2 = useRef(null);
   const ref3 = useRef(null);
@@ -52,32 +51,48 @@ export default function Home() {
     }
   };
 
-  useLayoutEffect(() => {
-    const refs = [ref1, ref2, ref3, ref4, ref5];
+  // CHECK PDPA CONSENT LOCAL STORAGE
+  useEffect(() => {
+    const userHasGivenConsent =
+      typeof window !== "undefined" &&
+      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
+    if (userHasGivenConsent) {
+      setHasConsent(true);
+      TagManager.initialize({ gtmId: GTM_PRODUCTION });
+    }
+  }, [hasConsent]);
 
-    refs.forEach((ref, index) => {
-      if (ref.current) {
-        ScrollTrigger.create({
-          trigger: ref.current,
-          markers: false,
-          start: "top center",
-          end: "bottom center",
-          onEnter: () => {
-            console.log(index + 1);
-            setActiveSection(index + 1);
-          },
-          onEnterBack: () => {
-            console.log(`Back ${index + 1}`);
-            setActiveSection(index + 1);
-          },
-        });
-      }
-    });
+  useLayoutEffect(() => {
+    let ctx = gsap.context(() => {
+      const refs = [ref1, ref2, ref3, ref4, ref5];
+
+      refs.forEach((ref, index) => {
+        if (ref.current) {
+          ScrollTrigger.create({
+            trigger: ref.current,
+            markers: false,
+            start: "top center",
+            end: "bottom center",
+            onEnter: () => {
+              setActiveSection(index + 1);
+            },
+            onEnterBack: () => {
+              setActiveSection(index + 1);
+            },
+          });
+        }
+      });
+    }, rootPage);
+
+    return () => ctx.revert();
   }, [ref1, ref2, ref3, ref4, ref5]);
 
   return (
     <QueryClientProvider client={queryClient}>
-      <main className={`page-container ${poppinsFont.className} `}>
+      <main
+        className={`page-container ${poppinsFont.className} `}
+        ref={rootPage}
+      >
         <div className="section" ref={ref1}>
           <HeroSection />
         </div>
@@ -99,7 +114,7 @@ export default function Home() {
           <ContactHomeSection />
         </div>
 
-        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />} 
+        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
 
         {/* tab section */}
         <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2 ">

@@ -48,6 +48,7 @@ const Footer = (props: FooterProps) => {
   return (
     <footer className="bg-neutral-1000 text-white">
       <div
+      ref={root}
         className={`relative md:py-[50px]  mx-auto p-5 lg:px-[50px] flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-y-0`}
       >
         {/* left */}

@@ -10,6 +10,8 @@ import { HeroSectionProps } from "./interface";
 
 import { FaArrowRight } from "react-icons/fa6";
 
+
+
 const HeroSection = ({
   root,
   h1Ref,
@@ -23,6 +25,9 @@ const HeroSection = ({
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
       ref={root}
     >
+
+
+
       <div ref={circleLeftRef}>
         <BackgroundGradientBlur className="top-0 left-[-100px] sm:top-[-200px] sm:left-[-200px]  z-50 opacity-20  " />
       </div>
@@ -31,6 +36,9 @@ const HeroSection = ({
       </div>
 
       <div className="h-full   relative flex justify-start items-center w-full max-w-[1440px] m-auto">
+
+      
+
         <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col items-center text-center justify-center sm:p-0">
           <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
             <div className="text-4xl md:text-6xl mb-3 text-white">
