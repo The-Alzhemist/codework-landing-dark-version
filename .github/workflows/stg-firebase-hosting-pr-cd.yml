@@ -27,4 +27,4 @@ jobs:
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODEWORK_TECH }}'
           channelId: pr
           target: code-work-tech-dark-version
-          projectId: code-work-tech-dark-version
+          projectId: codework-tech
