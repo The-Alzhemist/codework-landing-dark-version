@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <main
-        className={`page-container ${poppinsFont.className} `}
+        className={`page-container production-version:1.01 ${poppinsFont.className} `}
         ref={rootPage}
       >
         <div className="section" ref={ref1}>
@@ -117,7 +117,7 @@ export default function Home() {
         {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
 
         {/* tab section */}
-        <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2 ">
+        <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2">
           <div
             onClick={() => scrollToSection(1)}
             className={`${
