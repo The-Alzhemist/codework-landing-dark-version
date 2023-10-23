@@ -90,7 +90,7 @@ export default function Home() {
   return (
     <QueryClientProvider client={queryClient}>
       <main
-        className={`page-container ${poppinsFont.className} `}
+        className={`page-container staging-version:1.01 ${poppinsFont.className} `}
         ref={rootPage}
       >
         <div className="section" ref={ref1}>
