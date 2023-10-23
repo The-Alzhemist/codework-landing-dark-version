@@ -25,7 +25,7 @@ jobs:
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODEWORK_TECH }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODEWORK_TECH_DARK_VERSION }}'
           channelId: pr
           target: code-work-tech-dark-version
           projectId: code-work-tech-dark-version
