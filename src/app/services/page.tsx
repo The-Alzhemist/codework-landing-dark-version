@@ -1,8 +1,12 @@
+
+
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import FormPage from "@/features/ContactPage/FormPage";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import ServiceIntro from "./components/ServiceIntro/ServiceIntro";
+import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
+import ServiceCard from "./components/ServiceCard/ServiceCard";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -10,7 +14,7 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CodeWork Tech | Contact Us",
+  title: "CodeWork Tech | Services",
   description:
     "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
   openGraph: {
@@ -54,6 +58,8 @@ export default function ServicePage() {
        
       </div> */}
       <ServiceIntro/>
+      <ServiceCard/>
+      <ContactHomeSection/>
     </main>
   );
 }

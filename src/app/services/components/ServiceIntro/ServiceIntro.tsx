@@ -2,16 +2,10 @@
 
 import React from "react";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-
-
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 
-
-import { FaArrowRight } from "react-icons/fa6";
 import witServiceIntro from "./withServiceIntro";
 import { ServiceIntroProps } from "./interface";
-
 
 
 const ServiceIntro = ({
@@ -27,9 +21,6 @@ const ServiceIntro = ({
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
       ref={root}
     >
-
-
-
       <div ref={circleLeftRef}>
         <BackgroundGradientBlur className="top-0 left-[-100px] sm:top-[-200px] sm:left-[-200px]  z-50 opacity-20  " />
       </div>
@@ -51,7 +42,7 @@ const ServiceIntro = ({
 
           <div ref={pRef} className="mb-3">
             <Paragraph
-              className={`mb-8 max-w-[880px] text-base sm:text-md font-light text-white opacity-80`}
+              className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
             >
               <span>
                 {`Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.`}
