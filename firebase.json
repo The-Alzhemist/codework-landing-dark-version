@@ -1,7 +1,7 @@
 {
   "hosting": [
     {
-      "site": "code-work-tech-dark-version",
+      "site": "code-work-tech",
       "public": "out",
       "ignore": [
         "firebase.json",
@@ -10,7 +10,7 @@
       ]
     },
     {
-      "site": "staging-code-work-tech-dark-version",
+      "site": "staging-code-work-tech",
       "public": "out",
       "ignore": [
         "firebase.json",
