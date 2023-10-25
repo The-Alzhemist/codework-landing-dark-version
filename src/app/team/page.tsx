@@ -3,6 +3,8 @@ import FormPage from "@/features/ContactPage/FormPage";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import TeamIntro from "./components/TeamIntro/TeamIntro";
+import TeamMember from "./components/TeamMember/TeamMember";
+import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -55,8 +57,9 @@ export default function TeamPage() {
     </div> */}
     
     <TeamIntro/>
+    <TeamMember/>
 
-    {/* <ContactHomeSection/> */}
+    <ContactHomeSection/>
   </main>
   );
 }
