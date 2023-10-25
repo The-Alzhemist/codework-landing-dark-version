@@ -1,7 +1,12 @@
+
+
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import FormPage from "@/features/ContactPage/FormPage";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import ServiceIntro from "./components/ServiceIntro/ServiceIntro";
+import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
+import ServiceCard from "./components/ServiceCard/ServiceCard";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -9,7 +14,7 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CodeWork Tech | Contact Us",
+  title: "CodeWork Tech | Services",
   description:
     "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
   openGraph: {
@@ -39,7 +44,7 @@ export const metadata: Metadata = {
 export default function ServicePage() {
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
-      <div className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5">
+      {/* <div className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5">
         <div className="text-center h-screen flex justify-center flex-col items-center text-4xl text-white">
       
           <div className="mb-10"> Service page is coming soon...</div>
@@ -51,7 +56,10 @@ export default function ServicePage() {
         </PrimaryButton>
         </div>
        
-      </div>
+      </div> */}
+      <ServiceIntro/>
+      <ServiceCard/>
+      <ContactHomeSection/>
     </main>
   );
 }
