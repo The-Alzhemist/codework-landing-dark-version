@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "codework-tech"
+  },
+  "targets": {
+    "codework-tech": {
+      "hosting": {
+        "staging-codework-tech": [
+          "staging-codework-tech"
+        ],
+        "codework-tech": [
+          "codework-tech"
+        ]
+      }
+    }
   }
 }
