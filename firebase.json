@@ -1,7 +1,8 @@
 {
   "hosting": [
     {
-      "site": "code-work-tech-dark-version",
+      "target": "codework-tech",
+      "cleanUrls": true,
       "public": "out",
       "ignore": [
         "firebase.json",
@@ -10,7 +11,8 @@
       ]
     },
     {
-      "site": "staging-code-work-tech-dark-version",
+      "target": "staging-codework-tech",
+      "cleanUrls": true,
       "public": "out",
       "ignore": [
         "firebase.json",
