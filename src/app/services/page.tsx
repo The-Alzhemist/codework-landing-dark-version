@@ -1,7 +1,6 @@
 
 
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-import FormPage from "@/features/ContactPage/FormPage";
+
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import ServiceIntro from "../../features/ServicePage/components/ServiceIntro/ServiceIntro";
@@ -16,11 +15,11 @@ const poppinsFont = Poppins({
 export const metadata: Metadata = {
   title: "CodeWork Tech | Services",
   description:
-    "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+    "Discover our service offerings, thoughtfully designed to address your business requirements",
   openGraph: {
     title: "CodeWork Tech | Contact Us",
     description:
-      "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+      "Discover our service offerings, thoughtfully designed to address your business requirements",
     url: "",
     siteName: "",
     images: [
