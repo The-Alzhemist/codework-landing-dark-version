@@ -85,7 +85,7 @@ function TeamMember() {
             alt="bg circle gradient"
             title="bg circle gradient"
             loading="lazy"
-            className=" rounded-lg mb-3"
+            className="rounded-lg mb-3"
           />
           <div>
             <h2 className="text-sm sm:text-base font-semibold text-white text-left">

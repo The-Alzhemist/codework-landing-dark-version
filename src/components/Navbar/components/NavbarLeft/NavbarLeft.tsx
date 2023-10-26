@@ -17,9 +17,14 @@ export const menuList = [
     url: "/projects",
   },
   {
+    name: "Team",
+    url: "/team",
+  },
+  {
     name: "Contact us",
     url: "/contact-us",
   },
+ 
 ];
 
 export const NavbarLeft = ({handleClick}: { handleClick: () => void }) => {
