@@ -8,7 +8,7 @@ const witServiceIntro = (Component: React.FC<ServiceIntroProps>) => {
     const root = useRef<HTMLElement | null>(null);
     const h1Ref = useRef<HTMLDivElement | null>(null);
     const pRef = useRef<HTMLDivElement | null>(null);
-    const btnRef = useRef<HTMLDivElement | null>(null);
+    const imgRef = useRef<HTMLDivElement | null>(null);
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
@@ -31,7 +31,7 @@ const witServiceIntro = (Component: React.FC<ServiceIntroProps>) => {
           ease: "power4",
           stagger: 0.25,
         });
-        gsap.from(btnRef.current, {
+        gsap.from(imgRef.current, {
           opacity: 0,
           y: 200,
           duration: 1,
@@ -66,7 +66,7 @@ const witServiceIntro = (Component: React.FC<ServiceIntroProps>) => {
       root,
       h1Ref,
       pRef,
-      btnRef,
+      imgRef,
       circleLeftRef,
       circleRightRef,
     };
