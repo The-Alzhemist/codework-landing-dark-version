@@ -26,5 +26,5 @@ jobs:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_CODEWORK_TECH_DARK_VERSION }}'
           channelId: pr
-          target: staging-code-work-tech-dark-version
+          target: staging-codework-tech
           projectId: codework-tech
