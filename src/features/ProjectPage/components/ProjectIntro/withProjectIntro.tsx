@@ -1,14 +1,15 @@
 import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
+import { ProjectIntroProps } from "./interface";
 
 
-const withProjectIntro = (Component: React.FC<any>) => {
+const withProjectIntro = (Component: React.FC<ProjectIntroProps>) => {
   const Hoc = () => {
     const root = useRef<HTMLElement | null>(null);
     const h1Ref = useRef<HTMLDivElement | null>(null);
     const pRef = useRef<HTMLDivElement | null>(null);
-    const btnRef = useRef<HTMLDivElement | null>(null);
+    const imgRef = useRef<HTMLDivElement | null>(null);
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
@@ -31,7 +32,7 @@ const withProjectIntro = (Component: React.FC<any>) => {
           ease: "power4",
           stagger: 0.25,
         });
-        gsap.from(btnRef.current, {
+        gsap.from(imgRef.current, {
           opacity: 0,
           y: 200,
           duration: 1,
@@ -62,11 +63,11 @@ const withProjectIntro = (Component: React.FC<any>) => {
       return () => ctx.revert();
     }, []);
 
-    const newProps: any = {
+    const newProps: ProjectIntroProps = {
       root,
       h1Ref,
       pRef,
-      btnRef,
+      imgRef,
       circleLeftRef,
       circleRightRef,
     };
