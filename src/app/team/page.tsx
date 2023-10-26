@@ -2,8 +2,8 @@ import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import FormPage from "@/features/ContactPage/FormPage";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import TeamIntro from "./components/TeamIntro/TeamIntro";
-import TeamMember from "./components/TeamMember/TeamMember";
+import TeamIntro from "../../features/TeamPage/components/TeamIntro/TeamIntro";
+import TeamMember from "../../features/TeamPage/components/TeamMember/TeamMember";
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 
 const poppinsFont = Poppins({
@@ -12,13 +12,13 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CodeWork Tech | Contact Us",
+  title: "CodeWork Tech | Team",
   description:
-    "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+    "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
   openGraph: {
-    title: "CodeWork Tech | Contact Us",
+    title: "CodeWork Tech | Team",
     description:
-      "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+      "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
     url: "",
     siteName: "",
     images: [
@@ -41,24 +41,9 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
-    {/* <div className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5">
-      <div className="text-center h-screen flex justify-center flex-col items-center text-4xl text-white">
-    
-        <div className="mb-10"> Service page is coming soon...</div>
-        <PrimaryButton
-        className=" py-3 text-base sm:text-lg hover:scale-90 mb-5 lg:mb-0"
-        pathName="/"
-      >
-        Back to home page
-      </PrimaryButton>
-      </div>
-     
-    </div> */}
-    
+    <main className={` bg-neutral-1000 ${poppinsFont.className}`}>    
     <TeamIntro/>
     <TeamMember/>
-
     <ContactHomeSection/>
   </main>
   );

@@ -10,10 +10,10 @@ const poppinsFont = Poppins({
 
 export const metadata: Metadata = {
   title: "CodeWork Tech | Contact Us",
-  description: "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+  description: "Contact us to turn your vision into reality. Let’s create something extraordinary together.",
   openGraph: {
     title: "CodeWork Tech | Contact Us",
-  description: "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+  description: "Contact us to turn your vision into reality. Let’s create something extraordinary together.",
     url: '',
     siteName: '',
     images: [
