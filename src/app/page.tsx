@@ -172,7 +172,7 @@ export default function Home() {
             target="_blank"
           >
             <img
-              src="/logo/line-logo.png"
+              src="/logo/codework-line-logo-v1.png"
               className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px] z-50"
             />
           </a>
@@ -183,7 +183,7 @@ export default function Home() {
             target="_blank"
           >
             <img
-              src="/logo/facebook-logo.png"
+              src="/logo/codework-fb-logo-v1.png"
               className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]"
             />
           </a>

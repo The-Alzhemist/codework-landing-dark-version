@@ -9,11 +9,11 @@ export const menuList = [
     url: "/",
   },
   {
-    name: "Service",
+    name: "Services",
     url: "/services",
   },
   {
-    name: "Project",
+    name: "Projects",
     url: "/projects",
   },
   {
