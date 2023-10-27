@@ -25,9 +25,6 @@ const HeroSection = ({
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
       ref={root}
     >
-
-
-
       <div ref={circleLeftRef}>
         <BackgroundGradientBlur className="top-0 left-[-100px] sm:top-[-200px] sm:left-[-200px]  z-50 opacity-20  " />
       </div>
@@ -36,8 +33,6 @@ const HeroSection = ({
       </div>
 
       <div className="h-full   relative flex justify-start items-center w-full max-w-[1440px] m-auto">
-
-      
 
         <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col items-center text-center justify-center sm:p-0">
           <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
@@ -62,7 +57,7 @@ const HeroSection = ({
 
           <div className="max-w-7xl " ref={btnRef}>
             <PrimaryButton pathName="/contact-us" className=" text-xl ">
-              <div className="flex items-center gap-2">
+              <div className="flex items-center gap-5">
                 Contact us
                 <span className="animate-horicentralBounce">
                   <FaArrowRight />

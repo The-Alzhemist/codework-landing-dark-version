@@ -30,6 +30,12 @@ const serviceList = [
   {
     img: "",
     alt: "",
+    name: "Pornjira (Ice)",
+    position: "Operations Manager",
+  },
+  {
+    img: "",
+    alt: "",
     name: "Pusit (Man)",
     position: "Product manager",
   },
@@ -57,12 +63,7 @@ const serviceList = [
     name: "Aphiwit (Nueng)",
     position: "Front-end Developer",
   },
-  {
-    img: "",
-    alt: "",
-    name: "Pornjira (Ice)",
-    position: "Operations Manager",
-  },
+
 
   {
     img: "",

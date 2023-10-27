@@ -24,26 +24,24 @@ export const NavbarRight = () => {
       >
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Social media</label>
-          <div className="flex justify-end gap-x-1">
+          <div className="flex justify-end gap-x-2 items-center">
             <IconSocialLink linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
 
             {/* ถ้ามีลิ้งให้กลับมาเปิดใช้งาน */}
             {/* <IconSocialLink linkName="#" iconName={<FaInstagram />} /> */}
             {/* <IconSocialLink linkName="#" iconName={<PiLinkedinLogoBold />} /> */}
+            <div className="text-xs sm:text-lg ">Codework Tech</div>
           </div>
-          <div className="text-xs sm:text-lg ">Codework Tech</div>
-        </div>
 
-        <div className="mb-5">
-          <label className="flex justify-end">
+          <label className="flex justify-end items-center gap-x-2 ">
             <IconSocialLink linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
+            <div className="text-xs sm:text-lg">@codeworktech</div>
           </label>
-          <div className="text-xs sm:text-lg">@codeworktech</div>
         </div>
-
+ß
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Telephone</label>
-          <div className="text-xs sm:text-lg">(+66)83 987 4997</div>
+          <div className="text-xs sm:text-lg">(+66) 63 849 4282</div>
         </div>
 
         <div>

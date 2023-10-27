@@ -23,7 +23,7 @@ export const OurProject = () => {
               className="text-2xl md:text-4xl font-semibold flex mb-7"
             >
               <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
-                Project.
+                PROJECTS.
               </span>
             </h2>
           <Paragraph

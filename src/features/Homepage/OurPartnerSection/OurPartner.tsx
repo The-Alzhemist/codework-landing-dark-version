@@ -26,7 +26,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               ref={h1Ref}
             >
               <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
-                Partner.
+                Partners.
               </span>
             </h2>
             <div ref={pRef}>
