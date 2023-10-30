@@ -10,28 +10,26 @@ gsap.registerPlugin(ScrollTrigger);
 
 const serviceList = [
   {
-    img: "",
-    alt: "",
+    img: "https://placehold.co/220x305",
+    imgWebP: "https://placehold.co/220x305",
     name: "Pakorn (Puck)",
     position: "CEO & Co-founder",
   },
   {
-    img: "",
-    alt: "",
+    img: "https://placehold.co/220x305",
+    imgWebP: "https://placehold.co/220x305",
     name: "Soratat (Q)",
     position: "Founder",
   },
   {
     img: "/images/team-page/ter.jpg",
     imgWebP: "/images/team-page/ter.webp",
-    alt: "",
     name: "Pongsakorn (Ter)",
     position: "Head of Product and Deliverable",
   },
   {
     img: "/images/team-page/ice.jpg",
     imgWebP: "/images/team-page/ice.webp",
-    alt: "",
     name: "Pornjira (Ice)",
     position: "Operations Manager",
   },
@@ -44,28 +42,24 @@ const serviceList = [
   {
     img: "/images/team-page/ford.jpg",
     imgWebP: "/images/team-page/ford.webp",
-    alt: "",
     name: "Pornsit (Ford)",
     position: "Principle Engineer",
   },
   {
     img: "/images/team-page/mo.jpg",
     imgWebP: "/images/team-page/mo.webp",
-    alt: "",
     name: "Niti (Mo)",
     position: "Full-stack Developer",
   },
   {
-    img: "/images/team-page/fluck.jpg",
-    imgWebP: "/images/team-page/fluck.webp",
-    alt: "",
+    img: "/images/team-page/fluke.jpg",
+    imgWebP: "/images/team-page/fluke.webp",
     name: "Peerapol (Fluke)",
     position: "Full-stack Developer",
   },
   {
     img: "/images/team-page/nueng.jpg",
     imgWebP: "/images/team-page/nueng.webp",
-    alt: "",
     name: "Aphiwit (Nueng)",
     position: "Front-end Developer",
   },
@@ -74,7 +68,6 @@ const serviceList = [
   {
     img: "/images/team-page/kawpoon.jpg",
     imgWebP: "/images/team-page/kawpoon.webp",
-    alt: "",
     name: "Chantisa (Kawpoon)",
     position: "UX/UI Designer",
   },
@@ -98,7 +91,7 @@ function TeamMember() {
               alt=""
               title=""
               loading="lazy"
-              className="rounded-lg mb-3 w-[220px] h-[305px] object-cover"
+              className="rounded-lg mb-3 w-[220px] h-[200px] sm:h-[305px] object-cover border-2 border-primary-50"
             />
           </picture>
           <div>
