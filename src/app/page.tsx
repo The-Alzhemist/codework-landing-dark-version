@@ -12,7 +12,7 @@ import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 import { Poppins } from "next/font/google";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import TagManager from "react-gtm-module";
-import { QueryClient, QueryClientProvider } from "react-query";
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import OurService from "@/features/Homepage/OurServiceSection/OurService";
@@ -21,7 +21,9 @@ gsap.registerPlugin(ScrollTrigger);
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
   subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false 
 });
+
 
 
 export default function Home() {

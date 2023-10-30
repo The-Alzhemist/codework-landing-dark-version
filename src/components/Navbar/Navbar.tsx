@@ -16,6 +16,7 @@ import { Poppins } from "next/font/google";
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
   subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false 
 });
 
 const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {

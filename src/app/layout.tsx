@@ -1,12 +1,16 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 import { NavbarToggleContextProvider } from "@/context/ThemeContext/NavbarToggleContext";
 
 
-const inter = Inter({ subsets: ["latin"] });
+const poppinsFont = Poppins({
+  weight: ["100", "300", "500", "700", "800"],
+  subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false 
+});
 
 export const metadata: Metadata = {
   title: "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
@@ -43,7 +47,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={poppinsFont.className}>
         <NavbarToggleContextProvider>
           <Navbar/>
           <div>{children}</div>

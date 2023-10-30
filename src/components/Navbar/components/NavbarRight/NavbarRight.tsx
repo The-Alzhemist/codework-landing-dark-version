@@ -38,7 +38,7 @@ export const NavbarRight = () => {
             <div className="text-xs sm:text-lg">@codeworktech</div>
           </label>
         </div>
-ß
+
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Telephone</label>
           <div className="text-xs sm:text-lg">(+66) 63 849 4282</div>
