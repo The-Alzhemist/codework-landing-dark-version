@@ -7,30 +7,27 @@ import { gsap } from "gsap";
 const withNavbar = (Component: React.FC<NavbarProps>) => {
   const Hoc = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-
-
-    // const [isOpen, setIsOpen] = useState(false);
     const sectionNavRef = useRef(null);
 
     const NavbarContext = useContext(NavbarToggleContext);
 
-  
-    const { isOpen, setIsOpen } = NavbarContext;
+    // Check if NavbarContext exists before extracting values
+    const { isOpen, setIsOpen } = NavbarContext || { isOpen: false, setIsOpen: () => {} };
 
-  
     useEffect(() => {
-      gsap.to(sectionNavRef.current, {
-        y: isOpen ? "-100%" : "0%",
-        duration: 0.75,
-        ease: "power4.out",
-      });
-    },[isOpen])
-    
-    
-  
+      if (NavbarContext) {
+        gsap.to(sectionNavRef.current, {
+          y: isOpen ? "-100%" : "0%",
+          duration: 0.75,
+          ease: "power4.out",
+        });
+      }
+    }, [isOpen]);
 
     const onClikcToggle = () => {
-      setIsOpen(!isOpen);
+      if (NavbarContext) {
+        setIsOpen(!isOpen);
+      }
     };
 
     useEffect(() => {
@@ -42,24 +39,29 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
         }
       };
 
-      typeof window !== "undefined" &&
-        window.addEventListener("scroll", handleScroll);
+      typeof window !== "undefined" && window.addEventListener("scroll", handleScroll);
 
       return () => {
-        typeof window !== "undefined" &&
-          window.removeEventListener("scroll", handleScroll);
+        typeof window !== "undefined" && window.removeEventListener("scroll", handleScroll);
       };
     }, []);
 
-  
     const newProps: NavbarProps = {
       sectionNavRef,
       onClikcToggle,
       isScrolled,
     };
+
     return <Component {...newProps} />;
   };
 
   return Hoc;
 };
+
 export default withNavbar;
+
+
+
+
+
+

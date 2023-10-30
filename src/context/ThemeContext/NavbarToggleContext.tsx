@@ -3,8 +3,8 @@
 import React, { createContext, useState, ReactNode } from 'react';
 
 type NavbarToggleContextType = {
-  isOpen:boolean
-  setIsOpen:any
+  isOpen: boolean;
+  setIsOpen: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 const NavbarToggleContext = createContext<NavbarToggleContextType | undefined>(undefined);
