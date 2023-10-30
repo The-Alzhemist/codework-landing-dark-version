@@ -22,43 +22,49 @@ const serviceList = [
     position: "Founder",
   },
   {
-    img: "",
+    img: "/images/team-page/ter.jpg",
+    imgWebP: "/images/team-page/ter.webp",
     alt: "",
     name: "Pongsakorn (Ter)",
     position: "Head of Product and Deliverable",
   },
   {
-    img: "",
+    img: "/images/team-page/ice.jpg",
+    imgWebP: "/images/team-page/ice.webp",
     alt: "",
     name: "Pornjira (Ice)",
     position: "Operations Manager",
   },
   {
-    img: "",
-    alt: "",
+    img: "/images/team-page/man.jpg",
+    imgWebP: "/images/team-page/man.webp",
     name: "Pusit (Man)",
     position: "Product manager",
   },
   {
-    img: "",
+    img: "/images/team-page/ford.jpg",
+    imgWebP: "/images/team-page/ford.webp",
     alt: "",
     name: "Pornsit (Ford)",
     position: "Principle Engineer",
   },
   {
-    img: "",
+    img: "/images/team-page/mo.jpg",
+    imgWebP: "/images/team-page/mo.webp",
     alt: "",
     name: "Niti (Mo)",
     position: "Full-stack Developer",
   },
   {
-    img: "",
+    img: "/images/team-page/fluck.jpg",
+    imgWebP: "/images/team-page/fluck.webp",
     alt: "",
     name: "Peerapol (Fluke)",
     position: "Full-stack Developer",
   },
   {
-    img: "",
+    img: "/images/team-page/nueng.jpg",
+    imgWebP: "/images/team-page/nueng.webp",
     alt: "",
     name: "Aphiwit (Nueng)",
     position: "Front-end Developer",
@@ -66,7 +72,8 @@ const serviceList = [
 
 
   {
-    img: "",
+    img: "/images/team-page/kawpoon.jpg",
+    imgWebP: "/images/team-page/kawpoon.webp",
     alt: "",
     name: "Chantisa (Kawpoon)",
     position: "UX/UI Designer",
@@ -81,15 +88,21 @@ function TeamMember() {
           key={"team-member-key-" + index}
           className="w-[40%] md:w-[32%] lg:w-[20%] card-x flex flex-col rounded-2xl items-start mb-10 max-w-[350px] "
         >
-          <img
-            src="https://placehold.co/220x305"
-            alt="bg circle gradient"
-            title="bg circle gradient"
-            loading="lazy"
-            className="rounded-lg mb-3"
-          />
+             <picture>
+            <source
+              srcSet={item.imgWebP}
+              type="image/webp"
+            />
+            <img
+              src={item.img}
+              alt=""
+              title=""
+              loading="lazy"
+              className="rounded-lg mb-3 w-[220px] h-[305px] object-cover"
+            />
+          </picture>
           <div>
-            <h2 className="text-sm sm:text-base font-semibold text-white text-left">
+            <h2 className="text-sm sm:text-base font-semibold text-white text-left ">
               {item.name}
             </h2>
           
