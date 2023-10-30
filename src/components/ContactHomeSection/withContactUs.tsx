@@ -1,8 +1,10 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useContext, useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ContactHomeSectionProps } from "./interface";
+import { NavbarToggleContext } from "@/context/ThemeContext/NavbarToggleContext";
+
 gsap.registerPlugin(TextPlugin);
 
 
@@ -10,7 +12,7 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
   const Hoc = () => {
     const textMessageRef = useRef<HTMLDivElement>(null);
     const root = useRef<HTMLElement>(null);
-  
+    const NavbarContext = useContext(NavbarToggleContext);
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
         gsap.to(textMessageRef.current, {
@@ -29,9 +31,20 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
       return () => ctx.revert();
     }, []);
     
+
+    if (!NavbarContext) {
+      return <div>Context is not available</div>;
+    }
+  
+    const { isOpen, setIsOpen } = NavbarContext;
+  
+  
+    
     const newProps: ContactHomeSectionProps = {
       root,
-      textMessageRef
+      textMessageRef,
+      isOpen, 
+      setIsOpen
     };
 
     return <Component {...newProps} />;

@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useContext } from "react";
 
 import withNavbar from "./withNavbar";
 import { NavbarRight } from "./components/NavbarRight/NavbarRight";
@@ -18,16 +18,10 @@ const poppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-const Navbar = ({
-  sectionNavRef,
-  onClikcToggle,
-  isScrolled,
-}: NavbarProps) => {
-
+const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
   return (
     <>
       <div
-
         className={`${
           isScrolled ? "fixed  bg-neutral-1000" : "absolute bg-transparent"
         }  ${
@@ -42,6 +36,7 @@ const Navbar = ({
           onClick={onClikcToggle}
         >
           <IoMdMenu />
+    
         </div>
       </div>
 

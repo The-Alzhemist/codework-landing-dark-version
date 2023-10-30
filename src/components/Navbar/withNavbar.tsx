@@ -1,21 +1,12 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useContext, useEffect, useRef, useState } from "react";
 import { NavbarProps } from "./interface";
 import { gsap } from "gsap";
+import { NavbarToggleContext } from "@/context/ThemeContext/NavbarToggleContext";
+
 
 const withNavbar = (Component: React.FC<NavbarProps>) => {
   const Hoc = () => {
     const [isScrolled, setIsScrolled] = useState(false);
-    const [isOpen, setIsOpen] = useState(false);
-    const sectionNavRef = useRef(null);
-
-    const onClikcToggle = () => {
-      setIsOpen(!isOpen);
-      gsap.to(sectionNavRef.current, {
-        y: isOpen ? "-100%" : "0%",
-        duration: 0.75,
-        ease: "power4.out",
-      });
-    };
 
     useEffect(() => {
       const handleScroll = () => {
@@ -34,6 +25,25 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
           window.removeEventListener("scroll", handleScroll);
       };
     }, []);
+    
+    // const [isOpen, setIsOpen] = useState(false);
+    const sectionNavRef = useRef(null);
+
+    const NavbarContext = useContext(NavbarToggleContext);
+
+    if (!NavbarContext) {
+      // Handle the case where the context is undefined
+      return null; // or render an error message or loading state
+    }
+    const { isOpen, setIsOpen } = NavbarContext;
+  
+
+    const onClikcToggle = () => {
+      setIsOpen(!isOpen);
+    };
+
+    
+
 
   
 
