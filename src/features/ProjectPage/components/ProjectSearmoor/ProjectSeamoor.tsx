@@ -7,11 +7,6 @@ export default function ProjectSeamoor() {
       {/* 1 */}
       <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-y-0 justify-center  items-start lg:items-center">
         <div className="w-[90%] lg:w-1/2">
-          {/* <img
-            src="/images/project-page/seamour-project-cover.jpg"
-            alt=""
-            className="w-full rounded-e-full"
-          /> */}
             <picture>
             <source
               srcSet="/images/project-page/seamour-project-cover.webp"
@@ -29,11 +24,6 @@ export default function ProjectSeamoor() {
 
         <div className="w-full lg:w-1/2 pr-5 px-5 lg:px-[50px]">
           <h2 className="text-2xl sm:text-4xl  text-primary-100 font-semibold  mb-5 flex items-center gap-x-2">
-            {/* <img
-              src="/logo/our-partner/semour.png"
-              className="w-[100px] h-auto bg-white"
-            /> */}
-
             <a
               className="grayscale-[50%] group-hover:grayscale-0 w-[100px] h-[100px]   bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
               href=""
