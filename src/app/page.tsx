@@ -23,7 +23,7 @@ const poppinsFont = Poppins({
   subsets: ["latin"],
 });
 
-const queryClient = new QueryClient();
+
 export default function Home() {
   const [hasConsent, setHasConsent] = useState(false);
   const rootPage = useRef(null);
@@ -88,9 +88,9 @@ export default function Home() {
   }, [ref1, ref2, ref3, ref4, ref5]);
 
   return (
-    <QueryClientProvider client={queryClient}>
+   
       <main
-        className={`page-container staging-version:1.01 ${poppinsFont.className} `}
+        className={`${poppinsFont.className} `}
         ref={rootPage}
       >
         <div className="section" ref={ref1}>
@@ -189,6 +189,6 @@ export default function Home() {
           </a>
         </div>
       </main>
-    </QueryClientProvider>
+   
   );
 }
