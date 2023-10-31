@@ -27,12 +27,12 @@ export const metadata: Metadata = {
     siteName: "",
     images: [
       {
-        url: "/logo/meta/metatag-contact-us.png",
+        url: "/logo/meta/meta-tag-servies.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: "/logo/meta/metatag-contact-us.png",
+        url: "/logo/meta/meta-tag-servies.jpg",
         width: 1800,
         height: 1600,
         alt: "codework-tech-contact-us-logo-white-transpatent",
