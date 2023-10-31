@@ -22,52 +22,52 @@ const serviceList = [
     position: "Founder",
   },
   {
-    img: "/images/team-page/ter.jpg",
-    imgWebP: "/images/team-page/ter.webp",
+    img: "/images/teamPage/ter.jpg",
+    imgWebP: "/images/teamPage/ter.webp",
     name: "Pongsakorn (Ter)",
     position: "Head of Product and Deliverable",
   },
   {
-    img: "/images/team-page/ice.jpg",
-    imgWebP: "/images/team-page/ice.webp",
+    img: "/images/teamPage/ice.jpg",
+    imgWebP: "/images/teamPage/ice.webp",
     name: "Pornjira (Ice)",
     position: "Operations Manager",
   },
   {
-    img: "/images/team-page/man.jpg",
-    imgWebP: "/images/team-page/man.webp",
+    img: "/images/teamPage/man.jpg",
+    imgWebP: "/images/teamPage/man.webp",
     name: "Pusit (Man)",
     position: "Product manager",
   },
   {
-    img: "/images/team-page/ford.jpg",
-    imgWebP: "/images/team-page/ford.webp",
+    img: "/images/teamPage/ford.jpg",
+    imgWebP: "/images/teamPage/ford.webp",
     name: "Pornsit (Ford)",
     position: "Principle Engineer",
   },
   {
-    img: "/images/team-page/mo.jpg",
-    imgWebP: "/images/team-page/mo.webp",
+    img: "/images/teamPage/mo.jpg",
+    imgWebP: "/images/teamPage/mo.webp",
     name: "Niti (Mo)",
     position: "Full-stack Developer",
   },
   {
-    img: "/images/team-page/fluke.jpg",
-    imgWebP: "/images/team-page/fluke.webp",
+    img: "/images/teamPage/fluke.jpg",
+    imgWebP: "/images/teamPage/fluke.webp",
     name: "Peerapol (Fluke)",
     position: "Full-stack Developer",
   },
   {
-    img: "/images/team-page/nueng.jpg",
-    imgWebP: "/images/team-page/nueng.webp",
+    img: "/images/teamPage/nueng.jpg",
+    imgWebP: "/images/teamPage/nueng.webp",
     name: "Aphiwit (Nueng)",
     position: "Front-end Developer",
   },
 
 
   {
-    img: "/images/team-page/kawpoon.jpg",
-    imgWebP: "/images/team-page/kawpoon.webp",
+    img: "/images/teamPage/kawpoon.jpg",
+    imgWebP: "/images/teamPage/kawpoon.webp",
     name: "Chantisa (Kawpoon)",
     position: "UX/UI Designer",
   },
@@ -75,7 +75,7 @@ const serviceList = [
 
 function TeamMember() {
   return (
-    <section className="service-card-container relative  py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] flex flex-row justify-center  flex-wrap gap-x-10 sm:gap-x-0">
+    <section className="serviceCard-container relative  py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] flex flex-row justify-center  flex-wrap gap-x-10 sm:gap-x-0">
       {serviceList.map((item: any, index) => (
         <div
           key={"team-member-key-" + index}

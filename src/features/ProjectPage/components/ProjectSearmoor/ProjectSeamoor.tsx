@@ -9,11 +9,11 @@ export default function ProjectSeamoor() {
         <div className="w-[90%] lg:w-1/2">
             <picture>
             <source
-              srcSet="/images/project-page/seamour-project-cover.webp"
+              srcSet="/images/projectPage/seamour-project-cover.webp"
               type="image/webp"
             />
             <img
-              src="/images/project-page/seamour-project-cover.jpg"
+              src="/images/projectPage/seamour-project-cover.jpg"
               alt="seamour-project-cover."
               title="seamour-project-cover."
               loading="lazy"

@@ -49,13 +49,13 @@ const TeamIntro = ({
 
         <picture ref={imgRef}>
             <source
-              srcSet="images/service-page/serviceIntro/services-herosection-element.png"
+              srcSet="images/teamPage/teamIntro/team-cover-v1.webp"
               type="image/webp"
             />
             <img
-              src="images/service-page/serviceIntro/services-herosection-element.png"
-              alt=""
-              title=""
+              src="images/teamPage/teamIntro/team-cover-v1.png"
+              alt="team page image cover"
+              title="team page image cover"
               loading="lazy"
               className="max-w-[200px] lg:max-w-[480px] rounded-lg mb-5 sm:mb-0 ml-24 sm:ml-0"
             />

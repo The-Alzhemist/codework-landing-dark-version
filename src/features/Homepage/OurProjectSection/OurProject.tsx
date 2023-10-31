@@ -60,8 +60,8 @@ const projectList = [
         task: "Digital transformation consultancy",
       },
     ],
-    projectImage: "/images/home-page/the-pine-mock-project-v1.webp",
-    projectImageWebP: "/images/home-page/the-pine-mock-project-v1.jpg",
+    projectImage: "/images/homePage/the-pine-mock-project-v1.webp",
+    projectImageWebP: "/images/homePage/the-pine-mock-project-v1.jpg",
   },
   {
     projectName: "Tonsai Market",
@@ -84,8 +84,8 @@ const projectList = [
         task: "Digital transformation consultancy",
       },
     ],
-    projectImage: "/images/home-page/tonsai-mock-project-v1.webp",
-    projectImageWebP: "/images/home-page/tonsai-mock-project-v1.jpg",
+    projectImage: "/images/homePage/tonsai-mock-project-v1.webp",
+    projectImageWebP: "/images/homePage/tonsai-mock-project-v1.jpg",
   },
 ];
 
