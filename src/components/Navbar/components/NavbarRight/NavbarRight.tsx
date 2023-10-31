@@ -39,14 +39,14 @@ export const NavbarRight = () => {
           </label>
         </div>
 
-        <div className="mb-5">
+        <div className="mb-5 flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Telephone</label>
-          <div className="text-xs sm:text-lg">(+66) 63 849 4282</div>
+          <a href="tel:0638494282" className="text-xs sm:text-lg "><span className="hover:border-b-2 hover:border-slate-900">(+66) 63 849 4282</span></a>
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Email</label>
-          <div className="text-xs sm:text-lg">hello@codework-tech.com</div>
+          <a href="mailto: hello@codework-tech.com"className="text-xs sm:text-lg  "><span className="hover:border-b-2 hover:border-slate-900">hello@codework-tech.com</span></a>
         </div>
       </motion.div>
     </>
