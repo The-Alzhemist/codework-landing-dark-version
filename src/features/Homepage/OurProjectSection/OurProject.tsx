@@ -5,7 +5,7 @@ import React from "react";
 import withOurProject from "./withOurPoject";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, EffectCoverflow, Navigation } from "swiper/modules";
+import { Pagination, EffectCoverflow, Navigation, Autoplay } from "swiper/modules";
 import { v4 as uuidv4 } from 'uuid';
 
 // Import Swiper styles
@@ -110,21 +110,26 @@ export const OurProject = () => {
 
         {/* card */}
         <Swiper
+           direction="horizontal" // Set the direction to right-to-left
           navigation
           pagination={{ clickable: true }}
           effect="coverflow"
           grabCursor={true}
           centeredSlides={true}
-          initialSlide={2}
-          loop={true}
+          
+          loop={false}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
           breakpoints={{
             1000: {
               slidesPerView: 2,
-              spaceBetween: 20,
+              spaceBetween: 0,
             },
             600: {
               slidesPerView: 1.5,
-              spaceBetween: 30,
+              spaceBetween: 0,
             },
             200: {
               slidesPerView: 1,
@@ -138,7 +143,7 @@ export const OurProject = () => {
             modifier: 1,
             slideShadows: false,
           }}
-          modules={[EffectCoverflow, Pagination, Navigation]}
+          modules={[EffectCoverflow, Pagination, Navigation, Autoplay]}
         >
           {projectList &&
             projectList.map((proj: ProjectListProps) => (

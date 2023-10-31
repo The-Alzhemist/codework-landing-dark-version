@@ -24,15 +24,15 @@ export const metadata: Metadata = {
     siteName: "",
     images: [
       {
-        url: "/logo/meta/metatag-contact-us.png",
+        url: "/logo/meta/meta-tag-team.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: "/logo/meta/metatag-contact-us.png",
+        url: "/logo/meta/meta-tag-team.jpg",
         width: 1800,
         height: 1600,
-        alt: "codework-tech-contact-us-logo-white-transpatent",
+        alt: "codework-tech-team-page-meta-image",
       },
     ],
     locale: "en_US",

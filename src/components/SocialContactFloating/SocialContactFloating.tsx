@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function SocialContactFloating() {
   return (
-    <div className="flex flex-col gap-y-2 fixed bottom-4 right-4 z-50">
+    <div className="flex flex-col gap-y-2 fixed bottom-4 right-4 z-40">
     <a
       href="https://page.line.me/448yyxgh"
       rel="nofollow"
