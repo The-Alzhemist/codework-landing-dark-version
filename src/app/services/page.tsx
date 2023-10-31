@@ -7,6 +7,7 @@ import { Poppins } from "next/font/google";
 import ServiceIntro from "../../features/ServicePage/components/ServiceIntro/ServiceIntro";
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 import ServiceCard from "../../features/ServicePage/components/ServiceCard/ServiceCard";
+import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -48,6 +49,7 @@ export default function ServicePage() {
       <ServiceIntro/>
       <ServiceCard/>
       <ContactHomeSection/>
+      <SocialContactFloating/>
     </main>
   );
 }

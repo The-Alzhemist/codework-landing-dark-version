@@ -1,4 +1,5 @@
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
+import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import FormPage from "@/features/ContactPage/FormPage";
 import ProjectIntro from "@/features/ProjectPage/components/ProjectIntro/ProjectIntro";
@@ -46,6 +47,7 @@ export default function ProjectPage() {
      <ProjectIntro/>
      <ProjectSeamoor/>
      <ContactHomeSection/>
+     <SocialContactFloating/>
     </main>
   );
 }

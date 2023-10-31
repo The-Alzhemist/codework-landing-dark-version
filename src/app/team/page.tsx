@@ -4,6 +4,7 @@ import { Poppins } from "next/font/google";
 import TeamIntro from "../../features/TeamPage/components/TeamIntro/TeamIntro";
 import TeamMember from "../../features/TeamPage/components/TeamMember/TeamMember";
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
+import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -45,6 +46,7 @@ export default function TeamPage() {
     <TeamIntro/>
     <TeamMember/>
     <ContactHomeSection/>
+    <SocialContactFloating/>
   </main>
   );
 }
