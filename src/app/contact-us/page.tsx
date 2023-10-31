@@ -1,7 +1,13 @@
+
+
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
+import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
 import FormPage from "@/features/ContactPage/FormPage";
+import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { useEffect, useState } from "react";
+import TagManager from "react-gtm-module";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -39,6 +45,7 @@ export const metadata: Metadata = {
 };
 
 export default function ContactUsPage() {
+
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
       <FormPage />

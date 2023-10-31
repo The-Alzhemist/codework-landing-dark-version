@@ -54,16 +54,6 @@ export default function Home() {
     }
   };
 
-  // CHECK PDPA CONSENT LOCAL STORAGE
-  useEffect(() => {
-    const userHasGivenConsent =
-      typeof window !== "undefined" &&
-      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
-    if (userHasGivenConsent) {
-      setHasConsent(true);
-      TagManager.initialize({ gtmId: GTM_PRODUCTION });
-    }
-  }, [hasConsent]);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
