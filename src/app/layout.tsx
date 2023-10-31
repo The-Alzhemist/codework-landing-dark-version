@@ -3,7 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
-import { NavbarToggleContextProvider } from "@/context/ThemeContext/NavbarToggleContext";
+import { NavbarToggleContextProvider } from "@/context/NavbarToggleContext/NavbarToggleContext";
 
 
 const poppinsFont = Poppins({

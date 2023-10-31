@@ -3,7 +3,7 @@ import React, { useContext, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ContactHomeSectionProps } from "./interface";
-import { NavbarToggleContext } from "@/context/ThemeContext/NavbarToggleContext";
+import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
 
 gsap.registerPlugin(TextPlugin);
 

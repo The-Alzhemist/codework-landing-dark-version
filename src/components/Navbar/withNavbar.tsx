@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 import { NavbarProps } from "./interface";
 
-import { NavbarToggleContext } from "@/context/ThemeContext/NavbarToggleContext";
+import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
 import { gsap } from "gsap";
 
 const withNavbar = (Component: React.FC<NavbarProps>) => {
