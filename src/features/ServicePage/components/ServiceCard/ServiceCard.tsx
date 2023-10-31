@@ -6,9 +6,10 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import withServiceCard from "./withServiceCard";
+import { ServiceListProps } from "./interface";
 gsap.registerPlugin(ScrollTrigger);
 
-const serviceList = [
+const serviceList:ServiceListProps[] = [
   {
     img: "/images/servicePage/serviceCard/service-ux-xi-1x.png",
     imgWebP: "/images/servicePage/serviceCard/service-ux-xi-1x.webp",
@@ -63,7 +64,7 @@ const serviceList = [
  function ServiceCard() {
   return (
     <section className="serviceCard-container relative  py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] flex flex-col">
-      {serviceList.map((item: any, index) => (
+      {serviceList.map((item: ServiceListProps, index) => (
         <div key={'serviceCard-key-' + index} className="card-x flex flex-col sm:flex-row  border-2 border-secondary-200 p-7 rounded-2xl items-center gap-x-10  mb-10">
         
             <picture>

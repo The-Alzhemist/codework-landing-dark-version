@@ -3,10 +3,8 @@ import React from "react";
 const withTeamMember = (Component: React.FC<any>) => {
   const Hoc = () => {
   
-    const newProps: any = {
-    
-    };
-    return <Component {...newProps} />;
+   
+    return <Component />;
   };
 
   return Hoc;

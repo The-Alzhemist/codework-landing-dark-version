@@ -13,8 +13,9 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { ProjectListProps } from "./interface";
 
-const projectList = [
+const projectList: ProjectListProps[] = [
   {
     projectName: "Seamoor marine",
     projectDetail:
@@ -140,7 +141,7 @@ export const OurProject = () => {
           modules={[EffectCoverflow, Pagination, Navigation]}
         >
           {projectList &&
-            projectList.map((proj: any, index: number) => (
+            projectList.map((proj: ProjectListProps) => (
          
                 <SwiperSlide key={uuidv4()}>
                   <div className="relative bg-neutral-950-750 w-full rounded-3xl overflow-hidden border-4 border-neutralVariant-50">
@@ -166,7 +167,7 @@ export const OurProject = () => {
                     {/* text */}
                     <div className="absolute bottom-0  text-neutral-50   p-7">
                       <div className="flex flex-wrap font-light gap-2 text-slate-900 mb-14    sm:mb-3">
-                        {proj.projectTasks && proj.projectTasks.map((item: any, index:number) => (
+                        {proj.projectTasks && proj.projectTasks.map((item: {task:string}, index:number) => (
                           <React.Fragment key={uuidv4()}>
                             <div className="bg-neutralVariant-50  rounded-full text-center py-2 px-2 text-[10px] sm:text-xs shadow-md">
                           {item.task}

@@ -6,9 +6,10 @@ import React, { useLayoutEffect, useRef } from "react";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import withTeamMember from "./withTeamMember";
+import { TeamMemberProps } from "./interface";
 gsap.registerPlugin(ScrollTrigger);
 
-const serviceList = [
+const teamMemberList: TeamMemberProps[] = [
   {
     img: "https://placehold.co/220x305",
     imgWebP: "https://placehold.co/220x305",
@@ -76,7 +77,7 @@ const serviceList = [
 function TeamMember() {
   return (
     <section className="serviceCard-container relative  py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] flex flex-row justify-center  flex-wrap gap-x-10 sm:gap-x-0">
-      {serviceList.map((item: any, index) => (
+      {teamMemberList.map((item: TeamMemberProps, index) => (
         <div
           key={"team-member-key-" + index}
           className="w-[40%] md:w-[32%] lg:w-[20%] card-x flex flex-col rounded-2xl items-start mb-10 max-w-[350px] "
