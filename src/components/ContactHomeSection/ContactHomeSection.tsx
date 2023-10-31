@@ -9,7 +9,7 @@ import { ContactHomeSectionProps } from "./interface";
 
 
 const ContactHomeSection = ({ root,
-  textMessageRef}: ContactHomeSectionProps) => {
+  textMessageRef, setIsOpen}: ContactHomeSectionProps) => {
 
   return (
     <section
@@ -34,7 +34,7 @@ const ContactHomeSection = ({ root,
             </span>
           </h2>
 
-          <div className="w-full sm:w-1/2 flex justify-end relative mb-10 sm:mb-0  group-hover:rotate-6 transition-all duration-300">
+          <div onClick={() => setIsOpen(true)} className="w-full sm:w-1/2 flex justify-end relative mb-10 sm:mb-0  group-hover:rotate-6 transition-all duration-300">
             <PrimaryButton
               className=" py-3 text-base sm:text-lg hover:scale-90 mb-5 lg:mb-0"
               pathName="/contact-us"

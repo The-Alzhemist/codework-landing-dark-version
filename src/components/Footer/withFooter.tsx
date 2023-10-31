@@ -1,13 +1,11 @@
 import React from "react";
-import { FooterMenu, FooterProps, footerExternalProps } from "./interface";
+import { FooterMenu, FooterProps } from "./interface";
 import { footerMenu } from "@/constants/footerText";
 
 
 
 const withFooter = (Component: React.FC<FooterProps>) => {
-  const Hoc = (props:footerExternalProps) => {
-
-    const { fontPrompt } = props;
+  const Hoc = () => {
 
     const newProps: FooterProps = {
       footerMenu

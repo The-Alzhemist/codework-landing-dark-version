@@ -12,18 +12,21 @@ import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 import { Poppins } from "next/font/google";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import TagManager from "react-gtm-module";
-import { QueryClient, QueryClientProvider } from "react-query";
+
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import OurService from "@/features/Homepage/OurServiceSection/OurService";
+import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
   subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false 
 });
 
-const queryClient = new QueryClient();
+
+
 export default function Home() {
   const [hasConsent, setHasConsent] = useState(false);
   const rootPage = useRef(null);
@@ -88,9 +91,9 @@ export default function Home() {
   }, [ref1, ref2, ref3, ref4, ref5]);
 
   return (
-    <QueryClientProvider client={queryClient}>
+   
       <main
-        className={`page-container staging-version:1.01 ${poppinsFont.className} `}
+        className={`${poppinsFont.className} `}
         ref={rootPage}
       >
         <div className="section" ref={ref1}>
@@ -164,31 +167,8 @@ export default function Home() {
           ></div>
         </div>
 
-        {/* contact */}
-        <div className="flex flex-col gap-y-2 fixed bottom-4 right-4 z-50">
-          <a
-            href="https://page.line.me/448yyxgh"
-            rel="nofollow"
-            target="_blank"
-          >
-            <img
-              src="/logo/line-logo.png"
-              className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px] z-50"
-            />
-          </a>
-
-          <a
-            href="https://www.facebook.com/profile.php?id=61551048177724"
-            rel="nofollow"
-            target="_blank"
-          >
-            <img
-              src="/logo/facebook-logo.png"
-              className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]"
-            />
-          </a>
-        </div>
+        <SocialContactFloating/>
       </main>
-    </QueryClientProvider>
+   
   );
 }

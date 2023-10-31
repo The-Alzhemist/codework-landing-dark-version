@@ -48,11 +48,11 @@ const ServiceIntro = ({
 
         <picture ref={imgRef}>
             <source
-              srcSet="images/service-page/serviceIntro/services-herosection-element.png"
+              srcSet="images/servicePage/serviceIntro/services-herosection-element.png"
               type="image/webp"
             />
             <img
-              src="images/service-page/serviceIntro/services-herosection-element.png"
+              src="images/servicePage/serviceIntro/services-herosection-element.png"
               alt=""
               title=""
               loading="lazy"

@@ -2,11 +2,12 @@ import { SimpleButton } from '@/components/buttons/SimpleButton'
 import React from 'react'
 import withPDPAPopup from './withPDPAPopup';
 import { PDPAPopupProps } from './interface';
-import { Poppins } from '@next/font/google';
+import { Poppins } from "next/font/google";
 
 const poppinsFont = Poppins({
     weight: ["100", "300", "500", "700", "800"],
     subsets: ["latin"],
+    display: 'swap', adjustFontFallback: false 
   });
 
 const PDPAPopup = ({ isOpen, handleClose, shouldRender, setIsOpen }: PDPAPopupProps) => {

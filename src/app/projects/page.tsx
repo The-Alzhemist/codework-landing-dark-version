@@ -1,4 +1,5 @@
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
+import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import FormPage from "@/features/ContactPage/FormPage";
 import ProjectIntro from "@/features/ProjectPage/components/ProjectIntro/ProjectIntro";
@@ -9,6 +10,7 @@ import { Poppins } from "next/font/google";
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
   subsets: ["latin"],
+  display: 'swap', adjustFontFallback: false 
 });
 
 export const metadata: Metadata = {
@@ -45,6 +47,7 @@ export default function ProjectPage() {
      <ProjectIntro/>
      <ProjectSeamoor/>
      <ContactHomeSection/>
+     <SocialContactFloating/>
     </main>
   );
 }

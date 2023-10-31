@@ -15,22 +15,6 @@ export const footerMenu = {
         path: '/'
       },
       {
-        pageMenu: "About us",
-        hasSubMenu: false,
-        path: '/aboutus',
-        subMenu: [
-          {
-            name: "Our story",
-          },
-          {
-            name: "Culture",
-          },
-          {
-            name: "Team",
-          },
-        ],
-      },
-      {
         pageMenu: "Services",
         hasSubMenu: false,
         path: '/services',
@@ -46,14 +30,25 @@ export const footerMenu = {
         path: '/projects',
       },
       {
-        pageMenu: "Products",
+        pageMenu: "Team",
         hasSubMenu: false,
-        path: '/products',
+        path: '/team',
+        subMenu: [
+          {
+            name: "Our story",
+          },
+          {
+            name: "Culture",
+          },
+          {
+            name: "Team",
+          },
+        ],
       },
       {
-        pageMenu: "Privacy policy",
+        pageMenu: "Contact us",
         hasSubMenu: false,
-        path: '/privacy-policy',
-      },
+        path: '/contact-us',
+      }
     ],
   };
