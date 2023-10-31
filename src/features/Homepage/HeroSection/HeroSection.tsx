@@ -19,6 +19,7 @@ const HeroSection = ({
   btnRef,
   circleLeftRef,
   circleRightRef,
+  setIsOpen
 }: HeroSectionProps) => {
   return (
     <section
@@ -55,7 +56,7 @@ const HeroSection = ({
             </Paragraph>
           </div>
 
-          <div className="max-w-7xl " ref={btnRef}>
+          <div className="max-w-7xl " ref={btnRef} onClick={() => setIsOpen(true)}>
             <PrimaryButton pathName="/contact-us" className=" text-xl ">
               <div className="flex items-center gap-5">
                 Contact us

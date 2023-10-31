@@ -33,7 +33,8 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
     
 
     if (!NavbarContext) {
-      return <div>Context is not available</div>;
+      console.warn('Context is not available')
+      return
     }
   
     const { isOpen, setIsOpen } = NavbarContext;
