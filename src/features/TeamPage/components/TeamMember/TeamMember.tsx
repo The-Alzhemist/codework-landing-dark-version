@@ -1,7 +1,7 @@
 "use client";
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
-import React, { useLayoutEffect, useRef } from "react";
+import React from "react";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";

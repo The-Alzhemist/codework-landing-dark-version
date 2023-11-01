@@ -8,7 +8,6 @@ import Link from "next/link";
 import { gsap } from "gsap";
 
 
-
 const Footer = (props: FooterProps) => {
   const { footerMenu } = props;
 
