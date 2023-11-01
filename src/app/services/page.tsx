@@ -8,6 +8,7 @@ import ServiceIntro from "../../features/ServicePage/components/ServiceIntro/Ser
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 import ServiceCard from "../../features/ServicePage/components/ServiceCard/ServiceCard";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
+import ServiceWrapper from "@/features/ServicePage/ServiceWrapper";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -46,10 +47,7 @@ export const metadata: Metadata = {
 export default function ServicePage() {
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
-      <ServiceIntro/>
-      <ServiceCard/>
-      <ContactHomeSection/>
-      <SocialContactFloating/>
+      <ServiceWrapper/>
     </main>
   );
 }
