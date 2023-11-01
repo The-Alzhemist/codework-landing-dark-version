@@ -17,7 +17,7 @@ import { ProjectListProps } from "./interface";
 
 const projectList: ProjectListProps[] = [
   {
-    projectName: "Seamoor marine",
+    projectName: "Seamoor Marine",
     projectDetail:
       "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
     projectTasks: [
@@ -41,7 +41,7 @@ const projectList: ProjectListProps[] = [
     projectImageWebP: "/images/seamoorMock.webp",
   },
   {
-    projectName: "The pine",
+    projectName: "The Pine",
     projectDetail:
       "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
     projectTasks: [

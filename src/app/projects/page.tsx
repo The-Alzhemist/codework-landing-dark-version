@@ -3,6 +3,7 @@ import SocialContactFloating from "@/components/SocialContactFloating/SocialCont
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import FormPage from "@/features/ContactPage/FormPage";
 import ProjectIntro from "@/features/ProjectPage/components/ProjectIntro/ProjectIntro";
+import ProjectWrapper from "@/features/ProjectPage/ProjectWrapper";
 import ProjectSeamoor from "@/features/ProjectPage/components/ProjectSearmoor/ProjectSeamoor";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
@@ -10,7 +11,8 @@ import { Poppins } from "next/font/google";
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
   subsets: ["latin"],
-  display: 'swap', adjustFontFallback: false 
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -44,10 +46,7 @@ export const metadata: Metadata = {
 export default function ProjectPage() {
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
-     <ProjectIntro/>
-     <ProjectSeamoor/>
-     <ContactHomeSection/>
-     <SocialContactFloating/>
+      <ProjectWrapper />
     </main>
   );
 }

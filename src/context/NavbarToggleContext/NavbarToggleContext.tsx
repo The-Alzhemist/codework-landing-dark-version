@@ -16,8 +16,6 @@ type NavbarToggleContextProviderProps = {
 const NavbarToggleContextProvider: React.FC<NavbarToggleContextProviderProps> = ({ children }) => {
   const [isOpen, setIsOpen] = useState(true);
 
-
-
   return (
     <NavbarToggleContext.Provider value={{ isOpen, setIsOpen }}>
       {children}

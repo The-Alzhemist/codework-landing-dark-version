@@ -1,15 +1,16 @@
-
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import TeamIntro from "../../features/TeamPage/components/TeamIntro/TeamIntro";
 import TeamMember from "../../features/TeamPage/components/TeamMember/TeamMember";
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
+import TeamWrapper from "@/features/TeamPage/TeamWrapper";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
   subsets: ["latin"],
-  display: 'swap', adjustFontFallback: false 
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -42,11 +43,8 @@ export const metadata: Metadata = {
 
 export default function TeamPage() {
   return (
-    <main className={` bg-neutral-1000 ${poppinsFont.className}`}>    
-    <TeamIntro/>
-    <TeamMember/>
-    <ContactHomeSection/>
-    <SocialContactFloating/>
-  </main>
+    <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
+      <TeamWrapper />
+    </main>
   );
 }

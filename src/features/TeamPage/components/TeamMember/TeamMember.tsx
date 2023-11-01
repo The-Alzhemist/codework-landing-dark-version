@@ -1,7 +1,7 @@
 "use client";
 
 import Paragraph from "@/components/typography/paragraph/Paragraph";
-import React, { useLayoutEffect, useRef } from "react";
+import React from "react";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -10,18 +10,6 @@ import { TeamMemberProps } from "./interface";
 gsap.registerPlugin(ScrollTrigger);
 
 const teamMemberList: TeamMemberProps[] = [
-  {
-    img: "https://placehold.co/220x305",
-    imgWebP: "https://placehold.co/220x305",
-    name: "Pakorn (Puck)",
-    position: "CEO & Co-founder",
-  },
-  {
-    img: "https://placehold.co/220x305",
-    imgWebP: "https://placehold.co/220x305",
-    name: "Soratat (Q)",
-    position: "Founder",
-  },
   {
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
