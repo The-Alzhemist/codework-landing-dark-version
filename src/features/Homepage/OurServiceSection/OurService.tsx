@@ -68,7 +68,7 @@ const serviceList = [
           </h2>
           <div ref={pref}>
             <Paragraph
-              className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
+              className={`lg:max-w-[970px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
             >
               {`Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.`}
             </Paragraph>
@@ -83,7 +83,7 @@ const serviceList = [
               <React.Fragment key={service.name}>
                 <div className="relative sm:w-[45%] lg:w-[30%] max-w-[425px] border border-primary-50 hover:border-primary-100  min-h-auto sm:min-h-[500px] p-6 rounded-lg overflow-hidden cursor-pointer transition-all duration-3  hover:shadow-[0_8px_30px_rgba(233,251,100,0.1)] group">
                   <h3 className="relative  text-xl sm:text-4xl font-semibold h-[70px] sm:h-[135px] text-white flex items-center justify-between">
-                    <span className="max-w-[310px] text-transparent bg-clip-text bg-secondary-100">
+                    <span className="max-w-[310px] text-transparent bg-clip-text bg-secondary-100 py-2">
                       {service.name}
                     </span>
                   </h3>

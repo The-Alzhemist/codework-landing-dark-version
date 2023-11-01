@@ -11,18 +11,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamMemberList: TeamMemberProps[] = [
   {
-    img: "https://placehold.co/220x305",
-    imgWebP: "https://placehold.co/220x305",
-    name: "Pakorn (Puck)",
-    position: "CEO & Co-founder",
-  },
-  {
-    img: "https://placehold.co/220x305",
-    imgWebP: "https://placehold.co/220x305",
-    name: "Soratat (Q)",
-    position: "Founder",
-  },
-  {
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
     name: "Pongsakorn (Ter)",

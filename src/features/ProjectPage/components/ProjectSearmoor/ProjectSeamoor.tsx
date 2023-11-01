@@ -38,7 +38,7 @@ export default function ProjectSeamoor() {
                 alt={`xxx`}
               />
             </a>
-            <span>Seamoor marine</span>
+            <span>Seamoor Marine</span>
           </h2>
           {/* tag */}
           <div className="flex flex-wrap gap-3 mb-5">
