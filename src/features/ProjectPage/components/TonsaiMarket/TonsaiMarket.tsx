@@ -1,7 +1,7 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 
-export default function ProjectSeamoor() {
+export default function ProjectTonsaiMarket() {
   return (
     <section className="relative py-10 md:py-[50px] mx-auto bg-neutral-1000 ">
       {/* 1 */}
@@ -9,13 +9,13 @@ export default function ProjectSeamoor() {
         <div className="w-[90%] lg:w-1/2">
             <picture>
             <source
-              srcSet="/images/projectPage/seamour-project-cover.webp"
+              srcSet="/images/homePage/tonsai-mock-project-v1.webp"
               type="image/webp"
             />
             <img
-              src="/images/projectPage/seamour-project-cover.jpg"
-              alt="seamour-project-cover."
-              title="seamour-project-cover."
+              src="/images/homePage/tonsai-mock-project-v1.jpg"
+              alt="tonsai-market-project-cover."
+              title="tonsai-market-project-cover."
               loading="lazy"
               className="w-full rounded-e-full"
             />
@@ -26,19 +26,19 @@ export default function ProjectSeamoor() {
           <h2 className="text-2xl sm:text-4xl  text-primary-100 font-semibold  mb-5 flex items-center gap-x-2">
             <a
               className="grayscale-[50%] group-hover:grayscale-0 w-[100px] h-[100px]   bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
-              href=""
+              href="https://www.facebook.com/Tonsaimarket456"
               target="_blank"
               rel="noopener nofollow"
             >
               <img
-                src="/logo/our-partner/semour.png"
+                src="/logo/our-partner/tonsai_market.png"
                 width={0}
                 height={0}
                 className={`h-auto w-[90%] p-3 `}
-                alt={`Seamoor  project image cover`}
+                alt={`Tonsai market project image cover`}
               />
             </a>
-            <span>Seamoor Marine</span>
+            <span>Tonsai Market</span>
           </h2>
           {/* tag */}
           <div className="flex flex-wrap gap-3 mb-5">

@@ -1,23 +1,23 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 
-export default function ProjectSeamoor() {
+export default function ProjectThePine() {
   return (
-    <section className="relative py-10 md:py-[50px] mx-auto bg-neutral-1000 ">
+    <section className="relative py-10 md:py-[50px] mx-auto bg-neutral-1000  ">
       {/* 1 */}
-      <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-y-0 justify-center  items-start lg:items-center">
-        <div className="w-[90%] lg:w-1/2">
-            <picture>
+      <div className="flex flex-col lg:flex-row-reverse  gap-y-10 lg:gap-y-0 justify-center  items-start lg:items-center">
+        <div className="w-[100%] lg:w-1/2">
+            <picture className="flex justify-end ">
             <source
-              srcSet="/images/projectPage/seamour-project-cover.webp"
+              srcSet="/images/homePage/the-pine-mock-project-v1.webp"
               type="image/webp"
             />
             <img
-              src="/images/projectPage/seamour-project-cover.jpg"
-              alt="seamour-project-cover."
-              title="seamour-project-cover."
+              src="/images/homePage/the-pine-mock-project-v1.jpg"
+              alt="the-pine-project-cover."
+              title="the-pine-project-cover."
               loading="lazy"
-              className="w-full rounded-e-full"
+              className="rounded-l-full w-[90%] lg:w-full"
             />
           </picture>
         </div>
@@ -26,19 +26,19 @@ export default function ProjectSeamoor() {
           <h2 className="text-2xl sm:text-4xl  text-primary-100 font-semibold  mb-5 flex items-center gap-x-2">
             <a
               className="grayscale-[50%] group-hover:grayscale-0 w-[100px] h-[100px]   bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
-              href=""
+              href="https://www.facebook.com/ThePineSongkhla/"
               target="_blank"
               rel="noopener nofollow"
             >
               <img
-                src="/logo/our-partner/semour.png"
+                src="/logo/our-partner/The_Pine.png"
                 width={0}
                 height={0}
-                className={`h-auto w-[90%] p-3 `}
-                alt={`Seamoor  project image cover`}
+                className={`h-auto w-[90%] p-1  rounded-full `}
+                alt={`the pine  project image cover`}
               />
             </a>
-            <span>Seamoor Marine</span>
+            <span>The Pine</span>
           </h2>
           {/* tag */}
           <div className="flex flex-wrap gap-3 mb-5">

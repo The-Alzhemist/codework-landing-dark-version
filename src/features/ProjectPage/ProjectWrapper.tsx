@@ -8,12 +8,16 @@ import SocialContactFloating from "@/components/SocialContactFloating/SocialCont
 import PDPAPopup from "../PAPAPopup/PDPAPopup";
 import { ProjectWrapperProps } from "./interface";
 import withProjectWrapper from "./withProjectWrapper";
+import ProjectThePine from "./components/ThePine/ThePine";
+import ProjectTonsaiMarket from "./components/TonsaiMarket/TonsaiMarket";
 
  const  ProjectWrapper = ({hasConsent, setHasConsent}:ProjectWrapperProps) => {
   return (
     <>
       <ProjectIntro />
       <ProjectSeamoor />
+      {/* <ProjectThePine/>
+      <ProjectTonsaiMarket/> */}
       <ContactHomeSection />
       <SocialContactFloating />
       {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} /> }
