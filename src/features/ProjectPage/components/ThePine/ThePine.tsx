@@ -57,26 +57,22 @@ export default function ProjectThePine() {
 
           {/* p */}
           <Paragraph className="text-base font-light opacity-80 text-white mb-5">
-            {` Develop an internal system for a marine and logistics company,
-            optimizing operations, tracking shipments, and facilitating
-            efficient communication.`}
+            {` Develop an internal backend management system for The Pine Hotel, including features such as reservation and payment systems.`}
           </Paragraph>
 
           <div className="text-base font-light opacity-80 text-white mb-5">
             <h3 className="font-semibold mb-2">Pain point</h3>
             <ul>
               <li className="mb-2">
-                {` - Difficulty with Offline System: The current offline system
-                presents challenges in efficiently locating and tracking
-                documents, leading to a time-consuming and frustrating user
-                experience.`}
+                {` - The existing backend system lacks efficiency.`}
               </li>
 
               <li>
-                {` - Incompatible Third-Party Tools: The current third-party tools
-                don't align with the client's specific requirements, resulting
-                in functional gaps and integration issues that hinder workflow
-                and productivity.`}
+                {` - The current system has a user interface that is difficult to use, resulting in a non-smooth workflow and employee training challenges.`}
+              </li>
+
+              <li>
+                {` - The preference is to avoid monthly subscription costs.`}
               </li>
             </ul>
           </div>
@@ -85,20 +81,11 @@ export default function ProjectThePine() {
             <h3 className="font-semibold mb-2">Solution</h3>
             <ul>
               <li className="mb-2">
-                {` - Streamline and digitize all processes, transitioning from
-                offline to online platforms for enhanced trackability and
-                efficiency.`}
+                {` - Develop a Property Management System (PMS) that is user-friendly and offers sufficient functionality for operational needs.`}
               </li>
 
               <li className="mb-2">
-                {`- Tailor the software that perfectly aligns with the client's
-                unique requirements, ensuring a seamless and user-friendly
-                experience.`}
-              </li>
-
-              <li>
-                {`  - Offer guidance and support to facilitate a smooth transition
-                during software implementation.`}
+                {`- Enable the ability to view reports and easily check whether guests have made payments.`}
               </li>
             </ul>
           </div>

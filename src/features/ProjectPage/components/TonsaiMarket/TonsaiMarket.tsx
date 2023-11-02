@@ -57,26 +57,22 @@ export default function ProjectTonsaiMarket() {
 
           {/* p */}
           <Paragraph className="text-base font-light opacity-80 text-white mb-5">
-            {` Develop an internal system for a marine and logistics company,
-            optimizing operations, tracking shipments, and facilitating
-            efficient communication.`}
+            {`Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations.`}
           </Paragraph>
 
           <div className="text-base font-light opacity-80 text-white mb-5">
             <h3 className="font-semibold mb-2">Pain point</h3>
             <ul>
               <li className="mb-2">
-                {` - Difficulty with Offline System: The current offline system
-                presents challenges in efficiently locating and tracking
-                documents, leading to a time-consuming and frustrating user
-                experience.`}
+                {` - The absence of a back-end management system makes it difficult to monitor income and expenses.`}
               </li>
 
               <li>
-                {` - Incompatible Third-Party Tools: The current third-party tools
-                don't align with the client's specific requirements, resulting
-                in functional gaps and integration issues that hinder workflow
-                and productivity.`}
+                {` - There are issues with reconciling accounts.`}
+              </li>
+
+              <li>
+                {` - Challenges exist in rent collection.`}
               </li>
             </ul>
           </div>
@@ -85,20 +81,15 @@ export default function ProjectTonsaiMarket() {
             <h3 className="font-semibold mb-2">Solution</h3>
             <ul>
               <li className="mb-2">
-                {` - Streamline and digitize all processes, transitioning from
-                offline to online platforms for enhanced trackability and
-                efficiency.`}
+                {` - Develop a system that simplifies rent and electricity fee collection and allows for easy monitoring.`}
               </li>
 
               <li className="mb-2">
-                {`- Tailor the software that perfectly aligns with the client's
-                unique requirements, ensuring a seamless and user-friendly
-                experience.`}
+                {` - Make it easier to manage accounts.`}
               </li>
 
               <li>
-                {`  - Offer guidance and support to facilitate a smooth transition
-                during software implementation.`}
+                {` - Generate and view monthly profit and loss reports, enabling better future strategy planning.`}
               </li>
             </ul>
           </div>
