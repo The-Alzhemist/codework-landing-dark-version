@@ -15,11 +15,10 @@ jobs:
         with:
           node-version: 16
           cache: "yarn"
-      - name: yarn install, yarn build and yarn export
+      - name: yarn install, yarn build
         run: |
           yarn install
           yarn build
-          yarn export
         env:
           NEXT_PUBLIC_ANALYTICS_ID: NEXT_PUBLIC_ANALYTICS_ID
       - uses: FirebaseExtended/action-hosting-deploy@v0

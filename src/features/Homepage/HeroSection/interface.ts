@@ -7,5 +7,7 @@ export interface HeroSectionProps {
   btnRef: React.RefObject<HTMLDivElement>;
   circleLeftRef: React.RefObject<HTMLDivElement>;
   circleRightRef: React.RefObject<HTMLDivElement>;
+  isOpen:boolean
+  setIsOpen: (value: boolean) => void;
 }
 

@@ -1,6 +1,7 @@
-import React, { useLayoutEffect, useRef } from "react";
+import React, { useContext, useLayoutEffect, useRef } from "react";
 import { HeroSectionProps } from "./interface";
 import { gsap } from "gsap";
+import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
 
 
 const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
@@ -12,6 +13,8 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
+
+    const NavbarContext = useContext(NavbarToggleContext);
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -62,6 +65,13 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
       return () => ctx.revert();
     }, []);
 
+    if (!NavbarContext) {
+      console.warn('Context is not available')
+      return
+    }
+  
+    const { isOpen, setIsOpen } = NavbarContext;
+
     const newProps: HeroSectionProps = {
       root,
       h1Ref,
@@ -69,6 +79,7 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
       btnRef,
       circleLeftRef,
       circleRightRef,
+      isOpen, setIsOpen
     };
     return <Component {...newProps} />;
   };

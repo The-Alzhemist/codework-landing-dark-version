@@ -24,31 +24,29 @@ export const NavbarRight = () => {
       >
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Social media</label>
-          <div className="flex justify-end gap-x-1">
-            <IconSocialLink linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
+          <div className="flex justify-end gap-x-2 items-center">
+            <IconSocialLink  ariaLabel="Facebook social link" linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
 
             {/* ถ้ามีลิ้งให้กลับมาเปิดใช้งาน */}
             {/* <IconSocialLink linkName="#" iconName={<FaInstagram />} /> */}
             {/* <IconSocialLink linkName="#" iconName={<PiLinkedinLogoBold />} /> */}
+            <div className="text-xs sm:text-lg ">Codework Tech</div>
           </div>
-          <div className="text-xs sm:text-lg ">Codework Tech</div>
-        </div>
 
-        <div className="mb-5">
-          <label className="flex justify-end">
-            <IconSocialLink linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
+          <label className="flex justify-end items-center gap-x-2 ">
+            <IconSocialLink ariaLabel="Line social link" linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
+            <div className="text-xs sm:text-lg">@codeworktech</div>
           </label>
-          <div className="text-xs sm:text-lg">@codeworktech</div>
         </div>
 
-        <div className="mb-5">
+        <div className="mb-5 flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Telephone</label>
-          <div className="text-xs sm:text-lg">(+66)83 987 4997</div>
+          <a href="tel:0638494282" className="text-xs sm:text-lg "><span className="hover:border-b-2 hover:border-slate-900">(+66) 63 849 4282</span></a>
         </div>
 
-        <div>
+        <div className="flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Email</label>
-          <div className="text-xs sm:text-lg">hello@codework-tech.com</div>
+          <a href="mailto: hello@codework-tech.com"className="text-xs sm:text-lg  "><span className="hover:border-b-2 hover:border-slate-900">hello@codework-tech.com</span></a>
         </div>
       </motion.div>
     </>

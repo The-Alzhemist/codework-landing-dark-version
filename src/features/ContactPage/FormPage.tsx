@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useLayoutEffect, useRef, useState } from "react";
+import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { SELECTED_OPTION_LIST } from "@/constants/contactPage/constants";
 import withFormPage from "./withFormPage";
@@ -21,6 +21,9 @@ import { CgSpinner } from "react-icons/cg";
 import { BiCheckCircle } from "react-icons/bi";
 
 import { gsap } from "gsap";
+import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
+import TagManager from "react-gtm-module";
+import PDPAPopup from "../PAPAPopup/PDPAPopup";
 
 
 const FormPage = ({
@@ -39,6 +42,7 @@ const FormPage = ({
   const h1Tag = useRef<HTMLDivElement | null>(null);
   const formTag = useRef<HTMLFormElement | null>(null);
   const root = useRef<any>(null);
+  const [hasConsent, setHasConsent] = useState(false);
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -66,6 +70,18 @@ const FormPage = ({
 
     return () => ctx.revert();
   }, []);
+
+
+  // CHECK PDPA CONSENT LOCAL STORAGE
+  useEffect(() => {
+    const userHasGivenConsent =
+      typeof window !== "undefined" &&
+      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
+    if (userHasGivenConsent) {
+      setHasConsent(true);
+      TagManager.initialize({ gtmId: GTM_PRODUCTION });
+    }
+  }, [hasConsent]);
 
 
   return (
@@ -328,6 +344,8 @@ const FormPage = ({
             </div>
           </div>
         </Modal>
+
+        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} /> }
       </div>
     </>
   );

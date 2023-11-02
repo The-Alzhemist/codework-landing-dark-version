@@ -9,17 +9,22 @@ export const menuList = [
     url: "/",
   },
   {
-    name: "Service",
+    name: "Services",
     url: "/services",
   },
   {
-    name: "Project",
+    name: "Projects",
     url: "/projects",
+  },
+  {
+    name: "Team",
+    url: "/team",
   },
   {
     name: "Contact us",
     url: "/contact-us",
   },
+ 
 ];
 
 export const NavbarLeft = ({handleClick}: { handleClick: () => void }) => {
@@ -27,7 +32,7 @@ export const NavbarLeft = ({handleClick}: { handleClick: () => void }) => {
 
   return (
     <>
-      <div className="flex flex-col  gap-y-7 items-start  w-full ">
+      <div className="flex flex-col  gap-y-7 items-start  w-full max-w-[500px] ">
         {menuList.map((menu: {name: string, url: string}) => (
           <React.Fragment key={menu.name}>
             <div

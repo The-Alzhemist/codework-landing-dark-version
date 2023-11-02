@@ -26,7 +26,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               ref={h1Ref}
             >
               <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
-                Partner.
+                Partners.
               </span>
             </h2>
             <div ref={pRef}>
@@ -45,40 +45,43 @@ Explore our extensive network of trusted partners, and experience the power of c
           {/* logo */}
           <div
             ref={btnRef}
-            className=" overflow-hidden  whitespace-nowrap relative group "
+            className=" overflow-hidden  whitespace-nowrap relative group sm:min-h-[250px] flex items-center"
           >
             {/* img-slide */}
             <ul className="inline-block animate-scroll group-hover:pause mr-10">
               {/* img */}
-              <div className="flex gap-x-5 sm:gap-x-10">
+              <li className="flex gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map((item, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
                     <a
-                      className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
+                      className="grayscale-[90%] hover:grayscale-0 sm:hover:scale-110  w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
                       href={item.urlName}
                       target="_blank"
                       rel="noopener nofollow"
                     >
-                      <img
-                        src={item.pathName}
-                        width={0}
-                        height={0}
-                        className={`h-auto w-[90%] p-3 ${item.className}`}
-                        alt={`${item.alt}`}
-                      />
+                      <picture className="flex justify-center">
+                        <source srcSet={item.pathNameWebP} type="image/webp" />
+                        <img
+                          src={item.pathName}
+                          width={0}
+                          height={0}
+                          className={`h-auto w-[90%] p-3 ${item.className}`}
+                          alt={`${item.alt}`}
+                        />
+                      </picture>
                     </a>
                   </React.Fragment>
                 ))}
-              </div>
+              </li>
             </ul>
 
             <ul className="inline-block animate-scroll group-hover:pause">
               {/* img */}
-              <div className="flex  gap-x-5 sm:gap-x-10">
+              <li className="flex  gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map((item, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
                     <a
-                      className="grayscale-[50%] group-hover:grayscale-0 w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
+                      className="grayscale-[90%] hover:grayscale-0 sm:hover:scale-110  w-[150px] h-[150px] sm:w-[200px] sm:h-[200px]  bg-white rounded-full border-2 border-primary-500 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
                       href={item.urlName}
                       target="_blank"
                       rel="noopener nofollow"
@@ -89,11 +92,12 @@ Explore our extensive network of trusted partners, and experience the power of c
                         height={0}
                         className={`h-auto w-[90%] p-3 ${item.className}`}
                         alt={`${item.alt}`}
+                        loading="lazy"
                       />
                     </a>
                   </React.Fragment>
                 ))}
-              </div>
+              </li>
             </ul>
           </div>
         </>
