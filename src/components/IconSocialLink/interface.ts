@@ -3,5 +3,6 @@ export interface IconSocialLinkProps {
     className?: string;
     target?: string;
     iconName: React.ReactNode;
+    ariaLabel?: string
   }
   

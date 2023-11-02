@@ -25,7 +25,7 @@ export const NavbarRight = () => {
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Social media</label>
           <div className="flex justify-end gap-x-2 items-center">
-            <IconSocialLink linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
+            <IconSocialLink  ariaLabel="Facebook social link" linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
 
             {/* ถ้ามีลิ้งให้กลับมาเปิดใช้งาน */}
             {/* <IconSocialLink linkName="#" iconName={<FaInstagram />} /> */}
@@ -34,7 +34,7 @@ export const NavbarRight = () => {
           </div>
 
           <label className="flex justify-end items-center gap-x-2 ">
-            <IconSocialLink linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
+            <IconSocialLink ariaLabel="Line social link" linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
             <div className="text-xs sm:text-lg">@codeworktech</div>
           </label>
         </div>
