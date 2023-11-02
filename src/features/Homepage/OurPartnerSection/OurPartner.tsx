@@ -59,13 +59,16 @@ Explore our extensive network of trusted partners, and experience the power of c
                       target="_blank"
                       rel="noopener nofollow"
                     >
-                      <img
-                        src={item.pathName}
-                        width={0}
-                        height={0}
-                        className={`h-auto w-[90%] p-3 ${item.className}`}
-                        alt={`${item.alt}`}
-                      />
+                      <picture className="flex justify-center">
+                        <source srcSet={item.pathNameWebP} type="image/webp" />
+                        <img
+                          src={item.pathName}
+                          width={0}
+                          height={0}
+                          className={`h-auto w-[90%] p-3 ${item.className}`}
+                          alt={`${item.alt}`}
+                        />
+                      </picture>
                     </a>
                   </React.Fragment>
                 ))}
