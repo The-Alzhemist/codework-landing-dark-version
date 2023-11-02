@@ -50,7 +50,7 @@ Explore our extensive network of trusted partners, and experience the power of c
             {/* img-slide */}
             <ul className="inline-block animate-scroll group-hover:pause mr-10">
               {/* img */}
-              <div className="flex gap-x-5 sm:gap-x-10">
+              <li className="flex gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map((item, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
                     <a
@@ -69,12 +69,12 @@ Explore our extensive network of trusted partners, and experience the power of c
                     </a>
                   </React.Fragment>
                 ))}
-              </div>
+              </li>
             </ul>
 
             <ul className="inline-block animate-scroll group-hover:pause">
               {/* img */}
-              <div className="flex  gap-x-5 sm:gap-x-10">
+              <li className="flex  gap-x-5 sm:gap-x-10">
                 {ourPartnerSectionText.imagesList.map((item, index: number) => (
                   <React.Fragment key={`our-partner-${index}`}>
                     <a
@@ -89,11 +89,12 @@ Explore our extensive network of trusted partners, and experience the power of c
                         height={0}
                         className={`h-auto w-[90%] p-3 ${item.className}`}
                         alt={`${item.alt}`}
+                        loading="lazy"
                       />
                     </a>
                   </React.Fragment>
                 ))}
-              </div>
+              </li>
             </ul>
           </div>
         </>

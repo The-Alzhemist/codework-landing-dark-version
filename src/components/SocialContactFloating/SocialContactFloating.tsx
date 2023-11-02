@@ -6,10 +6,14 @@ export default function SocialContactFloating() {
     <a
       href="https://page.line.me/448yyxgh"
       rel="nofollow"
+      aria-label="Contact us with line"
       target="_blank"
     >
       <img
         src="/logo/codework-line-logo-v1.png"
+        alt="contact line"
+        title="contact line"
+        loading="lazy"
         className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px] z-50"
       />
     </a>
@@ -17,10 +21,14 @@ export default function SocialContactFloating() {
     <a
       href="https://www.facebook.com/profile.php?id=61551048177724"
       rel="nofollow"
+      aria-label="Contact us with facebook page"
       target="_blank"
     >
       <img
         src="/logo/codework-fb-logo-v1.png"
+        alt="contact facebook"
+        title="contact facebook"
+        loading="lazy"
         className="h-[50px] w-[50px] sm:h-[70px] sm:w-[70px]"
       />
     </a>
