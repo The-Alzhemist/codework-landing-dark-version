@@ -16,8 +16,8 @@ import ProjectTonsaiMarket from "./components/TonsaiMarket/TonsaiMarket";
     <>
       <ProjectIntro />
       <ProjectSeamoor />
-      {/* <ProjectThePine/>
-      <ProjectTonsaiMarket/> */}
+      <ProjectThePine/>
+      <ProjectTonsaiMarket/>
       <ContactHomeSection />
       <SocialContactFloating />
       {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} /> }

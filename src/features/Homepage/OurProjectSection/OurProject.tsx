@@ -43,7 +43,7 @@ const projectList: ProjectListProps[] = [
   {
     projectName: "The Pine",
     projectDetail:
-      "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
+      "Develop an internal backend management system for The Pine Hotel, including features such as reservation and payment systems.",
     projectTasks: [
       {
         task: "Project solution consultancy",
@@ -67,7 +67,7 @@ const projectList: ProjectListProps[] = [
   {
     projectName: "Tonsai Market",
     projectDetail:
-      "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
+      "Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations.",
     projectTasks: [
       {
         task: "Project solution consultancy",
