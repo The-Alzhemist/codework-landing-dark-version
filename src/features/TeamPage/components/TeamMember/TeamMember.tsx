@@ -77,7 +77,7 @@ function TeamMember() {
             />
             <img
               src={item.img}
-              alt=""
+              alt={item.name}
               title=""
               loading="lazy"
               className="rounded-lg mb-3 w-[220px] h-[200px] sm:h-[305px] object-cover border-2 border-primary-50"

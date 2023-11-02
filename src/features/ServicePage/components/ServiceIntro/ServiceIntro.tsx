@@ -53,8 +53,8 @@ const ServiceIntro = ({
             />
             <img
               src="images/servicePage/serviceIntro/services-herosection-element.png"
-              alt=""
-              title=""
+              alt="services-herosection-element cover image"
+              title="services-herosection-element cover image"
               loading="lazy"
               className="max-w-[200px] lg:max-w-[480px] rounded-lg mb-5 sm:mb-0 ml-24 sm:ml-0"
             />
