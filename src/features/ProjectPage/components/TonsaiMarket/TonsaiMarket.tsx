@@ -67,7 +67,7 @@ export default function ProjectTonsaiMarket() {
                 {` - The absence of a back-end management system makes it difficult to monitor income and expenses.`}
               </li>
 
-              <li>
+              <li className="mb-2">
                 {` - There are issues with reconciling accounts.`}
               </li>
 

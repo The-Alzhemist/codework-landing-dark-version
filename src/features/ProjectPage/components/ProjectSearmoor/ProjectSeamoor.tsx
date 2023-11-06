@@ -26,7 +26,7 @@ export default function ProjectSeamoor() {
           <h2 className="text-2xl sm:text-4xl  text-primary-100 font-semibold  mb-5 flex items-center gap-x-2">
             <a
               className="grayscale-[50%] group-hover:grayscale-0 w-[100px] h-[100px]   bg-white rounded-full border-2 border-primary-700 flex justify-center items-center transition-all  hover:shadow-lg whitespace-nowrap"
-              href=""
+              href="https://seamoormarine.com/"
               target="_blank"
               rel="noopener nofollow"
             >

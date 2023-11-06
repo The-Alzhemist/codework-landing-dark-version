@@ -43,12 +43,16 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
 
       <section
         ref={sectionNavRef}
-        className={`toggle-barx translate-y-[-100%]  fixed top-0  w-full h-screen sm:h-auto  z-10 ${poppinsFont.className}`}
+        onClick={onClikcToggle}
+        className={`translate-y-[-100%]   fixed top-0  w-full h-screen  z-10 ${poppinsFont.className}`}
       >
-        <aside className=" bg-primary-400  flex flex-col">
+        
+        <aside 
+        onClick={(e) => e.stopPropagation()}
+        className=" bg-primary-400  flex flex-col">
           {/* nav */}
           <div className="p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]">
-            <div className="text-neutral-1000">
+            <div className="text-neutral-1000" onClick={onClikcToggle}>
               <Link href="/">
                 <picture>
                   <source srcSet="/logo/codework_white.png" type="image/webp" />
@@ -77,6 +81,8 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
             <NavbarRight />
           </div>
         </aside>
+
+       
       </section>
     </>
   );
