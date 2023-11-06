@@ -67,7 +67,7 @@ export default function ProjectThePine() {
                 {` - The existing backend system lacks efficiency.`}
               </li>
 
-              <li>
+              <li className="mb-2">
                 {` - The current system has a user interface that is difficult to use, resulting in a non-smooth workflow and employee training challenges.`}
               </li>
 
