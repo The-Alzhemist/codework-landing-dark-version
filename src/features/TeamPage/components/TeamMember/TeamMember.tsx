@@ -11,6 +11,12 @@ gsap.registerPlugin(ScrollTrigger);
 
 const teamMemberList: TeamMemberProps[] = [
   {
+    img: "/images/teamPage/kunpuck.jpg",
+    imgWebP: "/images/teamPage/kunpuck.webp",
+    name: "Pakorn (Puck)",
+    position: "CEO & Co-founder",
+  },
+  {
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
     name: "Pongsakorn (Ter)",
@@ -80,7 +86,7 @@ function TeamMember() {
               alt={item.name}
               title=""
               loading="lazy"
-              className="rounded-lg mb-3 w-[220px] h-[200px] sm:h-[305px] object-cover border-2 border-primary-50"
+              className="rounded-lg mb-3 w-[220px] h-[200px] sm:h-[305px] object-cover border-2 border-primary-50 m-1"
             />
           </picture>
           <div>
