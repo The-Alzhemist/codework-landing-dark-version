@@ -16,6 +16,12 @@ const teamMemberList: TeamMemberProps[] = [
     name: "Pakorn (Puck)",
     position: "CEO & Co-founder",
   },
+    {
+    img: "/images/teamPage/kunQ.jpg",
+    imgWebP: "/images/teamPage/kunQ.webp",
+    name: "Soratat (Q)",
+    position: "Founder",
+  },
   {
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
