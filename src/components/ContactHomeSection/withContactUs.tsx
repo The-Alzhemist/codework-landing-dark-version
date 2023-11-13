@@ -19,7 +19,7 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
           duration: 7,
           repeat: -1,
           repeatDelay: 5,
-          ease: "bounce.out",
+          ease: "power4.out",
           text: {
             value:
               "Let's start a conversation about your business's digital future",
