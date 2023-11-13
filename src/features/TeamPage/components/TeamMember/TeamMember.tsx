@@ -44,7 +44,7 @@ const teamMemberList: TeamMemberProps[] = [
     img: "/images/teamPage/ford.jpg",
     imgWebP: "/images/teamPage/ford.webp",
     name: "Pornsit (Ford)",
-    position: "Principle Engineer",
+    position: "Principal Engineer",
   },
   {
     img: "/images/teamPage/mo.jpg",
