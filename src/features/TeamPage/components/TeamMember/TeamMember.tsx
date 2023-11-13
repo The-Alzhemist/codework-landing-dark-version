@@ -20,7 +20,7 @@ const teamMemberList: TeamMemberProps[] = [
     img: "/images/teamPage/kunQ.jpg",
     imgWebP: "/images/teamPage/kunQ.webp",
     name: "Soratat (Q)",
-    position: "Founder",
+    position: "Co-founder",
   },
   {
     img: "/images/teamPage/ter.jpg",
