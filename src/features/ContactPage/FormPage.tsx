@@ -299,8 +299,7 @@ const FormPage = ({
           </div>
 
           <p className="mb-5  text-sm text-white">
-            *We will be in touch with you shortly through the number +66 83 987
-            4997.
+            *We will be in touch with you shortly through the number (+66) 63 849 4282
           </p>
 
           <div className=" flex justify-end">
