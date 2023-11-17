@@ -17,7 +17,7 @@ const BackgroundGradientBlur = ({ className }: BgGradientBlueInterface) => {
           src="/images/bg-blur-1x.png"
           alt="bg circle gradient"
           title="bg circle gradient"
-          loading="lazy"
+     
         />
       </picture>
     </>

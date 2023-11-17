@@ -163,7 +163,6 @@ export const OurProject = () => {
                           src={proj.projectImage}
                           alt={proj.projectName}
                           title={proj.projectName}
-                          loading="lazy"
                           className="rounded-lg w-full min-h-[300px] sm:h-auto object-cover lg:h-[350px]"
                         />
                       </picture>
