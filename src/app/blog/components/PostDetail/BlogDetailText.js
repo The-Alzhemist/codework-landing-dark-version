@@ -1,11 +1,11 @@
 import { storyblokEditable } from "@storyblok/react/rsc";
 import { render, MARK_BOLD } from 'storyblok-rich-text-react-renderer';
 
-render(document, {
-    markResolvers: {
-        [MARK_BOLD]: (children) => <strong className="bg-yellow-300">{children}</strong>
-    }
-});
+// render(document, {
+//     markResolvers: {
+//         [MARK_BOLD]: (children) => <strong className="bg-yellow-300">{children}</strong>
+//     }
+// });
 
 
 const BlogDetailText = ({ blok }) => (

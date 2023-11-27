@@ -2,7 +2,7 @@
 
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
-import BlogWrapper from "@/features/BlogPage/BlogPage";
+import BlogWrapper from "@/features/BlogPage/BlogWrapper";
 import FormPage from "@/features/ContactPage/FormPage";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 import { Metadata } from "next";
