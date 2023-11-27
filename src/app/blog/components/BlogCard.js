@@ -37,13 +37,13 @@ const BlogCard = ({ blok }) => (
           </span>
         </h3>
 
-        <p className="text-white h-[50px] sm:h-[100px] mb-5 flex items-start text-sm sm:text-md font-light">
+        <p className="text-white h-[80px]  mb-2 flex items-start text-sm sm:text-md font-light">
         {blok.blogShortDetail ?? '-'}
         </p>
       </div>
 
       {/* tag */}
-      <div className="flex flex-wrap gap-x-2">
+      <div className="flex flex-wrap gap-2">
       {blok.tags && blok.tags.map((tag, index) => (
         <span key={index} className="text-xs text-white py-2 px-4 rounded-full border border-primary-200">
           {tag}
