@@ -44,7 +44,7 @@ import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "./blog/components/StoryblokProvider";
  
 storyblokInit({
-  accessToken: "NleD8v5eHeN3VQGJ0n4j3Att",
+  accessToken: "AvAS9WNQIjtLCunkmVME0gtt",
   use: [apiPlugin],
 });
 
