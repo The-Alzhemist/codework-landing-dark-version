@@ -1,5 +1,4 @@
 import React from "react";
-import BlogPostWrapper from "@/features/BlogPage/components/BlogPost/BlogPostWrapper";
 import { Poppins } from "next/font/google";
 import {
   ISbStoriesParams,
@@ -34,30 +33,27 @@ async function fetchData(post: any) {
 }
 
 export async function generateStaticParams() {
-  const resultArray: any = [];
+  const links = await getLink();
+  const paths: any[] = [];
+  Object.keys(links).forEach((linkKey) => {
+    if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
+      return;
+    }
+    const slug = links[linkKey].slug.replace("blog/", "");
+    paths.push({ post: slug });
+  });
+
+  return paths;
+}
+
+const getLink = async () => {
   const storyblokApi = getStoryblokApi();
-  const links = storyblokApi
+  if (!storyblokApi) {
+    return;
+  }
+  return storyblokApi
     .get("cdn/links/", {
       starts_with: "blog/",
     })
-    .then((response) => {
-
-      const linkObj = [response.data.links];
-
-      for (const item of linkObj) {
-        // Loop through the inner objects
-        for (const key in item) {
-          if (item.hasOwnProperty(key)) {
-            const realPath = item[key].real_path;
-            resultArray.push({ path: realPath });
-          }
-        }
-      }
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-  // console.log('links #1 >>>>> ', links)
-  console.log('resultArray >>>>>>',resultArray )
-  return [{ post: "1" }, { post: "2" }, { post: "3" }];
-}
+    .then((res) => res.data.links);
+};
