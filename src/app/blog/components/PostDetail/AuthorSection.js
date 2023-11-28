@@ -26,8 +26,8 @@ const AuthorSection = ({ blok }) => (
 
     {/* title */}
     <div>
-      <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-[135px] text-white flex items-center justify-between">
-        <span className="max-w-[360px] py-2">{blok.blogTitle ?? "-"}</span>
+      <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-[110px] text-white flex items-center justify-between">
+        <span className="max-w-[800px] py-2">{blok.blogTitle ?? "-"}</span>
       </h3>
     </div>
   </>

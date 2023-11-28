@@ -8,7 +8,8 @@ import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSecti
  
 export default async function BlogWrapper() {
   const { data } = await fetchData();
- 
+
+   
   return (
     <div>
       <BlogIntro/>
