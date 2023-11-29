@@ -19,7 +19,7 @@ const BlogIntro = ({
 }: BlogIntroProps) => {
   return (
     <section
-    className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
+    className={`relative overflow-hidden pt-16   md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
     ref={root}
   >
     <div ref={circleLeftRef}>

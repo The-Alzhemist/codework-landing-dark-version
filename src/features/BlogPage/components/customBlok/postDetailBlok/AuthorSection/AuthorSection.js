@@ -4,7 +4,7 @@ const AuthorSection = ({ blok }) => (
   <>
     <div {...storyblokEditable(blok)}>
       {/* autoher */}
-      <div className="text-white flex items-center gap-x-2 text-xs mt-5">
+      <div className="text-white flex items-center gap-x-2 text-xs mt-5 mb-3">
         <span>
           <img
             className="relative  transition-all duration-100 rounded-full"
@@ -26,7 +26,7 @@ const AuthorSection = ({ blok }) => (
 
     {/* title */}
     <div>
-      <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-[110px] text-white flex items-center justify-between">
+      <h3 className="relative text-lg sm:text-3xl font-semibold  text-white mb-5 flex items-center justify-between">
         <span className="max-w-[800px] py-2">{blok.blogTitle ?? "-"}</span>
       </h3>
     </div>
