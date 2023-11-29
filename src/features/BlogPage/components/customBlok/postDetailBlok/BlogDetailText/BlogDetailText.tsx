@@ -1,3 +1,4 @@
+import React from 'react';
 import { storyblokEditable } from "@storyblok/react/rsc";
 import {
   render,
@@ -6,9 +7,10 @@ import {
   NODE_PARAGRAPH,
   NODE_LI
 } from "storyblok-rich-text-react-renderer";
+import { BlogDetailTextProps } from './interface';
 
 
-const BlogDetailText = ({ blok }) => (
+const BlogDetailText: React.FC<BlogDetailTextProps> = ({ blok }) => (
   <>
     <div {...storyblokEditable(blok)}>
       {/* autoher */}
@@ -41,5 +43,3 @@ const BlogDetailText = ({ blok }) => (
 );
 
 export default BlogDetailText;
-
-
