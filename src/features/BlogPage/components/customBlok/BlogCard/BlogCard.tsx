@@ -55,11 +55,11 @@ const BlogCard: FC<BlogCardProps> = ({ blok }) => (
 
         {/* title */}
         <div>
-          <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-[135px] mb-5 sm:mb- text-white flex items-center justify-between">
+          <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-[135px]  text-white flex items-center justify-between">
             <span className="max-w-[360px] py-2">{blok.blogTitle ?? "-"}</span>
           </h3>
 
-          <p className="text-white h-[80px] mb-2 flex items-start text-sm sm:text-md font-light">
+          <p className="text-white h-[80px] mb-2 flex items-start text-sm sm:text-md font-light mb-5">
             {blok.blogShortDetail ?? "-"}
           </p>
         </div>
@@ -67,7 +67,7 @@ const BlogCard: FC<BlogCardProps> = ({ blok }) => (
         {/* tag */}
         <div className="flex flex-wrap gap-2">
           {blok.tags &&
-            blok.tags.map((tag, index) => (
+            blok.tags.sort().map((tag, index) => (
               <span
                 key={index}
                 className="text-xs text-secondary-200 py-2 px-3 rounded-full border border-secondary-200"

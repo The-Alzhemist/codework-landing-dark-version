@@ -16,6 +16,7 @@ export default async function BlogWrapper() {
       <StoryblokStory story={data.story} />
       <ContactHomeSection />
       <SocialContactFloating />
+    
     </div>
   );
 }
