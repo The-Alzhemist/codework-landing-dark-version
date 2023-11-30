@@ -10,7 +10,7 @@ export const getLinks = async (pathLink: string) => {
     }
     return storyblokApi
       .get("cdn/links/", {
-        starts_with: pathLink,
+        starts_with: pathLink
       })
       .then((res) => res.data.links);
   };

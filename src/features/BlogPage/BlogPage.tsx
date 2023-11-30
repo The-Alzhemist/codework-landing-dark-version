@@ -19,5 +19,5 @@ export default async function BlogWrapper() {
   let sbParams:ISbStoriesParams = { version: "draft" };
  
   const storyblokApi = getStoryblokApi();
-  return storyblokApi.get(`cdn/stories/blog`, sbParams);
+  return storyblokApi.get(`cdn/stories/blog`,sbParams );
 }
