@@ -43,9 +43,14 @@ export const metadata: Metadata = {
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "../features/BlogPage/components/StoryblokProvider";
  
+
 storyblokInit({
-  accessToken: "AvAS9WNQIjtLCunkmVME0gtt",
+  accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
+  apiOptions: {
+    fetch: (input, init) =>
+      fetch(input, { ...init, next: { revalidate: 3600 } }),
+  },
 });
 
 

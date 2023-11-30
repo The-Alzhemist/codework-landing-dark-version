@@ -45,7 +45,7 @@ const BlogCardLastest: React.FC<BlogCardLastestProps> = ({ blok }) => (
         {/* tag */}
         <div className="flex flex-wrap gap-2">
           {blok.tags &&
-            blok.tags.map((tag, index) => (
+            blok.tags.sort().map((tag, index) => (
               <span
                 key={index}
                 className="text-xs text-secondary-200 py-2 px-3 rounded-full border border-secondary-200"
