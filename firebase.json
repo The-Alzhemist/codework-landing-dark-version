@@ -11,7 +11,7 @@
       ]
     },
     {
-      "target": "preprod-codework-tech",
+      "target": "pre-prod-codework-tech",
       "cleanUrls": true,
       "public": "out",
       "ignore": [
