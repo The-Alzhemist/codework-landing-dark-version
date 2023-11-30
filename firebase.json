@@ -11,6 +11,16 @@
       ]
     },
     {
+      "target": "preprod-codework-tech",
+      "cleanUrls": true,
+      "public": "out",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ]
+    },
+    {
       "target": "staging-codework-tech",
       "cleanUrls": true,
       "public": "out",
