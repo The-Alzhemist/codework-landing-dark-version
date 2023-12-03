@@ -27,7 +27,6 @@ export default async function PostPage({ params }: any) {
         className={`${poppinsFont.className} pt-20 sm:pt-0 relative  md:py-[50px] mx-auto px-5 lg:px-[250px] bg-neutral-1000`}
       >
        <Breadcrumb postPath={params.post}/>
-
         <StoryblokStory story={data.story} />
         <SocialContactFloating />
       </main>
@@ -37,8 +36,9 @@ export default async function PostPage({ params }: any) {
 }
 
 async function fetchData(post: any) {
-  let sbParams:ISbStoriesParams = { version: "draft" };
+  let sbParams:ISbStoriesParams = { version: process.env.STORYBLOK_CONTENT_VERSION as "draft" | "published" | undefined };
   const storyblokApi = getStoryblokApi();
+  console.log('sbParams#2>>>>', sbParams)
   return storyblokApi.get(`cdn/stories/blog/${post}`, sbParams);
 }
 
@@ -46,7 +46,7 @@ async function fetchData(post: any) {
 export async function generateStaticParams() {
   const links = await getLinks("blog/");
   const paths: any[] = [];
-  
+  console.log('links#1 >>', links)
   Object.keys(links).forEach((linkKey) => {
     if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
       return;
