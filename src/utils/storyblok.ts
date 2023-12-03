@@ -10,7 +10,8 @@ export const getLinks = async (pathLink: string) => {
     }
     return storyblokApi
       .get("cdn/links/", {
-        starts_with: pathLink
+        starts_with: pathLink,
+        version: process.env.STORYBLOK_CONTENT_VERSION as "draft" | "published" | undefined
       })
       .then((res) => res.data.links);
   };
