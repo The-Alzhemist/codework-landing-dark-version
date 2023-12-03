@@ -9,7 +9,12 @@ import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSecti
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import { getLinks } from "@/utils/storyblok";
 import Breadcrumb from "@/features/BlogPage/components/Breadcrumb/Breadcrumb";
+import { Metadata, ResolvingMetadata } from "next";
 
+type Props = {
+  params: { id: string }
+  searchParams: { [key: string]: string | string[] | undefined }
+}
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -46,7 +51,7 @@ async function fetchData(post: any) {
 export async function generateStaticParams() {
   const links = await getLinks("blog/");
   const paths: any[] = [];
-  console.log('links#1 >>', links)
+
   Object.keys(links).forEach((linkKey) => {
     if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
       return;
@@ -58,3 +63,42 @@ export async function generateStaticParams() {
   return paths;
 }
 
+export async function generateMetadata(
+  { params, searchParams }: any,
+  parent: ResolvingMetadata
+): Promise<Metadata> {
+   let seoTag:Metadata = {}
+  params.post
+  console.log('  params.post >>>',   params.post)
+ 
+  const { data } = await fetchData(params.post);
+  const metaArray = data.story.content.body.filter((item:any) => item.metaTitle)
+  metaArray.forEach((item:any) => {
+    seoTag = {
+      title: item.metaTitle,
+      description: item.metaDescription,
+      openGraph: {
+        title: item.metaTitle,
+        description: item.metaDescription,
+        images: [
+          {
+            url: "/logo/meta/meta-tag-home.jpg",
+            width: 800,
+            height: 600,
+            alt: "",
+          },
+        ]
+      }
+    }
+
+  });
+ 
+  return seoTag
+}
+ 
+async function fetchDataByParams(post: any) {
+  let sbParams:ISbStoriesParams = { version: process.env.STORYBLOK_CONTENT_VERSION as "draft" | "published" | undefined };
+  const storyblokApi = getStoryblokApi();
+  console.log('sbParams#2>>>>', sbParams)
+  return storyblokApi.get(`cdn/stories/blog/${post}`, sbParams);
+}
