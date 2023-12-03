@@ -13,6 +13,7 @@ export default async function BlogWrapper() {
   return (
     <div>
       <BlogIntro/>
+      process.env.STORYBLOK_CONTENT_VERSION:  {process.env.STORYBLOK_CONTENT_VERSION}
       <StoryblokStory story={data.story} />
       <ContactHomeSection />
       <SocialContactFloating />
@@ -22,8 +23,7 @@ export default async function BlogWrapper() {
 }
  
  async function fetchData() {
-  let sbParams:ISbStoriesParams = { version: "draft" };
- 
+  let sbParams:ISbStoriesParams = { version: process.env.STORYBLOK_CONTENT_VERSION as "draft" | "published" | undefined };
   const storyblokApi = getStoryblokApi();
   return storyblokApi.get(`cdn/stories/blog`, sbParams);
 }
