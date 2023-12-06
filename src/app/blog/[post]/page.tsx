@@ -10,6 +10,7 @@ import SocialContactFloating from "@/components/SocialContactFloating/SocialCont
 import { getLinks } from "@/utils/storyblok";
 import Breadcrumb from "@/features/BlogPage/components/Breadcrumb/Breadcrumb";
 import { Metadata, ResolvingMetadata } from "next";
+import { MetaArrayItem, PathItem, PostPageProps } from "./interface";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -18,7 +19,7 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export default async function PostPage({ params }: any) {
+export default async function PostPage({ params }: PostPageProps) {
   const { data } = await fetchData(params.post);
 
   return (
@@ -39,7 +40,7 @@ export default async function PostPage({ params }: any) {
   );
 }
 
-async function fetchData(post: any) {
+async function fetchData(post: string) {
   let sbParams: ISbStoriesParams = {
     version: process.env.STORYBLOK_CONTENT_VERSION as
       | "draft"
@@ -52,7 +53,7 @@ async function fetchData(post: any) {
 
 export async function generateStaticParams() {
   const links = await getLinks("blog/");
-  const paths: any[] = [];
+  const paths: PathItem[] = [];
 
   Object.keys(links).forEach((linkKey) => {
     if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
@@ -66,18 +67,19 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata(
-  { params, searchParams }: any,
+  { params }: {params: { post: string }},
   parent: ResolvingMetadata
 ): Promise<Metadata> {
   let seoTag: Metadata = {};
 
   const { data } = await fetchData(params.post);
 
-  const metaArray = data.story.content.body.filter(
-    (item: any) => (item.metaTitle) 
+  const metaArray:MetaArrayItem[] = data.story.content.body.filter(
+    (item: MetaArrayItem) => (item.metaTitle) 
   );
  
-  metaArray.forEach((item: any) => {
+ 
+  metaArray.forEach((item: MetaArrayItem) => {
     seoTag = {
       title: item.metaTitle,
       description: item.metaDescription,
