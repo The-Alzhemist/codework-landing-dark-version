@@ -83,7 +83,7 @@ export async function generateMetadata(
         description: item.metaDescription,
         images: [
           {
-            url: item.image ? item.image.filename : "/logo/meta/meta-tag-homexx.jpg",
+            url: item.metaImage ? item.metaImage.filename : "/logo/meta/meta-tag-home.jpg",
             width: 800,
             height: 600,
             alt: "",
