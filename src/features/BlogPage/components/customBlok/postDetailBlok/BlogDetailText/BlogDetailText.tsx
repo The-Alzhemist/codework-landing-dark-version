@@ -37,7 +37,7 @@ const BlogDetailText: React.FC<BlogDetailTextProps> = ({ blok }) => (
               <li className="pl-2 flex items-center gap-x-2"><span>-</span> <span>{children}</span> </li>
             ),
             [NODE_IMAGE]: (children, props) => (
-             <img className='p-3 sm:p-5' {...props}/>
+             <img className='p-3 sm:p-10 w-[90%] mx-auto' {...props}/>
             )
           },
         })}
