@@ -41,7 +41,8 @@ export const metadata: Metadata = {
 };
 
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
-import StoryblokProvider from "../features/BlogPage/components/StoryblokProvider";
+import StoryblokProvider from "@/features/BlogPage/components/StoryblokProvider/StoryblokProvider";
+
  
 
 storyblokInit({

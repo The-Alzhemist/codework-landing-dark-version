@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/features/BlogPage/components/StoryblokProvider.js", "src/features/BlogPage/components/defaultBlok/Feature.js", "src/features/BlogPage/components/defaultBlok/Page/Page.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/features/BlogPage/components/StoryblokProvider.tsx", "src/features/BlogPage/components/defaultBlok/Feature.js", "src/features/BlogPage/components/defaultBlok/Page/Page.tsx"],
   "exclude": ["node_modules"]
 }
