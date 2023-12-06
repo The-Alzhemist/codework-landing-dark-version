@@ -5,7 +5,7 @@ import { PageProps } from './interface';
 
 const Page: React.FC<PageProps> = ({ blok }) => (
   <main {...storyblokEditable(blok)}>
-    {blok.body.map((nestedBlok: any) => (
+    {blok.body.map((nestedBlok) => (
       <StoryblokComponent blok={nestedBlok} key={nestedBlok._uid} />
     ))}
   </main>
