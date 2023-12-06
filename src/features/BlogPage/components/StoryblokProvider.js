@@ -12,6 +12,7 @@ import Image from "./customBlok/postDetailBlok/Image/Image";
 import BlogDetailText from "./customBlok/postDetailBlok/BlogDetailText/BlogDetailText";
 import BlogH2 from './customBlok/BlogH2/blogH2'
 import BlogDetailTag from "./customBlok/postDetailBlok/BlogDetailTag/BlogDetailTag";
+import ImageCoverDetailBlog from "./customBlok/postDetailBlok/ImageCoverDetailBlog/ImageCoverDetailBlog";
 
 
 const components = {
@@ -25,7 +26,8 @@ const components = {
   blogDetailText: BlogDetailText,
   blogCardLastest: BlogCardLastest,
   blogH2: BlogH2,
-  blogDetailTag: BlogDetailTag
+  blogDetailTag: BlogDetailTag,
+  imageCoverDetailBlog: ImageCoverDetailBlog
 };
 
 storyblokInit({
