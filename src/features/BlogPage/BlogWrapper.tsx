@@ -13,7 +13,6 @@ export default async function BlogWrapper() {
   return (
     <div>
       <BlogIntro/>
-      process.env.STORYBLOK_CONTENT_VERSION:  {process.env.STORYBLOK_CONTENT_VERSION}
       <StoryblokStory story={data.story} />
       <ContactHomeSection />
       <SocialContactFloating />

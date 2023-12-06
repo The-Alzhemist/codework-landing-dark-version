@@ -1,6 +1,6 @@
 export interface ImageProps {
     blok: {
-      Image: {
+      image: {
         filename?: string;
       };
     };

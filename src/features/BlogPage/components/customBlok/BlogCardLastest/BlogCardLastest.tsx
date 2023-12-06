@@ -61,7 +61,7 @@ const BlogCardLastest: React.FC<BlogCardLastestProps> = ({ blok }) => (
         <img
           className="relative transition-all duration-100 rounded-md grayscale-[50%] group-hover:grayscale-0 mb-5 sm:mb-0"
           src={
-            blok.image.filename
+            blok.image
               ? blok.image.filename
               : "https://fakeimg.pl/30x30/282828/eae0d0/?retina=1"
           }
