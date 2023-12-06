@@ -1,7 +1,9 @@
 import Link from "next/link";
 import React from "react";
 
-export default function Breadcrumb({postPath}: any) {
+export default function Breadcrumb({postPath}: {
+  postPath: string;
+}) {
   
   return (
     <nav
