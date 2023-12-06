@@ -19,6 +19,9 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
+export const dynamic = 'auto'
+export const dynamicParams = true
+
 export default async function PostPage({ params }: PostPageProps) {
   const { data } = await fetchData(params.post);
 
