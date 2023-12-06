@@ -5,7 +5,7 @@ export default function Breadcrumb({postPath}: any) {
   
   return (
     <nav
-      className="flex px-5 py-3 my-10 max-w-[500px] text-gray-700 border rounded-lg bg-neutral-800 border-white-200"
+      className="flex flex-wrap px-5 py-3 my-10 w-auto  text-gray-700 border rounded-lg bg-neutral-800 border-white-200"
       aria-label="Breadcrumb"
     >
       <ol className="inline-flex items-center space-x-1 md:space-x-2 rtl:space-x-reverse">
