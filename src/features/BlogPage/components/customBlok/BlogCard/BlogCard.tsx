@@ -6,9 +6,6 @@ import { BlogCardProps } from "./interface";
 import { DateTime } from "luxon";
 
 
-// Define the props interface
-
-// Convert the component to TypeScript
 const BlogCard: FC<BlogCardProps> = ({ blok }) => (
   <div {...storyblokEditable(blok)}>
     <Link href={blok.link ? blok.link.cached_url : "#"}>
@@ -17,7 +14,7 @@ const BlogCard: FC<BlogCardProps> = ({ blok }) => (
           <img
             className="relative transition-all duration-100 rounded-md"
             src={
-              blok.image.filename
+              blok.image
                 ? blok.image.filename
                 : "https://fakeimg.pl/400x200/282828/eae0d0/?retina=1"
             }
@@ -59,7 +56,7 @@ const BlogCard: FC<BlogCardProps> = ({ blok }) => (
             <span className="max-w-[360px] py-2">{blok.blogTitle ?? "-"}</span>
           </h3>
 
-          <p className="text-white h-[80px] mb-2 flex items-start text-sm sm:text-md font-light mb-5">
+          <p className="text-white h-[80px] flex items-start text-sm sm:text-md font-light mb-5">
             {blok.blogShortDetail ?? "-"}
           </p>
         </div>

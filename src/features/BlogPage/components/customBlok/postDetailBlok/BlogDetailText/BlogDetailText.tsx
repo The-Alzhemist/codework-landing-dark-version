@@ -5,7 +5,8 @@ import {
   MARK_BOLD,
   MARK_CODE,
   NODE_PARAGRAPH,
-  NODE_LI
+  NODE_LI,
+  NODE_IMAGE
 } from "storyblok-rich-text-react-renderer";
 import { BlogDetailTextProps } from './interface';
 
@@ -34,6 +35,9 @@ const BlogDetailText: React.FC<BlogDetailTextProps> = ({ blok }) => (
             ),
             [NODE_LI]: (children) => (
               <li className="pl-2 flex items-center gap-x-2"><span>-</span> <span>{children}</span> </li>
+            ),
+            [NODE_IMAGE]: (children, props) => (
+             <img className='p-3 sm:p-5' {...props}/>
             )
           },
         })}

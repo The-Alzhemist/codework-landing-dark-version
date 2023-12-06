@@ -11,11 +11,6 @@ import { getLinks } from "@/utils/storyblok";
 import Breadcrumb from "@/features/BlogPage/components/Breadcrumb/Breadcrumb";
 import { Metadata, ResolvingMetadata } from "next";
 
-type Props = {
-  params: { id: string }
-  searchParams: { [key: string]: string | string[] | undefined }
-}
-
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
   subsets: ["latin"],
@@ -31,22 +26,26 @@ export default async function PostPage({ params }: any) {
       <main
         className={`${poppinsFont.className} pt-20 sm:pt-0 relative  md:py-[50px] mx-auto px-5 lg:px-[250px] bg-neutral-1000`}
       >
-       <Breadcrumb postPath={params.post}/>
+        <Breadcrumb postPath={params.post} />
         <StoryblokStory story={data.story} />
-        <SocialContactFloating />
       </main>
+
+      <SocialContactFloating />
       <ContactHomeSection />
     </>
   );
 }
 
 async function fetchData(post: any) {
-  let sbParams:ISbStoriesParams = { version: process.env.STORYBLOK_CONTENT_VERSION as "draft" | "published" | undefined };
+  let sbParams: ISbStoriesParams = {
+    version: process.env.STORYBLOK_CONTENT_VERSION as
+      | "draft"
+      | "published"
+      | undefined,
+  };
   const storyblokApi = getStoryblokApi();
-  console.log('sbParams#2>>>>', sbParams)
   return storyblokApi.get(`cdn/stories/blog/${post}`, sbParams);
 }
-
 
 export async function generateStaticParams() {
   const links = await getLinks("blog/");
@@ -67,13 +66,15 @@ export async function generateMetadata(
   { params, searchParams }: any,
   parent: ResolvingMetadata
 ): Promise<Metadata> {
-   let seoTag:Metadata = {}
-  params.post
-  console.log('  params.post >>>',   params.post)
- 
+  let seoTag: Metadata = {};
+
   const { data } = await fetchData(params.post);
-  const metaArray = data.story.content.body.filter((item:any) => item.metaTitle)
-  metaArray.forEach((item:any) => {
+
+  const metaArray = data.story.content.body.filter(
+    (item: any) => (item.metaTitle) 
+  );
+ 
+  metaArray.forEach((item: any) => {
     seoTag = {
       title: item.metaTitle,
       description: item.metaDescription,
@@ -82,23 +83,15 @@ export async function generateMetadata(
         description: item.metaDescription,
         images: [
           {
-            url: "/logo/meta/meta-tag-home.jpg",
+            url: item.image ? item.image.filename : "/logo/meta/meta-tag-homexx.jpg",
             width: 800,
             height: 600,
             alt: "",
           },
-        ]
-      }
-    }
-
+        ],
+      },
+    };
   });
- 
-  return seoTag
-}
- 
-async function fetchDataByParams(post: any) {
-  let sbParams:ISbStoriesParams = { version: process.env.STORYBLOK_CONTENT_VERSION as "draft" | "published" | undefined };
-  const storyblokApi = getStoryblokApi();
-  console.log('sbParams#2>>>>', sbParams)
-  return storyblokApi.get(`cdn/stories/blog/${post}`, sbParams);
+
+  return seoTag;
 }

@@ -8,9 +8,9 @@ const Image: React.FC<ImageProps> = ({ blok }) => (
     <img
       className="w-full"
       src={
-        blok.Image.filename
-          ? blok.Image.filename
-          : "https://fakeimg.pl/30x30/282828/eae0d0/?retina=1"
+        blok.image
+          ? blok.image.filename
+          : "https://fakeimg.pl/300x157/282828/eae0d0/?retina=1"
       }
       alt="Description" // Add appropriate alt text for accessibility
     />
