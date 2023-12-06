@@ -15,7 +15,7 @@ const BlogDetailText: React.FC<BlogDetailTextProps> = ({ blok }) => (
   <>
     <div {...storyblokEditable(blok)}>
       {/* autoher */}
-      <div className="text-white flex flex-col items-left gap-x-2 text-lg mt-20">
+      <div className="text-white flex flex-col items-left gap-x-2 text-lg mt-12     ">
         {render(blok.text, {
           markResolvers: {
             [MARK_BOLD]: (children) => (
