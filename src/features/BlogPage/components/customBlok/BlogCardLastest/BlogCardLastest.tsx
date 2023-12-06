@@ -12,7 +12,7 @@ const BlogCardLastest: React.FC<BlogCardLastestProps> = ({ blok }) => (
       {/* left */}
       <div>
         {/* autoher */}
-        <div className="text-white flex items-center gap-x-2 text-xs mb-2">
+        <div className="text-white flex items-center gap-x-2 text-xs mb-5">
           <span>
             <img
               className="relative transition-all duration-100 rounded-full"
@@ -33,11 +33,11 @@ const BlogCardLastest: React.FC<BlogCardLastestProps> = ({ blok }) => (
 
         {/* title */}
         <div className="mb-3">
-          <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-auto text-white flex items-center justify-betwee mb-2">
+          <h3 className="relative text-lg sm:text-xl font-semibold  sm:h-auto text-white flex items-center justify-betwee mb-3">
             <span className="max-w-[800px] py-2">{blok.blogTitle ?? "-"}</span>
           </h3>
 
-          <p className="text-white h-[80px] sm:h-auto mb-2 flex items-start text-sm sm:text-md font-light">
+          <p className="text-white h-[80px] sm:h-auto flex items-start text-sm sm:text-md font-light mb-5">
           {blok.blogShortDetail ?? "-"}
           </p>
         </div>

@@ -31,7 +31,7 @@ const BlogCard: FC<BlogCardProps> = ({ blok }) => (
         )}
 
         {/* autoher */}
-        <div className="text-white flex items-center gap-x-2 text-xs mt-5 mb-5 sm:mb-0">
+        <div className="text-white flex items-center gap-x-2 text-xs mt-5 mb-5 sm:mb-3">
           <span>
             <img
               className="relative transition-all duration-100 rounded-full"
@@ -52,11 +52,11 @@ const BlogCard: FC<BlogCardProps> = ({ blok }) => (
 
         {/* title */}
         <div>
-          <h3 className="relative text-lg sm:text-xl font-semibold h-[70px] sm:h-[135px]  text-white flex items-center justify-between">
+          <h3 className="relative text-lg sm:text-xl font-semibold  text-white flex items-center justify-between mb-3">
             <span className="max-w-[360px] py-2">{blok.blogTitle ?? "-"}</span>
           </h3>
 
-          <p className="text-white h-[80px] flex items-start text-sm sm:text-md font-light mb-5">
+          <p className="text-white  flex items-start text-sm sm:text-md font-light mb-7">
             {blok.blogShortDetail ?? "-"}
           </p>
         </div>

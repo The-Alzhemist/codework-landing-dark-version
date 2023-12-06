@@ -24,10 +24,13 @@ export default async function PostPage({ params }: any) {
   return (
     <>
       <main
-        className={`${poppinsFont.className} pt-20 sm:pt-0 relative  md:py-[50px] mx-auto px-5 lg:px-[250px] bg-neutral-1000`}
+        className={`${poppinsFont.className} pt-20 sm:pt-0 relative  md:py-[50px] mx-auto px-5  bg-neutral-1000`}
       >
+        <div className="max-w-[800px] mx-auto">
         <Breadcrumb postPath={params.post} />
         <StoryblokStory story={data.story} />
+        </div>
+       
       </main>
 
       <SocialContactFloating />
