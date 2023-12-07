@@ -43,6 +43,8 @@ export default async function PostPage({ params }: PostPageProps) {
   );
 }
 
+export const revalidate = 30
+
 async function fetchData(post: string) {
   let sbParams: ISbStoriesParams = {
     version: process.env.STORYBLOK_CONTENT_VERSION as
