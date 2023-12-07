@@ -28,13 +28,15 @@ const components: { [key: string]: React.ComponentType<any> } = {
   imageCoverDetailBlog: ImageCoverDetailBlog,
 };
 
+const REVALIDATE_TIME = Number(process.env.STORYBLOK_REVALIDATE_TIME_SECOND as number | false | undefined )
+
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN as string,
   use: [apiPlugin],
   components,
   apiOptions: {
     fetch: (input, init) =>
-      fetch(input, { ...init, next: { revalidate: 3600 } }),
+      fetch(input, { ...init, next: { revalidate: REVALIDATE_TIME }}),
   },
 });
 

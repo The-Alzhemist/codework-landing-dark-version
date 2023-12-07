@@ -5,11 +5,11 @@ import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 import { NavbarToggleContextProvider } from "@/context/NavbarToggleContext/NavbarToggleContext";
 
-
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
   subsets: ["latin"],
-  display: 'swap', adjustFontFallback: false 
+  display: "swap",
+  adjustFontFallback: false,
 });
 
 export const metadata: Metadata = {
@@ -43,17 +43,18 @@ export const metadata: Metadata = {
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "@/features/BlogPage/components/StoryblokProvider/StoryblokProvider";
 
- 
+const REVALIDATE_TIME = Number(
+  process.env.STORYBLOK_REVALIDATE_TIME_SECOND as number | false | undefined
+);
 
 storyblokInit({
   accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   apiOptions: {
     fetch: (input, init) =>
-      fetch(input, { ...init, next: { revalidate: 3600 } }),
+      fetch(input, { ...init, next: { revalidate: REVALIDATE_TIME } }),
   },
 });
-
 
 export default function RootLayout({
   children,
@@ -62,15 +63,15 @@ export default function RootLayout({
 }) {
   return (
     <StoryblokProvider>
-    <html lang="en">
-      <body className={poppinsFont.className}>
-        <NavbarToggleContextProvider>
-          <Navbar/>
-          <div>{children}</div>
-          <Footer />
-        </NavbarToggleContextProvider>
-      </body>
-    </html>
+      <html lang="en">
+        <body className={poppinsFont.className}>
+          <NavbarToggleContextProvider>
+            <Navbar />
+            <div>{children}</div>
+            <Footer />
+          </NavbarToggleContextProvider>
+        </body>
+      </html>
     </StoryblokProvider>
   );
 }
