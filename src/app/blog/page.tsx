@@ -50,11 +50,6 @@ export default function BlogPage() {
   return (
     <main className={`bg-neutral-1000 ${poppinsFont.className}`}>
       <BlogWrapper/>
-      <div className="bg-teal-600">
-        STORYBLOK_CONTENT_VERSION:    {process.env.STORYBLOK_CONTENT_VERSION} | 
-        STORYBLOK_REVALIDATE_TIME_SECOND: {process.env.STORYBLOK_REVALIDATE_TIME_SECOND} | 
-        STORYBLOK_ACCESS_TOKEN: {process.env.STORYBLOK_ACCESS_TOKEN}
-        </div>
     </main>
   );
 }
