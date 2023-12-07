@@ -1,3 +1,5 @@
+export const dynamic = 'auto'
+export const dynamicParams = true
 export const revalidate = 6
 
 import React from "react";
@@ -21,8 +23,7 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export const dynamic = 'auto'
-export const dynamicParams = true
+
 
 export default async function PostPage({ params }: PostPageProps) {
   const { data } = await fetchData(params.post);
@@ -64,6 +65,7 @@ async function fetchData(post: string) {
   return storyblokApi.get(`cdn/stories/blog/${post}`, sbParams);
 }
 
+
 export async function generateStaticParams() {
   const links = await getLinks("blog/");
   const paths: PathItem[] = [];
@@ -78,6 +80,8 @@ export async function generateStaticParams() {
 
   return paths;
 }
+
+
 
 export async function generateMetadata(
   { params }: {params: { post: string }},
