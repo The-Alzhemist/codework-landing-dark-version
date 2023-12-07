@@ -1,3 +1,5 @@
+export const revalidate = 6
+
 import React from "react";
 import { Poppins } from "next/font/google";
 import {
@@ -49,7 +51,7 @@ export default async function PostPage({ params }: PostPageProps) {
   );
 }
 
-export const revalidate = 30
+
 
 async function fetchData(post: string) {
   let sbParams: ISbStoriesParams = {
