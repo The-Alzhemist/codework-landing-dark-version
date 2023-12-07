@@ -37,7 +37,7 @@ const BlogCardLastest: React.FC<BlogCardLastestProps> = ({ blok }) => (
             <span className="max-w-[800px] py-2">{blok.blogTitle ?? "-"}</span>
           </h3>
 
-          <p className="text-white h-[80px] sm:h-auto flex items-start text-sm sm:text-md font-light mb-5">
+          <p className="text-white  sm:h-auto flex items-start text-sm sm:text-md font-light mb-5">
           {blok.blogShortDetail ?? "-"}
           </p>
         </div>
@@ -59,7 +59,7 @@ const BlogCardLastest: React.FC<BlogCardLastestProps> = ({ blok }) => (
       {/* right */}
       <picture>
         <img
-          className="relative transition-all duration-100 rounded-md grayscale-[50%] group-hover:grayscale-0 mb-5 sm:mb-0"
+          className="relative transition-all duration-100 rounded-md mb-5 sm:mb-0"
           src={
             blok.image
               ? blok.image.filename

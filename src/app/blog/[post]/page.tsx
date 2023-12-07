@@ -35,14 +35,7 @@ export default async function PostPage({ params }: PostPageProps) {
         <div className="max-w-[800px] mx-auto">
         <Breadcrumb postPath={params.post} />
         <StoryblokStory story={data.story} />
-        </div>
-
-        <div className="bg-teal-600">
-        STORYBLOK_CONTENT_VERSION:    {process.env.STORYBLOK_CONTENT_VERSION} | 
-        STORYBLOK_REVALIDATE_TIME_SECOND: {process.env.STORYBLOK_REVALIDATE_TIME_SECOND} | 
-        STORYBLOK_ACCESS_TOKEN: {process.env.STORYBLOK_ACCESS_TOKEN}
-        </div>
-       
+        </div>       
       </main>
 
       <SocialContactFloating />
