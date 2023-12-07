@@ -1,4 +1,5 @@
 
+export const revalidate = 6
 
 import BlogWrapper from "@/features/BlogPage/BlogWrapper";
 
@@ -41,7 +42,7 @@ export const metadata: Metadata = {
   },
 };
 
-export const revalidate = 30
+
 
 export default function BlogPage() {
 
