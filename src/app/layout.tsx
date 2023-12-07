@@ -40,12 +40,28 @@ export const metadata: Metadata = {
   },
 };
 
+import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
+import StoryblokProvider from "@/features/BlogPage/components/StoryblokProvider/StoryblokProvider";
+
+ 
+
+storyblokInit({
+  accessToken: process.env.STORYBLOK_ACCESS_TOKEN,
+  use: [apiPlugin],
+  apiOptions: {
+    fetch: (input, init) =>
+      fetch(input, { ...init, next: { revalidate: 3600 } }),
+  },
+});
+
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
+    <StoryblokProvider>
     <html lang="en">
       <body className={poppinsFont.className}>
         <NavbarToggleContextProvider>
@@ -55,5 +71,6 @@ export default function RootLayout({
         </NavbarToggleContextProvider>
       </body>
     </html>
+    </StoryblokProvider>
   );
 }

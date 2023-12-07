@@ -8,6 +8,7 @@ name: STG Deploy to Firebase Hosting on PUSH
       - 'develop'
 jobs:
   build_and_deploy:
+    environment: staging
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -21,6 +22,7 @@ jobs:
           yarn build
         env:
           NEXT_PUBLIC_ANALYTICS_ID: NEXT_PUBLIC_ANALYTICS_ID
+          STORYBLOK_ACCESS_TOKEN: '${{ secrets.STORYBLOK_ACCESS_TOKEN }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
