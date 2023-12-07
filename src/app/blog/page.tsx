@@ -1,6 +1,5 @@
 
-export const dynamic = 'auto'
-export const dynamicParams = true
+
 export const revalidate = 6
 
 import BlogWrapper from "@/features/BlogPage/BlogWrapper";
