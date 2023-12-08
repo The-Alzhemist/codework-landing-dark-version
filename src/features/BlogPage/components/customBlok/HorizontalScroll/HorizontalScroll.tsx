@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { storyblokEditable } from "@storyblok/react/rsc";
 import { BlogFilterTagsContext } from "@/context/BlogFilterTagsContext/BlogFilterTagsContext";
 import { FILTER_TAGS } from "@/constants/blogPage/constant";
