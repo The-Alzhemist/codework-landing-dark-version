@@ -12,13 +12,15 @@ import BlogCardLastest from '../customBlok/BlogCardLastest/BlogCardLastest';
 import BlogH2 from '../customBlok/BlogH2/blogH2';
 import BlogDetailTag from '../customBlok/postDetailBlok/BlogDetailTag/BlogDetailTag';
 import ImageCoverDetailBlog from '../customBlok/postDetailBlok/ImageCoverDetailBlog/ImageCoverDetailBlog';
-
+import HorizontalScroll from '../customBlok/HorizontalScroll/HorizontalScroll';
+import GridSortLayout from '../customBlok/GridSortLayout/GridSortLayout';
 
 const components: { [key: string]: React.ComponentType<any> } = {
   feature: Feature,
   grid: Grid,
   teaser: Teaser,
   page: Page,
+  gridSortLayout: GridSortLayout,
   blogCard: BlogCard,
   authorSection: AuthorSection,
   blogDetailText: BlogDetailText,
@@ -26,6 +28,7 @@ const components: { [key: string]: React.ComponentType<any> } = {
   blogH2: BlogH2,
   blogDetailTag: BlogDetailTag,
   imageCoverDetailBlog: ImageCoverDetailBlog,
+  horizontalScroll: HorizontalScroll
 };
 
 const REVALIDATE_TIME = Number(process.env.STORYBLOK_REVALIDATE_TIME_SECOND as number | false | undefined )
