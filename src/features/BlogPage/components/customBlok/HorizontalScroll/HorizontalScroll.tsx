@@ -4,17 +4,15 @@ import { BlogFilterTagsContext } from "@/context/BlogFilterTagsContext/BlogFilte
 import { FILTER_TAGS } from "@/constants/blogPage/constant";
 
 const HorizontalScroll: React.FC<any> = ({ blok }) => {
-
   const sortedLists = [...FILTER_TAGS].sort((a, b) => a.localeCompare(b));
 
-//   const [activeItem, setActiveItem] = useState("All");
   const blogFilterContext = useContext(BlogFilterTagsContext);
   if (!blogFilterContext) {
-    console.warn('Context is not available')
-    return
+    console.warn("Context is not available");
+    return;
   }
 
-  const { activeItem, setActiveItem} = blogFilterContext;
+  const { activeItem, setActiveItem } = blogFilterContext;
 
   const changeToActive = (item: string) => {
     setActiveItem(item);
