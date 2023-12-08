@@ -3,7 +3,7 @@
 import { ISbStoriesParams, getStoryblokApi} from "@storyblok/react/rsc";
 import StoryblokStory from "@storyblok/react/story";
 import BlogIntro from "./components/BlogIntro/BlogIntro";
-import { BlogFilterTagsProvider } from "@/context/BlogFilterTagsContext/BlogFilterTagsContext";
+
  
 export default async function BlogWrapper() {
   const { data } = await fetchData();
