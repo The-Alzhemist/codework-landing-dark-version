@@ -42,6 +42,7 @@ export const metadata: Metadata = {
 
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "@/features/BlogPage/components/StoryblokProvider/StoryblokProvider";
+import { BlogFilterTagsProvider } from "@/context/BlogFilterTagsContext/BlogFilterTagsContext";
 
 const REVALIDATE_TIME = Number(
   process.env.STORYBLOK_REVALIDATE_TIME_SECOND as number | false | undefined
@@ -66,9 +67,11 @@ export default function RootLayout({
       <html lang="en">
         <body className={poppinsFont.className}>
           <NavbarToggleContextProvider>
-            <Navbar />
-            <div>{children}</div>
-            <Footer />
+            <BlogFilterTagsProvider>
+              <Navbar />
+              <div>{children}</div>
+              <Footer />
+            </BlogFilterTagsProvider>
           </NavbarToggleContextProvider>
         </body>
       </html>
