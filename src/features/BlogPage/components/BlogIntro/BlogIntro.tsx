@@ -50,13 +50,13 @@ const BlogIntro = ({
 
       <picture ref={imgRef}>
           <source
-            srcSet="images/projectPage/projectIntro/projects-cover-v1.webp"
+            srcSet="images/blogPage/herosection-blog.webp"
             type="image/webp"
           />
           <img
-            src="images/servicePage/serviceIntro/projects-cover-v1.png"
-            alt="projects page image cover"
-            title="projects page image cover"
+            src="images/blogPage/herosection-blog.webp"
+            alt="blog page image cover"
+            title="blog page image cover"
             loading="lazy"
             className="max-w-[200px] lg:max-w-[480px] rounded-lg mb-5 sm:mb-0 ml-24 sm:ml-0"
           />
