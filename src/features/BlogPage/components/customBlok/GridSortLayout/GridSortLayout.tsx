@@ -33,7 +33,7 @@ const GridSortLayout: React.FC<GridProps> = ({ blok }) => {
     <>
       <div className="flex flex-row flex-wrap justify-center sm:justify-start gap-7 p-5 lg:p-[50px]" {...storyblokEditable(blok)}>
         {filteredAndSortedBlogs.length === 0 && (
-          <div className="w-full min-h-[200px] flex flex-col justify-center items-center text-lg text-t">
+          <div className="w-full min-h-[200px] flex flex-col justify-center items-center text-lg text-white">
             <p className="mb-4 font-bold">Oops! No {activeItem} blogs found.</p>
             <p className="text-sm">Check back later or explore other exciting content!</p>
           </div>
