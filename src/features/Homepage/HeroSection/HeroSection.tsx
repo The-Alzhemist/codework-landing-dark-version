@@ -8,7 +8,7 @@ import withHeroSection from "./withHeroSection";
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 import { HeroSectionProps } from "./interface";
 
-import { FaArrowRight } from "react-icons/fa6";
+import { FaArrowRight, FaLine } from "react-icons/fa6";
 
 
 
@@ -57,14 +57,25 @@ const HeroSection = ({
           </div>
 
           <div className="max-w-7xl " ref={btnRef} onClick={() => setIsOpen(true)}>
-            <PrimaryButton pathName="/contact-us" className=" text-xl ">
+        <div className="flex flex-col gap-x-2">
+        <PrimaryButton pathName="/contact-us" className=" text-xl ">
               <div className="flex items-center gap-5">
                 Contact us
-                <span className="animate-horicentralBounce">
-                  <FaArrowRight />
-                </span>
+             
               </div>
             </PrimaryButton>
+            
+          <div className="mt-5 text-white text-xs">
+          OR
+          </div>
+            <a href="" className="text-xl  border-white border-b-2">
+              <div className="flex items-center gap-y-5 gap-x-2 text-white">
+               Quick contact with <span className="text-2xl"><FaLine /></span>
+              </div>
+            </a>
+        </div>
+
+           
           </div>
         </div>
       </div>
