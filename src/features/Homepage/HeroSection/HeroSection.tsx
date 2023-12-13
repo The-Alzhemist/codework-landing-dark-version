@@ -2,15 +2,14 @@
 
 import React from "react";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
+
 
 import withHeroSection from "./withHeroSection";
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 import { HeroSectionProps } from "./interface";
 
-import { FaArrowRight, FaLine } from "react-icons/fa6";
+import { FaLine } from "react-icons/fa6";
 import { ExternalPrimaryButton } from "@/components/buttons/ExternalPrimaryButton";
-import { OutlinedButton } from "@/components/buttons/OutlinedButton";
 import Link from "next/link";
 
 const HeroSection = ({
