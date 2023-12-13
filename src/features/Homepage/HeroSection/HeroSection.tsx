@@ -9,8 +9,9 @@ import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/Backgrou
 import { HeroSectionProps } from "./interface";
 
 import { FaArrowRight, FaLine } from "react-icons/fa6";
-
-
+import { ExternalPrimaryButton } from "@/components/buttons/ExternalPrimaryButton";
+import { OutlinedButton } from "@/components/buttons/OutlinedButton";
+import Link from "next/link";
 
 const HeroSection = ({
   root,
@@ -19,7 +20,7 @@ const HeroSection = ({
   btnRef,
   circleLeftRef,
   circleRightRef,
-  setIsOpen
+  setIsOpen,
 }: HeroSectionProps) => {
   return (
     <section
@@ -34,7 +35,6 @@ const HeroSection = ({
       </div>
 
       <div className="h-full   relative flex justify-start items-center w-full max-w-[1440px] m-auto">
-
         <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col items-center text-center justify-center sm:p-0">
           <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
             <div className="text-4xl md:text-6xl mb-3 text-white">
@@ -56,26 +56,35 @@ const HeroSection = ({
             </Paragraph>
           </div>
 
-          <div className="max-w-7xl " ref={btnRef} onClick={() => setIsOpen(true)}>
-        <div className="flex flex-col gap-x-2">
-        <PrimaryButton pathName="/contact-us" className=" text-xl ">
-              <div className="flex items-center gap-5">
-                Contact us
-             
-              </div>
-            </PrimaryButton>
-            
-          <div className="mt-5 text-white text-xs">
-          OR
-          </div>
-            <a href="" className="text-xl  border-white border-b-2">
-              <div className="flex items-center gap-y-5 gap-x-2 text-white">
-               Quick contact with <span className="text-2xl"><FaLine /></span>
-              </div>
-            </a>
-        </div>
+          <div
+            className="max-w-7xl "
+            ref={btnRef}
+            onClick={() => setIsOpen(true)}
+          >
+            <div className="flex flex-col gap-x-2">
+              <ExternalPrimaryButton
+                pathName="https://page.line.me/448yyxgh"
+                className=" text-xl "
+              >
+                <div className="flex items-center gap-x-2">
+                  Quick contact with
+                  <span className="text-2xl">
+                    <FaLine />
+                  </span>
+                </div>
+              </ExternalPrimaryButton>
 
-           
+              <div className="mt-5 text-white text-xs mb-5">OR</div>
+
+              <Link
+                href="/contact-us"
+                className="flex justify-center text-xl"
+              >
+                <div className="flex items-center text-white border-b-2 border-white">
+                  Contact us form
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
       </div>
