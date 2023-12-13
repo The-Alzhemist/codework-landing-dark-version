@@ -66,7 +66,7 @@ const HeroSection = ({
                 className=" text-xl "
               >
                 <div className="flex items-center gap-x-2">
-                  Quick contact with
+                {`Let's talk with us`}
                   <span className="text-2xl">
                     <FaLine />
                   </span>
@@ -80,7 +80,7 @@ const HeroSection = ({
                 className="flex justify-center text-xl"
               >
                 <div className="flex items-center text-white border-b-2 border-white">
-                  Contact us form
+                Leave a message
                 </div>
               </Link>
             </div>
