@@ -25,6 +25,7 @@ jobs:
           STORYBLOK_ACCESS_TOKEN: '${{ secrets.STORYBLOK_ACCESS_TOKEN }}'
           STORYBLOK_CONTENT_VERSION: '${{ secrets.STORYBLOK_CONTENT_VERSION }}'
           STORYBLOK_REVALIDATE_TIME_SECOND: '${{ secrets.STORYBLOK_REVALIDATE_TIME_SECOND }}'
+          ENV_URL: '${{ secrets.ENV_URL }}'
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
