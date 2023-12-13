@@ -24,12 +24,12 @@ export const metadata: Metadata = {
     siteName: "https://codework-tech.com",
     images: [
       {
-        url: "https://codework-tech.com/logo/meta/meta-tag-home.jpg",
+        url: process.env.ENV_URL + "/logo/meta/meta-tag-home.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: "https://codework-tech.com/logo/meta/meta-tag-home.jpg",
+        url: process.env.ENV_URL + "/logo/meta/meta-tag-home.jpg",
         width: 1800,
         height: 1600,
         alt: "codework-tech-home-page-meta-image",
