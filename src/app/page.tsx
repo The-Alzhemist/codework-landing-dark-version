@@ -90,6 +90,10 @@ export default function Home() {
   }, [hasConsent]);
 
  
+  const handleSocialContactVisibility = (isRef1:boolean) => {
+    const opacityValue = isRef1 ? 0 : 1;
+    gsap.to(".social-contact-floating", { opacity: opacityValue, duration: 0.5 });
+  };
 
   return (
     <main className={`${poppinsFont.className} `} ref={rootPage}>
