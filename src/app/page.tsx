@@ -65,9 +65,11 @@ export default function Home() {
             end: "bottom center",
             onEnter: () => {
               setActiveSection(index + 1);
+              handleSocialContactVisibility(index + 1 === 1);
             },
             onEnterBack: () => {
               setActiveSection(index + 1);
+              handleSocialContactVisibility(index + 1 === 1);
             },
           });
         }
@@ -88,6 +90,10 @@ export default function Home() {
   }, [hasConsent]);
 
  
+  const handleSocialContactVisibility = (isRef1:boolean) => {
+    const opacityValue = isRef1 ? 0 : 1;
+    gsap.to(".social-contact-floating", { opacity: opacityValue, duration: 0.5 });
+  };
 
   return (
     <main className={`${poppinsFont.className} `} ref={rootPage}>
@@ -162,7 +168,10 @@ export default function Home() {
         ></div>
       </div>
 
-      <SocialContactFloating />
+     <div className="social-contact-floating">
+     <SocialContactFloating />
+     </div>
+    
     </main>
   );
 }
