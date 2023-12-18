@@ -79,6 +79,16 @@ export default function Home() {
     return () => ctx.revert();
   }, [ref1, ref2, ref3, ref4, ref5]);
 
+  useEffect(() => {
+    const userHasGivenConsent =
+      typeof window !== "undefined" &&
+      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
+    if (userHasGivenConsent) {
+      setHasConsent(true);
+      TagManager.initialize({ gtmId: GTM_PRODUCTION });
+    }
+  }, [hasConsent]);
+
   const handleSocialContactVisibility = (isRef1:boolean) => {
     const opacityValue = isRef1 ? 0 : 1;
     gsap.to(".social-contact-floating", { opacity: opacityValue, duration: 0.5 });
