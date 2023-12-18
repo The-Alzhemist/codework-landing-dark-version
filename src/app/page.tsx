@@ -8,12 +8,14 @@ import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import OurService from "@/features/Homepage/OurServiceSection/OurService";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
+import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
+import TagManager from "react-gtm-module";
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
