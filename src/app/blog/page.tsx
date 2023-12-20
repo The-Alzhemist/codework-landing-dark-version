@@ -27,15 +27,15 @@ export const metadata: Metadata = {
     siteName: "",
     images: [
       {
-        url: process.env.ENV_URL + "/logo/meta/meta-tag-contact-us.jpg",
+        url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: process.env.ENV_URL + "/logo/meta/meta-tag-contact-us.jpg",
+        url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
         width: 1800,
         height: 1600,
-        alt: "codework-tech-contact-us-meta-image",
+        alt: "codework-tech-blog-meta-image",
       },
     ],
     locale: "en_US",
