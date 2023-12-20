@@ -16,13 +16,13 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CodeWork Tech | Blog",
+  title: "CodeWork Tech | Blogs",
   description:
-    "",
+    "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
   openGraph: {
-    title: "CodeWork Tech | Blog",
+    title: "CodeWork Tech | Blogs",
     description:
-      "",
+      "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
     url: "",
     siteName: "",
     images: [
