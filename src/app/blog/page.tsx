@@ -16,26 +16,26 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CodeWork Tech | Blog",
+  title: "CodeWork Tech | Blogs",
   description:
-    "",
+    "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
   openGraph: {
-    title: "CodeWork Tech | Blog",
+    title: "CodeWork Tech | Blogs",
     description:
-      "",
+      "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
     url: "",
     siteName: "",
     images: [
       {
-        url: "/logo/meta/meta-tag-contact-us.jpg",
+        url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
         width: 800,
         height: 600,
       },
       {
-        url: "/logo/meta/meta-tag-contact-us.jpg",
+        url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
         width: 1800,
         height: 1600,
-        alt: "codework-tech-contact-us-meta-image",
+        alt: "codework-tech-blog-meta-image",
       },
     ],
     locale: "en_US",
