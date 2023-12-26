@@ -8,12 +8,14 @@ import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
-import { useLayoutEffect, useRef, useState } from "react";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import OurService from "@/features/Homepage/OurServiceSection/OurService";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
+import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
+import TagManager from "react-gtm-module";
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
@@ -76,6 +78,16 @@ export default function Home() {
 
     return () => ctx.revert();
   }, [ref1, ref2, ref3, ref4, ref5]);
+
+  useEffect(() => {
+    const userHasGivenConsent =
+      typeof window !== "undefined" &&
+      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
+    if (userHasGivenConsent) {
+      setHasConsent(true);
+      TagManager.initialize({ gtmId: GTM_PRODUCTION });
+    }
+  }, [hasConsent]);
 
   const handleSocialContactVisibility = (isRef1:boolean) => {
     const opacityValue = isRef1 ? 0 : 1;
