@@ -46,7 +46,7 @@ export const NavbarRight = () => {
 
         <div className="flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Email</label>
-          <a href="mailto: hello@codework-tech.com"className="text-xs sm:text-lg  "><span className="hover:border-b-2 hover:border-slate-900">hello@codework-tech.com</span></a>
+          <a href="mailto: hello@codework-tech.com" className="text-xs sm:text-lg  "><span className="hover:border-b-2 hover:border-slate-900">hello@codework-tech.com</span></a>
         </div>
       </motion.div>
     </>

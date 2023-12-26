@@ -1,48 +1,64 @@
-// SocialContactFloating.js
-import React, { useState } from "react";
+"use client"
 
-const SocialContactFloating = () => {
-  const [isHovered, setIsHovered] = useState(false);
+import React from "react";
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
+import { AiFillMessage } from "react-icons/ai";
+import withSocialContactFloating from "./withSocialContactFloating";
+import { ContactLink, SocialContactFloatingProps, SocialLink } from "./interface";
 
-  const handleMouseLeave = () => {
-    setIsHovered(false);
-  };
-
-  const handleListClick = () => {
-    // Do something when a social item is clicked
-  };
-
+const SocialContactFloating = ({
+  isClicked,
+  handleClick,
+  socialListRef,
+  socialLinks,
+  contactLinks,
+}: SocialContactFloatingProps) => {
   return (
     <div
-      className="relative inline-block"
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      className="flex flex-col gap-y-2 fixed bottom-4 right-5 z-40 transition-all duration-300"
+      ref={socialListRef}
     >
       <button
-        className="bg-blue-500 text-white px-4 py-2 rounded-md focus:outline-none"
-        onClick={handleListClick}
+        className="flex gap-x-1 items-center justify-center rounded-full px-5 py-3 bg-slate-300"
+        onClick={handleClick}
       >
-        Social #1
+        <AiFillMessage />
+        <span>Contacts</span>
       </button>
 
-      {isHovered && (
-        <div
-          className="absolute top-10 left-0 p-4 bg-white shadow-md rounded-md z-10 cursor-pointer"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        >
-          <p className="hover-item hover:text-yellow-200">Facebook</p>
-          <p className="hover-item hover:text-yellow-200">Line</p>
-          <p className="hover-item hover:text-yellow-200">Twitter</p>
-          <p className="hover-item hover:text-yellow-200">GitHub</p>
+      {isClicked && (
+        <div className="absolute min-w-[250px] bottom-14 left-[-120px] p-5 bg-slate-100 shadow-md rounded-2xl z-10 cursor-pointer flex flex-col gap-y-2 ">
+          {socialLinks.map((link: SocialLink, index: number) => (
+            <a
+              key={index}
+              href={link.url}
+              rel="nofollow"
+              aria-label={`Contact us with ${link.text}`}
+              target="_blank"
+              className="hover:text-primary-400 transition-all duration-150 flex  items-center justify-start gap-x-2"
+            >
+              {link.icon}
+              <span>{link.text}</span>
+            </a>
+          ))}
+
+          <div className="border-t border-slate-200 w-full pt-1">
+            {contactLinks.map((link: ContactLink, index: number) => (
+              <a
+                key={index}
+                href={link.url}
+                className="hover:text-primary-400 transition-all duration-150 flex  items-center justify-start gap-x-2 pt-2"
+              >
+                {link.icon}
+                <span className="text-xs">{link.text}</span>
+              </a>
+            ))}
+          </div>
         </div>
       )}
     </div>
   );
 };
 
-export default SocialContactFloating;
+const WrappedComponent = withSocialContactFloating(SocialContactFloating);
+export default WrappedComponent;
