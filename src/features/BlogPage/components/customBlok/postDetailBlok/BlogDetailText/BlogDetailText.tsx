@@ -28,12 +28,12 @@ const BlogDetailText: React.FC<BlogDetailTextProps> = ({ blok }) => (
             [MARK_LINK]: (children, props) => {
               const { linktype, href, target } = props;
               if (linktype === 'email') {
-                  return <a  className="text-gray-200 border-b border-gray-200" href={`mailto:${href}`}>{children}</a>;
+                  return <a  className="text-yan-400" href={`mailto:${href}`}>{children}</a>;
               }
               if (href && href.match(/^(https?:)?\/\//)) {
-                  return <a className="text-gray-200 border-b border-gray-200"  href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
+                  return <a className="text-yan-400"  href={href} target="_blank" rel="noopener noreferrer">{children}</a>;
               }
-              return <Link className="text-gray-200 border-b border-gray-200" href={href ? href : "/"}>{children}</Link>;
+              return <Link className="text-yan-400" href={href ? href : "/"}>{children}</Link>;
           }
           },
           nodeResolvers: {
