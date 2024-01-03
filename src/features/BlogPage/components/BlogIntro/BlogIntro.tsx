@@ -42,7 +42,7 @@ const BlogIntro = ({
             className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
           >
             <span>
-              {`Explore the latest insights, trends, and expert opinions in technology and business through our blog.`}
+              {`Explore the latest insights, trends, and expert opinions in technology and business through our blog. Stay informed and inspired as we share valuable knowledge to empower your journey in the digital world.`}
             </span>
           </Paragraph>
         </div>         
