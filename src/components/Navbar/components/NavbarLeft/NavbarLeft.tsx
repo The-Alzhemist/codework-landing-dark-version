@@ -21,6 +21,10 @@ export const menuList = [
     url: "/team",
   },
   {
+    name: "Blog",
+    url: "/blog",
+  },
+  {
     name: "Contact us",
     url: "/contact-us",
   },
