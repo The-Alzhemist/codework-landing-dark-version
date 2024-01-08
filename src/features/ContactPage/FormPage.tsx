@@ -44,6 +44,8 @@ const FormPage = ({
   const root = useRef<any>(null);
   const [hasConsent, setHasConsent] = useState(false);
 
+  
+
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.from(h1Tag.current, {
