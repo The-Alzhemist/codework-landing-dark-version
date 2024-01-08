@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import TeamIntro from "../../features/TeamPage/components/TeamIntro/TeamIntro";
-import TeamMember from "../../features/TeamPage/components/TeamMember/TeamMember";
+import TeamIntro from "../../../features/TeamPage/components/TeamIntro/TeamIntro";
+import TeamMember from "../../../features/TeamPage/components/TeamMember/TeamMember";
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import TeamWrapper from "@/features/TeamPage/TeamWrapper";
@@ -48,3 +48,9 @@ export default function TeamPage() {
     </main>
   );
 }
+
+const locales = ['en', 'th'];
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+} 
+
