@@ -50,3 +50,8 @@ export default function ProjectPage() {
     </main>
   );
 }
+
+const locales = ['en', 'th'];
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+} 
