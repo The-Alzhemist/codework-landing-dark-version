@@ -58,20 +58,20 @@ async function fetchData(post: string) {
 }
 
 
-export async function generateStaticParams() {
-  const links = await getLinks("blog/");
-  const paths: PathItem[] = [];
+// export async function generateStaticParams() {
+//   const links = await getLinks("blog/");
+//   const paths: PathItem[] = [];
 
-  Object.keys(links).forEach((linkKey) => {
-    if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
-      return;
-    }
-    const slug = links[linkKey].slug.replace("blog/", "");
-    paths.push({ post: slug });
-  });
+//   Object.keys(links).forEach((linkKey) => {
+//     if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
+//       return;
+//     }
+//     const slug = links[linkKey].slug.replace("blog/", "");
+//     paths.push({ post: slug });
+//   });
 
-  return paths;
-}
+//   return paths;
+// }
 
 
 
