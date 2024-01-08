@@ -24,6 +24,7 @@ import { gsap } from "gsap";
 import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
 import TagManager from "react-gtm-module";
 import PDPAPopup from "../PAPAPopup/PDPAPopup";
+import { useTranslations } from "next-intl";
 
 
 const FormPage = ({
@@ -86,6 +87,7 @@ const FormPage = ({
   }, [hasConsent]);
 
 
+  const t = useTranslations('Home');
   return (
     <>
       <div
@@ -94,7 +96,7 @@ const FormPage = ({
       >
         <h1 className="text-center mt-16 mb-20 text-white" ref={h1Tag}>
           <div  className="text-2xl font-light">
-            Wanna talk with us?
+            Wanna talk with us? {t('HeroSection.Greeting')}
           </div>
           <div
             
