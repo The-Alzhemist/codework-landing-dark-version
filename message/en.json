@@ -1,8 +1,17 @@
 {
     "Home": {
       "HeroSection": {
-        "Greeting": "สวัสดีครับ",
+        "Greeting": "Hello!",
         "Descrition": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software."
+      },
+      "OurPartner": {
+        "Descrition": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."
+      },
+      "OurService": {
+        "Descrition": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority."
+      },
+      "OurProject": {
+        "Descrition":  "Explore our successful projects with valued clients, showcasing our expertise and dedication."
       }
     }
   }
