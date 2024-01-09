@@ -7,6 +7,7 @@ import ProjectWrapper from "@/features/ProjectPage/ProjectWrapper";
 import ProjectSeamoor from "@/features/ProjectPage/components/ProjectSearmoor/ProjectSeamoor";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
+import { getTranslations } from "next-intl/server";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -15,33 +16,33 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export const metadata: Metadata = {
-  title: "CodeWork Tech | Contact Us",
-  description:
-    "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
-  openGraph: {
-    title: "CodeWork Tech | Contact Us",
-    description:
-      "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
-    url: "",
-    siteName: "",
-    images: [
-      {
-        url: "/logo/meta/meta-tag-projects.jpg",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: "/logo/meta/meta-tag-projects.jpg",
-        width: 1800,
-        height: 1600,
-        alt: "codework-tech-project-page-meta-image",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "MetaData" });
+
+  return {
+    title: t("Project.Title"),
+    description: t("Project.Description"),
+    openGraph: {
+      title: t("Project.Title"),
+      description: t("Project.Description"),
+      images: [
+        {
+          url: "/logo/meta/meta-tag-projects.jpg",
+          width: 800,
+          height: 600,
+        },
+        {
+          url: "/logo/meta/meta-tag-projects.jpg",
+          width: 1800,
+          height: 1600,
+          alt: "codework-tech-project-page-meta-image",
+        },
+      ],
+    },
+    type: "website"
+  };
+}
 
 export default function ProjectPage() {
   return (
@@ -51,7 +52,7 @@ export default function ProjectPage() {
   );
 }
 
-const locales = ['en', 'th'];
+const locales = ["en", "th"];
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-} 
+  return locales.map((locale) => ({ locale }));
+}

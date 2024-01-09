@@ -106,5 +106,23 @@
       "Title": "เว็บไซต์ใช้คุกกี้",
       "Description": "เราเคารพสิทธิส่วนบุคคลของคุณและใช้คุกกี้เพื่อปรับปรุงประสบการณ์การเรียกดูของคุณ",
       "AcceptButton": "ยอมรับ"
+    },
+    "MetaData": {
+      "Project": {
+        "Title": "ไทย CodeWork Tech | Contact Us",
+        "Description": "ไทย Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+        "OpenGraph": {
+          "Title": "CodeWork Tech | Contact Us",
+          "Description": "ไทย Get in touch with us and make your dream come true. Let’s create something extraordinary together!"
+        }
+      },
+      "Service": {
+        "Title": "ไทย CodeWork Tech | Services",
+        "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements",
+        "OpenGraph": {
+          "Title": "CodeWork Tech | Servicess",
+          "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements"
+        }
+      }
     }
   }
