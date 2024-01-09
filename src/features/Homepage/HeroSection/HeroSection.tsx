@@ -11,6 +11,7 @@ import { HeroSectionProps } from "./interface";
 import { FaLine } from "react-icons/fa6";
 import { ExternalPrimaryButton } from "@/components/buttons/ExternalPrimaryButton";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const HeroSection = ({
   root,
@@ -21,6 +22,8 @@ const HeroSection = ({
   circleRightRef,
   setIsOpen,
 }: HeroSectionProps) => {
+
+  const t = useTranslations('Home');
   return (
     <section
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -50,7 +53,7 @@ const HeroSection = ({
               className={`mb-8 max-w-[880px] text-base sm:text-md font-light text-white opacity-80`}
             >
               <span>
-                {`Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software.`}
+              {t("HeroSection.Descrition")}
               </span>
             </Paragraph>
           </div>

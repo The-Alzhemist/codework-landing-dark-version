@@ -72,7 +72,7 @@ export default function RootLayout({children, params: {locale}}:any) {
         <body className={poppinsFont.className}>
           <NavbarToggleContextProvider>
             <BlogFilterTagsProvider>
-              <Navbar />
+          
                {children}
               <Footer />
             </BlogFilterTagsProvider>

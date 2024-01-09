@@ -3,6 +3,7 @@ import { NavbarProps } from "./interface";
 
 import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
 import { gsap } from "gsap";
+import { useLocale } from "next-intl";
 
 const withNavbar = (Component: React.FC<NavbarProps>) => {
   const Hoc = () => {

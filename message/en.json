@@ -1,7 +1,8 @@
 {
     "Home": {
       "HeroSection": {
-        "Greeting": "Hello Greeting!"
+        "Greeting": "สวัสดีครับ",
+        "Descrition": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software."
       }
     }
   }
