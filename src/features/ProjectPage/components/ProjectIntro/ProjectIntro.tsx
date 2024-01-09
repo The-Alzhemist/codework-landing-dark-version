@@ -5,6 +5,7 @@ import Paragraph from "@/components/typography/paragraph/Paragraph";
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 import witServiceIntro from "./withProjectIntro";
 import { ProjectIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 
 
@@ -16,6 +17,7 @@ const ProjectIntro = ({
   circleLeftRef,
   circleRightRef,
 }: ProjectIntroProps) => {
+  const t = useTranslations("Project");
   return (
     <section
     className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -41,7 +43,7 @@ const ProjectIntro = ({
             className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
           >
             <span>
-              {`Explore our successful projects with valued clients, showcasing our expertise and dedication.`}
+            {t('HeroSection.Description')}
             </span>
           </Paragraph>
         </div>         

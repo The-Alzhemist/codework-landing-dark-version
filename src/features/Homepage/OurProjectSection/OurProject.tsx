@@ -16,83 +16,83 @@ import "swiper/css/navigation";
 import { ProjectListProps } from "./interface";
 import { useTranslations } from "next-intl";
 
-const projectList: ProjectListProps[] = [
-  {
-    projectName: "Seamoor Marine",
-    projectDetail:
-      "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
-    projectTasks: [
-      {
-        task: "Project solution consultancy",
-      },
-      {
-        task: "UX/UI Design",
-      },
-      {
-        task: "Web development",
-      },
-      {
-        task: "Digital marketing",
-      },
-      {
-        task: "Digital transformation consultancy",
-      },
-    ],
-    projectImage: "/images/seamoorMock.png",
-    projectImageWebP: "/images/seamoorMock.webp",
-  },
-  {
-    projectName: "The Pine",
-    projectDetail:
-      "Develop an internal backend management system for The Pine Hotel, including features such as reservation and payment systems.",
-    projectTasks: [
-      {
-        task: "Project solution consultancy",
-      },
-      {
-        task: "UX/UI Design",
-      },
-      {
-        task: "Web development",
-      },
-      {
-        task: "Digital marketing",
-      },
-      {
-        task: "Digital transformation consultancy",
-      },
-    ],
-    projectImage: "/images/homePage/the-pine-mock-project-v1.webp",
-    projectImageWebP: "/images/homePage/the-pine-mock-project-v1.jpg",
-  },
-  {
-    projectName: "Tonsai Market",
-    projectDetail:
-      "Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations.",
-    projectTasks: [
-      {
-        task: "Project solution consultancy",
-      },
-      {
-        task: "UX/UI Design",
-      },
-      {
-        task: "Web development",
-      },
-      {
-        task: "Digital marketing",
-      },
-      {
-        task: "Digital transformation consultancy",
-      },
-    ],
-    projectImage: "/images/homePage/tonsai-mock-project-v1.webp",
-    projectImageWebP: "/images/homePage/tonsai-mock-project-v1.jpg",
-  },
-];
+
 
 export const OurProject = () => {
   const t = useTranslations('Home');
+
+  const projectList: ProjectListProps[] = [
+    {
+      projectName: "Seamoor Marine",
+      projectDetail: t('OurProject.Swiper.Seamoor.Description'),
+      projectTasks: [
+        {
+          task: "Project solution consultancy",
+        },
+        {
+          task: "UX/UI Design",
+        },
+        {
+          task: "Web development",
+        },
+        {
+          task: "Digital marketing",
+        },
+        {
+          task: "Digital transformation consultancy",
+        },
+      ],
+      projectImage: "/images/seamoorMock.png",
+      projectImageWebP: "/images/seamoorMock.webp",
+    },
+    {
+      projectName: "The Pine",
+      projectDetail: t('OurProject.Swiper.ThePine'),
+      projectTasks: [
+        {
+          task: "Project solution consultancy",
+        },
+        {
+          task: "UX/UI Design",
+        },
+        {
+          task: "Web development",
+        },
+        {
+          task: "Digital marketing",
+        },
+        {
+          task: "Digital transformation consultancy",
+        },
+      ],
+      projectImage: "/images/homePage/the-pine-mock-project-v1.webp",
+      projectImageWebP: "/images/homePage/the-pine-mock-project-v1.jpg",
+    },
+    {
+      projectName: "Tonsai Market",
+      projectDetail: t('OurProject.Swiper.TonsaiMatket'),
+      projectTasks: [
+        {
+          task: "Project solution consultancy",
+        },
+        {
+          task: "UX/UI Design",
+        },
+        {
+          task: "Web development",
+        },
+        {
+          task: "Digital marketing",
+        },
+        {
+          task: "Digital transformation consultancy",
+        },
+      ],
+      projectImage: "/images/homePage/tonsai-mock-project-v1.webp",
+      projectImageWebP: "/images/homePage/tonsai-mock-project-v1.jpg",
+    },
+  ];
+
   return (
     <section className=" relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-1000 ">
       <div className=" m-auto max-w-[1440px]">
