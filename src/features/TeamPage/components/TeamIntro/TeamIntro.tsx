@@ -49,11 +49,11 @@ const TeamIntro = ({
 
         <picture ref={imgRef}>
           <source
-            srcSet="images/teamPage/teamIntro/team-cover-v1.webp"
+            srcSet="/images/teamPage/teamIntro/team-cover-v1.webp"
             type="image/webp"
           />
           <img
-            src="images/teamPage/teamIntro/team-cover-v1.png"
+            src="/images/teamPage/teamIntro/team-cover-v1.png"
             alt="team page image cover"
             title="team page image cover"
             loading="lazy"

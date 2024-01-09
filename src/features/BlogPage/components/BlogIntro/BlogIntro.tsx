@@ -52,11 +52,11 @@ const BlogIntro = ({
 
       <picture ref={imgRef}>
           <source
-            srcSet="images/blogPage/herosection-blog.webp"
+            srcSet="/images/blogPage/herosection-blog.webp"
             type="image/webp"
           />
           <img
-            src="images/blogPage/herosection-blog.webp"
+            src="/images/blogPage/herosection-blog.webp"
             alt="blog page image cover"
             title="blog page image cover"
             loading="lazy"
