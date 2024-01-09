@@ -47,7 +47,7 @@ export const OurProject = () => {
     },
     {
       projectName: "The Pine",
-      projectDetail: t('OurProject.Swiper.ThePine'),
+      projectDetail: t('OurProject.Swiper.ThePine.Description'),
       projectTasks: [
         {
           task: "Project solution consultancy",
@@ -70,7 +70,7 @@ export const OurProject = () => {
     },
     {
       projectName: "Tonsai Market",
-      projectDetail: t('OurProject.Swiper.TonsaiMatket'),
+      projectDetail: t('OurProject.Swiper.TonsaiMarket.Description'),
       projectTasks: [
         {
           task: "Project solution consultancy",

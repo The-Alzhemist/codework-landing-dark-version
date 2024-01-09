@@ -68,6 +68,7 @@ export default function RootLayout({ children, params: { locale } }: any) {
     <NextIntlClientProvider locale={locale}  messages={messages}>
       <Navbar />
       {children}
+      <Footer />
     </NextIntlClientProvider>
   );
 }

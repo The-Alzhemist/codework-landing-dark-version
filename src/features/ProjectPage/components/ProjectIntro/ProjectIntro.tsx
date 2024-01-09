@@ -51,11 +51,11 @@ const ProjectIntro = ({
 
       <picture ref={imgRef}>
           <source
-            srcSet="images/projectPage/projectIntro/projects-cover-v1.webp"
+            srcSet="/images/projectPage/projectIntro/projects-cover-v1.webp"
             type="image/webp"
           />
           <img
-            src="images/servicePage/serviceIntro/projects-cover-v1.png"
+            src="/images/servicePage/serviceIntro/projects-cover-v1.png"
             alt="projects page image cover"
             title="projects page image cover"
             loading="lazy"

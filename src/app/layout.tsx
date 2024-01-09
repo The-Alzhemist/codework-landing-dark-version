@@ -74,7 +74,7 @@ export default function RootLayout({children, params: {locale}}:any) {
             <BlogFilterTagsProvider>
           
                {children}
-              <Footer />
+            
             </BlogFilterTagsProvider>
           </NavbarToggleContextProvider>
         </body>

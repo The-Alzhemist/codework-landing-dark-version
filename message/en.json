@@ -93,5 +93,18 @@
       "SubTitle": "Let’s make your dream come true",
       "Title": "Contact Us",
       "Button": "Share us your idea"
+    },
+    "Menu": {
+      "Home": "Home",
+      "Service": "Service",
+      "Team": "Team",
+      "Project": "Project",
+      "ContactUs": "ContactUs",
+      "Blog": "Blog"
+    },
+    "CookieConsentPopup": {
+      "Title": "The website uses cookies",
+      "Description": "We respect your privacy and use cookies to improve your browsing experience.",
+      "AcceptButton": "Accept"
     }
   }
