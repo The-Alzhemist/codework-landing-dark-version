@@ -5,6 +5,7 @@ import TeamMember from "../../../features/TeamPage/components/TeamMember/TeamMem
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import TeamWrapper from "@/features/TeamPage/TeamWrapper";
+import { getTranslations } from "next-intl/server";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -13,33 +14,32 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export const metadata: Metadata = {
-  title: "CodeWork Tech | Team",
-  description:
-    "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
-  openGraph: {
-    title: "CodeWork Tech | Team",
-    description:
-      "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
-    url: "",
-    siteName: "",
-    images: [
-      {
-        url: process.env.ENV_URL + "/logo/meta/meta-tag-team.jpg",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: process.env.ENV_URL + "/logo/meta/meta-tag-team.jpg",
-        width: 1800,
-        height: 1600,
-        alt: "codework-tech-team-page-meta-image",
-      },
-    ],
-    locale: "en_US",
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "MetaData" });
+
+  return {
+    title: t("Team.Title"),
+    description: t("Team.Description"),
+    openGraph: {
+      title: t("Team.Title"),
+      description: t("Team.Description"),
+      images: [
+        {
+          url: process.env.ENV_URL + "/logo/meta/meta-tag-team.jpg",
+          width: 800,
+          height: 600,
+        },
+        {
+          url: process.env.ENV_URL + "/logo/meta/meta-tag-team.jpg",
+          width: 1800,
+          height: 1600,
+          alt: "codework-tech-team-page-meta-image",
+        },
+      ],
+    },
     type: "website",
-  },
-};
+  };
+}
 
 export default function TeamPage() {
   return (
@@ -49,8 +49,7 @@ export default function TeamPage() {
   );
 }
 
-const locales = ['en', 'th'];
+const locales = ["en", "th"];
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-} 
-
+  return locales.map((locale) => ({ locale }));
+}
