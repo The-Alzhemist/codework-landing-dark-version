@@ -54,7 +54,3 @@ export default function BlogPage() {
   );
 }
 
-const locales = ['en', 'th'];
-export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-} 

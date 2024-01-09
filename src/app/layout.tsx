@@ -60,7 +60,7 @@ storyblokInit({
 
 export default function RootLayout({children, params: {locale}}:any) {
 
-  const messages = useMessages();
+  
 
   return (
     <StoryblokProvider>
