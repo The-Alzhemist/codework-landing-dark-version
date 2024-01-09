@@ -26,8 +26,6 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
   const router = useRouter();
   const currentLang = pathName.split("/")[1];
   const switchLang = (lang: string) => {
-    console.log("log time: 05/01/2023");
-
     const newPathname = pathName.replace(`/${currentLang}`, `/${lang}`);
     router.push(newPathname);
   };
@@ -72,7 +70,7 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
           {/* nav */}
           <div className="p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]">
             <div className="text-neutral-1000" onClick={onClikcToggle}>
-              <Link href="/">
+              <Link href="/en">
                 <picture>
                   <source srcSet="/logo/codework_white.png" type="image/webp" />
                   <img

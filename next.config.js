@@ -3,8 +3,9 @@ const withNextIntl = require('next-intl/plugin')();
 
 const nextConfig = {
     output: 'export',
-    images: { unoptimized: false },
+    images: { unoptimized: false }
 }
+
 
 
 module.exports = withNextIntl(nextConfig);
