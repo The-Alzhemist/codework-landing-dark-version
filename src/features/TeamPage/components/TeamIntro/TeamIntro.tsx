@@ -6,6 +6,7 @@ import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/Backgrou
 
 import witServiceIntro from "./withTeamIntro";
 import { TeamIntroProps } from "./interface";
+import { usePathname } from "next/navigation";
 ;
 
 const TeamIntro = ({
@@ -16,6 +17,10 @@ const TeamIntro = ({
   circleLeftRef,
   circleRightRef,
 }: TeamIntroProps) => {
+
+  const pathname = usePathname();
+  console.log('pathname: ', pathname)
+
   return (
     <section
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -32,7 +37,7 @@ const TeamIntro = ({
         <div className="z-0 w-[100%] lg:w-[100%]  relative flex flex-col items-left text-left justify-center sm:p-0">
           <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
             <div className="text-4xl md:text-6xl mb-3  text-primary-100">
-            TEAM.
+            TEAM. {pathname}
             </div>
           </h1>
 
