@@ -62,9 +62,10 @@ storyblokInit({
 export default function RootLayout({ children, params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const messages = useMessages();
+  
 
   return (
-    <NextIntlClientProvider messages={messages}>
+    <NextIntlClientProvider locale={locale}  messages={messages}>
       {children}
     </NextIntlClientProvider>
   );
