@@ -53,7 +53,7 @@ const HeroSection = ({
               className={`mb-8 max-w-[880px] text-base sm:text-md font-light text-white opacity-80`}
             >
               <span>
-              {t("HeroSection.Descrition")}
+              {t("HeroSection.Description")}
               </span>
             </Paragraph>
           </div>

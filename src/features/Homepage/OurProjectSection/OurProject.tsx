@@ -106,7 +106,7 @@ export const OurProject = () => {
           <Paragraph
             className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
           >
-              {t("OurProject.Descrition")}
+              {t("OurProject.Description")}
           </Paragraph>
         </div>
 

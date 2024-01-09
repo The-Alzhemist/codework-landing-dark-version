@@ -6,54 +6,50 @@ import withOurService from "./withOurService";
 import { OurServiceProps } from "./interface";
 import { useTranslations } from "next-intl";
 
-const serviceList = [
-  {
-    name: "UX/UI design",
-    imageWebP: "/images/homePage/ux-ui.webp",
-    image: "/images/homePage/ux-ui.png",
-    detail:
-      "Focusing on creating intuitive and visually appealing digital interfaces that enhance user experience and engagement",
-  },
-  {
-    name: "Project solution consultancy",
-    imageWebP: "/images/homePage/project-solution.webp",
-    image: "/images/homePage/project-solution.png",
-    detail:
-      "Collaborating closely with clients to identify their unique challenges and requirements",
-  },
-  {
-    name: "Web development",
-    imageWebP: "/images/homePage/web-development.webp",
-    image: "/images/homePage/web-development.png",
-    detail:
-      "The process of building and maintaining websites, utilizing various programming languages and frameworks to create responsive and dynamic online platforms.",
-  },
-  {
-    name: "Mobile development",
-    imageWebP: "/images/homePage/mobile-development.webp",
-    image: "/images/homePage/mobile-development.png",
-    
-    detail:
-      "Elevate your business with our mobile development expertise. We specialize in creating intuitive and customized mobile apps for both iOS and Android platforms.",
-  },
-  {
-    name: "Digital marketing",
-    imageWebP: "/images/homePage/digital-marketing.webp",
-    image: "/images/homePage/digital-marketing.png",
-    detail:
-      "Unlock the full potential of your online presence with our digital marketing strategies. From SEO and social media marketing to targeted campaigns",
-  },
-  {
-    name: "Digital transformation consultancy",
-    imageWebP: "/images/homePage/digital-transformation-consultancy.webp",
-    image: "/images/homePage/digital-transformation-consultancy.png",
-    detail:
-      "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences.",
-  },
-];
+
 
 const OurService = ({ h1Ref, pref, divBtnRef, root }: OurServiceProps) => {
   const t = useTranslations('Home');
+
+  const serviceList = [
+    {
+      name: "UX/UI design",
+      imageWebP: "/images/homePage/ux-ui.webp",
+      image: "/images/homePage/ux-ui.png",
+      detail: t('OurService.UxUi')
+    },
+    {
+      name: "Project solution consultancy",
+      imageWebP: "/images/homePage/project-solution.webp",
+      image: "/images/homePage/project-solution.png",
+      detail: t('OurService.ProjectSolution')
+    },
+    {
+      name: "Web development",
+      imageWebP: "/images/homePage/web-development.webp",
+      image: "/images/homePage/web-development.png",
+      detail: t('OurService.WebDevelopment')
+    },
+    {
+      name: "Mobile development",
+      imageWebP: "/images/homePage/mobile-development.webp",
+      image: "/images/homePage/mobile-development.png",
+      
+      detail: t('OurService.MobileDevelopment')
+    },
+    {
+      name: "Digital marketing",
+      imageWebP: "/images/homePage/digital-marketing.webp",
+      image: "/images/homePage/digital-marketing.png",
+      detail: t('OurService.DigitalMkt')
+    },
+    {
+      name: "Digital transformation consultancy",
+      imageWebP: "/images/homePage/digital-transformation-consultancy.webp",
+      image: "/images/homePage/digital-transformation-consultancy.png",
+      detail: t('OurService.DigitalTrasformConsult')
+    },
+  ];
   
   return (
     <section
@@ -75,7 +71,7 @@ const OurService = ({ h1Ref, pref, divBtnRef, root }: OurServiceProps) => {
             <Paragraph
               className={`lg:max-w-[970px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
             >
-                {t("OurService.Descrition")}
+                {t("OurService.Description")}
             </Paragraph>
           </div>
         </div>

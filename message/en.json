@@ -2,16 +2,43 @@
     "Home": {
       "HeroSection": {
         "Greeting": "Hello!",
-        "Descrition": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software."
+        "Description": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software."
       },
       "OurPartner": {
-        "Descrition": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."
+        "Description": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."
       },
       "OurService": {
-        "Descrition": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority."
+        "Description": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.",
+        "UxUi": "Focusing on creating intuitive and visually appealing digital interfaces that enhance user experience and engagement",
+        "ProjectSolution": "Collaborating closely with clients to identify their unique challenges and requirements",
+        "WebDevelopment": "The process of building and maintaining websites, utilizing various programming languages and frameworks to create responsive and dynamic online platforms.",
+        "MobileDevelopment": "Elevate your business with our mobile development expertise. We specialize in creating intuitive and customized mobile apps for both iOS and Android platforms.",
+        "DigitalMkt": "Unlock the full potential of your online presence with our digital marketing strategies. From SEO and social media marketing to targeted campaigns",
+        "DigitalTrasformConsult": "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences."
       },
       "OurProject": {
-        "Descrition":  "Explore our successful projects with valued clients, showcasing our expertise and dedication."
+        "Description":  "Explore our successful projects with valued clients, showcasing our expertise and dedication."
       }
+    },
+    "Service": {
+      "HeroSection": {
+        "Description": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority."
+      }
+    },
+    "Team": {
+      "HeroSection": {
+        "Description": "We are a dedicated team committed to the consistent delivery of exceptional products that surpass your expectations. Every day, we proactively seek opportunities for learning and growth to tackle new challenges, ensuring the development of top-tier software that exceeds your highest aspirations."
+      }
+    },
+    "Blog": {
+      "HeroSection": {
+        "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog. Stay informed and inspired as we share valuable knowledge to empower your journey in the digital world."
+      }
+    },
+    "ContactSection": {
+      "TextAnimation": "Let's start a conversation about your business's digital future",
+      "SubTitle": "Let’s make your dream come true",
+      "Title": "Contact Us",
+      "Button": "Share us your idea"
     }
   }

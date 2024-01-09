@@ -6,10 +6,14 @@ import withContactUs from "./withContactUs";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { ContactHomeSectionProps } from "./interface";
+import { useTranslations } from "next-intl";
 
-
-const ContactHomeSection = ({ root,
-  textMessageRef, setIsOpen}: ContactHomeSectionProps) => {
+const ContactHomeSection = ({
+  root,
+  textMessageRef,
+  setIsOpen,
+}: ContactHomeSectionProps) => {
+  const t = useTranslations("ContactSection");
 
   return (
     <section
@@ -21,25 +25,26 @@ const ContactHomeSection = ({ root,
           <div
             className="max-w-[450px] min-w-[200px] p-4 rounded-2xl mb-5 group-hover:mb-10 text-base sm:text-xl bg-secondary-1000 font-light text-primary-100 group-hover:rotate-[-6deg]  transition-all duration-300"
             ref={textMessageRef}
-          >
-            {`             `}
-          </div>
+          ></div>
           <Paragraph className="max-w-[670px] text-end  mb-4 group-hover:mt-10 text-md sm:text-2xl font-semibold text-slate-900 group-hover:rotate-6 transition-all duration-300">
-            {`Let’s make your dream come true`}
+            {t("SubTitle")}
           </Paragraph>
 
           <h2 className="mb-5 sm:mb-14 flex justify-end relative ">
             <span className="font-semibold text-xl md:text-4xl text-slate-900 group-hover:rotate-6  transition-all duration-300 ">
-              CONTACT US
+              {t("Title")}
             </span>
           </h2>
 
-          <div onClick={() => setIsOpen(true)} className="w-full sm:w-1/2 flex justify-end relative mb-10 sm:mb-0  group-hover:rotate-6 transition-all duration-300">
+          <div
+            onClick={() => setIsOpen(true)}
+            className="w-full sm:w-1/2 flex justify-end relative mb-10 sm:mb-0  group-hover:rotate-6 transition-all duration-300"
+          >
             <PrimaryButton
               className=" py-3 text-base sm:text-lg hover:scale-90 mb-5 lg:mb-0 min-w-[220px]"
               pathName="/contact-us"
             >
-              Share us your idea
+              {t("Button")}
             </PrimaryButton>
           </div>
         </div>

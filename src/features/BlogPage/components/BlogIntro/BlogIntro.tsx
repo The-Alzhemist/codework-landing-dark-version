@@ -7,6 +7,7 @@ import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/Backgrou
 
 import withBlogIntro from "./withBlogIntro";
 import { BlogIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 
 const BlogIntro = ({
@@ -17,6 +18,7 @@ const BlogIntro = ({
   circleLeftRef,
   circleRightRef,
 }: BlogIntroProps) => {
+  const t = useTranslations("Blog");
   return (
     <section
     className={`relative overflow-hidden pt-16   md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -42,7 +44,7 @@ const BlogIntro = ({
             className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
           >
             <span>
-              {`Explore the latest insights, trends, and expert opinions in technology and business through our blog. Stay informed and inspired as we share valuable knowledge to empower your journey in the digital world.`}
+            {t('HeroSection.Description')}
             </span>
           </Paragraph>
         </div>         

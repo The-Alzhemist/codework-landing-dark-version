@@ -36,7 +36,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               <Paragraph
                 className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
               >
-                 {t("OurPartner.Descrition")}
+                 {t("OurPartner.Description")}
               </Paragraph>
             </div>
           </div>
