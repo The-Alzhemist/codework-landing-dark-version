@@ -123,6 +123,38 @@
           "Title": "CodeWork Tech | Servicess",
           "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements"
         }
+      },
+      "Home": {
+        "Title": "ไทย CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+        "Description": "ไทย Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
+        "OpenGraph": {
+          "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+          "Description": "ไทย Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity."
+        }
+      },
+      "Blog": {
+        "Title": "ไทย CodeWork Tech | Blogs",
+        "Description": "ไทย Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
+        "OpenGraph": {
+          "Title": "ไทย CodeWork Tech | Blogs",
+          "Description": "ไทย Explore the latest insights, trends, and expert opinions in technology and business through our blog."
+        }
+      },
+      "Team": {
+        "Title": "ไทย CodeWork Tech | Team",
+        "Description": "ไทย Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
+        "OpenGraph": {
+          "Title": "ไทย CodeWork Tech | Team",
+          "Description": "ไทย Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story."
+        }
+      },
+      "ContactUs": {
+        "Title": "ไทย CodeWork Tech | Contact Us",
+        "Description": "ไทย Contact us to turn your vision into reality. Let’s create something extraordinary together.",
+        "OpenGraph": {
+          "Title": "ไทย CodeWork Tech | Contact Us",
+          "Description": "ไทย Contact us to turn your vision into reality. Let’s create something extraordinary together."
+        }
       }
     }
   }

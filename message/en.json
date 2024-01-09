@@ -123,6 +123,38 @@
         "Title": "CodeWork Tech | Servicess",
         "Description": "Discover our service offerings, thoughtfully designed to address your business requirements"
       }
+    },
+    "Home": {
+      "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+      "Description": "Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+        "Description": "Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity."
+      }
+    },
+    "Blog": {
+      "Title": "CodeWork Tech | Blogs",
+      "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Blogs",
+        "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog."
+      }
+    },
+    "Team": {
+      "Title": "CodeWork Tech | Team",
+      "Description": "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Team",
+        "Description": "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story."
+      }
+    },
+    "ContactUs": {
+      "Title": "CodeWork Tech | Contact Us",
+      "Description": "Contact us to turn your vision into reality. Let’s create something extraordinary together.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Contact Us",
+        "Description": "Contact us to turn your vision into reality. Let’s create something extraordinary together."
+      }
     }
   }
 }

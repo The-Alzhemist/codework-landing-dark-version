@@ -13,38 +13,9 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export const metadata: Metadata = {
-  title: "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
-  description:
-    "Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
-  openGraph: {
-    title: "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
-    description:
-      "Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
-    url: "https://codework-tech.com",
-    siteName: "https://codework-tech.com",
-    images: [
-      {
-        url: process.env.ENV_URL + "/logo/meta/meta-tag-home.jpg",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: process.env.ENV_URL + "/logo/meta/meta-tag-home.jpg",
-        width: 1800,
-        height: 1600,
-        alt: "codework-tech-home-page-meta-image",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
 
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
-import StoryblokProvider from "@/features/BlogPage/components/StoryblokProvider/StoryblokProvider";
-import { BlogFilterTagsProvider } from "@/context/BlogFilterTagsContext/BlogFilterTagsContext";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
 const REVALIDATE_TIME = Number(
   process.env.STORYBLOK_REVALIDATE_TIME_SECOND as number | false | undefined
@@ -58,6 +29,36 @@ storyblokInit({
       fetch(input, { ...init, next: { revalidate: REVALIDATE_TIME } }),
   },
 });
+
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "MetaData" });
+
+  return {
+    title: t("Home.Title"),
+    description: t("Home.Description"),
+    openGraph: {
+      title: t("Home.Title"),
+      description: t("Home.Description"),
+      url: "https://codework-tech.com",
+      siteName: "https://codework-tech.com",
+      images: [
+        {
+          url: process.env.ENV_URL + "/logo/meta/meta-tag-home.jpg",
+          width: 800,
+          height: 600,
+        },
+        {
+          url: process.env.ENV_URL + "/logo/meta/meta-tag-home.jpg",
+          width: 1800,
+          height: 1600,
+          alt: "codework-tech-home-page-meta-image",
+        },
+      ],
+    },
+    type: "website",
+  };
+}
 
 export default function RootLayout({ children, params: { locale } }: any) {
   unstable_setRequestLocale(locale);

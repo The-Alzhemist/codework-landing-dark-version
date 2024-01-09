@@ -5,6 +5,7 @@ export const revalidate = 6
 import BlogWrapper from "@/features/BlogPage/BlogWrapper";
 
 import { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
 
 
@@ -15,34 +16,34 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export const metadata: Metadata = {
-  title: "CodeWork Tech | Blogs",
-  description:
-    "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
-  openGraph: {
-    title: "CodeWork Tech | Blogs",
-    description:
-      "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
-    url: "",
-    siteName: "",
-    images: [
-      {
-        url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
-        width: 800,
-        height: 600,
-      },
-      {
-        url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
-        width: 1800,
-        height: 1600,
-        alt: "codework-tech-blog-meta-image",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-};
 
+
+export async function generateMetadata({ params: { locale } }: any) {
+  const t = await getTranslations({ locale, namespace: "MetaData" });
+
+  return {
+    title: t("Blog.Title"),
+    description: t("Blog.Description"),
+    openGraph: {
+      title: t("Blog.Title"),
+      description: t("Blog.Description"),
+      images: [
+        {
+          url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
+          width: 800,
+          height: 600,
+        },
+        {
+          url: process.env.ENV_URL + "/images/blogPage/meta-tag-blog.jpg",
+          width: 1800,
+          height: 1600,
+          alt: "codework-tech-blog-meta-image",
+        },
+      ],
+    },
+    type: "website"
+  };
+}
 
 
 export default function BlogPage() {
