@@ -4,6 +4,7 @@ import Paragraph from "@/components/typography/paragraph/Paragraph";
 import React from "react";
 import withOurService from "./withOurService";
 import { OurServiceProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const serviceList = [
   {
@@ -52,6 +53,8 @@ const serviceList = [
 ];
 
 const OurService = ({ h1Ref, pref, divBtnRef, root }: OurServiceProps) => {
+  const t = useTranslations('Home');
+  
   return (
     <section
       className="relative py-12 md:py-[50px] mx-auto px-5 lg:px-[50px] sm:pt-0  bg-neutral-1000 "
@@ -72,7 +75,7 @@ const OurService = ({ h1Ref, pref, divBtnRef, root }: OurServiceProps) => {
             <Paragraph
               className={`lg:max-w-[970px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
             >
-              {`Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.`}
+                {t("OurService.Descrition")}
             </Paragraph>
           </div>
         </div>

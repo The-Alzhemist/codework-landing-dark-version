@@ -14,6 +14,7 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { ProjectListProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const projectList: ProjectListProps[] = [
   {
@@ -91,6 +92,7 @@ const projectList: ProjectListProps[] = [
 ];
 
 export const OurProject = () => {
+  const t = useTranslations('Home');
   return (
     <section className=" relative py-12 md:py-[100px] mx-auto px-5 lg:px-[50px]  bg-neutral-1000 ">
       <div className=" m-auto max-w-[1440px]">
@@ -104,7 +106,7 @@ export const OurProject = () => {
           <Paragraph
             className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
           >
-            {`Explore our successful projects with valued clients, showcasing our expertise and dedication.`}
+              {t("OurProject.Descrition")}
           </Paragraph>
         </div>
 
