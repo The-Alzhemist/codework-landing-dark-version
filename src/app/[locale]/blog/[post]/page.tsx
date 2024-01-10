@@ -1,3 +1,5 @@
+
+
 export const dynamicParams = true 
 export const revalidate = 6
 
@@ -23,7 +25,6 @@ const poppinsFont = Poppins({
 });
 
 
-
 export default async function PostPage({ params }: PostPageProps) {
   const { data } = await fetchData(params.post);
 
@@ -43,7 +44,6 @@ export default async function PostPage({ params }: PostPageProps) {
     </>
   );
 }
-
 
 
 async function fetchData(post: string) {
@@ -67,13 +67,17 @@ export async function generateStaticParams() {
       return;
     }
     const slug = links[linkKey].slug.replace("blog/", "");
-    paths.push({ post: slug });
+    paths.push({ post: `/blog/${slug}` });
+
   });
 
+  console.log('paths>>>>>', paths)
   return paths;
 }
-
-
+// const locales = ['en', 'th'];
+// export function generateStaticParams() {
+//   return locales.map((locale) => ({locale}));
+// } 
 
 
 export async function generateMetadata(
