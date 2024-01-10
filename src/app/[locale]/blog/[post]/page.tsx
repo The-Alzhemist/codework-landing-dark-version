@@ -23,7 +23,7 @@ const poppinsFont = Poppins({
 });
 
 export default async function PostPage({ params }: PostPageProps) {
-  console.log('params', params)
+  console.log("params", params);
   const { data } = await fetchData(params.post);
 
   return (
@@ -32,8 +32,8 @@ export default async function PostPage({ params }: PostPageProps) {
         className={`${poppinsFont.className} pt-20 sm:pt-0 relative  md:py-[50px] mx-auto px-5  bg-neutral-1000`}
       >
         <div className="max-w-[800px] mx-auto">
-          {/* <Breadcrumb postPath={params.post} />
-        <StoryblokStory story={data.story} /> */}
+          <Breadcrumb postPath={params.post} />
+          <StoryblokStory story={data.story} />
         </div>
       </main>
 
@@ -55,24 +55,28 @@ async function fetchData(post: string) {
 }
 
 export async function generateStaticParams() {
-  // const links = await getLinks("blog/");
-  // const paths: PathItem[] = [];
+  const links = await getLinks("blog/");
+  const paths: any = []
 
-  // Object.keys(links).forEach((linkKey) => {
-  //   if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
-  //     return;
-  //   }
-  //   const slug = links[linkKey].slug.replace("blog/", "");
-  //   paths.push({ post: `/blog/${slug}` });
-  // });
+  Object.keys(links).forEach((linkKey) => {
+    if (links[linkKey].is_folder || links[linkKey].slug === "blog/") {
+      return;
+    }
 
-  // console.log("paths>>>>>", paths);
-  return [{ locale: 'en', post: 'introduction-to-daisy-ui' }];
+    // Modify this line to include the locales you want
+    const locales = ['en', 'th'];
+
+    // Create an entry for each locale
+    locales.forEach((locale) => {
+      const slug = links[linkKey].slug.replace("blog/", "");
+      paths.push({ locale, post: `${slug}` });
+    });
+  });
+
+  console.log(paths);
+
+  return paths;
 }
-// const locales = ['en', 'th'];
-// export function generateStaticParams() {
-//   return locales.map((locale) => ({locale}));
-// }
 
 export async function generateMetadata(
   { params }: { params: { post: string } },
