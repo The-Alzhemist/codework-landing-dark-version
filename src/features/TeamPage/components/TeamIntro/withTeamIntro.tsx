@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { TeamIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const witTeamIntro = (Component: React.FC<TeamIntroProps>) => {
   const Hoc = () => {
@@ -12,6 +13,8 @@ const witTeamIntro = (Component: React.FC<TeamIntroProps>) => {
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
+
+    const t = useTranslations("Team");
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -69,6 +72,7 @@ const witTeamIntro = (Component: React.FC<TeamIntroProps>) => {
       imgRef,
       circleLeftRef,
       circleRightRef,
+      t
     };
     return <Component {...newProps} />;
   };

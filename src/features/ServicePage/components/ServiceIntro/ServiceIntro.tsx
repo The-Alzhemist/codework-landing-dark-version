@@ -15,8 +15,9 @@ const ServiceIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t
 }: ServiceIntroProps) => {
-  const t = useTranslations("Service");
+
 
   return (
     <section

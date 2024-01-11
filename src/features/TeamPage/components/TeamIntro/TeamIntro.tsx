@@ -15,9 +15,8 @@ const TeamIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t,
 }: TeamIntroProps) => {
-  const t = useTranslations("Team");
-
   return (
     <section
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}

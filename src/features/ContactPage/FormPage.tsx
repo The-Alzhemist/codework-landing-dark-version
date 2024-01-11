@@ -26,7 +26,6 @@ import TagManager from "react-gtm-module";
 import PDPAPopup from "../PAPAPopup/PDPAPopup";
 import { useTranslations } from "next-intl";
 
-
 const FormPage = ({
   handleSubmit,
   errors,
@@ -39,13 +38,10 @@ const FormPage = ({
   showModal,
   setShowModal,
 }: WithFormPageProps) => {
-
   const h1Tag = useRef<HTMLDivElement | null>(null);
   const formTag = useRef<HTMLFormElement | null>(null);
   const root = useRef<any>(null);
   const [hasConsent, setHasConsent] = useState(false);
-
-  
 
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
@@ -56,9 +52,9 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: h1Tag.current,
-          markers: false
+          markers: false,
         },
-      })
+      });
       gsap.from(formTag.current, {
         x: -50,
         opacity: 0,
@@ -66,14 +62,13 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: formTag.current,
-          markers: false
+          markers: false,
         },
       });
     }, root);
 
     return () => ctx.revert();
   }, []);
-
 
   // CHECK PDPA CONSENT LOCAL STORAGE
   useEffect(() => {
@@ -86,26 +81,22 @@ const FormPage = ({
     }
   }, [hasConsent]);
 
-
-  const t = useTranslations('Home');
+  const t = useTranslations("ContactUs");
   return (
     <>
       <div
-      ref={root}
+        ref={root}
         className=" relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
         <h1 className="text-center mt-16 mb-20 text-white" ref={h1Tag}>
-          <div  className="text-2xl font-light">
-            Wanna talk with us? {t('HeroSection.Greeting')}
+          <div className="text-2xl font-light">
+           {t("SubTitle")}
           </div>
-          <div
-            
-            className="font-normal inline bg-line text-3xl md:text-5xl text-primary-100"
-          >
-            Contact us
+          <div className="font-normal inline bg-line text-3xl md:text-5xl text-primary-100">
+          {t("Title")}
           </div>
         </h1>
-        <form  onSubmit={handleSubmit(onSubmit)} ref={formTag}>
+        <form onSubmit={handleSubmit(onSubmit)} ref={formTag}>
           {/* row 1 */}
           <div className="text-white">
             <TextAreaField
@@ -118,7 +109,7 @@ const FormPage = ({
                 },
               }}
               placeholder="Write something..."
-              label="Tell us your idea"
+              label={t("Form.TellUsYourIdea")}
               className="mb-[12px] "
               rows={5}
             />
@@ -136,7 +127,7 @@ const FormPage = ({
                 suffixIcon="฿"
                 placeholder="Write something..."
                 type="text"
-                label="Your budget? (optional)"
+                label={t("Form.Budget")}
                 className="mb-[12px]"
               />
 
@@ -148,7 +139,7 @@ const FormPage = ({
                 }}
                 placeholder="Write something..."
                 type="text"
-                label="Name"
+                label={t("Form.Name")}
                 className="mb-[12px]"
               />
               <InputField
@@ -163,7 +154,7 @@ const FormPage = ({
                 }}
                 placeholder="Write something..."
                 type="text"
-                label="Email"
+                label={t("Form.Email")}
                 className="mb-[12px]"
               />
 
@@ -177,7 +168,7 @@ const FormPage = ({
                   },
                 }}
                 name="attachment"
-                label="File Attachment"
+                label={t("Form.FileAttachment")}
                 className="w-full  mb-5"
               />
             </div>
@@ -195,7 +186,7 @@ const FormPage = ({
                       },
                     }}
                     type="date"
-                    label="Preferred time slots"
+                    label={t("Form.TimeSlot")}
                     className="mb-[12px] "
                     inputClassName="h-[38px]"
                   />
@@ -210,7 +201,7 @@ const FormPage = ({
                         message: "",
                       },
                     }}
-                    label="Time Period"
+                    label={t("Form.TimePerriod")}
                     className="mb-[12px]"
                     optionList={SELECTED_OPTION_LIST}
                   />
@@ -228,7 +219,7 @@ const FormPage = ({
                 }}
                 placeholder="Write something..."
                 type="number"
-                label="Phone number"
+                label={t("Form.PhoneNumber")}
                 className="mb-[12px]"
               />
 
@@ -240,14 +231,14 @@ const FormPage = ({
                 }}
                 placeholder="Write something..."
                 type="text"
-                label="Company name"
+                label={t("Form.CompanyName")}
                 className="mb-[12px]"
               />
             </div>
           </div>
 
           <div className="mb-5 text-white">
-            <label className="flex">How did you hear about us?</label>
+            <label className="flex">{t("Form.HowDidYouHearAboutUs")}</label>
             <div className="flex gap-x-4 items-start flex-wrap">
               <CheckBoxSimpleField
                 control={control}
@@ -303,7 +294,7 @@ const FormPage = ({
           </div>
 
           <p className="mb-5  text-sm text-white">
-            *We will be in touch with you shortly through the number (+66) 63 849 4282
+          {t("Form.ShortMessage")}
           </p>
 
           <div className=" flex justify-end">
@@ -318,7 +309,7 @@ const FormPage = ({
                     <CgSpinner />
                   </span>
                 )}
-                Submit my idea
+                {t("Form.SubmitButton")}
               </div>
             </ExternalPrimaryButton>
           </div>
@@ -348,7 +339,7 @@ const FormPage = ({
           </div>
         </Modal>
 
-        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} /> }
+        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
       </div>
     </>
   );

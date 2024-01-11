@@ -91,6 +91,25 @@
       }
     }
   },
+  "ContactUs": {
+    "Title": "Contact us",
+    "SubTitle": "Wanna talk with us?",
+    "Form": {
+      "TellUsYourIdea": "Tell us your idea",
+      "Budget": "Your budget? (optional)",
+      "TimeSlot": "Preferred time slots",
+      "TimePerriod": "Time Period",
+      "Name": "Name",
+      "PhoneNumber": "Phone number",
+      "Email": "Email",
+      "CompanyName": "Company name",
+      "FileAttachment": "File Attachment",
+      "HowDidYouHearAboutUs": "How did you hear about us?",
+      "ShortMessage": "*We will be in touch with you shortly through the number (+66) 63 849 4282",
+      "SubmitButton": "Submit your idea"
+    },
+    "OtherContactChannel": "Other contact channels"
+  },
   "ContactSection": {
     "TextAnimation": "Let's start a conversation about your business's digital future",
     "SubTitle": "Let’s make your dream come true",
