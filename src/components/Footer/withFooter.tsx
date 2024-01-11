@@ -9,12 +9,12 @@ const withFooter = (Component: React.FC<FooterProps>) => {
 
   const Hoc = () => {
     const t = useTranslations("Menu");
-
+    const contactTranslations  = useTranslations("ContactUs");
     const footerMenu = {
       footerLeft: {
         companyName: "CodeWork Tech Co.,Ltd.",
         companyAddress:
-          "3774 Sukhumvit road, South Bang Na, Bang Na, Bangkok 10260",
+        contactTranslations('Address'),
         companyEmail: "hello@codework-tech.com",
         companyTel: "(+66) 63 849 4282",
         companyCopyright: "Ⓒ2023 CodeWork Tech Co.,Ltd. All rights reserved.",
