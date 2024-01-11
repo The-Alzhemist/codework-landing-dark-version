@@ -3,5 +3,5 @@ export interface NavbarProps {
   sectionNavRef: React.RefObject<HTMLElement>;
   isScrolled: boolean;
   currentLang:string
-  switchLang:any
+  switchLang: (lang: string) => void
 }
