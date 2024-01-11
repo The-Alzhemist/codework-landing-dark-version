@@ -44,13 +44,9 @@ export async function generateMetadata({ params: { locale } }: any) {
   };
 }
 
-export default function ContactUsPage({ params: { locale } }: any) {
-  unstable_setRequestLocale(locale);
-
-  const t = useTranslations("Home");
+export default function ContactUsPage() {
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
-      <h1 className="text-white">{t("HeroSection.Greeting")}</h1>
       <FormPage />
       <SocialContactFloating />
     </main>

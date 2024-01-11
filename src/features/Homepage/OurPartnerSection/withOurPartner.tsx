@@ -12,6 +12,7 @@ const withOurPartner = (Component: React.FC<OurPartnerProps>) => {
 
     const t = useTranslations('Home');
 
+
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
         gsap.from(h1Ref.current, {

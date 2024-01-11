@@ -37,6 +37,7 @@ const FormPage = ({
   onSubmit,
   showModal,
   setShowModal,
+  t
 }: WithFormPageProps) => {
   const h1Tag = useRef<HTMLDivElement | null>(null);
   const formTag = useRef<HTMLFormElement | null>(null);
@@ -81,7 +82,7 @@ const FormPage = ({
     }
   }, [hasConsent]);
 
-  const t = useTranslations("ContactUs");
+
   return (
     <>
       <div
@@ -89,11 +90,9 @@ const FormPage = ({
         className=" relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
         <h1 className="text-center mt-16 mb-20 text-white" ref={h1Tag}>
-          <div className="text-2xl font-light">
-           {t("SubTitle")}
-          </div>
+          <div className="text-2xl font-light">{t("SubTitle")}</div>
           <div className="font-normal inline bg-line text-3xl md:text-5xl text-primary-100">
-          {t("Title")}
+            {t("Title")}
           </div>
         </h1>
         <form onSubmit={handleSubmit(onSubmit)} ref={formTag}>
@@ -293,9 +292,7 @@ const FormPage = ({
             </div>
           </div>
 
-          <p className="mb-5  text-sm text-white">
-          {t("Form.ShortMessage")}
-          </p>
+          <p className="mb-5  text-sm text-white">{t("Form.ShortMessage")}</p>
 
           <div className=" flex justify-end">
             <ExternalPrimaryButton
@@ -329,11 +326,10 @@ const FormPage = ({
                 <BiCheckCircle />
               </div>
               <h3 className="text-xl sm:text-xl font-medium text-slate-900 mb-5">
-                Thank you for sharing your idea with us!
+                {t("SentSuccessPopup.Title")}
               </h3>
               <div className="text-sm font-light mt-0 pt-0 text-slate-700 mb-5">
-                We will get back to you as soon as possible. Let the journey
-                with CodeWork
+                {t("SentSuccessPopup.Description")}
               </div>
             </div>
           </div>
