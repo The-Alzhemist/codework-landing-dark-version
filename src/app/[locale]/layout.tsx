@@ -64,7 +64,12 @@ export async function generateMetadata({
   };
 }
 
-export default function RootLayout({ children, params: { locale } }: any) {
+export default function RootLayout({ children, params: { locale } }: {
+  children: any;
+  params: {
+      locale: string;
+  };
+}) {
   unstable_setRequestLocale(locale);
   const messages = useMessages();
 
