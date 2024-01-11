@@ -10,6 +10,7 @@ export interface PostPageProps {
   
   export interface PathItem {
     post: string;
+    locale: string;
   }
   
   export interface MetaArrayItem {

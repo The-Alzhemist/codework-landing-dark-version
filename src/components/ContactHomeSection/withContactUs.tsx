@@ -4,6 +4,7 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ContactHomeSectionProps } from "./interface";
 import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
+import { useTranslations } from "next-intl";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -13,6 +14,9 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
     const textMessageRef = useRef<HTMLDivElement>(null);
     const root = useRef<HTMLElement>(null);
     const NavbarContext = useContext(NavbarToggleContext);
+    const t = useTranslations("ContactSection");
+
+    
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
         gsap.to(textMessageRef.current, {
@@ -22,7 +26,7 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
           ease: "power4.out",
           text: {
             value:
-              "Let's start a conversation about your business's digital future",
+              t('TextAnimation'),
             delimiter: "",
           },
         });
@@ -45,7 +49,8 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
       root,
       textMessageRef,
       isOpen, 
-      setIsOpen
+      setIsOpen,
+      t
     };
 
     return <Component {...newProps} />;

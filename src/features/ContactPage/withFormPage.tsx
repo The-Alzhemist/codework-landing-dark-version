@@ -6,6 +6,7 @@ import {
   FORMSPREE_PRODUCTION_LANDING_KEY,
 } from "@/config/environment";
 import { WithFormPageProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 
 const withFormPage = (Component: React.FC<WithFormPageProps>) => {
@@ -26,6 +27,8 @@ const withFormPage = (Component: React.FC<WithFormPageProps>) => {
     const [state, sendDataToFromSpree] = useFormSpree(FORMSPREE_PRODUCTION_LANDING_KEY);
     const isShowOtherChannel = watch("channels.other");
     const [showModal, setShowModal] = useState(false);
+
+    const t = useTranslations("ContactUs");
 
     useEffect(() => {
       if (!state.submitting && !state.errors && state.succeeded) {
@@ -79,7 +82,8 @@ const withFormPage = (Component: React.FC<WithFormPageProps>) => {
       isShowOtherChannel,
       onSubmit,
       showModal,
-      setShowModal
+      setShowModal,
+      t
     };
 
 

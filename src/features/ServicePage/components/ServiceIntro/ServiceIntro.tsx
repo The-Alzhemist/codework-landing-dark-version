@@ -6,6 +6,7 @@ import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/Backgrou
 
 import witServiceIntro from "./withServiceIntro";
 import { ServiceIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const ServiceIntro = ({
   root,
@@ -14,7 +15,10 @@ const ServiceIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t
 }: ServiceIntroProps) => {
+
+
   return (
     <section
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -40,7 +44,7 @@ const ServiceIntro = ({
               className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
             >
               <span>
-                {`Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.`}
+                {t('HeroSection.Description')}
               </span>
             </Paragraph>
           </div>         
@@ -48,11 +52,11 @@ const ServiceIntro = ({
 
         <picture ref={imgRef}>
             <source
-              srcSet="images/servicePage/serviceIntro/services-herosection-element.png"
+              srcSet="/images/servicePage/serviceIntro/services-herosection-element.png"
               type="image/webp"
             />
             <img
-              src="images/servicePage/serviceIntro/services-herosection-element.png"
+              src="/images/servicePage/serviceIntro/services-herosection-element.png"
               alt="services-herosection-element cover image"
               title="services-herosection-element cover image"
               loading="lazy"

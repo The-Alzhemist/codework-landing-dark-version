@@ -8,6 +8,7 @@ import { ProjectIntroProps } from "./interface";
 
 
 
+
 const ProjectIntro = ({
   root,
   h1Ref,
@@ -15,7 +16,9 @@ const ProjectIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t
 }: ProjectIntroProps) => {
+ 
   return (
     <section
     className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -41,7 +44,7 @@ const ProjectIntro = ({
             className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
           >
             <span>
-              {`Explore our successful projects with valued clients, showcasing our expertise and dedication.`}
+            {t('HeroSection.Description')}
             </span>
           </Paragraph>
         </div>         
@@ -49,11 +52,11 @@ const ProjectIntro = ({
 
       <picture ref={imgRef}>
           <source
-            srcSet="images/projectPage/projectIntro/projects-cover-v1.webp"
+            srcSet="/images/projectPage/projectIntro/projects-cover-v1.webp"
             type="image/webp"
           />
           <img
-            src="images/servicePage/serviceIntro/projects-cover-v1.png"
+            src="/images/servicePage/serviceIntro/projects-cover-v1.png"
             alt="projects page image cover"
             title="projects page image cover"
             loading="lazy"

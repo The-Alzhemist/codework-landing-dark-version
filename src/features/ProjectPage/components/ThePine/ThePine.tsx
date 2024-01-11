@@ -1,7 +1,9 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function ProjectThePine() {
+  const t = useTranslations("Project");
   return (
     <section className="relative py-10 md:py-[50px] mx-auto bg-neutral-1000  ">
       {/* 1 */}
@@ -57,22 +59,22 @@ export default function ProjectThePine() {
 
           {/* p */}
           <Paragraph className="text-base font-light opacity-80 text-white mb-5">
-            {` Develop an internal backend management system for The Pine Hotel, including features such as reservation and payment systems.`}
+          {t('ThePine.Description')}
           </Paragraph>
 
           <div className="text-base font-light opacity-80 text-white mb-5">
             <h3 className="font-semibold mb-2">Pain point</h3>
             <ul>
               <li className="mb-2">
-                {` - The existing backend system lacks efficiency.`}
+             - {t('ThePine.PainPoint.List1')}
               </li>
 
               <li className="mb-2">
-                {` - The current system has a user interface that is difficult to use, resulting in a non-smooth workflow and employee training challenges.`}
+              - {t('ThePine.PainPoint.List2')}
               </li>
 
               <li>
-                {` - The preference is to avoid monthly subscription costs.`}
+              - {t('ThePine.PainPoint.List3')}
               </li>
             </ul>
           </div>
@@ -81,11 +83,11 @@ export default function ProjectThePine() {
             <h3 className="font-semibold mb-2">Solution</h3>
             <ul>
               <li className="mb-2">
-                {` - Develop a Property Management System (PMS) that is user-friendly and offers sufficient functionality for operational needs.`}
+              - {t('ThePine.Solution.List1')}
               </li>
 
               <li className="mb-2">
-                {`- Enable the ability to view reports and easily check whether guests have made payments.`}
+              - {t('ThePine.Solution.List2')}
               </li>
             </ul>
           </div>

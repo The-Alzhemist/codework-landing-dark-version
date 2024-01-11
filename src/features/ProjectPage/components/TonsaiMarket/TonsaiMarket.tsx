@@ -1,7 +1,10 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function ProjectTonsaiMarket() {
+  const t = useTranslations("Project");
+
   return (
     <section className="relative py-10 md:py-[50px] mx-auto bg-neutral-1000 ">
       {/* 1 */}
@@ -57,22 +60,22 @@ export default function ProjectTonsaiMarket() {
 
           {/* p */}
           <Paragraph className="text-base font-light opacity-80 text-white mb-5">
-            {`Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations.`}
+          {t('TonsaiMarket.Description')}
           </Paragraph>
 
           <div className="text-base font-light opacity-80 text-white mb-5">
             <h3 className="font-semibold mb-2">Pain point</h3>
             <ul>
               <li className="mb-2">
-                {` - The absence of a back-end management system makes it difficult to monitor income and expenses.`}
+              - {t('TonsaiMarket.PainPoint.List1')}
               </li>
 
               <li className="mb-2">
-                {` - There are issues with reconciling accounts.`}
+              - {t('TonsaiMarket.PainPoint.List2')}
               </li>
 
               <li>
-                {` - Challenges exist in rent collection.`}
+              - {t('TonsaiMarket.PainPoint.List3')}
               </li>
             </ul>
           </div>
@@ -81,15 +84,15 @@ export default function ProjectTonsaiMarket() {
             <h3 className="font-semibold mb-2">Solution</h3>
             <ul>
               <li className="mb-2">
-                {` - Develop a system that simplifies rent and electricity fee collection and allows for easy monitoring.`}
+              - {t('TonsaiMarket.Solution.List1')}
               </li>
 
               <li className="mb-2">
-                {` - Make it easier to manage accounts.`}
+              - {t('TonsaiMarket.Solution.List2')}
               </li>
 
               <li>
-                {` - Generate and view monthly profit and loss reports, enabling better future strategy planning.`}
+              - {t('TonsaiMarket.Solution.List3')}
               </li>
             </ul>
           </div>

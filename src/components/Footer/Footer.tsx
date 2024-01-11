@@ -55,6 +55,7 @@ const Footer = (props: FooterProps) => {
           <div className="font-light">{footerMenu.footerLeft.companyName}</div>
           <div className="font-light">
             {footerMenu.footerLeft.companyAddress}
+          
           </div>
           <div className="font-light">
             Email: <a href="mailto: hello@codework-tech.com"><span className="hover:border-b-2 hover:border-white">{footerMenu.footerLeft.companyEmail}</span></a> 

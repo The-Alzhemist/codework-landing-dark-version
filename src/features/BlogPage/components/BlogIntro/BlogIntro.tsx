@@ -7,6 +7,7 @@ import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/Backgrou
 
 import withBlogIntro from "./withBlogIntro";
 import { BlogIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 
 const BlogIntro = ({
@@ -16,7 +17,9 @@ const BlogIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t
 }: BlogIntroProps) => {
+  
   return (
     <section
     className={`relative overflow-hidden pt-16   md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -42,7 +45,7 @@ const BlogIntro = ({
             className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
           >
             <span>
-              {`Explore the latest insights, trends, and expert opinions in technology and business through our blog. Stay informed and inspired as we share valuable knowledge to empower your journey in the digital world.`}
+            {t('HeroSection.Description')}
             </span>
           </Paragraph>
         </div>         
@@ -50,11 +53,11 @@ const BlogIntro = ({
 
       <picture ref={imgRef}>
           <source
-            srcSet="images/blogPage/herosection-blog.webp"
+            srcSet="/images/blogPage/herosection-blog.webp"
             type="image/webp"
           />
           <img
-            src="images/blogPage/herosection-blog.webp"
+            src="/images/blogPage/herosection-blog.webp"
             alt="blog page image cover"
             title="blog page image cover"
             loading="lazy"

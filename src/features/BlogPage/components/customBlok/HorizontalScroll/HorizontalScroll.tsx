@@ -21,7 +21,7 @@ const HorizontalScroll: React.FC<any> = ({ blok }) => {
   return (
     <div {...storyblokEditable(blok)} className="p-5 lg:px-[50px]">
       <div className="flex flex-row flex-nowrap md:flex-wrap justify-left gap-5 items-center overflow-x-auto no-scrollbar max-w-[1000px]">
-        {sortedLists.map((item: any, index: number) => (
+        {sortedLists.map((item:string, index: number) => (
           <span
             key={`blog-item-${index}`}
             className={`text-xs py-2 px-3 rounded-full min-w-fit h-[35px] border cursor-pointer ${

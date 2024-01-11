@@ -12,14 +12,22 @@ import Link from "next/link";
 import { CodeworkTechLogo } from "./components/BrandLogo/BrandLogo";
 import { Poppins } from "next/font/google";
 
+import { usePathname, useRouter } from "next/navigation";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
   subsets: ["latin"],
-  display: 'swap', adjustFontFallback: false 
+  display: "swap",
+  adjustFontFallback: false,
 });
 
-const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
+const Navbar = ({
+  sectionNavRef,
+  onClikcToggle,
+  isScrolled,
+  currentLang,
+  switchLang,
+}: NavbarProps) => {
   return (
     <>
       <div
@@ -32,12 +40,19 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
         <div className="text-neutral-1000 cursor-pointer">
           <CodeworkTechLogo />
         </div>
-        <div
-          className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-850 rounded-full p-2 "
-          onClick={onClikcToggle}
-        >
-          <IoMdMenu />
-    
+
+        <div className="flex gap-x-2 items-center">
+          <div className="flex justify-center items-center gap-x-2 text-white">
+            <button onClick={() => switchLang("th")}>TH</button> |
+            <button onClick={() => switchLang("en")}>EN</button>
+          </div>
+
+          <div
+            className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-850 rounded-full p-2 "
+            onClick={onClikcToggle}
+          >
+            <IoMdMenu />
+          </div>
         </div>
       </div>
 
@@ -46,14 +61,14 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
         onClick={onClikcToggle}
         className={`translate-y-[-100%]   fixed top-0  w-full h-screen  z-10 ${poppinsFont.className}`}
       >
-        
-        <aside 
-        onClick={(e) => e.stopPropagation()}
-        className=" bg-primary-400  flex flex-col">
+        <aside
+          onClick={(e) => e.stopPropagation()}
+          className=" bg-primary-400  flex flex-col"
+        >
           {/* nav */}
           <div className="p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]">
             <div className="text-neutral-1000" onClick={onClikcToggle}>
-              <Link href="/">
+              <Link href={`/${currentLang}`}>
                 <picture>
                   <source srcSet="/logo/codework_white.png" type="image/webp" />
                   <img
@@ -81,8 +96,6 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
             <NavbarRight />
           </div>
         </aside>
-
-       
       </section>
     </>
   );
