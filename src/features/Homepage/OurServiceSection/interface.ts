@@ -3,7 +3,12 @@ export interface OurServiceProps {
     pref: React.RefObject<HTMLDivElement>;
     divBtnRef: React.RefObject<HTMLDivElement>;
     root: React.RefObject<HTMLElement>;
-    serviceList: any
+    serviceList: {
+      name: string;
+      imageWebP: string;
+      image: string;
+      detail: string;
+  }[];
     t:any
   }
   

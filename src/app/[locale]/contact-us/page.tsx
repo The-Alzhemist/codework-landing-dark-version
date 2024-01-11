@@ -17,7 +17,13 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata({ params: { locale } }: {
+  params: {
+      locale: string;
+  }
+}) {
+
+
   const t = await getTranslations({ locale, namespace: "MetaData" });
 
   return {

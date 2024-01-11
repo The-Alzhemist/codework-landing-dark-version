@@ -1,13 +1,10 @@
-
-
-export const revalidate = 6
+export const revalidate = 6;
 
 import BlogWrapper from "@/features/BlogPage/BlogWrapper";
 
 import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
-
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -16,9 +13,13 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-
-
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: string;
+  };
+}) {
   const t = await getTranslations({ locale, namespace: "MetaData" });
 
   return {
@@ -41,22 +42,19 @@ export async function generateMetadata({ params: { locale } }: any) {
         },
       ],
     },
-    type: "website"
+    type: "website",
   };
 }
 
-
 export default function BlogPage() {
-
   return (
     <main className={`bg-neutral-1000 ${poppinsFont.className}`}>
-      <BlogWrapper/>
+      <BlogWrapper />
     </main>
   );
 }
 
-
-const locales = ['en', 'th'];
+const locales = ["en", "th"];
 export function generateStaticParams() {
-  return locales.map((locale) => ({locale}));
-} 
+  return locales.map((locale) => ({ locale }));
+}

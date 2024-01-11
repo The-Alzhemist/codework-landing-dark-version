@@ -13,7 +13,6 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
@@ -30,8 +29,13 @@ storyblokInit({
   },
 });
 
-
-export async function generateMetadata({ params: { locale } }: any) {
+export async function generateMetadata({
+  params: { locale },
+}: {
+  params: {
+    locale: string;
+  };
+}) {
   const t = await getTranslations({ locale, namespace: "MetaData" });
 
   return {
@@ -63,10 +67,9 @@ export async function generateMetadata({ params: { locale } }: any) {
 export default function RootLayout({ children, params: { locale } }: any) {
   unstable_setRequestLocale(locale);
   const messages = useMessages();
-  
 
   return (
-    <NextIntlClientProvider locale={locale}  messages={messages}>
+    <NextIntlClientProvider locale={locale} messages={messages}>
       <Navbar />
       {children}
       <Footer />
