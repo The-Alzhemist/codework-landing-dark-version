@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { BlogIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 
 const withBlogIntro = (Component: React.FC<BlogIntroProps>) => {
@@ -13,6 +14,8 @@ const withBlogIntro = (Component: React.FC<BlogIntroProps>) => {
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
+
+    const t = useTranslations("Blog");
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -70,6 +73,7 @@ const withBlogIntro = (Component: React.FC<BlogIntroProps>) => {
       imgRef,
       circleLeftRef,
       circleRightRef,
+      t
     };
     return <Component {...newProps} />;
   };

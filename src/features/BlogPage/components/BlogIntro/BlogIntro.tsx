@@ -17,8 +17,9 @@ const BlogIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t
 }: BlogIntroProps) => {
-  const t = useTranslations("Blog");
+  
   return (
     <section
     className={`relative overflow-hidden pt-16   md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
