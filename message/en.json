@@ -136,11 +136,11 @@
   },
   "MetaData": {
     "Project": {
-      "Title": "xCodeWork Tech | Contact Us",
-      "Description": "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+      "Title": "CodeWork Tech | Project",
+      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication.",
       "OpenGraph": {
-        "Title": "CodeWork Tech | Contact Us",
-        "Description": "Get in touch with us and make your dream come true. Let’s create something extraordinary together!"
+        "Title": "CodeWork Tech | Project",
+        "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
       }
     },
     "Service": {
@@ -160,10 +160,10 @@
       }
     },
     "Blog": {
-      "Title": "CodeWork Tech | Blogs",
+      "Title": "CodeWork Tech | Blog",
       "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
       "OpenGraph": {
-        "Title": "CodeWork Tech | Blogs",
+        "Title": "CodeWork Tech | Blog",
         "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog."
       }
     },

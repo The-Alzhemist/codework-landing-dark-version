@@ -1,6 +1,3 @@
-export const dynamicParams = true;
-export const revalidate = 6;
-
 import React from "react";
 import { Poppins } from "next/font/google";
 import {

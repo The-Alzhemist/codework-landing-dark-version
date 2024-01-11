@@ -3,7 +3,7 @@
 import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
-import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
+
 
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
@@ -15,6 +15,7 @@ import OurService from "@/features/Homepage/OurServiceSection/OurService";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import withHomePage from "./withHomePage";
 import { HomePageProps } from "./interface";
+import OurProject from "./OurProjectSection/OurProject";
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
