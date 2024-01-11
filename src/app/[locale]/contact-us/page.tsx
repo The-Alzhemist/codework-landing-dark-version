@@ -1,14 +1,9 @@
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
-import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
+
 import FormPage from "@/features/ContactPage/FormPage";
-import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
-import { Metadata } from "next";
 
 import { Poppins } from "next/font/google";
-import { useEffect, useState } from "react";
-import TagManager from "react-gtm-module";
-import { useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700"],
@@ -17,13 +12,13 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export async function generateMetadata({ params: { locale } }: {
+export async function generateMetadata({
+  params: { locale },
+}: {
   params: {
-      locale: string;
-  }
+    locale: string;
+  };
 }) {
-
-
   const t = await getTranslations({ locale, namespace: "MetaData" });
 
   return {

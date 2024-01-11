@@ -1,11 +1,4 @@
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-import FormPage from "@/features/ContactPage/FormPage";
-import { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import ServiceIntro from "../../../features/ServicePage/components/ServiceIntro/ServiceIntro";
-import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
-import ServiceCard from "../../../features/ServicePage/components/ServiceCard/ServiceCard";
-import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
 import ServiceWrapper from "@/features/ServicePage/ServiceWrapper";
 import { getTranslations } from "next-intl/server";
 

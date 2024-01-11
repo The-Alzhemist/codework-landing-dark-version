@@ -1,11 +1,5 @@
-import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSection";
-import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
-import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-import FormPage from "@/features/ContactPage/FormPage";
-import ProjectIntro from "@/features/ProjectPage/components/ProjectIntro/ProjectIntro";
+
 import ProjectWrapper from "@/features/ProjectPage/ProjectWrapper";
-import ProjectSeamoor from "@/features/ProjectPage/components/ProjectSearmoor/ProjectSeamoor";
-import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import { getTranslations } from "next-intl/server";
 

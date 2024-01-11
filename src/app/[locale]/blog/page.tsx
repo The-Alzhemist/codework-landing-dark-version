@@ -1,8 +1,6 @@
 export const revalidate = 6;
 
 import BlogWrapper from "@/features/BlogPage/BlogWrapper";
-
-import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
 import { Poppins } from "next/font/google";
 
