@@ -3,5 +3,7 @@ export interface OurServiceProps {
     pref: React.RefObject<HTMLDivElement>;
     divBtnRef: React.RefObject<HTMLDivElement>;
     root: React.RefObject<HTMLElement>;
+    serviceList: any
+    t:any
   }
   

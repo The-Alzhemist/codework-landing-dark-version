@@ -15,6 +15,8 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
     const root = useRef<HTMLElement>(null);
     const NavbarContext = useContext(NavbarToggleContext);
     const t = useTranslations("ContactSection");
+
+    
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
         gsap.to(textMessageRef.current, {
@@ -47,7 +49,8 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
       root,
       textMessageRef,
       isOpen, 
-      setIsOpen
+      setIsOpen,
+      t
     };
 
     return <Component {...newProps} />;

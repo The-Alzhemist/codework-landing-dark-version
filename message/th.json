@@ -1,160 +1,163 @@
 {
-    "Home": {
-      "HeroSection": {
-        "Greeting": "สวัสดีครับ",
-        "Description": "การทำให้ไอเดียนวัตกรรมของคุณกลายเป็นสิ่งที่เป็นจริงในโลกคือความเชี่ยวชาญของเรา ไม่ว่าคุณจะเป็นนักธุรกิจของตนเอง, สตาร์ทอัพ, หรือธุรกิจที่มีชื่อเสียง, เรามีความพร้อมที่จะแปลงวิสัยทัศน์ของคุณให้กลายเป็นซอฟต์แวร์ที่ทันสมัยและทันต่อเวลา"
-      },
-      "OurPartner": {
-        "Description": "เราภูมิใจในการทำงานร่วมกับบริษัทที่มีชื่อเสียงเหล่านี้ ร่วมกับเรา, เรานำเสนอทางออกที่ทันสมัยซึ่งทำให้ธุรกิจของคุณก้าวเข้าสู่อนาคต สำรวจเครือข่ายของพันธมิตรที่น่าเชื่อถือของเราไปพร้อมกัน และสัมผัสประสบการณ์ที่ทรงพลังของการทำงานร่วมกับ CodeWork"
-      },
-      "OurService": {
-        "Description": "สำรวจบริการของเราที่ถูกออกแบบเพื่อยกระดับธุรกิจของคุณ ที่นี่เรามีเครื่องมือและความเชี่ยวชาญที่คุณต้องการเพื่อประสบความสำเร็จในยุคดิจิทัล ธุรกิจของคุณคือลำดับความสำคัญของเรา",
-        "UxUi": "โฟกัสการสร้างอินทิวิทีฟและมีดีทั้งด้านดิจิทัลที่เพิ่มประสิทธิภาพของประสบการณ์และความสัมพันธ์ของผู้ใช้",
-        "ProjectSolution": "ร่วมมืออย่างใกล้ชิดกับลูกค้าเพื่อระบุความท้าทายและความต้องการที่ไม่เหมือนใคร",
-        "WebDevelopment": "กระบวนการสร้างและบำรุงรักษาเว็บไซต์โดยใช้ภาษาโปรแกรมและเฟรมเวิร์กต่าง ๆ เพื่อสร้างแพลตฟอร์มออนไลน์ที่ตอบสนองและไดนามิก",
-        "MobileDevelopment": "ยกระดับธุรกิจของคุณด้วยความเชี่ยวชาญในการพัฒนาแอปพลิเคชันมือถือของเรา เราเชี่ยวชาญในการสร้างแอปพลิเคชันที่อินทิวิทีฟและปรับแต่งสำหรับแพลตฟอร์มทั้ง iOS และ Android",
-        "DigitalMkt": "ปลดล็อคศักยภาพทั้งหมดของการมีอยู่ออนไลน์ของคุณด้วยกลยุทธ์การตลาดดิจิทัลของเรา ตั้งแต่ SEO และการตลาดทางสื่อสังคม ไปจนถึงแคมเปญที่เป้าหมาย",
-        "DigitalTrasformConsult": "เราจะประเมินกระบวนการปัจจุบันของคุณ, กำหนดแผนที่ปรับให้เหมาะกับคุณ, และนำเสนอโซลูชันที่ทันสมัยเพื่อเพิ่มประสิทธิภาพการดำเนินงานและเสริมสร้างประสบการณ์ลูกค้า"
-      },
-      "OurProject": {
-        "Description":  "สำรวจโครงการที่ประสบความสำเร็จของเรากับลูกค้าที่มีค่า ซึ่งเป็นตัวอย่างการเชี่ยวชาญและความมุ่งมั่นของเรา",
-        "Swiper": {
-          "Seamoor": {
-            "Description": "พัฒนาระบบภายในสำหรับบริษัทที่ดำเนินธุรกิจทางทะเลและโลจิสติกส์ เพื่อปรับให้การดำเนินงานเป็นมิตรกับสภาพแวดล้อม, ติดตามการส่งของ, และสfacilitateการสื่อสารที่มีประสิทธิภาพ"
-          },
-          "ThePine": {
-            "Description": "พัฒนาระบบการจัดการภายในสำหรับโรงแรม The Pine รวมถึงคุณสมบัติเช่นระบบจองและระบบชำระเงิน"
-          },
-          "TonsaiMarket": {
-            "Description": "พัฒนาระบบการจัดการภายในสำหรับ Tonsai Market รวมถึงคุณสมบัติเช่นการเก็บค่าเช่า, ค่าไฟฟ้า, และการจองบูธ"
-          }
-        }
-      }
+  "Home": {
+    "HeroSection": {
+      "Greeting": "สวัสดีครับ",
+      "Description": "การทำให้ไอเดียนวัตกรรมของคุณกลายเป็นสิ่งที่เป็นจริงในโลกคือความเชี่ยวชาญของเรา ไม่ว่าคุณจะเป็นนักธุรกิจของตนเอง, สตาร์ทอัพ, หรือธุรกิจที่มีชื่อเสียง, เรามีความพร้อมที่จะแปลงวิสัยทัศน์ของคุณให้กลายเป็นซอฟต์แวร์ที่ทันสมัยและทันต่อเวลา",
+      "LetTalkWithUs": "มาพูดคุยกันเถอะ",
+      "Or": "หรือ",
+      "LeaveMessage": "ฝากข้อความไว้สิ"
     },
-    "Service": {
-      "HeroSection": {
-        "Description": "สำรวจบริการของเราที่ถูกออกแบบเพื่อยกระดับธุรกิจของคุณ ที่นี่เรามีเครื่องมือและความเชี่ยวชาญที่คุณต้องการเพื่อประสบความสำเร็จในยุคดิจิทัล ธุรกิจของคุณคือลำดับความสำคัญของเรา"
-      }
+    "OurPartner": {
+      "Description": "เราภูมิใจในการทำงานร่วมกับบริษัทที่มีชื่อเสียงเหล่านี้ ร่วมกับเรา, เรานำเสนอทางออกที่ทันสมัยซึ่งทำให้ธุรกิจของคุณก้าวเข้าสู่อนาคต สำรวจเครือข่ายของพันธมิตรที่น่าเชื่อถือของเราไปพร้อมกัน และสัมผัสประสบการณ์ที่ทรงพลังของการทำงานร่วมกับ CodeWork"
     },
-    "Team": {
-      "HeroSection": {
-        "Description": "เราคือทีมที่มุ่งมั่นที่จะส่งมอบผลิตภัณฑ์ที่ยอดเยี่ยมอย่างต่อเนื่องที่เหนือความคาดหวังของคุณ ทุกวัน, เราพยายามหาโอกาสในการเรียนรู้และ成長อย่างใ主 และเผชิญหน้ากับความท้าทายใหม่, ทำให้มั่นใจได้ว่าเราพัฒนาซอฟต์แวร์ระดับต้นขึ้นมาที่เหนือความคาดหวังที่สูงที่สุดของคุณ"
-      }
+    "OurService": {
+      "Description": "สำรวจบริการของเราที่ถูกออกแบบเพื่อยกระดับธุรกิจของคุณ ที่นี่เรามีเครื่องมือและความเชี่ยวชาญที่คุณต้องการเพื่อประสบความสำเร็จในยุคดิจิทัล ธุรกิจของคุณคือลำดับความสำคัญของเรา",
+      "UxUi": "โฟกัสการสร้างอินทิวิทีฟและมีดีทั้งด้านดิจิทัลที่เพิ่มประสิทธิภาพของประสบการณ์และความสัมพันธ์ของผู้ใช้",
+      "ProjectSolution": "ร่วมมืออย่างใกล้ชิดกับลูกค้าเพื่อระบุความท้าทายและความต้องการที่ไม่เหมือนใคร",
+      "WebDevelopment": "กระบวนการสร้างและบำรุงรักษาเว็บไซต์โดยใช้ภาษาโปรแกรมและเฟรมเวิร์กต่าง ๆ เพื่อสร้างแพลตฟอร์มออนไลน์ที่ตอบสนองและไดนามิก",
+      "MobileDevelopment": "ยกระดับธุรกิจของคุณด้วยความเชี่ยวชาญในการพัฒนาแอปพลิเคชันมือถือของเรา เราเชี่ยวชาญในการสร้างแอปพลิเคชันที่อินทิวิทีฟและปรับแต่งสำหรับแพลตฟอร์มทั้ง iOS และ Android",
+      "DigitalMkt": "ปลดล็อคศักยภาพทั้งหมดของการมีอยู่ออนไลน์ของคุณด้วยกลยุทธ์การตลาดดิจิทัลของเรา ตั้งแต่ SEO และการตลาดทางสื่อสังคม ไปจนถึงแคมเปญที่เป้าหมาย",
+      "DigitalTrasformConsult": "เราจะประเมินกระบวนการปัจจุบันของคุณ, กำหนดแผนที่ปรับให้เหมาะกับคุณ, และนำเสนอโซลูชันที่ทันสมัยเพื่อเพิ่มประสิทธิภาพการดำเนินงานและเสริมสร้างประสบการณ์ลูกค้า"
     },
-    "Blog": {
-      "HeroSection": {
-        "Description": "สำรวจข้อมูลล่าสุด, แนวโน้ม, และความคิดเห็นของผู้เชี่ยวชาญในเทคโนโลยีและธุรกิจผ่านบล็อกของเรา อยู่รอดูและรับแรงบันดาลใจเมื่อเราแบ่งปันความรู้มีค่าเพื่อเสริมสร้างการเดินทางของคุณในโลกดิจิทัล"
-      }
-    },
-    "Project": {
-      "HeroSection": {
-        "Description": "สำรวจโครงการที่ประสบความสำเร็จของเรากับลูกค้าที่มีค่า ซึ่งเป็นตัวอย่างการเชี่ยวชาญและความมุ่งมั่นของเรา"
-      },
-      "Searmoor": {
-        "Description": "พัฒนาระบบภายในสำหรับบริษัททางทะเลและโลจิสติกส์เพื่อปรับให้การดำเนินงานเป็นมิตรกับสภาพแวดล้อม, ติดตามการส่งของ, และสfacilitateการสื่อสารที่มีประสิทธิภาพ",
-        "PainPoint": {
-          "List1": "ความยากลำบากกับระบบออฟไลน์: ระบบปัจจุบันที่ทำงานแบบออฟไลน์ทำให้เกิดความท้าทายในการค้นหาและติดตามเอกสารอย่างมีประสิทธิภาพ, ทำให้มีประสบการณ์ผู้ใช้ที่ใช้เวลามากและน่าหงุดหงิด",
-          "List2": "เครื่องมือที่ไม่สามารถทำงานร่วมกับบุคคลที่สาม: เครื่องมือบุคคลที่สามปัจจุบันไม่สอดคล้องกับความต้องการเฉพาะของลูกค้า, ทำให้เกิดช่องโหว่ทางฟังก์ชันและปัญหาการผสมผสานที่ขัดขวางการทำงานและการผลิตภาพ"
+    "OurProject": {
+      "Description": "สำรวจโครงการที่ประสบความสำเร็จของเรากับลูกค้าที่มีค่า ซึ่งเป็นตัวอย่างการเชี่ยวชาญและความมุ่งมั่นของเรา",
+      "Swiper": {
+        "Seamoor": {
+          "Description": "พัฒนาระบบภายในสำหรับบริษัทที่ดำเนินธุรกิจทางทะเลและโลจิสติกส์ เพื่อปรับให้การดำเนินงานเป็นมิตรกับสภาพแวดล้อม, ติดตามการส่งของ, และสfacilitateการสื่อสารที่มีประสิทธิภาพ"
         },
-        "Solution": {
-          "List1": "ปรับปรุงกระบวนการทั้งหมดและทำให้เป็นดิจิทัล, การเปลี่ยนจากระบบออฟไลน์เป็นระบบออนไลน์เพื่อเพิ่มประสิทธิภาพและสามารถติดตามได้มีประสิทธิภาพมากขึ้น",
-          "List2": "ปรับทำซอฟต์แวร์ที่สอดคล้องกับความต้องการที่เฉพาะเจาะจงของลูกค้า, จึงมั่นใจได้ว่ามีประสบการณ์ที่ไม่มีปัญหาและเป็นมิตรกับผู้ใช้",
-          "List3": "ให้คำปรึกษาและสนับสนุนเพื่อส่งเสริมการโยกย้ายอย่างราบรื่นในระหว่างการใช้ซอฟต์แวร์"
-        }
-      },
-      "ThePine": {
-        "Description": "พัฒนาระบบการจัดการภายในสำหรับโรงแรม The Pine รวมถึงคุณสมบัติเช่นระบบจองและระบบชำระเงิน",
-        "PainPoint": {
-          "List1": "ระบบ backend ที่มีประสิทธิภาพน้อย",
-          "List2": "ระบบปัจจุบันมีอินเตอร์เฟซที่ใช้งานยาก, ทำให้กระบวนการทำงานไม่ราบรื่นและมีความท้าทายในการฝึกอบรมพนักงาน",
-          "List3": "ต้องการหลีกเลี่ยงค่าสมัครสมาชิกรายเดือน"
+        "ThePine": {
+          "Description": "พัฒนาระบบการจัดการภายในสำหรับโรงแรม The Pine รวมถึงคุณสมบัติเช่นระบบจองและระบบชำระเงิน"
         },
-        "Solution": {
-          "List1": "พัฒนาระบบจัดการทรัพย์สิน (PMS) ที่ใช้งานง่ายและมีความสามารถเพียงพอสำหรับความต้องการดำเนินการ",
-          "List2": "เปิดให้สามารถดูรายงานและตรวจสอบได้ง่ายว่าแขกทำการชำระเงินหรือยัง"
-        }
-      },
-      "TonsaiMarket": {
-        "Description": "พัฒนาระบบการจัดการ backend สำหรับ Tonsai Market รวมถึงคุณสมบัติเช่นการเก็บค่าเช่า, ค่าไฟฟ้า, และการจองบูธ",
-        "PainPoint": {
-          "List1": "การขาดระบบการจัดการที่ทำให้ยากต่อการตรวจสอบรายรับรายจ่าย",
-          "List2": "มีปัญหาในการตรวจสอบบัญชี",
-          "List3": "มีความท้าทายในการเก็บค่าเช่า"
-        },
-        "Solution": {
-          "List1": "พัฒนาระบบที่ทำให้การเก็บค่าเช่าและค่าไฟฟ้าเป็นเรื่องง่ายและสามารถตรวจสอบได้โดยง่าย",
-          "List2": "ทำให้การจัดการบัญชีเป็นเรื่องง่ายขึ้น",
-          "List3": "สร้างและดูรายงานกำไรขาดทุนรายเดือน, ทำให้สามารถวางแผนกลยุทธ์ในอนาคตได้ดีขึ้น"
-        }
-      }
-    },
-    "ContactSection": {
-      "TextAnimation": "เริ่มสนทนาเกี่ยวกับอนาคตดิจิทัลของธุรกิจของคุณ",
-      "SubTitle": "มาทำให้ความฝันของคุณเป็นจริงกันเถอะ",
-      "Title": "ติดต่อเรา",
-      "Button": "แบ่งปันความคิดของคุณกับเรา"
-    },
-    "Menu": {
-      "Home": "หน้าแรก",
-      "Service": "บริการของเรา",
-      "Team": "ทีมงาน",
-      "Project": "โปรเจ็ค",
-      "ContactUs": "ติดต่อเรา",
-      "Blog": "บทความ"
-    },
-    "CookieConsentPopup": {
-      "Title": "เว็บไซต์ใช้คุกกี้",
-      "Description": "เราเคารพสิทธิส่วนบุคคลของคุณและใช้คุกกี้เพื่อปรับปรุงประสบการณ์การเรียกดูของคุณ",
-      "AcceptButton": "ยอมรับ"
-    },
-    "MetaData": {
-      "Project": {
-        "Title": "ไทย CodeWork Tech | Contact Us",
-        "Description": "ไทย Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
-        "OpenGraph": {
-          "Title": "CodeWork Tech | Contact Us",
-          "Description": "ไทย Get in touch with us and make your dream come true. Let’s create something extraordinary together!"
-        }
-      },
-      "Service": {
-        "Title": "ไทย CodeWork Tech | Services",
-        "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements",
-        "OpenGraph": {
-          "Title": "CodeWork Tech | Servicess",
-          "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements"
-        }
-      },
-      "Home": {
-        "Title": "ไทย CodeWork Tech | Turning Ideas into Powerful Software Solutions",
-        "Description": "ไทย Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
-        "OpenGraph": {
-          "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
-          "Description": "ไทย Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity."
-        }
-      },
-      "Blog": {
-        "Title": "ไทย CodeWork Tech | Blogs",
-        "Description": "ไทย Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
-        "OpenGraph": {
-          "Title": "ไทย CodeWork Tech | Blogs",
-          "Description": "ไทย Explore the latest insights, trends, and expert opinions in technology and business through our blog."
-        }
-      },
-      "Team": {
-        "Title": "ไทย CodeWork Tech | Team",
-        "Description": "ไทย Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
-        "OpenGraph": {
-          "Title": "ไทย CodeWork Tech | Team",
-          "Description": "ไทย Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story."
-        }
-      },
-      "ContactUs": {
-        "Title": "ไทย CodeWork Tech | Contact Us",
-        "Description": "ไทย Contact us to turn your vision into reality. Let’s create something extraordinary together.",
-        "OpenGraph": {
-          "Title": "ไทย CodeWork Tech | Contact Us",
-          "Description": "ไทย Contact us to turn your vision into reality. Let’s create something extraordinary together."
+        "TonsaiMarket": {
+          "Description": "พัฒนาระบบการจัดการภายในสำหรับ Tonsai Market รวมถึงคุณสมบัติเช่นการเก็บค่าเช่า, ค่าไฟฟ้า, และการจองบูธ"
         }
       }
     }
+  },
+  "Service": {
+    "HeroSection": {
+      "Description": "สำรวจบริการของเราที่ถูกออกแบบเพื่อยกระดับธุรกิจของคุณ ที่นี่เรามีเครื่องมือและความเชี่ยวชาญที่คุณต้องการเพื่อประสบความสำเร็จในยุคดิจิทัล ธุรกิจของคุณคือลำดับความสำคัญของเรา"
+    }
+  },
+  "Team": {
+    "HeroSection": {
+      "Description": "เราคือทีมที่มุ่งมั่นที่จะส่งมอบผลิตภัณฑ์ที่ยอดเยี่ยมอย่างต่อเนื่องที่เหนือความคาดหวังของคุณ ทุกวัน, เราพยายามหาโอกาสในการเรียนรู้และ成長อย่างใ主 และเผชิญหน้ากับความท้าทายใหม่, ทำให้มั่นใจได้ว่าเราพัฒนาซอฟต์แวร์ระดับต้นขึ้นมาที่เหนือความคาดหวังที่สูงที่สุดของคุณ"
+    }
+  },
+  "Blog": {
+    "HeroSection": {
+      "Description": "สำรวจข้อมูลล่าสุด, แนวโน้ม, และความคิดเห็นของผู้เชี่ยวชาญในเทคโนโลยีและธุรกิจผ่านบล็อกของเรา อยู่รอดูและรับแรงบันดาลใจเมื่อเราแบ่งปันความรู้มีค่าเพื่อเสริมสร้างการเดินทางของคุณในโลกดิจิทัล"
+    }
+  },
+  "Project": {
+    "HeroSection": {
+      "Description": "สำรวจโครงการที่ประสบความสำเร็จของเรากับลูกค้าที่มีค่า ซึ่งเป็นตัวอย่างการเชี่ยวชาญและความมุ่งมั่นของเรา"
+    },
+    "Searmoor": {
+      "Description": "พัฒนาระบบภายในสำหรับบริษัททางทะเลและโลจิสติกส์เพื่อปรับให้การดำเนินงานเป็นมิตรกับสภาพแวดล้อม, ติดตามการส่งของ, และสfacilitateการสื่อสารที่มีประสิทธิภาพ",
+      "PainPoint": {
+        "List1": "ความยากลำบากกับระบบออฟไลน์: ระบบปัจจุบันที่ทำงานแบบออฟไลน์ทำให้เกิดความท้าทายในการค้นหาและติดตามเอกสารอย่างมีประสิทธิภาพ, ทำให้มีประสบการณ์ผู้ใช้ที่ใช้เวลามากและน่าหงุดหงิด",
+        "List2": "เครื่องมือที่ไม่สามารถทำงานร่วมกับบุคคลที่สาม: เครื่องมือบุคคลที่สามปัจจุบันไม่สอดคล้องกับความต้องการเฉพาะของลูกค้า, ทำให้เกิดช่องโหว่ทางฟังก์ชันและปัญหาการผสมผสานที่ขัดขวางการทำงานและการผลิตภาพ"
+      },
+      "Solution": {
+        "List1": "ปรับปรุงกระบวนการทั้งหมดและทำให้เป็นดิจิทัล, การเปลี่ยนจากระบบออฟไลน์เป็นระบบออนไลน์เพื่อเพิ่มประสิทธิภาพและสามารถติดตามได้มีประสิทธิภาพมากขึ้น",
+        "List2": "ปรับทำซอฟต์แวร์ที่สอดคล้องกับความต้องการที่เฉพาะเจาะจงของลูกค้า, จึงมั่นใจได้ว่ามีประสบการณ์ที่ไม่มีปัญหาและเป็นมิตรกับผู้ใช้",
+        "List3": "ให้คำปรึกษาและสนับสนุนเพื่อส่งเสริมการโยกย้ายอย่างราบรื่นในระหว่างการใช้ซอฟต์แวร์"
+      }
+    },
+    "ThePine": {
+      "Description": "พัฒนาระบบการจัดการภายในสำหรับโรงแรม The Pine รวมถึงคุณสมบัติเช่นระบบจองและระบบชำระเงิน",
+      "PainPoint": {
+        "List1": "ระบบ backend ที่มีประสิทธิภาพน้อย",
+        "List2": "ระบบปัจจุบันมีอินเตอร์เฟซที่ใช้งานยาก, ทำให้กระบวนการทำงานไม่ราบรื่นและมีความท้าทายในการฝึกอบรมพนักงาน",
+        "List3": "ต้องการหลีกเลี่ยงค่าสมัครสมาชิกรายเดือน"
+      },
+      "Solution": {
+        "List1": "พัฒนาระบบจัดการทรัพย์สิน (PMS) ที่ใช้งานง่ายและมีความสามารถเพียงพอสำหรับความต้องการดำเนินการ",
+        "List2": "เปิดให้สามารถดูรายงานและตรวจสอบได้ง่ายว่าแขกทำการชำระเงินหรือยัง"
+      }
+    },
+    "TonsaiMarket": {
+      "Description": "พัฒนาระบบการจัดการ backend สำหรับ Tonsai Market รวมถึงคุณสมบัติเช่นการเก็บค่าเช่า, ค่าไฟฟ้า, และการจองบูธ",
+      "PainPoint": {
+        "List1": "การขาดระบบการจัดการที่ทำให้ยากต่อการตรวจสอบรายรับรายจ่าย",
+        "List2": "มีปัญหาในการตรวจสอบบัญชี",
+        "List3": "มีความท้าทายในการเก็บค่าเช่า"
+      },
+      "Solution": {
+        "List1": "พัฒนาระบบที่ทำให้การเก็บค่าเช่าและค่าไฟฟ้าเป็นเรื่องง่ายและสามารถตรวจสอบได้โดยง่าย",
+        "List2": "ทำให้การจัดการบัญชีเป็นเรื่องง่ายขึ้น",
+        "List3": "สร้างและดูรายงานกำไรขาดทุนรายเดือน, ทำให้สามารถวางแผนกลยุทธ์ในอนาคตได้ดีขึ้น"
+      }
+    }
+  },
+  "ContactSection": {
+    "TextAnimation": "เริ่มสนทนาเกี่ยวกับอนาคตดิจิทัลของธุรกิจของคุณ",
+    "SubTitle": "มาทำให้ความฝันของคุณเป็นจริงกันเถอะ",
+    "Title": "ติดต่อเรา",
+    "Button": "แบ่งปันความคิดของคุณกับเรา"
+  },
+  "Menu": {
+    "Home": "หน้าแรก",
+    "Service": "บริการของเรา",
+    "Team": "ทีมงาน",
+    "Project": "โปรเจ็ค",
+    "ContactUs": "ติดต่อเรา",
+    "Blog": "บทความ"
+  },
+  "CookieConsentPopup": {
+    "Title": "เว็บไซต์ใช้คุกกี้",
+    "Description": "เราเคารพสิทธิส่วนบุคคลของคุณและใช้คุกกี้เพื่อปรับปรุงประสบการณ์การเรียกดูของคุณ",
+    "AcceptButton": "ยอมรับ"
+  },
+  "MetaData": {
+    "Project": {
+      "Title": "ไทย CodeWork Tech | Contact Us",
+      "Description": "ไทย Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Contact Us",
+        "Description": "ไทย Get in touch with us and make your dream come true. Let’s create something extraordinary together!"
+      }
+    },
+    "Service": {
+      "Title": "ไทย CodeWork Tech | Services",
+      "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Servicess",
+        "Description": "ไทย Discover our service offerings, thoughtfully designed to address your business requirements"
+      }
+    },
+    "Home": {
+      "Title": "ไทย CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+      "Description": "ไทย Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+        "Description": "ไทย Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity."
+      }
+    },
+    "Blog": {
+      "Title": "ไทย CodeWork Tech | Blogs",
+      "Description": "ไทย Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
+      "OpenGraph": {
+        "Title": "ไทย CodeWork Tech | Blogs",
+        "Description": "ไทย Explore the latest insights, trends, and expert opinions in technology and business through our blog."
+      }
+    },
+    "Team": {
+      "Title": "ไทย CodeWork Tech | Team",
+      "Description": "ไทย Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
+      "OpenGraph": {
+        "Title": "ไทย CodeWork Tech | Team",
+        "Description": "ไทย Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story."
+      }
+    },
+    "ContactUs": {
+      "Title": "ไทย CodeWork Tech | Contact Us",
+      "Description": "ไทย Contact us to turn your vision into reality. Let’s create something extraordinary together.",
+      "OpenGraph": {
+        "Title": "ไทย CodeWork Tech | Contact Us",
+        "Description": "ไทย Contact us to turn your vision into reality. Let’s create something extraordinary together."
+      }
+    }
   }
+}

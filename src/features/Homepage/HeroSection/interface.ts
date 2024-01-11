@@ -9,5 +9,7 @@ export interface HeroSectionProps {
   circleRightRef: React.RefObject<HTMLDivElement>;
   isOpen:boolean
   setIsOpen: (value: boolean) => void;
+  currentLang: string,
+  t: any
 }
 

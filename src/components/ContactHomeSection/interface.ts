@@ -3,4 +3,5 @@ export interface ContactHomeSectionProps {
     textMessageRef: React.RefObject<HTMLDivElement>;
     isOpen:boolean,
     setIsOpen:(value: boolean) => void;
+    t: any
   } 
