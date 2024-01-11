@@ -8,14 +8,13 @@ import { OurProject } from "@/features/Homepage/OurProjectSection/OurProject";
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
-import { useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import OurService from "@/features/Homepage/OurServiceSection/OurService";
 import SocialContactFloating from "@/components/SocialContactFloating/SocialContactFloating";
-import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
-import TagManager from "react-gtm-module";
+import withHomePage from "./withHomePage";
+import { HomePageProps } from "./interface";
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
@@ -25,75 +24,18 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-export default function HomePage() {
-  const [hasConsent, setHasConsent] = useState(false);
-  const rootPage = useRef(null);
-  const ref1 = useRef(null);
-  const ref2 = useRef(null);
-  const ref3 = useRef(null);
-  const ref4 = useRef(null);
-  const ref5 = useRef(null);
-
-  const [activeSection, setActiveSection] = useState(1);
-
-  const scrollToSection = (sectionNumber: number) => {
-    // Find the corresponding section reference
-    const sectionRefs = [ref1, ref2, ref3, ref4, ref5];
-
-    // Ensure that sectionRef is of the correct type
-    const sectionRef = sectionRefs[
-      sectionNumber - 1
-    ] as React.RefObject<HTMLElement> | null;
-
-    // Check if the section reference exists
-    if (sectionRef && sectionRef.current) {
-      // Scroll to the section smoothly
-      sectionRef.current.scrollIntoView({ behavior: "smooth" });
-    }
-  };
-
-  useLayoutEffect(() => {
-    let ctx = gsap.context(() => {
-      const refs = [ref1, ref2, ref3, ref4, ref5];
-
-      refs.forEach((ref, index) => {
-        if (ref.current) {
-          ScrollTrigger.create({
-            trigger: ref.current,
-            markers: false,
-            start: "top center",
-            end: "bottom center",
-            onEnter: () => {
-              setActiveSection(index + 1);
-              handleSocialContactVisibility(index + 1 === 1);
-            },
-            onEnterBack: () => {
-              setActiveSection(index + 1);
-              handleSocialContactVisibility(index + 1 === 1);
-            },
-          });
-        }
-      });
-    }, rootPage);
-
-    return () => ctx.revert();
-  }, [ref1, ref2, ref3, ref4, ref5]);
-
-  useEffect(() => {
-    const userHasGivenConsent =
-      typeof window !== "undefined" &&
-      localStorage.getItem(LOCAL_STORAGE_PDPA_KEY);
-    if (userHasGivenConsent) {
-      setHasConsent(true);
-      TagManager.initialize({ gtmId: GTM_PRODUCTION });
-    }
-  }, [hasConsent]);
-
-  const handleSocialContactVisibility = (isRef1:boolean) => {
-    const opacityValue = isRef1 ? 0 : 1;
-    gsap.to(".social-contact-floating", { opacity: opacityValue, duration: 0.5 });
-  };
-
+const HomePage = ({
+  hasConsent,
+  setHasConsent,
+  rootPage,
+  ref1,
+  ref2,
+  ref3,
+  ref4,
+  ref5,
+  scrollToSection,
+  activeSection,
+}: HomePageProps) => {
   return (
     <main className={`${poppinsFont.className} `} ref={rootPage}>
       <div className="section" ref={ref1}>
@@ -167,10 +109,11 @@ export default function HomePage() {
         ></div>
       </div>
 
-     <div className="social-contact-floating">
-     <SocialContactFloating />
-     </div>
-    
+      <div className="social-contact-floating">
+        <SocialContactFloating />
+      </div>
     </main>
   );
-}
+};
+const WrappedComponent = withHomePage(HomePage);
+export default WrappedComponent;
