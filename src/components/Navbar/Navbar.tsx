@@ -21,15 +21,13 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
-  const pathName = usePathname();
-  const router = useRouter();
-  const currentLang = pathName.split("/")[1];
-  const switchLang = (lang: string) => {
-    const newPathname = pathName.replace(`/${currentLang}`, `/${lang}`);
-    router.push(newPathname);
-  };
-
+const Navbar = ({
+  sectionNavRef,
+  onClikcToggle,
+  isScrolled,
+  currentLang,
+  switchLang,
+}: NavbarProps) => {
   return (
     <>
       <div
@@ -44,16 +42,16 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
         </div>
 
         <div className="flex gap-x-2 items-center">
+          <div className="flex justify-center items-center gap-x-2 text-white">
+            <button onClick={() => switchLang("th")}>TH</button> |
+            <button onClick={() => switchLang("en")}>EN</button>
+          </div>
+
           <div
             className="text-2xl text-neutral-50 cursor-pointer hover:bg-neutral-850 rounded-full p-2 "
             onClick={onClikcToggle}
           >
             <IoMdMenu />
-          </div>
-
-          <div className="flex justify-center items-center gap-x-2 text-white">
-            <button onClick={() => switchLang("th")}>TH</button> | 
-            <button onClick={() => switchLang("en")}>EN</button>
           </div>
         </div>
       </div>
@@ -70,7 +68,7 @@ const Navbar = ({ sectionNavRef, onClikcToggle, isScrolled }: NavbarProps) => {
           {/* nav */}
           <div className="p-2 cursor-pointer w-full px-5 sm:px-12 py-3 flex justify-between items-center h-[70px]">
             <div className="text-neutral-1000" onClick={onClikcToggle}>
-              <Link href="/en">
+              <Link href={`/${currentLang}`}>
                 <picture>
                   <source srcSet="/logo/codework_white.png" type="image/webp" />
                   <img

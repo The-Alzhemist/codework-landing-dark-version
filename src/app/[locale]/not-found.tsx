@@ -1,10 +1,9 @@
 
 
 import Link from "next/link";
-import { redirect, usePathname } from "next/navigation";
+
 
 export default function NotFound() {
- 
 
   return (
     <div className="w-full h-screen flex flex-col justify-center items-center">

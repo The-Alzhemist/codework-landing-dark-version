@@ -2,7 +2,10 @@
   "Home": {
     "HeroSection": {
       "Greeting": "Hello!",
-      "Description": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software."
+      "Description": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software.",
+      "LetTalkWithUs": "Let's talk with us",
+      "Or": "OR",
+      "LeaveMessage": "Leave a message"
     },
     "OurPartner": {
       "Description": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."

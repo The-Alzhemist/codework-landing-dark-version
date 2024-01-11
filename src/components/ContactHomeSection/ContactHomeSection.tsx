@@ -12,8 +12,9 @@ const ContactHomeSection = ({
   root,
   textMessageRef,
   setIsOpen,
+  t
 }: ContactHomeSectionProps) => {
-  const t = useTranslations("ContactSection");
+
 
   return (
     <section

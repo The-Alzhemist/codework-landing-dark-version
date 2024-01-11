@@ -6,9 +6,7 @@ import withOurPartner from "./withOurPartner";
 import { OurPartnerProps } from "./interface";
 import { useTranslations } from "next-intl";
 
-const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
-  const t = useTranslations('Home');
-
+const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
   return (
     <section
       className="h-screen  relative py-10  md:py-[50px] mx-auto px-5 lg:px-[0px] sm:pt-0  bg-neutral-1000 flex flex-col justify-center items-center"
@@ -36,7 +34,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               <Paragraph
                 className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
               >
-                 {t("OurPartner.Description")}
+                {t("OurPartner.Description")}
               </Paragraph>
             </div>
           </div>

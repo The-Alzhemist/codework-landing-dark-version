@@ -1,6 +1,7 @@
 import React, { useEffect, useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { OurPartnerProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const withOurPartner = (Component: React.FC<OurPartnerProps>) => {
   const Hoc = () => {
@@ -8,6 +9,8 @@ const withOurPartner = (Component: React.FC<OurPartnerProps>) => {
     const h1Ref = useRef<HTMLDivElement>(null);
     const pRef = useRef<HTMLDivElement>(null);
     const btnRef = useRef<HTMLDivElement>(null);
+
+    const t = useTranslations('Home');
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -45,6 +48,7 @@ const withOurPartner = (Component: React.FC<OurPartnerProps>) => {
       h1Ref,
       pRef,
       btnRef,
+      t
     };
     return <Component {...newProps} />;
   };
