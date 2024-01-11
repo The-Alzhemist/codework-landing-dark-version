@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 
 export interface ProjectListProps {
   projectName: string;
@@ -5,4 +6,9 @@ export interface ProjectListProps {
   projectTasks: { task: string }[];
   projectImage: string;
   projectImageWebP: string;
+}
+
+export interface OurProjectProps {
+  t: any;
+  projectList: ProjectListProps[];
 }
