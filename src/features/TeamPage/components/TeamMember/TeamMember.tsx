@@ -26,7 +26,7 @@ const teamMemberList: TeamMemberProps[] = [
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
     name: "Pongsakorn (Ter)",
-    position: "Head of Product and Deliverable",
+    position: "Head of Product Development & Co-founder",
   },
   {
     img: "/images/teamPage/ice.jpg",
@@ -63,15 +63,7 @@ const teamMemberList: TeamMemberProps[] = [
     imgWebP: "/images/teamPage/nueng.webp",
     name: "Aphiwit (Nueng)",
     position: "Front-end Developer",
-  },
-
-
-  {
-    img: "/images/teamPage/kawpoon.jpg",
-    imgWebP: "/images/teamPage/kawpoon.webp",
-    name: "Chantisa (Kawpoon)",
-    position: "UX/UI Designer",
-  },
+  }
 ];
 
 function TeamMember() {
@@ -101,7 +93,7 @@ function TeamMember() {
             </h2>
           
               <Paragraph
-                className={` text-white font-light opacity-80 text-xs sm:text-sm`}
+                className={` text-white font-light opacity-80 text-xs sm:text-sm max-w-[220px]`}
               >
                 {item.position}
               </Paragraph>
