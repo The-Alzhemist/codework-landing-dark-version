@@ -93,7 +93,7 @@ function TeamMember() {
             </h2>
           
               <Paragraph
-                className={` text-white font-light opacity-80 text-xs sm:text-sm`}
+                className={` text-white font-light opacity-80 text-xs sm:text-sm max-w-[220px]`}
               >
                 {item.position}
               </Paragraph>
