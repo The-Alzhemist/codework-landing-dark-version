@@ -12,10 +12,9 @@ const ContactHomeSection = ({
   root,
   textMessageRef,
   setIsOpen,
-  t
+  t,
+  currentLang,
 }: ContactHomeSectionProps) => {
-
-
   return (
     <section
       ref={root}
@@ -43,7 +42,7 @@ const ContactHomeSection = ({
           >
             <PrimaryButton
               className=" py-3 text-base sm:text-lg hover:scale-90 mb-5 lg:mb-0 min-w-[220px]"
-              pathName="/contact-us"
+              pathName={`${currentLang}/contact-us`}
             >
               {t("Button")}
             </PrimaryButton>
