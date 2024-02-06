@@ -26,7 +26,13 @@ const teamMemberList: TeamMemberProps[] = [
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
     name: "Pongsakorn (Ter)",
-    position: "Head of Product Development",
+    position: "Project manager",
+  },
+  {
+    img: "/images/teamPage/man.jpg",
+    imgWebP: "/images/teamPage/man.webp",
+    name: "Pusit (Man)",
+    position: "Project manager",
   },
   {
     img: "/images/teamPage/ice.jpg",
@@ -34,12 +40,7 @@ const teamMemberList: TeamMemberProps[] = [
     name: "Pornjira (Ice)",
     position: "Operations Manager",
   },
-  {
-    img: "/images/teamPage/man.jpg",
-    imgWebP: "/images/teamPage/man.webp",
-    name: "Pusit (Man)",
-    position: "Product manager",
-  },
+
   {
     img: "/images/teamPage/ford.jpg",
     imgWebP: "/images/teamPage/ford.webp",
