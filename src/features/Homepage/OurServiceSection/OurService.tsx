@@ -32,7 +32,7 @@ const OurService = ({
           </h2>
           <div ref={pref}>
             <Paragraph
-              className={`lg:max-w-[970px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
+              className={`lg:max-w-[970px] text-sm sm:text-lg font-light text-white opacity-80 text-center`}
             >
               {t("OurService.Description")}
             </Paragraph>
