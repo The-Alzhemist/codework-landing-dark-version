@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 
 import withNavbar from "./withNavbar";
 import { NavbarRight } from "./components/NavbarRight/NavbarRight";
@@ -28,6 +28,10 @@ const Navbar = ({
   currentLang,
   switchLang,
 }: NavbarProps) => {
+  const handleChange = (e: any) => {
+    switchLang(e.target.value);
+  };
+
   return (
     <>
       <div
@@ -42,9 +46,19 @@ const Navbar = ({
         </div>
 
         <div className="flex gap-x-2 items-center">
-          <div className="flex justify-center items-center gap-x-2 text-white">
+          {/* <div className="flex justify-center items-center gap-x-2 text-white">
             <button onClick={() => switchLang("th")}>TH</button> |
             <button onClick={() => switchLang("en")}>EN</button>
+          </div> */}
+          <div>
+            <select
+              value={currentLang}
+              onChange={handleChange}
+              className="text-white border border-secondary-500 bg-transparent px-5 py-2 rounded-md text-xs"
+            >
+              <option value="th">ภาษาไทย</option>
+              <option value="en">English</option>
+            </select>
           </div>
 
           <div
