@@ -8,9 +8,11 @@
       "LeaveMessage": "Leave a message"
     },
     "OurPartner": {
+      "title": "Partner",
       "Description": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."
     },
     "OurService": {
+      "title": "Service",
       "Description": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.",
       "UxUi": "Focusing on creating intuitive and visually appealing digital interfaces that enhance user experience and engagement",
       "ProjectSolution": "Collaborating closely with clients to identify their unique challenges and requirements",
@@ -20,6 +22,7 @@
       "DigitalTrasformConsult": "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences."
     },
     "OurProject": {
+      "title": "Project",
       "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication.",
       "Swiper": {
         "Seamoor": {
@@ -36,21 +39,25 @@
   },
   "Service": {
     "HeroSection": {
+      "title": "Service",
       "Description": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority."
     }
   },
   "Team": {
     "HeroSection": {
+      "title": "Team",
       "Description": "We are a dedicated team committed to the consistent delivery of exceptional products that surpass your expectations. Every day, we proactively seek opportunities for learning and growth to tackle new challenges, ensuring the development of top-tier software that exceeds your highest aspirations."
     }
   },
   "Blog": {
     "HeroSection": {
+      "title": "Blog",
       "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog. Stay informed and inspired as we share valuable knowledge to empower your journey in the digital world."
     }
   },
   "Project": {
     "HeroSection": {
+      "title": "Project",
       "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
     },
     "Searmoor": {
@@ -182,6 +189,11 @@
         "Title": "CodeWork Tech | Contact Us",
         "Description": "Contact us to turn your vision into reality. Let’s create something extraordinary together."
       }
+    }
+  },
+  "Global": {
+    "Button": {
+      "Contact": "Contacts"
     }
   }
 }

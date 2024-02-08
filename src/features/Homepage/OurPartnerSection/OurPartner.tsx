@@ -4,7 +4,6 @@ import { ourPartnerSectionText } from "@/constants/homePage/ourPartnerText";
 import React from "react";
 import withOurPartner from "./withOurPartner";
 import { OurPartnerProps } from "./interface";
-import { useTranslations } from "next-intl";
 
 const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
   return (
@@ -27,12 +26,12 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
               ref={h1Ref}
             >
               <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
-                Partners.
+                {t("OurPartner.title")}
               </span>
             </h2>
             <div ref={pRef}>
               <Paragraph
-                className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
+                className={`lg:max-w-[1000px] text-sm sm:text-lg font-light text-white opacity-80 text-center`}
               >
                 {t("OurPartner.Description")}
               </Paragraph>
