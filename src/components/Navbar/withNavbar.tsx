@@ -3,6 +3,8 @@ import { NavbarProps } from "./interface";
 
 import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
 import { gsap } from "gsap";
+import { useLocale } from "next-intl";
+import { usePathname, useRouter } from "next/navigation";
 
 const withNavbar = (Component: React.FC<NavbarProps>) => {
   const Hoc = () => {
@@ -13,6 +15,14 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
 
     // Check if NavbarContext exists before extracting values
     const { isOpen, setIsOpen } = NavbarContext || { isOpen: false, setIsOpen: () => {} };
+
+    const pathname = usePathname();
+    const router = useRouter();
+    const currentLang = pathname.includes("en") ? "en" : "th";
+    const switchLang = (lang: string) => {
+      const newPathname = pathname.replace(`/${currentLang}`, `/${lang}`);
+      router.push(newPathname);
+    };
 
     useEffect(() => {
       if (NavbarContext) {
@@ -50,6 +60,8 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
       sectionNavRef,
       onClikcToggle,
       isScrolled,
+      currentLang,
+      switchLang,
     };
 
     return <Component {...newProps} />;

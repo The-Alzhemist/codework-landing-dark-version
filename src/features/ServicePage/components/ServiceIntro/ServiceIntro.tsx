@@ -6,6 +6,7 @@ import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/Backgrou
 
 import witServiceIntro from "./withServiceIntro";
 import { ServiceIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const ServiceIntro = ({
   root,
@@ -14,6 +15,7 @@ const ServiceIntro = ({
   imgRef,
   circleLeftRef,
   circleRightRef,
+  t,
 }: ServiceIntroProps) => {
   return (
     <section
@@ -31,7 +33,7 @@ const ServiceIntro = ({
         <div className="z-0 w-[100%] lg:w-[100%]  relative flex flex-col items-left text-left justify-center sm:p-0">
           <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
             <div className="text-4xl md:text-6xl mb-3  text-primary-100">
-              SERVICES.
+              {t("HeroSection.title")}
             </div>
           </h1>
 
@@ -39,26 +41,24 @@ const ServiceIntro = ({
             <Paragraph
               className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
             >
-              <span>
-                {`Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.`}
-              </span>
+              <span>{t("HeroSection.Description")}</span>
             </Paragraph>
-          </div>         
+          </div>
         </div>
 
         <picture ref={imgRef}>
-            <source
-              srcSet="images/servicePage/serviceIntro/services-herosection-element.png"
-              type="image/webp"
-            />
-            <img
-              src="images/servicePage/serviceIntro/services-herosection-element.png"
-              alt="services-herosection-element cover image"
-              title="services-herosection-element cover image"
-              loading="lazy"
-              className="max-w-[200px] lg:max-w-[480px] rounded-lg mb-5 sm:mb-0 ml-24 sm:ml-0"
-            />
-          </picture>
+          <source
+            srcSet="/images/servicePage/serviceIntro/services-herosection-element.png"
+            type="image/webp"
+          />
+          <img
+            src="/images/servicePage/serviceIntro/services-herosection-element.png"
+            alt="services-herosection-element cover image"
+            title="services-herosection-element cover image"
+            loading="lazy"
+            className="max-w-[200px] lg:max-w-[480px] rounded-lg mb-5 sm:mb-0 ml-24 sm:ml-0"
+          />
+        </picture>
       </div>
     </section>
   );

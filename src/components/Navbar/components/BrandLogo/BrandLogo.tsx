@@ -1,9 +1,13 @@
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export const CodeworkTechLogo = () => {
+  const pathname = usePathname();
+  const currentLang = pathname.includes('en') ? 'en' : 'th'
+  
     return (
       <>
-        <Link href="/">
+        <Link href={`/${currentLang}`}>
           <picture>
             <source
               srcSet="/logo/codework-tech-logo-white-transpatent.webp"

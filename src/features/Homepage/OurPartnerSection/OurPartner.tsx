@@ -5,7 +5,7 @@ import React from "react";
 import withOurPartner from "./withOurPartner";
 import { OurPartnerProps } from "./interface";
 
-const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
+const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
   return (
     <section
       className="h-screen  relative py-10  md:py-[50px] mx-auto px-5 lg:px-[0px] sm:pt-0  bg-neutral-1000 flex flex-col justify-center items-center"
@@ -26,16 +26,14 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef }: OurPartnerProps) => {
               ref={h1Ref}
             >
               <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
-                Partners.
+                {t("OurPartner.title")}
               </span>
             </h2>
             <div ref={pRef}>
               <Paragraph
-                className={`lg:max-w-[1000px] text-sm sm:text-md font-light text-white opacity-80 text-center`}
+                className={`lg:max-w-[1000px] text-sm sm:text-lg font-light text-white opacity-80 text-center`}
               >
-                {`We take pride in our collaboration with these esteemed companies.
-Together, we bring you cutting-edge solutions that propel your business into the future.
-Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork.`}
+                {t("OurPartner.Description")}
               </Paragraph>
             </div>
           </div>

@@ -1,0 +1,199 @@
+{
+  "Home": {
+    "HeroSection": {
+      "Greeting": "Hello!",
+      "Description": "Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software.",
+      "LetTalkWithUs": "Let's talk with us",
+      "Or": "OR",
+      "LeaveMessage": "Leave a message"
+    },
+    "OurPartner": {
+      "title": "Partner",
+      "Description": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."
+    },
+    "OurService": {
+      "title": "Service",
+      "Description": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority.",
+      "UxUi": "Focusing on creating intuitive and visually appealing digital interfaces that enhance user experience and engagement",
+      "ProjectSolution": "Collaborating closely with clients to identify their unique challenges and requirements",
+      "WebDevelopment": "The process of building and maintaining websites, utilizing various programming languages and frameworks to create responsive and dynamic online platforms.",
+      "MobileDevelopment": "Elevate your business with our mobile development expertise. We specialize in creating intuitive and customized mobile apps for both iOS and Android platforms.",
+      "DigitalMkt": "Unlock the full potential of your online presence with our digital marketing strategies. From SEO and social media marketing to targeted campaigns",
+      "DigitalTrasformConsult": "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences."
+    },
+    "OurProject": {
+      "title": "Project",
+      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication.",
+      "Swiper": {
+        "Seamoor": {
+          "Description": "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication."
+        },
+        "ThePine": {
+          "Description": "Develop an internal backend management system for The Pine Hotel, including features such as reservation and payment systems."
+        },
+        "TonsaiMarket": {
+          "Description": "Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations."
+        }
+      }
+    }
+  },
+  "Service": {
+    "HeroSection": {
+      "title": "Service",
+      "Description": "Explore our services tailored to elevate your business. We're here to provide the tools and expertise you need to succeed in the digital era. Your business, our priority."
+    }
+  },
+  "Team": {
+    "HeroSection": {
+      "title": "Team",
+      "Description": "We are a dedicated team committed to the consistent delivery of exceptional products that surpass your expectations. Every day, we proactively seek opportunities for learning and growth to tackle new challenges, ensuring the development of top-tier software that exceeds your highest aspirations."
+    }
+  },
+  "Blog": {
+    "HeroSection": {
+      "title": "Blog",
+      "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog. Stay informed and inspired as we share valuable knowledge to empower your journey in the digital world."
+    }
+  },
+  "Project": {
+    "HeroSection": {
+      "title": "Project",
+      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
+    },
+    "Searmoor": {
+      "Description": "Develop an internal system for a marine and logistics company, optimizing operations, tracking shipments, and facilitating efficient communication.",
+      "PainPoint": {
+        "List1": "Difficulty with Offline System: The current offline system presents challenges in efficiently locating and tracking documents, leading to a time-consuming and frustrating user experience.",
+        "List2": "Incompatible Third-Party Tools: The current third-party tools don't align with the client's specific requirements, resulting in functional gaps and integration issues that hinder workflow and productivity."
+      },
+      "Solution": {
+        "List1": "Streamline and digitize all processes, transitioning from offline to online platforms for enhanced trackability and efficiency.",
+        "List2": "Tailor the software that perfectly aligns with the client's unique requirements, ensuring a seamless and user-friendly experience.",
+        "List3": "Offer guidance and support to facilitate a smooth transition during software implementation."
+      }
+    },
+    "ThePine": {
+      "Description": "Develop an internal backend management system for The Pine Hotel, including features such as reservation and payment systems.",
+      "PainPoint": {
+        "List1": "The existing backend system lacks efficiency.",
+        "List2": "The current system has a user interface that is difficult to use, resulting in a non-smooth workflow and employee training challenges.",
+        "List3": "The preference is to avoid monthly subscription costs."
+      },
+      "Solution": {
+        "List1": "Develop a Property Management System (PMS) that is user-friendly and offers sufficient functionality for operational needs.",
+        "List2": "Enable the ability to view reports and easily check whether guests have made payments."
+      }
+    },
+    "TonsaiMarket": {
+      "Description": "Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations.",
+      "PainPoint": {
+        "List1": "The absence of a back-end management system makes it difficult to monitor income and expenses.",
+        "List2": "There are issues with reconciling accounts.",
+        "List3": "Challenges exist in rent collection."
+      },
+      "Solution": {
+        "List1": "Develop a system that simplifies rent and electricity fee collection and allows for easy monitoring.",
+        "List2": "Make it easier to manage accounts.",
+        "List3": "Generate and view monthly profit and loss reports, enabling better future strategy planning."
+      }
+    }
+  },
+  "ContactUs": {
+    "Title": "Contact us",
+    "SubTitle": "Wanna talk with us?",
+    "Form": {
+      "TellUsYourIdea": "Tell us your idea",
+      "Budget": "Your budget? (optional)",
+      "TimeSlot": "Preferred time slots",
+      "TimePerriod": "Time Period",
+      "Name": "Name",
+      "PhoneNumber": "Phone number",
+      "Email": "Email",
+      "CompanyName": "Company name",
+      "FileAttachment": "File Attachment",
+      "HowDidYouHearAboutUs": "How did you hear about us?",
+      "ShortMessage": "*We will be in touch with you shortly through the number (+66) 63 849 4282",
+      "SubmitButton": "Submit your idea"
+    },
+    "SentSuccessPopup": {
+      "Title": "Thank you for sharing your idea with us!",
+      "Description": "We will get back to you as soon as possible. Let the journey with CodeWork"
+    },
+    "OtherContactChannel": "Other contact channels",
+    "Address": "3774 Sukhumvit road, South Bang Na, Bang Na, Bangkok 10260"
+  },
+  "ContactSection": {
+    "TextAnimation": "Let's start a conversation about your business's digital future",
+    "SubTitle": "Let’s make your dream come true",
+    "Title": "Contact Us",
+    "Button": "Share us your idea"
+  },
+  "Menu": {
+    "Home": "Home",
+    "Service": "Service",
+    "Team": "Team",
+    "Project": "Project",
+    "ContactUs": "ContactUs",
+    "Blog": "Blog"
+  },
+  "CookieConsentPopup": {
+    "Title": "The website uses cookies",
+    "Description": "We respect your privacy and use cookies to improve your browsing experience.",
+    "AcceptButton": "Accept"
+  },
+  "MetaData": {
+    "Project": {
+      "Title": "CodeWork Tech | Project",
+      "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Project",
+        "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication."
+      }
+    },
+    "Service": {
+      "Title": "CodeWork Tech | Services",
+      "Description": "Discover our service offerings, thoughtfully designed to address your business requirements",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Servicess",
+        "Description": "Discover our service offerings, thoughtfully designed to address your business requirements"
+      }
+    },
+    "Home": {
+      "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+      "Description": "Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Turning Ideas into Powerful Software Solutions",
+        "Description": "Bring innovation to life with our innovative software solutions. From UX/UI design to digital transformation consultant, we deliver excellence in scalability, reliability, and creativity."
+      }
+    },
+    "Blog": {
+      "Title": "CodeWork Tech | Blog",
+      "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Blog",
+        "Description": "Explore the latest insights, trends, and expert opinions in technology and business through our blog."
+      }
+    },
+    "Team": {
+      "Title": "CodeWork Tech | Team",
+      "Description": "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Team",
+        "Description": "Meet the talented team who drive the achievements at CodeWork Tech. Our exceptional team is the backbone of our success story."
+      }
+    },
+    "ContactUs": {
+      "Title": "CodeWork Tech | Contact Us",
+      "Description": "Contact us to turn your vision into reality. Let’s create something extraordinary together.",
+      "OpenGraph": {
+        "Title": "CodeWork Tech | Contact Us",
+        "Description": "Contact us to turn your vision into reality. Let’s create something extraordinary together."
+      }
+    }
+  },
+  "Global": {
+    "Button": {
+      "Contact": "Contacts"
+    }
+  }
+}

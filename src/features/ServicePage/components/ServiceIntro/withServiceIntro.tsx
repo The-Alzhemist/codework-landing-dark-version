@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { ServiceIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const witServiceIntro = (Component: React.FC<ServiceIntroProps>) => {
   const Hoc = () => {
@@ -12,6 +13,8 @@ const witServiceIntro = (Component: React.FC<ServiceIntroProps>) => {
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
+
+    const t = useTranslations("Service");
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -69,6 +72,7 @@ const witServiceIntro = (Component: React.FC<ServiceIntroProps>) => {
       imgRef,
       circleLeftRef,
       circleRightRef,
+      t
     };
     return <Component {...newProps} />;
   };

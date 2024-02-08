@@ -1,7 +1,9 @@
 import Paragraph from "@/components/typography/paragraph/Paragraph";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 export default function ProjectSeamoor() {
+  const t = useTranslations("Project");
   return (
     <section className="relative py-10 md:py-[50px] mx-auto bg-neutral-1000 ">
       {/* 1 */}
@@ -57,26 +59,18 @@ export default function ProjectSeamoor() {
 
           {/* p */}
           <Paragraph className="text-base font-light opacity-80 text-white mb-5">
-            {` Develop an internal system for a marine and logistics company,
-            optimizing operations, tracking shipments, and facilitating
-            efficient communication.`}
+            {t('Searmoor.Description')}
           </Paragraph>
 
           <div className="text-base font-light opacity-80 text-white mb-5">
             <h3 className="font-semibold mb-2">Pain point</h3>
             <ul>
               <li className="mb-2">
-                {` - Difficulty with Offline System: The current offline system
-                presents challenges in efficiently locating and tracking
-                documents, leading to a time-consuming and frustrating user
-                experience.`}
+              - {t('Searmoor.PainPoint.List1')}
               </li>
 
               <li>
-                {` - Incompatible Third-Party Tools: The current third-party tools
-                don't align with the client's specific requirements, resulting
-                in functional gaps and integration issues that hinder workflow
-                and productivity.`}
+              - {t('Searmoor.PainPoint.List2')}
               </li>
             </ul>
           </div>
@@ -85,20 +79,14 @@ export default function ProjectSeamoor() {
             <h3 className="font-semibold mb-2">Solution</h3>
             <ul>
               <li className="mb-2">
-                {` - Streamline and digitize all processes, transitioning from
-                offline to online platforms for enhanced trackability and
-                efficiency.`}
               </li>
 
               <li className="mb-2">
-                {`- Tailor the software that perfectly aligns with the client's
-                unique requirements, ensuring a seamless and user-friendly
-                experience.`}
+              - {t('Searmoor.Solution.List2')}
               </li>
 
               <li>
-                {`  - Offer guidance and support to facilitate a smooth transition
-                during software implementation.`}
+              - {t('Searmoor.Solution.List3')}
               </li>
             </ul>
           </div>
