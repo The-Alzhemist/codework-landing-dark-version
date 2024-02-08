@@ -1,10 +1,14 @@
-"use client"
+"use client";
 
 import React from "react";
 
 import { AiFillMessage } from "react-icons/ai";
 import withSocialContactFloating from "./withSocialContactFloating";
-import { ContactLink, SocialContactFloatingProps, SocialLink } from "./interface";
+import {
+  ContactLink,
+  SocialContactFloatingProps,
+  SocialLink,
+} from "./interface";
 
 const SocialContactFloating = ({
   isClicked,
@@ -12,6 +16,7 @@ const SocialContactFloating = ({
   socialListRef,
   socialLinks,
   contactLinks,
+  t,
 }: SocialContactFloatingProps) => {
   return (
     <div
@@ -23,7 +28,7 @@ const SocialContactFloating = ({
         onClick={handleClick}
       >
         <AiFillMessage />
-        <span>Contacts</span>
+        <span> {t("Button.Contact")}</span>
       </button>
 
       {isClicked && (

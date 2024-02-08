@@ -33,7 +33,7 @@ const TeamIntro = ({
         <div className="z-0 w-[100%] lg:w-[100%]  relative flex flex-col items-left text-left justify-center sm:p-0">
           <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
             <div className="text-4xl md:text-6xl mb-3  text-primary-100">
-              TEAM.
+              {t("HeroSection.title")}
             </div>
           </h1>
 

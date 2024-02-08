@@ -27,7 +27,7 @@ const OurService = ({
             ref={h1Ref}
           >
             <span className="text-white border-b-2 border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
-              Services.
+              {t("OurService.title")}
             </span>
           </h2>
           <div ref={pref}>
@@ -56,7 +56,7 @@ const OurService = ({
                       {service.name}
                     </span>
                   </h3>
-                  <p className="text-secondary-400 h-[50px] sm:h-[100px] mb-5 flex items-start text-sm sm:text-md font-light">
+                  <p className="text-secondary-400 h-auto sm:h-[100px] mb-5 flex items-start text-sm sm:text-md font-light">
                     {service.detail}
                   </p>
 
