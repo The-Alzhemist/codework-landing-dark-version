@@ -23,7 +23,6 @@ const HeroSection = ({
   currentLang,
   t,
 }: HeroSectionProps) => {
- 
   return (
     <section
       className={`relative overflow-hidden md:py-[50px] mx-auto px-5 lg:px-[50px] bg-neutral-1000 h-screen`}
@@ -52,20 +51,21 @@ const HeroSection = ({
           )}
 
           {currentLang === "th" && (
-            <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
-              <div className="text-4xl md:text-6xl mb-3 text-white">
-                พวกเราสามารถ
+            <h1 className="mb-7 md:mb-5 relative font-bold" ref={h1Ref}>
+              <div className="text-3xl md:text-5xl mb-5 text-white">
+                ให้ธุรกิจของคุณเติบโต ด้วยบริการซอฟต์แวร์โซลูชั่น
               </div>
-              <div className="text-3xl md:text-6xl mb-3 text-white">
-                ทำให้
-                <span className="text-primary-100">ความคิดของคุณเป็นจริง</span>
+              <div className="text-3xl md:text-5xl mb-3 text-white">
+                <span className="text-primary-100">
+                  เราสร้างผลิตภัณฑ์ที่ทันสมัยและครอบคลุมทุกรายละเอียด
+                </span>
               </div>
             </h1>
           )}
 
           <div ref={pRef} className="mb-3">
             <Paragraph
-              className={`mb-8 max-w-[880px] text-base sm:text-md font-light text-white opacity-80`}
+              className={`mb-8 max-w-[890px] text-lg sm:text-md font-light text-white opacity-80`}
             >
               <span>{t("HeroSection.Description")}</span>
             </Paragraph>
