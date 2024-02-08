@@ -54,7 +54,7 @@ const Navbar = ({
             <select
               value={currentLang}
               onChange={handleChange}
-              className="text-white border border-secondary-500 bg-transparent px-5 py-2 rounded-md text-xs"
+              className="text-white border border-gray-100 bg-transparent px-5 py-2 rounded-md text-xs"
             >
               <option value="th">ภาษาไทย</option>
               <option value="en">English</option>
