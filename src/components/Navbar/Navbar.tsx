@@ -57,7 +57,10 @@ const Navbar = ({
               className="text-white border border-gray-100 bg-transparent px-5 py-2 rounded-md text-xs"
             >
               <option value="th">ภาษาไทย</option>
-              <option value="en">English</option>
+              <option value="en">
+                {" "}
+                <span className="flag-icon flag-icon-th"></span> English
+              </option>
             </select>
           </div>
 

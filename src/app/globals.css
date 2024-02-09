@@ -46,3 +46,14 @@
 .swiper-button-prev::after {
   color: #fff;
 }
+
+.thailand-flag {
+  background-image: url('https://cdn.britannica.com/38/4038-004-111388C2/Flag-Thailand.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 20px; /* Adjust as needed */
+  height: 15px; /* Adjust as needed */
+  display: inline-block;
+  margin-right: 5px; /* Adjust as needed */
+}

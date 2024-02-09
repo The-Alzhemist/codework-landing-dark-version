@@ -1,34 +1,34 @@
 import React from "react";
 import { FooterProps } from "./interface";
 import { useTranslations } from "next-intl";
-
+import { usePathname } from "next/navigation";
 
 const withFooter = (Component: React.FC<FooterProps>) => {
-
-
-
   const Hoc = () => {
     const t = useTranslations("Menu");
-    const contactTranslations  = useTranslations("ContactUs");
+    const contactTranslations = useTranslations("ContactUs");
+
+    const pathname = usePathname();
+    const currentLang = pathname.includes("en") ? "en" : "th";
+
     const footerMenu = {
       footerLeft: {
         companyName: "CodeWork Tech Co.,Ltd.",
-        companyAddress:
-        contactTranslations('Address'),
+        companyAddress: contactTranslations("Address"),
         companyEmail: "hello@codework-tech.com",
         companyTel: "(+66) 63 849 4282",
         companyCopyright: "Ⓒ2023 CodeWork Tech Co.,Ltd. All rights reserved.",
       },
       footerRight: [
         {
-          pageMenu: t('Home'),
+          pageMenu: t("Home"),
           hasSubMenu: false,
-          path: "/",
+          path: `/${currentLang}`,
         },
         {
-          pageMenu:t('Service'),
+          pageMenu: t("Service"),
           hasSubMenu: false,
-          path: "/services",
+          path: `/${currentLang}/services`,
           subMenu: [
             {
               name: "UX/UI Design",
@@ -36,14 +36,14 @@ const withFooter = (Component: React.FC<FooterProps>) => {
           ],
         },
         {
-          pageMenu: t('Project'),
+          pageMenu: t("Project"),
           hasSubMenu: false,
-          path: "/projects",
+          path: `/${currentLang}/projects`,
         },
         {
-          pageMenu: t('Team'),
+          pageMenu: t("Team"),
           hasSubMenu: false,
-          path: "/team",
+          path: `/${currentLang}/team`,
           subMenu: [
             {
               name: "Our story",
@@ -57,9 +57,9 @@ const withFooter = (Component: React.FC<FooterProps>) => {
           ],
         },
         {
-          pageMenu: t('ContactUs'),
+          pageMenu: t("ContactUs"),
           hasSubMenu: false,
-          path: "/contact-us",
+          path: `/${currentLang}/contact-us`,
         },
       ],
     };
