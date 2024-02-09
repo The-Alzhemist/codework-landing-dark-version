@@ -58,7 +58,7 @@ const Navbar = ({
             >
               <option value="th">
                 <div className="flex gap-x-10">
-                  <span>xxx</span>
+                  {/* <span>xxx</span> */}
                   <span>ภาษาไทย</span>
                 </div>
               </option>
