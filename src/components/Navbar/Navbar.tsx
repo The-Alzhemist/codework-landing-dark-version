@@ -56,8 +56,15 @@ const Navbar = ({
               onChange={handleChange}
               className="text-white border border-gray-100 bg-transparent px-5 py-2 rounded-md text-xs"
             >
-              <option value="th">ภาษาไทย</option>
-              <option value="en">English</option>
+              <option value="th">
+                <div className="flex gap-x-10">
+                  <span>xxx</span>
+                  <span>ภาษาไทย</span>
+                </div>
+              </option>
+              <option value="en">
+                <span className="flag-icon flag-icon-th"></span> English
+              </option>
             </select>
           </div>
 

@@ -53,7 +53,7 @@ const HeroSection = ({
           {currentLang === "th" && (
             <h1 className="mb-7 md:mb-5 relative font-bold" ref={h1Ref}>
               <div className="text-3xl md:text-5xl mb-5 text-white">
-                ให้ธุรกิจของคุณเติบโต ด้วยบริการซอฟต์แวร์โซลูชั่น
+                ให้ธุรกิจของคุณเติบโตด้วยบริการซอฟต์แวร์โซลูชัน
               </div>
               <div className="text-3xl md:text-5xl mb-3 text-white">
                 <span className="text-primary-100">
