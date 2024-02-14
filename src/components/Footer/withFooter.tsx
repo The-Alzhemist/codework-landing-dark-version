@@ -1,11 +1,16 @@
 import React from "react";
 import { FooterProps } from "./interface";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 const withFooter = (Component: React.FC<FooterProps>) => {
   const Hoc = () => {
     const t = useTranslations("Menu");
     const contactTranslations = useTranslations("ContactUs");
+
+    const pathname = usePathname();
+    const currentLang = pathname.includes("en") ? "en" : "th";
+
     const footerMenu = {
       footerLeft: {
         companyName: contactTranslations("CodeWorkTechCompany"),
@@ -18,12 +23,12 @@ const withFooter = (Component: React.FC<FooterProps>) => {
         {
           pageMenu: t("Home"),
           hasSubMenu: false,
-          path: "/",
+          path: `/${currentLang}`,
         },
         {
           pageMenu: t("Service"),
           hasSubMenu: false,
-          path: "/services",
+          path: `/${currentLang}/services`,
           subMenu: [
             {
               name: "UX/UI Design",
@@ -33,12 +38,12 @@ const withFooter = (Component: React.FC<FooterProps>) => {
         {
           pageMenu: t("Project"),
           hasSubMenu: false,
-          path: "/projects",
+          path: `/${currentLang}/projects`,
         },
         {
           pageMenu: t("Team"),
           hasSubMenu: false,
-          path: "/team",
+          path: `/${currentLang}/team`,
           subMenu: [
             {
               name: "Our story",
@@ -54,7 +59,7 @@ const withFooter = (Component: React.FC<FooterProps>) => {
         {
           pageMenu: t("ContactUs"),
           hasSubMenu: false,
-          path: "/contact-us",
+          path: `/${currentLang}/contact-us`,
         },
       ],
     };
