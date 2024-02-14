@@ -2,31 +2,26 @@ import React from "react";
 import { FooterProps } from "./interface";
 import { useTranslations } from "next-intl";
 
-
 const withFooter = (Component: React.FC<FooterProps>) => {
-
-
-
   const Hoc = () => {
     const t = useTranslations("Menu");
-    const contactTranslations  = useTranslations("ContactUs");
+    const contactTranslations = useTranslations("ContactUs");
     const footerMenu = {
       footerLeft: {
-        companyName: "CodeWork Tech Co.,Ltd.",
-        companyAddress:
-        contactTranslations('Address'),
+        companyName: contactTranslations("CodeWorkTechCompany"),
+        companyAddress: contactTranslations("Address"),
         companyEmail: "hello@codework-tech.com",
         companyTel: "(+66) 63 849 4282",
         companyCopyright: "Ⓒ2023 CodeWork Tech Co.,Ltd. All rights reserved.",
       },
       footerRight: [
         {
-          pageMenu: t('Home'),
+          pageMenu: t("Home"),
           hasSubMenu: false,
           path: "/",
         },
         {
-          pageMenu:t('Service'),
+          pageMenu: t("Service"),
           hasSubMenu: false,
           path: "/services",
           subMenu: [
@@ -36,12 +31,12 @@ const withFooter = (Component: React.FC<FooterProps>) => {
           ],
         },
         {
-          pageMenu: t('Project'),
+          pageMenu: t("Project"),
           hasSubMenu: false,
           path: "/projects",
         },
         {
-          pageMenu: t('Team'),
+          pageMenu: t("Team"),
           hasSubMenu: false,
           path: "/team",
           subMenu: [
@@ -57,7 +52,7 @@ const withFooter = (Component: React.FC<FooterProps>) => {
           ],
         },
         {
-          pageMenu: t('ContactUs'),
+          pageMenu: t("ContactUs"),
           hasSubMenu: false,
           path: "/contact-us",
         },
