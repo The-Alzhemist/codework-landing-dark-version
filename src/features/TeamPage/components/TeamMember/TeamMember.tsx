@@ -16,7 +16,7 @@ const teamMemberList: TeamMemberProps[] = [
     name: "Pakorn (Puck)",
     position: "CEO & Co-founder",
   },
-    {
+  {
     img: "/images/teamPage/kunQ.jpg",
     imgWebP: "/images/teamPage/kunQ.webp",
     name: "Soratat (Q)",
@@ -26,19 +26,19 @@ const teamMemberList: TeamMemberProps[] = [
     img: "/images/teamPage/ter.jpg",
     imgWebP: "/images/teamPage/ter.webp",
     name: "Pongsakorn (Ter)",
-    position: "Head of Product and Deliverable",
+    position: "Project manager",
+  },
+  {
+    img: "/images/teamPage/man.jpg",
+    imgWebP: "/images/teamPage/man.webp",
+    name: "Pusit (Man)",
+    position: "Project manager",
   },
   {
     img: "/images/teamPage/ice.jpg",
     imgWebP: "/images/teamPage/ice.webp",
     name: "Pornjira (Ice)",
     position: "Operations Manager",
-  },
-  {
-    img: "/images/teamPage/man.jpg",
-    imgWebP: "/images/teamPage/man.webp",
-    name: "Pusit (Man)",
-    position: "Product manager",
   },
   {
     img: "/images/teamPage/ford.jpg",
@@ -64,14 +64,6 @@ const teamMemberList: TeamMemberProps[] = [
     name: "Aphiwit (Nueng)",
     position: "Front-end Developer",
   },
-
-
-  {
-    img: "/images/teamPage/kawpoon.jpg",
-    imgWebP: "/images/teamPage/kawpoon.webp",
-    name: "Chantisa (Kawpoon)",
-    position: "UX/UI Designer",
-  },
 ];
 
 function TeamMember() {
@@ -82,11 +74,8 @@ function TeamMember() {
           key={"team-member-key-" + index}
           className="w-[40%] md:w-[32%] lg:w-[20%] card-x flex flex-col rounded-2xl items-start mb-10 max-w-[350px] "
         >
-             <picture>
-            <source
-              srcSet={item.imgWebP}
-              type="image/webp"
-            />
+          <picture>
+            <source srcSet={item.imgWebP} type="image/webp" />
             <img
               src={item.img}
               alt={item.name}
@@ -99,13 +88,12 @@ function TeamMember() {
             <h2 className="text-sm sm:text-base font-semibold text-white text-left ">
               {item.name}
             </h2>
-          
-              <Paragraph
-                className={` text-white font-light opacity-80 text-xs sm:text-sm`}
-              >
-                {item.position}
-              </Paragraph>
-            
+
+            <Paragraph
+              className={` text-white font-light opacity-80 text-xs sm:text-sm`}
+            >
+              {item.position}
+            </Paragraph>
           </div>
         </div>
       ))}

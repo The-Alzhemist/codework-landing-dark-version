@@ -1,4 +1,3 @@
-
 import ProjectWrapper from "@/features/ProjectPage/ProjectWrapper";
 import { Poppins } from "next/font/google";
 import { getTranslations } from "next-intl/server";
@@ -10,11 +9,12 @@ const poppinsFont = Poppins({
   adjustFontFallback: false,
 });
 
-
-export async function generateMetadata({ params: { locale } }: {
+export async function generateMetadata({
+  params: { locale },
+}: {
   params: {
-      locale: string;
-  }
+    locale: string;
+  };
 }) {
   const t = await getTranslations({ locale, namespace: "MetaData" });
 
@@ -26,19 +26,19 @@ export async function generateMetadata({ params: { locale } }: {
       description: t("Project.Description"),
       images: [
         {
-          url: "/logo/meta/meta-tag-projects.jpg",
+          url: process.env.ENV_URL + "/logo/meta/meta-tag-projects.jpg",
           width: 800,
           height: 600,
         },
         {
-          url: "/logo/meta/meta-tag-projects.jpg",
+          url: process.env.ENV_URL + "/logo/meta/meta-tag-projects.jpg",
           width: 1800,
           height: 1600,
           alt: "codework-tech-project-page-meta-image",
         },
       ],
     },
-    type: "website"
+    type: "website",
   };
 }
 
