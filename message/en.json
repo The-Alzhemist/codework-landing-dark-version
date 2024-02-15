@@ -112,7 +112,13 @@
       "FileAttachment": "File Attachment",
       "HowDidYouHearAboutUs": "How did you hear about us?",
       "ShortMessage": "*We will be in touch with you shortly through the number (+66) 63 849 4282",
-      "SubmitButton": "Submit your idea"
+      "SubmitButton": "Submit your idea",
+      "SearchEngine": "Search engine (Google, Yahoo, etc.)",
+      "SocialMedia": "Social media",
+      "Friend": "Friend/Colleague",
+      "Other": "Other (please specify)",
+      "OtherChannel": "Other contact channels",
+      "WritngSomething": "Write something..."
     },
     "SentSuccessPopup": {
       "Title": "Thank you for sharing your idea with us!",

@@ -9,7 +9,7 @@ export default function ProjectSeamoor() {
       {/* 1 */}
       <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-y-0 justify-center  items-start lg:items-center">
         <div className="w-[90%] lg:w-1/2">
-            <picture>
+          <picture>
             <source
               srcSet="/images/projectPage/seamour-project-cover.webp"
               type="image/webp"
@@ -59,35 +59,24 @@ export default function ProjectSeamoor() {
 
           {/* p */}
           <Paragraph className="text-base font-light opacity-80 text-white mb-5">
-            {t('Searmoor.Description')}
+            {t("Searmoor.Description")}
           </Paragraph>
 
           <div className="text-base font-light opacity-80 text-white mb-5">
             <h3 className="font-semibold mb-2">Pain point</h3>
             <ul>
-              <li className="mb-2">
-              - {t('Searmoor.PainPoint.List1')}
-              </li>
+              <li className="mb-2">- {t("Searmoor.PainPoint.List1")}</li>
 
-              <li>
-              - {t('Searmoor.PainPoint.List2')}
-              </li>
+              <li>- {t("Searmoor.PainPoint.List2")}</li>
             </ul>
           </div>
 
           <div className="text-base font-light opacity-80 text-white">
             <h3 className="font-semibold mb-2">Solution</h3>
             <ul>
-              <li className="mb-2">
-              </li>
+              <li className="mb-2">- {t("Searmoor.Solution.List1")}</li>
 
-              <li className="mb-2">
-              - {t('Searmoor.Solution.List2')}
-              </li>
-
-              <li>
-              - {t('Searmoor.Solution.List3')}
-              </li>
+              <li>- {t("Searmoor.Solution.List2")}</li>
             </ul>
           </div>
         </div>

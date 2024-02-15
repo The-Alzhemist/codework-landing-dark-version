@@ -37,7 +37,7 @@ const FormPage = ({
   onSubmit,
   showModal,
   setShowModal,
-  t
+  t,
 }: WithFormPageProps) => {
   const h1Tag = useRef<HTMLDivElement | null>(null);
   const formTag = useRef<HTMLFormElement | null>(null);
@@ -82,7 +82,6 @@ const FormPage = ({
     }
   }, [hasConsent]);
 
-
   return (
     <>
       <div
@@ -107,7 +106,7 @@ const FormPage = ({
                   message: "Tell us your idea is required.",
                 },
               }}
-              placeholder="Write something..."
+              placeholder={t("Form.WritngSomething")}
               label={t("Form.TellUsYourIdea")}
               className="mb-[12px] "
               rows={5}
@@ -124,7 +123,7 @@ const FormPage = ({
                   required: { value: false, message: "" },
                 }}
                 suffixIcon="฿"
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
                 label={t("Form.Budget")}
                 className="mb-[12px]"
@@ -136,7 +135,7 @@ const FormPage = ({
                 rules={{
                   required: { value: true, message: "Name is Required." },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
                 label={t("Form.Name")}
                 className="mb-[12px]"
@@ -151,7 +150,7 @@ const FormPage = ({
                     message: "Invalid pattern email address",
                   },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
                 label={t("Form.Email")}
                 className="mb-[12px]"
@@ -216,7 +215,7 @@ const FormPage = ({
                     message: "Phone number is Required.",
                   },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="number"
                 label={t("Form.PhoneNumber")}
                 className="mb-[12px]"
@@ -228,7 +227,7 @@ const FormPage = ({
                 rules={{
                   required: { value: false, message: "" },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
                 label={t("Form.CompanyName")}
                 className="mb-[12px]"
@@ -242,7 +241,7 @@ const FormPage = ({
               <CheckBoxSimpleField
                 control={control}
                 name="channels.searchEngine"
-                label="Search engine (Google, Yahoo, etc.)"
+                label={t("Form.SearchEngine")}
                 labelClassName=""
                 rules={{
                   required: { value: false, message: "" },
@@ -252,7 +251,7 @@ const FormPage = ({
               <CheckBoxSimpleField
                 control={control}
                 name="channels.social"
-                label="Social media"
+                label={t("Form.SocialMedia")}
                 rules={{
                   required: { value: false, message: "" },
                 }}
@@ -261,7 +260,7 @@ const FormPage = ({
               <CheckBoxSimpleField
                 control={control}
                 name="channels.friend"
-                label="Friend/Colleague"
+                label={t("Form.Friend")}
                 inputClassName="ml-0"
               />
               <div className="flex flex-col">
@@ -271,7 +270,7 @@ const FormPage = ({
                   rules={{
                     required: { value: false, message: "" },
                   }}
-                  label="Other (please specify)"
+                  label={t("Form.Other")}
                   inputClassName="ml-0"
                 />
 
@@ -282,7 +281,7 @@ const FormPage = ({
                     rules={{
                       required: { value: false, message: "" },
                     }}
-                    placeholder="Write something..."
+                    placeholder={t("Form.WritngSomething")}
                     type="text"
                     label=""
                     className="mb-[12px] ml-2"

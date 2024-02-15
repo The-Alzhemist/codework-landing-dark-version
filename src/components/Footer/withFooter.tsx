@@ -17,7 +17,7 @@ const withFooter = (Component: React.FC<FooterProps>) => {
         companyAddress: contactTranslations("Address"),
         companyEmail: "hello@codework-tech.com",
         companyTel: "(+66) 63 849 4282",
-        companyCopyright: "Ⓒ2023 CodeWork Tech Co.,Ltd. All rights reserved.",
+        companyCopyright: "Ⓒ2024 CodeWork Tech Co.,Ltd. All rights reserved.",
       },
       footerRight: [
         {
