@@ -31,12 +31,12 @@ const withSocialContactFloating = (
       {
         icon: <FaLinkedin />,
         text: "LinkedIn",
-        url: "https://www.linkedin.com/in/your-linkedin-profile",
+        url: "https://www.linkedin.com/company/codework-tech/",
       },
       {
         icon: <FaInstagram />,
         text: "Instagram",
-        url: "https://www.instagram.com/your-instagram-profile",
+        url: "https://www.instagram.com/codework_tech/",
       },
     ];
 
