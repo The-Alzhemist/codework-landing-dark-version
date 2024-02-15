@@ -27,14 +27,6 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
       router.push(newPathname);
     };
 
-    const pathname = usePathname();
-    const router = useRouter();
-    const currentLang = pathname.includes("en") ? "en" : "th";
-    const switchLang = (lang: string) => {
-      const newPathname = pathname.replace(`/${currentLang}`, `/${lang}`);
-      router.push(newPathname);
-    };
-
     useEffect(() => {
       if (NavbarContext) {
         gsap.to(sectionNavRef.current, {
