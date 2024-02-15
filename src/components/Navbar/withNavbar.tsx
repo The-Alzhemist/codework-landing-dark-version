@@ -14,7 +14,10 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
     const NavbarContext = useContext(NavbarToggleContext);
 
     // Check if NavbarContext exists before extracting values
-    const { isOpen, setIsOpen } = NavbarContext || { isOpen: false, setIsOpen: () => {} };
+    const { isOpen, setIsOpen } = NavbarContext || {
+      isOpen: false,
+      setIsOpen: () => {},
+    };
 
     const pathname = usePathname();
     const router = useRouter();
@@ -49,10 +52,12 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
         }
       };
 
-      typeof window !== "undefined" && window.addEventListener("scroll", handleScroll);
+      typeof window !== "undefined" &&
+        window.addEventListener("scroll", handleScroll);
 
       return () => {
-        typeof window !== "undefined" && window.removeEventListener("scroll", handleScroll);
+        typeof window !== "undefined" &&
+          window.removeEventListener("scroll", handleScroll);
       };
     }, []);
 
@@ -71,9 +76,3 @@ const withNavbar = (Component: React.FC<NavbarProps>) => {
 };
 
 export default withNavbar;
-
-
-
-
-
-

@@ -50,22 +50,40 @@ const Navbar = ({
             <button onClick={() => switchLang("th")}>TH</button> |
             <button onClick={() => switchLang("en")}>EN</button>
           </div> */}
-          <div>
-            <select
-              value={currentLang}
-              onChange={handleChange}
-              className="text-white border border-gray-100 bg-transparent px-5 py-2 rounded-md text-xs"
+
+          <div className="flex justify-center items-center ">
+            <button
+              className={`border px-3 py-1.5 text-xs rounded-s-lg ${
+                currentLang === "th" ? "bg-white text-gray-800" : "text-white"
+              }`}
+              onClick={() => switchLang("th")}
             >
-              <option value="th">
-                <div className="flex gap-x-10">
-                  {/* <span>xxx</span> */}
-                  <span>ภาษาไทย</span>
-                </div>
-              </option>
-              <option value="en">
-                <span className="flag-icon flag-icon-th"></span> English
-              </option>
-            </select>
+              <div className="flex items-center gap-x-1">
+                <img
+                  className="w-auto h-3"
+                  src="/images/thFlag.png"
+                  alt="ThFlag"
+                  title="ThFlag"
+                />
+                <span className="hidden sm:block font-bold">TH</span>
+              </div>
+            </button>
+            <button
+              className={`border-y border-r px-3 py-1.5  text-xs rounded-e-lg ${
+                currentLang === "en" ? "bg-white text-gray-800" : "text-white"
+              }`}
+              onClick={() => switchLang("en")}
+            >
+              <div className="flex items-center gap-x-1">
+                <img
+                  className="w-auto h-3"
+                  src="/images/enFlag.png"
+                  alt="EnFlag"
+                  title="EnFlag"
+                />
+                <span className="hidden sm:block font-bold">EN</span>
+              </div>
+            </button>
           </div>
 
           <div

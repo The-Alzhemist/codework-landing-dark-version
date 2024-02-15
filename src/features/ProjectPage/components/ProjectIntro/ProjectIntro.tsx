@@ -37,7 +37,7 @@ const ProjectIntro = ({
 
           <div ref={pRef} className="mb-3">
             <Paragraph
-              className={`mb-8 max-w-[880px] text-base sm:text-lg font-light text-white opacity-80`}
+              className={`mb-8 max-w-[800px] text-base sm:text-lg font-light text-white opacity-80 `}
             >
               <span>{t("HeroSection.Description")}</span>
             </Paragraph>
