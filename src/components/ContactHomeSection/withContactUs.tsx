@@ -4,15 +4,23 @@ import { gsap } from "gsap";
 import { TextPlugin } from "gsap/TextPlugin";
 import { ContactHomeSectionProps } from "./interface";
 import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
+import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 gsap.registerPlugin(TextPlugin);
 
-
-const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) => {
+const withContactHomeSection = (
+  Component: React.FC<ContactHomeSectionProps>
+) => {
   const Hoc = () => {
     const textMessageRef = useRef<HTMLDivElement>(null);
     const root = useRef<HTMLElement>(null);
     const NavbarContext = useContext(NavbarToggleContext);
+    const t = useTranslations("ContactSection");
+
+    const pathname = usePathname();
+    const currentLang = pathname.includes("en") ? "en" : "th";
+
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
         gsap.to(textMessageRef.current, {
@@ -21,31 +29,29 @@ const withContactHomeSection = (Component: React.FC<ContactHomeSectionProps>) =>
           repeatDelay: 5,
           ease: "power4.out",
           text: {
-            value:
-              "Let's start a conversation about your business's digital future",
+            value: t("TextAnimation"),
             delimiter: "",
           },
         });
       });
-  
+
       return () => ctx.revert();
     }, []);
-    
 
     if (!NavbarContext) {
-      console.warn('Context is not available')
-      return
+      console.warn("Context is not available");
+      return;
     }
-  
+
     const { isOpen, setIsOpen } = NavbarContext;
-  
-  
-    
+
     const newProps: ContactHomeSectionProps = {
       root,
       textMessageRef,
-      isOpen, 
-      setIsOpen
+      isOpen,
+      setIsOpen,
+      t,
+      currentLang,
     };
 
     return <Component {...newProps} />;

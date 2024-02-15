@@ -7,6 +7,7 @@ export interface BlogIntroProps {
     imgRef: React.RefObject<HTMLDivElement>;
     circleLeftRef: React.RefObject<HTMLDivElement>;
     circleRightRef: React.RefObject<HTMLDivElement>;
+    t: any
   }
   
   

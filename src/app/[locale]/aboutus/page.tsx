@@ -1,5 +1,4 @@
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
-import FormPage from "@/features/ContactPage/FormPage";
 import { Metadata } from "next";
 import { Poppins } from "next/font/google";
 
@@ -10,11 +9,11 @@ const poppinsFont = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "CodeWork Tech | Contact Us",
+  title: "CodeWork Tech | About Us",
   description:
     "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
   openGraph: {
-    title: "CodeWork Tech | Contact Us",
+    title: "CodeWork Tech | About Us",
     description:
       "Get in touch with us and make your dream come true. Let’s create something extraordinary together!",
     url: "",
@@ -37,13 +36,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PrivacyPolicyPage() {
+export default function AboutusPage() {
   return (
     <main className={` bg-neutral-1000 ${poppinsFont.className}`}>
       <div className="relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5">
         <div className="text-center h-screen flex justify-center flex-col items-center text-4xl text-white">
       
-          <div className="mb-10"> Privacy policya page is coming soon...</div>
+          <div className="mb-10"> About us page is coming soon...</div>
           <PrimaryButton
           className=" py-3 text-base sm:text-lg hover:scale-90 mb-5 lg:mb-0"
           pathName="/"
@@ -56,3 +55,8 @@ export default function PrivacyPolicyPage() {
     </main>
   );
 }
+
+const locales = ['en', 'th'];
+export function generateStaticParams() {
+  return locales.map((locale) => ({locale}));
+} 

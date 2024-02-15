@@ -2,10 +2,15 @@ import React, { useContext, useLayoutEffect, useRef } from "react";
 import { HeroSectionProps } from "./interface";
 import { gsap } from "gsap";
 import { NavbarToggleContext } from "@/context/NavbarToggleContext/NavbarToggleContext";
-
+import { usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
   const Hoc = () => {
+    const pathname = usePathname();
+    const currentLang = pathname.includes("en") ? "en" : "th";
+    const t = useTranslations("Home");
+
     const root = useRef<HTMLElement | null>(null);
     const h1Ref = useRef<HTMLDivElement | null>(null);
     const pRef = useRef<HTMLDivElement | null>(null);
@@ -66,10 +71,10 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
     }, []);
 
     if (!NavbarContext) {
-      console.warn('Context is not available')
-      return
+      console.warn("Context is not available");
+      return;
     }
-  
+
     const { isOpen, setIsOpen } = NavbarContext;
 
     const newProps: HeroSectionProps = {
@@ -79,7 +84,10 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
       btnRef,
       circleLeftRef,
       circleRightRef,
-      isOpen, setIsOpen
+      isOpen,
+      setIsOpen,
+      currentLang,
+      t,
     };
     return <Component {...newProps} />;
   };
@@ -87,4 +95,3 @@ const withHeroSection = (Component: React.FC<HeroSectionProps>) => {
   return Hoc;
 };
 export default withHeroSection;
-

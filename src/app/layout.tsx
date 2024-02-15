@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
 import Footer from "@/components/Footer/Footer";
 import { NavbarToggleContextProvider } from "@/context/NavbarToggleContext/NavbarToggleContext";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 const poppinsFont = Poppins({
   weight: ["100", "300", "500", "700", "800"],
@@ -43,6 +44,8 @@ export const metadata: Metadata = {
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import StoryblokProvider from "@/features/BlogPage/components/StoryblokProvider/StoryblokProvider";
 import { BlogFilterTagsProvider } from "@/context/BlogFilterTagsContext/BlogFilterTagsContext";
+import { redirect, usePathname, useRouter } from "next/navigation";
+// import { useRouter } from "next/router";
 
 const REVALIDATE_TIME = Number(
   process.env.STORYBLOK_REVALIDATE_TIME_SECOND as number | false | undefined
@@ -57,21 +60,13 @@ storyblokInit({
   },
 });
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <StoryblokProvider>
       <html lang="en">
         <body className={poppinsFont.className}>
           <NavbarToggleContextProvider>
-            <BlogFilterTagsProvider>
-              <Navbar />
-              <div>{children}</div>
-              <Footer />
-            </BlogFilterTagsProvider>
+            <BlogFilterTagsProvider>{children}</BlogFilterTagsProvider>
           </NavbarToggleContextProvider>
         </body>
       </html>

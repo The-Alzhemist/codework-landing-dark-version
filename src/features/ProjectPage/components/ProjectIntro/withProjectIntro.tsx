@@ -2,6 +2,7 @@ import React, { useLayoutEffect, useRef } from "react";
 
 import { gsap } from "gsap";
 import { ProjectIntroProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 
 const withProjectIntro = (Component: React.FC<ProjectIntroProps>) => {
@@ -13,6 +14,8 @@ const withProjectIntro = (Component: React.FC<ProjectIntroProps>) => {
 
     const circleLeftRef = useRef<HTMLDivElement | null>(null);
     const circleRightRef = useRef<HTMLDivElement | null>(null);
+
+    const t = useTranslations("Project");
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -70,6 +73,7 @@ const withProjectIntro = (Component: React.FC<ProjectIntroProps>) => {
       imgRef,
       circleLeftRef,
       circleRightRef,
+      t
     };
     return <Component {...newProps} />;
   };

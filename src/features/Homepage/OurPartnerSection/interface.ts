@@ -3,4 +3,5 @@ export interface OurPartnerProps {
    h1Ref:  React.RefObject<HTMLDivElement>;
    pRef : React.RefObject<HTMLDivElement>;
    btnRef: React.RefObject<HTMLDivElement>;
+   t:any
   }

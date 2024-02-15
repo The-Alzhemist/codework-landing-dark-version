@@ -14,7 +14,7 @@ const SocialsSection = () => {
         <span className="font-light text-sm">Codework Tech</span>
       </div>
       <div className="flex justify-left items-center gap-x-2">
-         <IconSocialLink linkName="#" iconName={<FaLine />} />
+        <IconSocialLink linkName="#" iconName={<FaLine />} />
         <span className="font-light text-sm">@Codeworktech</span>
       </div>
     </section>

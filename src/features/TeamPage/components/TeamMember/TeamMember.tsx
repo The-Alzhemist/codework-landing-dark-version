@@ -40,7 +40,6 @@ const teamMemberList: TeamMemberProps[] = [
     name: "Pornjira (Ice)",
     position: "Operations Manager",
   },
-
   {
     img: "/images/teamPage/ford.jpg",
     imgWebP: "/images/teamPage/ford.webp",

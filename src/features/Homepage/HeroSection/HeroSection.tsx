@@ -3,7 +3,6 @@
 import React from "react";
 import Paragraph from "@/components/typography/paragraph/Paragraph";
 
-
 import withHeroSection from "./withHeroSection";
 import BackgroundGradientBlur from "@/components/BackgroundGradientBlur/BackgroundGradientBlur";
 import { HeroSectionProps } from "./interface";
@@ -11,6 +10,7 @@ import { HeroSectionProps } from "./interface";
 import { FaLine } from "react-icons/fa6";
 import { ExternalPrimaryButton } from "@/components/buttons/ExternalPrimaryButton";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 const HeroSection = ({
   root,
@@ -20,6 +20,8 @@ const HeroSection = ({
   circleLeftRef,
   circleRightRef,
   setIsOpen,
+  currentLang,
+  t,
 }: HeroSectionProps) => {
   return (
     <section
@@ -35,23 +37,37 @@ const HeroSection = ({
 
       <div className="h-full   relative flex justify-start items-center w-full max-w-[1440px] m-auto">
         <div className="z-0 w-[100%] lg:w-[100%]  min-h-[600px] relative flex flex-col items-center text-center justify-center sm:p-0">
-          <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
-            <div className="text-4xl md:text-6xl mb-3 text-white">
-              We can make
-            </div>
-            <div className="text-3xl md:text-6xl mb-3 text-white">
-              your <span className="text-primary-100">idea</span> come
-              <span className="text-primary-100"> true</span>
-            </div>
-          </h1>
+          {currentLang === "en" && (
+            <h1 className="mb-5 md:mb-5 relative font-bold" ref={h1Ref}>
+              <div className="text-4xl md:text-6xl mb-3 text-white">
+                We can make
+              </div>
+
+              <div className="text-3xl md:text-6xl mb-3 text-white">
+                your <span className="text-primary-100">idea</span> come
+                <span className="text-primary-100"> true</span>
+              </div>
+            </h1>
+          )}
+
+          {currentLang === "th" && (
+            <h1 className="mb-7 md:mb-5 relative font-bold" ref={h1Ref}>
+              <div className="text-3xl md:text-4xl mb-5 text-white">
+                ให้ธุรกิจของคุณเติบโตในยุคสมัยแห่งเทคโนโลยี
+              </div>
+              <div className="text-3xl md:text-4xl mb-2 text-white">
+                <span className="text-primary-100">
+                  เราสร้างสรรค์ผลงานที่ทันสมัยและตอบโจทย์ทุกรายละเอียดของธุรกิจคุณ
+                </span>
+              </div>
+            </h1>
+          )}
 
           <div ref={pRef} className="mb-3">
             <Paragraph
-              className={`mb-8 max-w-[880px] text-base sm:text-md font-light text-white opacity-80`}
+              className={`mb-8 max-w-[890px] text-lg sm:text-md font-light text-white opacity-80`}
             >
-              <span>
-                {`Turning your innovative ideas into real-world solutions is our expertise. Whether you're an entrepreneur, a startup, or a well-established business, we’re here to transform your vision into a functional and cutting-edge software.`}
-              </span>
+              <span>{t("HeroSection.Description")}</span>
             </Paragraph>
           </div>
 
@@ -66,21 +82,23 @@ const HeroSection = ({
                 className=" text-xl "
               >
                 <div className="flex items-center gap-x-2">
-                {`Let's talk with us`}
+                  {t("HeroSection.LetTalkWithUs")}
                   <span className="text-2xl">
                     <FaLine />
                   </span>
                 </div>
               </ExternalPrimaryButton>
 
-              <div className="mt-5 text-white text-xs mb-5">OR</div>
+              <div className="mt-5 text-white text-xs mb-5">
+                {t("HeroSection.Or")}
+              </div>
 
               <Link
-                href="/contact-us"
+                href={`${currentLang}/contact-us`}
                 className="flex justify-center text-xl"
               >
                 <div className="flex items-center text-white border-b-2 border-white">
-                Leave a message
+                  {t("HeroSection.LeaveMessage")}
                 </div>
               </Link>
             </div>

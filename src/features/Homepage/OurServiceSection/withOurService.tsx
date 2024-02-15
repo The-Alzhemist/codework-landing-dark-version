@@ -1,6 +1,7 @@
 import React, { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { OurServiceProps } from "./interface";
+import { useTranslations } from "next-intl";
 
 const withOurService = (Component: React.FC<OurServiceProps>) => {
   const Hoc = () => {
@@ -8,6 +9,47 @@ const withOurService = (Component: React.FC<OurServiceProps>) => {
     const pref = useRef<HTMLDivElement>(null);
     const divBtnRef = useRef<HTMLDivElement>(null);
     const root = useRef<HTMLElement>(null);
+    const t = useTranslations('Home');
+
+    const serviceList = [
+      {
+        name: "UX/UI design",
+        imageWebP: "/images/homePage/ux-ui.webp",
+        image: "/images/homePage/ux-ui.png",
+        detail: t('OurService.UxUi')
+      },
+      {
+        name: "Project solution consultancy",
+        imageWebP: "/images/homePage/project-solution.webp",
+        image: "/images/homePage/project-solution.png",
+        detail: t('OurService.ProjectSolution')
+      },
+      {
+        name: "Web development",
+        imageWebP: "/images/homePage/web-development.webp",
+        image: "/images/homePage/web-development.png",
+        detail: t('OurService.WebDevelopment')
+      },
+      {
+        name: "Mobile development",
+        imageWebP: "/images/homePage/mobile-development.webp",
+        image: "/images/homePage/mobile-development.png",
+        
+        detail: t('OurService.MobileDevelopment')
+      },
+      {
+        name: "Digital marketing",
+        imageWebP: "/images/homePage/digital-marketing.webp",
+        image: "/images/homePage/digital-marketing.png",
+        detail: t('OurService.DigitalMkt')
+      },
+      {
+        name: "Digital transformation consultancy",
+        imageWebP: "/images/homePage/digital-transformation-consultancy.webp",
+        image: "/images/homePage/digital-transformation-consultancy.png",
+        detail: t('OurService.DigitalTrasformConsult')
+      },
+    ];
 
     useLayoutEffect(() => {
       let ctx = gsap.context(() => {
@@ -43,7 +85,9 @@ const withOurService = (Component: React.FC<OurServiceProps>) => {
       h1Ref,
       pref,
       divBtnRef,
-      root
+      root,
+      serviceList,
+      t
     };
     return <Component {...newProps} />;
   };

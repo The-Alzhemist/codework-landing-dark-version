@@ -24,7 +24,7 @@ import { gsap } from "gsap";
 import { GTM_PRODUCTION, LOCAL_STORAGE_PDPA_KEY } from "@/config/environment";
 import TagManager from "react-gtm-module";
 import PDPAPopup from "../PAPAPopup/PDPAPopup";
-
+import { useTranslations } from "next-intl";
 
 const FormPage = ({
   handleSubmit,
@@ -37,8 +37,8 @@ const FormPage = ({
   onSubmit,
   showModal,
   setShowModal,
+  t,
 }: WithFormPageProps) => {
-
   const h1Tag = useRef<HTMLDivElement | null>(null);
   const formTag = useRef<HTMLFormElement | null>(null);
   const root = useRef<any>(null);
@@ -53,9 +53,9 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: h1Tag.current,
-          markers: false
+          markers: false,
         },
-      })
+      });
       gsap.from(formTag.current, {
         x: -50,
         opacity: 0,
@@ -63,14 +63,13 @@ const FormPage = ({
         ease: "Power4.easeInOut",
         scrollTrigger: {
           trigger: formTag.current,
-          markers: false
+          markers: false,
         },
       });
     }, root);
 
     return () => ctx.revert();
   }, []);
-
 
   // CHECK PDPA CONSENT LOCAL STORAGE
   useEffect(() => {
@@ -83,25 +82,19 @@ const FormPage = ({
     }
   }, [hasConsent]);
 
-
   return (
     <>
       <div
-      ref={root}
+        ref={root}
         className=" relative bg-neutral-1000 rounded-xl w-full max-w-[1140px] mx-auto py-[30px] md:py-[50px] lg:px-[50px] sm:my-0 px-5"
       >
         <h1 className="text-center mt-16 mb-20 text-white" ref={h1Tag}>
-          <div  className="text-2xl font-light">
-            Wanna talk with us?
-          </div>
-          <div
-            
-            className="font-normal inline bg-line text-3xl md:text-5xl text-primary-100"
-          >
-            Contact us
+          <div className="text-2xl font-light">{t("SubTitle")}</div>
+          <div className="font-normal inline bg-line text-3xl md:text-5xl text-primary-100">
+            {t("Title")}
           </div>
         </h1>
-        <form  onSubmit={handleSubmit(onSubmit)} ref={formTag}>
+        <form onSubmit={handleSubmit(onSubmit)} ref={formTag}>
           {/* row 1 */}
           <div className="text-white">
             <TextAreaField
@@ -113,8 +106,8 @@ const FormPage = ({
                   message: "Tell us your idea is required.",
                 },
               }}
-              placeholder="Write something..."
-              label="Tell us your idea"
+              placeholder={t("Form.WritngSomething")}
+              label={t("Form.TellUsYourIdea")}
               className="mb-[12px] "
               rows={5}
             />
@@ -130,9 +123,9 @@ const FormPage = ({
                   required: { value: false, message: "" },
                 }}
                 suffixIcon="฿"
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
-                label="Your budget? (optional)"
+                label={t("Form.Budget")}
                 className="mb-[12px]"
               />
 
@@ -142,9 +135,9 @@ const FormPage = ({
                 rules={{
                   required: { value: true, message: "Name is Required." },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
-                label="Name"
+                label={t("Form.Name")}
                 className="mb-[12px]"
               />
               <InputField
@@ -157,9 +150,9 @@ const FormPage = ({
                     message: "Invalid pattern email address",
                   },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
-                label="Email"
+                label={t("Form.Email")}
                 className="mb-[12px]"
               />
 
@@ -173,7 +166,7 @@ const FormPage = ({
                   },
                 }}
                 name="attachment"
-                label="File Attachment"
+                label={t("Form.FileAttachment")}
                 className="w-full  mb-5"
               />
             </div>
@@ -191,7 +184,7 @@ const FormPage = ({
                       },
                     }}
                     type="date"
-                    label="Preferred time slots"
+                    label={t("Form.TimeSlot")}
                     className="mb-[12px] "
                     inputClassName="h-[38px]"
                   />
@@ -206,7 +199,7 @@ const FormPage = ({
                         message: "",
                       },
                     }}
-                    label="Time Period"
+                    label={t("Form.TimePerriod")}
                     className="mb-[12px]"
                     optionList={SELECTED_OPTION_LIST}
                   />
@@ -222,9 +215,9 @@ const FormPage = ({
                     message: "Phone number is Required.",
                   },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="number"
-                label="Phone number"
+                label={t("Form.PhoneNumber")}
                 className="mb-[12px]"
               />
 
@@ -234,21 +227,21 @@ const FormPage = ({
                 rules={{
                   required: { value: false, message: "" },
                 }}
-                placeholder="Write something..."
+                placeholder={t("Form.WritngSomething")}
                 type="text"
-                label="Company name"
+                label={t("Form.CompanyName")}
                 className="mb-[12px]"
               />
             </div>
           </div>
 
           <div className="mb-5 text-white">
-            <label className="flex">How did you hear about us?</label>
+            <label className="flex">{t("Form.HowDidYouHearAboutUs")}</label>
             <div className="flex gap-x-4 items-start flex-wrap">
               <CheckBoxSimpleField
                 control={control}
                 name="channels.searchEngine"
-                label="Search engine (Google, Yahoo, etc.)"
+                label={t("Form.SearchEngine")}
                 labelClassName=""
                 rules={{
                   required: { value: false, message: "" },
@@ -258,7 +251,7 @@ const FormPage = ({
               <CheckBoxSimpleField
                 control={control}
                 name="channels.social"
-                label="Social media"
+                label={t("Form.SocialMedia")}
                 rules={{
                   required: { value: false, message: "" },
                 }}
@@ -267,7 +260,7 @@ const FormPage = ({
               <CheckBoxSimpleField
                 control={control}
                 name="channels.friend"
-                label="Friend/Colleague"
+                label={t("Form.Friend")}
                 inputClassName="ml-0"
               />
               <div className="flex flex-col">
@@ -277,7 +270,7 @@ const FormPage = ({
                   rules={{
                     required: { value: false, message: "" },
                   }}
-                  label="Other (please specify)"
+                  label={t("Form.Other")}
                   inputClassName="ml-0"
                 />
 
@@ -288,7 +281,7 @@ const FormPage = ({
                     rules={{
                       required: { value: false, message: "" },
                     }}
-                    placeholder="Write something..."
+                    placeholder={t("Form.WritngSomething")}
                     type="text"
                     label=""
                     className="mb-[12px] ml-2"
@@ -298,9 +291,7 @@ const FormPage = ({
             </div>
           </div>
 
-          <p className="mb-5  text-sm text-white">
-            *We will be in touch with you shortly through the number (+66) 63 849 4282
-          </p>
+          <p className="mb-5  text-sm text-white">{t("Form.ShortMessage")}</p>
 
           <div className=" flex justify-end">
             <ExternalPrimaryButton
@@ -314,7 +305,7 @@ const FormPage = ({
                     <CgSpinner />
                   </span>
                 )}
-                Submit my idea
+                {t("Form.SubmitButton")}
               </div>
             </ExternalPrimaryButton>
           </div>
@@ -334,17 +325,16 @@ const FormPage = ({
                 <BiCheckCircle />
               </div>
               <h3 className="text-xl sm:text-xl font-medium text-slate-900 mb-5">
-                Thank you for sharing your idea with us!
+                {t("SentSuccessPopup.Title")}
               </h3>
               <div className="text-sm font-light mt-0 pt-0 text-slate-700 mb-5">
-                We will get back to you as soon as possible. Let the journey
-                with CodeWork
+                {t("SentSuccessPopup.Description")}
               </div>
             </div>
           </div>
         </Modal>
 
-        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} /> }
+        {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
       </div>
     </>
   );
