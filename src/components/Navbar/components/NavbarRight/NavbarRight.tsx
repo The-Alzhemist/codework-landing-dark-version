@@ -25,28 +25,61 @@ export const NavbarRight = () => {
         <div className="mb-5">
           <label className="text-sm sm:text-lg font-bold">Social media</label>
           <div className="flex justify-end gap-x-2 items-center">
-            <IconSocialLink  ariaLabel="Facebook social link" linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr" iconName={<PiFacebookLogoBold />} />
+            <IconSocialLink
+              ariaLabel="Facebook social link"
+              linkName="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr"
+              iconName={<PiFacebookLogoBold />}
+            />
 
             {/* ถ้ามีลิ้งให้กลับมาเปิดใช้งาน */}
             {/* <IconSocialLink linkName="#" iconName={<FaInstagram />} /> */}
             {/* <IconSocialLink linkName="#" iconName={<PiLinkedinLogoBold />} /> */}
-            <div className="text-xs sm:text-lg ">Codework Tech</div>
+            <a
+              href="https://web.facebook.com/people/CodeWork-Tech/61551048177724/?_rdc=1&_rdr"
+              className="text-xs sm:text-lg "
+              target="_blank"
+              rel="nofollow"
+            >
+              Codework Tech
+            </a>
           </div>
 
           <label className="flex justify-end items-center gap-x-2 ">
-            <IconSocialLink ariaLabel="Line social link" linkName="https://page.line.me/448yyxgh" iconName={<FaLine />} />
-            <div className="text-xs sm:text-lg">@codeworktech</div>
+            <IconSocialLink
+              ariaLabel="Line social link"
+              linkName="https://page.line.me/448yyxgh"
+              iconName={<FaLine />}
+            />
+            <a
+              href="https://page.line.me/448yyxgh"
+              rel="nofollow"
+              target="_blank"
+              className="text-xs sm:text-lg"
+            >
+              @codeworktech
+            </a>
           </label>
         </div>
 
         <div className="mb-5 flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Telephone</label>
-          <a href="tel:0638494282" className="text-xs sm:text-lg "><span className="hover:border-b-2 hover:border-slate-900">(+66) 63 849 4282</span></a>
+          <a href="tel:0638494282" className="text-xs sm:text-lg ">
+            <span className="hover:border-b-2 hover:border-slate-900">
+              (+66) 63 849 4282
+            </span>
+          </a>
         </div>
 
         <div className="flex flex-col">
           <label className="text-sm sm:text-lg font-bold">Email</label>
-          <a href="mailto: hello@codework-tech.com" className="text-xs sm:text-lg  "><span className="hover:border-b-2 hover:border-slate-900">hello@codework-tech.com</span></a>
+          <a
+            href="mailto: hello@codework-tech.com"
+            className="text-xs sm:text-lg  "
+          >
+            <span className="hover:border-b-2 hover:border-slate-900">
+              hello@codework-tech.com
+            </span>
+          </a>
         </div>
       </motion.div>
     </>
