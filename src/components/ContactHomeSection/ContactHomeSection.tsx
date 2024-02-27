@@ -42,7 +42,7 @@ const ContactHomeSection = ({
           >
             <PrimaryButton
               className=" py-3 text-base sm:text-lg hover:scale-90 mb-5 lg:mb-0 min-w-[220px]"
-              pathName={`${currentLang}/contact-us`}
+              pathName={`/${currentLang}/contact-us`}
             >
               {t("Button")}
             </PrimaryButton>
