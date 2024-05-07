@@ -8,7 +8,7 @@
       "LeaveMessage": "Leave a message"
     },
     "OurPartner": {
-      "title": "Partner",
+      "title": "Trusted by",
       "Description": "We take pride in our collaboration with these esteemed companies. Together, we bring you cutting-edge solutions that propel your business into the future. Explore our extensive network of trusted partners, and experience the power of collaboration with CodeWork."
     },
     "OurService": {
@@ -22,7 +22,7 @@
       "DigitalTrasformConsult": "We'll assess your current processes, define a tailored roadmap, and implement cutting-edge solutions to streamline operations and enhance customer experiences."
     },
     "OurProject": {
-      "title": "Project",
+      "title": "Some of our projects",
       "Description": "Explore our successful projects with valued clients, showcasing our expertise and dedication.",
       "Swiper": {
         "Seamoor": {
