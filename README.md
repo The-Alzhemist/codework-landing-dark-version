@@ -22,7 +22,7 @@ This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-opti
 
 ## Learn More
 
-(test date time: 3/jan/2024 : 10:59)
+(test date time: 3/jan/2024 : 12:00)
 
 To learn more about Next.js, take a look at the following resources:
 

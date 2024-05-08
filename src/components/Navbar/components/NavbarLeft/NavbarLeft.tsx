@@ -4,6 +4,10 @@ import { usePathname } from "next/navigation";
 import React from "react";
 import { FaArrowLeft } from "react-icons/fa6";
 
+// {
+//   name: t("Team"),
+//   url: `/${currentLang}/team`,
+// },
 const getMenuList = (t: any, currentLang: string) => {
   return [
     {
@@ -19,16 +23,12 @@ const getMenuList = (t: any, currentLang: string) => {
       url: `/${currentLang}/projects`,
     },
     {
-      name: t("Team"),
-      url: `/${currentLang}/team`,
-    },
-    {
       name: t("Blog"),
       url: `/${currentLang}/blog`,
     },
     {
       name: t("ContactUs"),
-      url:`/${currentLang}/contact-us`,
+      url: `/${currentLang}/contact-us`,
     },
   ];
 };
@@ -36,7 +36,7 @@ const getMenuList = (t: any, currentLang: string) => {
 export const NavbarLeft = ({ handleClick }: { handleClick: () => void }) => {
   const t = useTranslations("Menu");
   const pathname = usePathname();
-  const currentLang = pathname.includes('en') ? 'en' : 'th'
+  const currentLang = pathname.includes("en") ? "en" : "th";
   const menuList = getMenuList(t, currentLang);
 
   return (
@@ -47,7 +47,7 @@ export const NavbarLeft = ({ handleClick }: { handleClick: () => void }) => {
             <div className="w-full pb-2 text-neutral-900 border-neutral-900 border-b-2 border-dashed sm:border-none hover:text-white text-4xl sm:text-5xl font-bold cursor-pointer group transition-all">
               <Link href={menu.url} onClick={handleClick}>
                 <span className="flex gap-x-2 text-center sm:text-left">
-                 {menu.name}
+                  {menu.name}
                   <span className="hidden group-hover:flex text-white">
                     <FaArrowLeft />
                   </span>
