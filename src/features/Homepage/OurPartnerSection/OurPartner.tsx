@@ -25,7 +25,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
               className="text-2xl md:text-4xl font-semibold flex mb-7"
               ref={h1Ref}
             >
-              <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100">
+              <span className="text-white  border-primary-100 underline underline-offset-3 decoration-8 decoration-primary-100 text-center leading-10 max-w-[300px] md:max-w-full">
                 {t("OurPartner.title")}
               </span>
             </h2>
@@ -63,7 +63,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
                           src={item.pathName}
                           width={0}
                           height={0}
-                          className={`h-auto w-[90%] p-3 ${item.className}`}
+                          className={`h-auto w-[90%] p-3 rounded-full  ${item.className}`}
                           alt={`${item.alt}`}
                         />
                       </picture>
@@ -88,7 +88,7 @@ const OurPartner = ({ root, h1Ref, pRef, btnRef, t }: OurPartnerProps) => {
                         src={item.pathName}
                         width={0}
                         height={0}
-                        className={`h-auto w-[90%] p-3 ${item.className}`}
+                        className={`h-auto w-[90%] p-3 rounded-full ${item.className}`}
                         alt={`${item.alt}`}
                         loading="lazy"
                       />

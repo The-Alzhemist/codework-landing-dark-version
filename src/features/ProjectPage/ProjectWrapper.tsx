@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React from "react";
 import ProjectIntro from "./components/ProjectIntro/ProjectIntro";
@@ -10,21 +10,22 @@ import { ProjectWrapperProps } from "./interface";
 import withProjectWrapper from "./withProjectWrapper";
 import ProjectThePine from "./components/ThePine/ThePine";
 import ProjectTonsaiMarket from "./components/TonsaiMarket/TonsaiMarket";
+import ProjectChavalak from "@/features/ProjectPage/components/Chavalak/Chavalak";
 
- const  ProjectWrapper = ({hasConsent, setHasConsent}:ProjectWrapperProps) => {
+const ProjectWrapper = ({ hasConsent, setHasConsent }: ProjectWrapperProps) => {
   return (
     <>
       <ProjectIntro />
       <ProjectSeamoor />
-      <ProjectThePine/>
-      <ProjectTonsaiMarket/>
+      <ProjectThePine />
+      <ProjectTonsaiMarket />
+      <ProjectChavalak />
       <ContactHomeSection />
       <SocialContactFloating />
-      {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} /> }
+      {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
     </>
   );
-}
+};
 
 const WrappedComponent = withProjectWrapper(ProjectWrapper);
 export default WrappedComponent;
-
