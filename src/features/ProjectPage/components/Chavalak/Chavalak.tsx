@@ -10,9 +10,12 @@ export default function ProjectChavalak() {
       <div className="flex flex-col lg:flex-row-reverse  gap-y-10 lg:gap-y-0 justify-center  items-start lg:items-center">
         <div className="w-[100%] lg:w-1/2">
           <picture className="flex justify-end ">
-            <source srcSet="https://placehold.co/1024x717" type="image/webp" />
+            <source
+              srcSet="/logo/our-partner/chavarak.webp"
+              type="image/webp"
+            />
             <img
-              src="https://placehold.co/1024x717"
+              src="/logo/our-partner/chavarak.jpg"
               alt="the-pine-project-cover."
               title="the-pine-project-cover."
               loading="lazy"
@@ -37,7 +40,7 @@ export default function ProjectChavalak() {
                 alt={`the pine  project image cover`}
               />
             </a>
-            <span>Chavalak</span>
+            <span>Chavarak</span>
           </h2>
           {/* tag */}
           <div className="flex flex-wrap gap-3 mb-5">

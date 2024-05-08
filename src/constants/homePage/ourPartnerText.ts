@@ -54,10 +54,10 @@ export const ourPartnerSectionText = {
       urlName: "https://seamoormarine.com",
     },
     {
-      pathName: "/logo/our-partner/suam-tara-logo.jpg",
-      pathNameWebP: "/logo/our-partner/suam-tara-logo.webp",
+      pathName: "/logo/our-partner/siam-tara-logo.jpg",
+      pathNameWebP: "/logo/our-partner/siam-tara-logo.webp",
       alt: "siam tara logo",
-      urlName: "https://www.facebook.com/SiamTaraPalace/?locale=th_TH",
+      urlName: "",
     },
     {
       pathName: "/logo/our-partner/The_Pine.png",
@@ -126,10 +126,10 @@ export const ourPartnerSectionText = {
       urlName: "https://seamoormarine.com",
     },
     {
-      pathName: "/logo/our-partner/suam-tara-logo.jpg",
-      pathNameWebP: "/logo/our-partner/suam-tara-logo.webp",
+      pathName: "/logo/our-partner/siam-tara-logo.jpg",
+      pathNameWebP: "/logo/our-partner/siam-tara-logo.webp",
       alt: "siam tara logo",
-      urlName: "https://www.facebook.com/SiamTaraPalace/?locale=th_TH",
+      urlName: "",
     },
     {
       pathName: "/logo/our-partner/The_Pine.png",
