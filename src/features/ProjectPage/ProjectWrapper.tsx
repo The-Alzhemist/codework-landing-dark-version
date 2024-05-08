@@ -16,10 +16,10 @@ const ProjectWrapper = ({ hasConsent, setHasConsent }: ProjectWrapperProps) => {
   return (
     <>
       <ProjectIntro />
+      <ProjectChavalak />
       <ProjectSeamoor />
       <ProjectThePine />
       <ProjectTonsaiMarket />
-      <ProjectChavalak />
       <ContactHomeSection />
       <SocialContactFloating />
       {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
