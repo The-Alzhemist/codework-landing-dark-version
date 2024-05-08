@@ -83,6 +83,22 @@
         "List2": "Enable the ability to view reports and easily check whether guests have made payments."
       }
     },
+    "Chavarak": {
+      "Description": "Chavarak's tailored ERP platform offers real-time inventory tracking, streamlined processes, and predictive maintenance suggestions to optimize operational efficiency and decision-making.",
+      "PainPoint": {
+        "List1": "Difficulty in tracking on-hand inventory leading to potential losses.",
+        "List2": "Challenges in managing and stocking inventory efficiently.",
+        "List3": "Lack of real-time monitoring capability for management.",
+        "List4": "Unsynchronized data causing discrepancies.",
+        "List5": "Struggles in planning machine maintenance effectively."
+      },
+      "Solution": {
+        "List1": "Develop a customized ERP platform specifically tailored for Chavarak.",
+        "List2": "Transition working processes to an online environment.",
+        "List3": "Enable management to make more precise decisions by providing real-time information on inventory levels.",
+        "List4": "Utilize the ERP platform's forecasting capabilities to anticipate inventory needs and plan maintenance schedules effectively."
+      }
+    },
     "TonsaiMarket": {
       "Description": "Develop a back-end management system for Tonsai Market, including features such as rent collection, electricity fees, and booth reservations.",
       "PainPoint": {
