@@ -10,12 +10,9 @@ export default function ProjectChavalak() {
       <div className="flex flex-col lg:flex-row-reverse  gap-y-10 lg:gap-y-0 justify-center  items-start lg:items-center">
         <div className="w-[100%] lg:w-1/2">
           <picture className="flex justify-end ">
-            <source
-              srcSet="/images/homePage/the-pine-mock-project-v1.webp"
-              type="image/webp"
-            />
+            <source srcSet="https://placehold.co/1024x717" type="image/webp" />
             <img
-              src="/images/homePage/the-pine-mock-project-v1.jpg"
+              src="https://placehold.co/1024x717"
               alt="the-pine-project-cover."
               title="the-pine-project-cover."
               loading="lazy"
@@ -33,7 +30,7 @@ export default function ProjectChavalak() {
               rel="noopener nofollow"
             >
               <img
-                src="https://placehold.co/1024x717"
+                src="/logo/our-partner/chavarak-logo.png"
                 width={0}
                 height={0}
                 className={`h-auto w-[90%] p-1  rounded-full `}
