@@ -41,19 +41,6 @@ const withFooter = (Component: React.FC<FooterProps>) => {
           path: `/${currentLang}/projects`,
         },
         {
-          pageMenu: t("Team"),
-          hasSubMenu: false,
-          path: `/${currentLang}/team`,
-          subMenu: [
-            {
-              name: "Our story",
-            },
-            {
-              name: "Culture",
-            },
-          ],
-        },
-        {
           pageMenu: t("ContactUs"),
           hasSubMenu: false,
           path: `/${currentLang}/contact-us`,
