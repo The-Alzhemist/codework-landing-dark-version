@@ -51,9 +51,6 @@ const withFooter = (Component: React.FC<FooterProps>) => {
             {
               name: "Culture",
             },
-            {
-              name: "Team",
-            },
           ],
         },
         {
