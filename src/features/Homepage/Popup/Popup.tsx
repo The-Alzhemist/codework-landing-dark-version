@@ -32,9 +32,9 @@ const Popup = ({ isOpen, handleClose, shouldRender }: PDPAPopupProps) => {
 
         {/* Image */}
         <img
-          src="/images/popup.jpg"
-          alt="codework contact us section cover image"
-          title="codework contact us section cover image"
+          src="/Popup.jpg"
+          alt="poupup image"
+          title="poupup image"
           loading="lazy"
           className="w-full h-auto object-cover max-h-[80vh]"
         />
