@@ -4,7 +4,6 @@ import ContactHomeSection from "@/components/ContactHomeSection/ContactHomeSecti
 import HeroSection from "@/features/Homepage/HeroSection/HeroSection";
 import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
 
-
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
 import { Poppins } from "next/font/google";
@@ -16,6 +15,8 @@ import SocialContactFloating from "@/components/SocialContactFloating/SocialCont
 import withHomePage from "./withHomePage";
 import { HomePageProps } from "./interface";
 import OurProject from "./OurProjectSection/OurProject";
+import Popup from "@/features/Homepage/Popup/Popup";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const poppinsFont = Poppins({
@@ -61,6 +62,8 @@ const HomePage = ({
       </div>
 
       {!hasConsent && <PDPAPopup onAccept={() => setHasConsent(true)} />}
+
+      {<Popup />}
 
       {/* tab section */}
       <div className="hidden sm:flex fixed top-[50%] right-4  flex-col gap-y-2">
