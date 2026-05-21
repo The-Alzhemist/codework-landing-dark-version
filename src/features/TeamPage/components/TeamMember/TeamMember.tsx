@@ -22,24 +22,14 @@ const teamMemberList: TeamMemberProps[] = [
     name: "Soratat (Q)",
     position: "Co-founder",
   },
-  {
-    img: "/images/teamPage/ter.jpg",
-    imgWebP: "/images/teamPage/ter.webp",
-    name: "Pongsakorn (Ter)",
-    position: "Project manager",
-  },
+
   {
     img: "/images/teamPage/man.jpg",
     imgWebP: "/images/teamPage/man.webp",
     name: "Pusit (Man)",
     position: "Project manager",
   },
-  {
-    img: "/images/teamPage/ice.jpg",
-    imgWebP: "/images/teamPage/ice.webp",
-    name: "Pornjira (Ice)",
-    position: "Operations Manager",
-  },
+
   {
     img: "/images/teamPage/ford.jpg",
     imgWebP: "/images/teamPage/ford.webp",
@@ -57,12 +47,6 @@ const teamMemberList: TeamMemberProps[] = [
     imgWebP: "/images/teamPage/fluke.webp",
     name: "Peerapol (Fluke)",
     position: "Full-stack Developer",
-  },
-  {
-    img: "/images/teamPage/nueng.jpg",
-    imgWebP: "/images/teamPage/nueng.webp",
-    name: "Aphiwit (Nueng)",
-    position: "Front-end Developer",
   },
 ];
 
