@@ -1,41 +1,124 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CodeWork Tech Dark Theme (SSR)
+
+Landing website ของ CodeWork Tech สร้างด้วย **Next.js App Router**, **TypeScript** และ **Tailwind CSS** สำหรับหน้า Home, Services, Projects, Team, Blog และ Contact Us พร้อม routing หลายภาษาด้วย `next-intl`
+
+## Features
+
+- Blog content จาก Storyblok
+- Contact form ผ่าน Formspree 
+- SEO metadata, Open Graph, sitemap และ robots.txt
+- Styling ด้วย Tailwind CSS
+- Build/deploy แยกตาม branch สำหรับ staging และ production
+
+## Tech Stack
+
+- Next.js `13.4.19`
+- React `18.2.0`
+- TypeScript `5.2.2`
+- Tailwind CSS `3.3.3`
+- next-intl
+- Storyblok React SDK
+- Formspree
+- Framer Motion / GSAP
+- next-sitemap
+
+## Project Structure
+
+```text
+src/
+  app/          routes, pages, layouts
+  components/   shared UI components
+  context/      React contexts
+  features/     page-level feature modules
+  config/       app constants/config
+  interfaces/   shared TypeScript types
+public/
+  images/       website images
+  logo/         logos and meta images
+```
 
 ## Getting Started
 
-First, run the development server:
-
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Local URL:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Scripts
 
-## Learn More
+| Command | Description |
+| --- | --- |
+| `npm run dev` | Run development server |
+| `npm run build` | Build production และ generate sitemap |
+| `npm run start` | Run production server |
+| `npm run lint` | Run Next.js ESLint |
 
-(test date time: 3/jan/2024 : 12:00)
+## Environment Variables
 
-To learn more about Next.js, take a look at the following resources:
+สร้างไฟล์ `.env.local` สำหรับ local development:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+ENV_URL=http://localhost:3000
+STORYBLOK_ACCESS_TOKEN='AvAS9WNQIjtLCunkmVME0gtt'
+STORYBLOK_CONTENT_VERSION=draft
+STORYBLOK_REVALIDATE_TIME_SECOND=60
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+หมายเหตุ: ไม่ควร commit token, password หรือ credential จริงลง repository
 
-## Deploy on Vercel
+## Main Routes
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js..
+- `/`
+- `/services`
+- `/projects`
+- `/team`
+- `/blog`
+- `/blog/[post]`
+- `/contact-us`
+- `/[locale]/*`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Storyblok Content
 
+เนื้อหา blog มาจาก Storyblok หากมีการเพิ่มหรือแก้ไข content แล้ว production/staging ยังไม่อัปเดต ให้ build และ deploy ใหม่ตาม environment ที่ต้องการ
 
+## Analytics
 
+เว็บไซต์มีการติดตั้ง Google Analytics แล้ว โดยดานต์และพี่แมนเป็น admin และสามารถเข้าดูข้อมูลได้
+
+## Deployment
+
+| Branch | URL |
+| --- | --- |
+| `develop` | `https://stg.codework-tech.com/` |
+| `production` | `https://codework-tech.com/` |
+
+Build command:
+
+```bash
+npm install
+npm run build
+```
+
+หลัง build ให้ตรวจสอบ sitemap และ robots files โดยเฉพาะก่อน deploy ไป production
+
+## SEO & Sitemap
+
+- Metadata หลักอยู่ที่ `src/app/layout.tsx`
+- Sitemap config อยู่ที่ `next-sitemap.config.js`
+- `siteUrl` คือ `https://codework-tech.com`
+- `next-sitemap` ทำงานอัตโนมัติหลัง `npm run build`
+
+## GA4
+- พี่แมน กับ กานต์ เป็น admin สามารถเข้าถึงได้
+
+## Storyblok account 
+- aphiwit@codework-tech.com PW: @CodeWork123
+
+## Form spree sent email
+- เข้าผ่าน admin@codework-tech.com 
