@@ -122,3 +122,6 @@ npm run build
 
 ## Form spree sent email
 - เข้าผ่าน admin@codework-tech.com 
+
+## Google Tag and GA4 
+- can access by developer@codework-tech.com
