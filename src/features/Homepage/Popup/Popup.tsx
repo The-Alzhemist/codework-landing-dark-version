@@ -1,15 +1,9 @@
 import { SimpleButton } from "@/components/buttons/SimpleButton";
 import React from "react";
 import { PDPAPopupProps } from "./interface";
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 import { useTranslations } from "next-intl";
 import withPopup from "@/features/Homepage/Popup/withPopup";
-
-const poppinsFont = Poppins({
-  weight: ["300", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-});
 
 const Popup = ({ isOpen, handleClose, shouldRender }: PDPAPopupProps) => {
   const t = useTranslations("CookieConsentPopup");

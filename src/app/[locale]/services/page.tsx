@@ -1,13 +1,6 @@
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 import ServiceWrapper from "@/features/ServicePage/ServiceWrapper";
 import { getTranslations } from "next-intl/server";
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 export async function generateMetadata({
   params: { locale },

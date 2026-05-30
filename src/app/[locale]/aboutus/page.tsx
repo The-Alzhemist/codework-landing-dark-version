@@ -1,12 +1,6 @@
 import { PrimaryButton } from "@/components/buttons/PrimaryButton";
 import { Metadata } from "next";
-import { Poppins } from "next/font/google";
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700"],
-  subsets: ["latin"],
-  display: 'swap', adjustFontFallback: false 
-});
+import { poppinsFont } from "@/lib/fonts";
 
 export const metadata: Metadata = {
   title: "CodeWork Tech | About Us",
