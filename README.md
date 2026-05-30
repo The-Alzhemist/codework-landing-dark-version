@@ -88,6 +88,9 @@ STORYBLOK_REVALIDATE_TIME_SECOND=60
 
 เนื้อหา blog มาจาก Storyblok หากมีการเพิ่มหรือแก้ไข content แล้ว production/staging ยังไม่อัปเดต ให้ build และ deploy ใหม่ตาม environment ที่ต้องการ
 
+
+Storyblok blog บน Next.js SSG จะต้อง build/deploy ก่อน จึงจะเข้าหน้า /blog/[slug] ได้ และหากต้องการให้ thumbnail แสดงในหน้า /blog ต้องเพิ่มรายการใน Storyblok เองแบบ manual
+
 ## Analytics
 
 เว็บไซต์มีการติดตั้ง Google Analytics แล้ว โดยดานต์และพี่แมนเป็น admin และสามารถเข้าดูข้อมูลได้
