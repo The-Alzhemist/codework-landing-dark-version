@@ -91,6 +91,9 @@ STORYBLOK_REVALIDATE_TIME_SECOND=60
 
 Storyblok blog บน Next.js SSG จะต้อง build/deploy ก่อน จึงจะเข้าหน้า /blog/[slug] ได้ และหากต้องการให้ thumbnail แสดงในหน้า /blog ต้องเพิ่มรายการใน Storyblok เองแบบ manual
 
+<img width="1147" height="646" alt="image" src="https://github.com/user-attachments/assets/80164629-c574-4dde-90bb-c2edf5099ce1" />
+
+
 ## Analytics
 
 เว็บไซต์มีการติดตั้ง Google Analytics แล้ว โดยดานต์และพี่แมนเป็น admin และสามารถเข้าดูข้อมูลได้
