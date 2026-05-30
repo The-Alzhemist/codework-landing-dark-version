@@ -1,5 +1,5 @@
 import React from "react";
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 import {
   ISbStoriesParams,
   StoryblokStory,
@@ -11,13 +11,6 @@ import { getLinks } from "@/utils/storyblok";
 import Breadcrumb from "@/features/BlogPage/components/Breadcrumb/Breadcrumb";
 import { Metadata, ResolvingMetadata } from "next";
 import { MetaArrayItem, PathItem, PostPageProps } from "./interface";
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 export default async function PostPage({ params }: PostPageProps) {
   console.log("params", params);

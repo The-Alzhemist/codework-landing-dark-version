@@ -2,15 +2,8 @@ import SocialContactFloating from "@/components/SocialContactFloating/SocialCont
 
 import FormPage from "@/features/ContactPage/FormPage";
 
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 import { getTranslations } from "next-intl/server";
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 export async function generateMetadata({
   params: { locale },

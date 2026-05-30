@@ -6,7 +6,7 @@ import OurPartner from "@/features/Homepage/OurPartnerSection/OurPartner";
 
 import PDPAPopup from "@/features/PAPAPopup/PDPAPopup";
 
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -18,13 +18,6 @@ import OurProject from "./OurProjectSection/OurProject";
 import Popup from "@/features/Homepage/Popup/Popup";
 
 gsap.registerPlugin(ScrollTrigger);
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700", "800"],
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 const HomePage = ({
   hasConsent,

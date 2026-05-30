@@ -1,15 +1,8 @@
 import Navbar from "@/components/Navbar/Navbar";
 import "../globals.css";
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 import Footer from "@/components/Footer/Footer";
 import { NextIntlClientProvider, useMessages } from "next-intl";
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700", "800"],
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 import { storyblokInit, apiPlugin } from "@storyblok/react/rsc";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";

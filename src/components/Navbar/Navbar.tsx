@@ -10,16 +10,9 @@ import { IoMdMenu } from "react-icons/io";
 import { IoCloseCircleOutline } from "react-icons/io5";
 import Link from "next/link";
 import { CodeworkTechLogo } from "./components/BrandLogo/BrandLogo";
-import { Poppins } from "next/font/google";
+import { poppinsFont } from "@/lib/fonts";
 
 import { usePathname, useRouter } from "next/navigation";
-
-const poppinsFont = Poppins({
-  weight: ["100", "300", "500", "700", "800"],
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
 
 const Navbar = ({
   sectionNavRef,
