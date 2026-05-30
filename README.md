@@ -1,4 +1,5 @@
-# CodeWork Tech Dark Theme (SSR)
+# CodeWork Tech Dark Theme (SSG)
+** เขียน storyblok  ต้อง build ขึ้นไปใหม่ทุกครั้ง
 
 Landing website ของ CodeWork Tech สร้างด้วย **Next.js App Router**, **TypeScript** และ **Tailwind CSS** สำหรับหน้า Home, Services, Projects, Team, Blog และ Contact Us พร้อม routing หลายภาษาด้วย `next-intl`
 
