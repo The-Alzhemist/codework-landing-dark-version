@@ -121,5 +121,7 @@ npm run build
 ## GA4
 - พี่แมน กับ กานต์ เป็น admin สามารถเข้าถึงได้
 
+
+
 ## Storyblok account 
 - ดูใน slack
